@@ -16,8 +16,16 @@
         <nav>
             <ul class="header-nav">
                 <li class="header-nav-item"><a href="#about">デイトラとは</a></li>
-                <li class="header-nav-item"><a href="#course">コース一覧</a></li>
-                <li class="header-nav-item"><a href="#contact">お問い合わせ</a></li>
+                <li class="header-nav-item drawer"><a>コース一覧</a>
+                    <div class="header-nav-item-drawerbox">
+                        <ul>
+                            <li class="header-nav-item-drawer-item"><a href="#course-beginner">初級</a></li>
+                            <li class="header-nav-item-drawer-item"><a href="#course-standard">中級</a></li>
+                            <li class="header-nav-item-drawer-item"><a href="#course-advance">上級</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-nav-item drawer"><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
@@ -52,15 +60,15 @@
         <div class="container">
             <h2 class="section-title">コース一覧</h2>
             <ul class="course-content">
-                <li class="course-content-item">
+                <li id="course-beginner" class="course-content-item">
                     <img src="./img/web_first.png" alt="Web制作コース初級編">
                     <p class="course-item-text">HTML / CSS / Bootstrap</p>
                 </li>
-                <li class="course-content-item">
+                <li id="course-standard" class="course-content-item">
                     <img src="./img/web_second.png" alt="Web制作コース中級編">
                     <p class="course-item-text">HTML / CSS / JavaScript / jQuery</p>
                 </li>
-                <li class="course-content-item">
+                <li id="course-advance" class="course-content-item">
                     <img src="./img/web_third.png" alt="Web制作コース上級編">
                     <p class="course-item-text">PHP / WordPress</p>
                 </li>
