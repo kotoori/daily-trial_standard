@@ -4,18 +4,34 @@ $(function(){
         $(this).find('.header-nav-item-drawer-item').slideToggle();
     })
 
-    //Topへ戻るボタン
-    $(window).scroll(function(){
+    //Topへ戻るボタンの表示/非表示を切り替える
+    function scrollTopButtonShow(){
         let scrollAmount = $(window).scrollTop();
-        console.log(scrollAmount);
         if(scrollAmount >= 80){
-            console.log("Active");
-            $('.scroll_top').addClass('active');
-        }else if(scrollAmount < 80){
-            console.log("Passive");
-            $('.scroll_top').removeClass('active');
-        }else{
-            ;//何もしない
+            $('.scroll_top').fadeIn(300);
+        }else{ /* (scrollAmount < 80) */
+            $('.scroll_top').fadeOut(300);
         }
+    }
+
+    let isAutoScrolling = false; /* 自動スクロール中を示すフラグ */
+
+    $(window).scroll(function(){
+        if(!isAutoScrolling){
+            scrollTopButtonShow();
+        }
+    })
+
+    $('a[href^="#"]').click(function(){
+        let href = $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let targetY = target.offset().top;
+        // animateで移動します
+        isAutoScrolling = true;
+        $('html, body').animate({scrollTop : targetY}, 500, 'swing',
+            function(){
+                isAutoScrolling = false;
+                scrollTopButtonShow();
+            });
     })
 })
