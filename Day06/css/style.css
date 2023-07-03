@@ -91,6 +91,30 @@ header{
 }
 
 /*========================
+scroll top icon
+=========================*/
+.scroll_top{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 80px;
+    right: 2%;
+    visibility: hidden; /* 初期状態は非表示 */
+    opacity: 0;
+    transition:all 0.3s ease;
+}
+
+.scroll_top.active{
+    visibility: visible;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.scroll_top:hover{
+    opacity: 0.8;
+}
+/*========================
 top
 =========================*/
 .top{
