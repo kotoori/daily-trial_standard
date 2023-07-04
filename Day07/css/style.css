@@ -182,11 +182,6 @@ course
 	justify-content: center;    /* 子要素に水平方向に中央揃え */
 }
 
-/*モーダル本体に「active」クラス付与した時のスタイル*/
-.modal-container.active{
-	visibility: visible;
-	opacity: 1;
-}
 /*モーダル枠の指定*/
 .modal-body{
 	position: relative;
@@ -205,10 +200,6 @@ course
 	font-size: 40px;
 	color: #fff;
 	cursor: pointer;
-}
-/*モーダル内のコンテンツの指定*/
-.modal-content{
-	text-align: left;
 }
 
 /*========================

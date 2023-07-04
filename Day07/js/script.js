@@ -50,8 +50,9 @@ $(function(){
     // 変数に要素を入れる
     let open = $('.course-content-item img'),
         close = $('.modal-close'),
-        container = $('.modal-container');
+        container = $('.modal-container'),
         content = $('.modal-content');
+    let isModalWindowOn = false;
 
     //bodyを固定する関数
     function bodyFix() {
@@ -78,14 +79,18 @@ $(function(){
 
     //開くボタンをクリックしたらモーダルを表示する
     open.on('click',function(){
-        bodyFix();
-        content.append(this.outerHTML);
-        container.fadeIn().css('display','flex');;
-        return false;
+        if(!isModalWindowOn){
+            bodyFix();
+            content.append(this.outerHTML);
+            isModalWindowOn = true;
+            container.fadeIn().css('display','flex');
+            return false;
+        }
     });
 
     //閉じるボタンをクリックしたらモーダルを閉じる
     close.on('click',function(){
+        isModalWindowOn = false;
         container.fadeOut(function(){
             bodyFixReset();
             content.empty();
@@ -94,11 +99,14 @@ $(function(){
 
     //モーダルの外側をクリックしたらモーダルを閉じる
     $(document).on('click',function(e) {
-        if(!$(e.target).closest('.modal-body').length) {
-            container.fadeOut(function(){
-                bodyFixReset();
-                content.empty();
-            });
+        if(isModalWindowOn){
+            if(!$(e.target).closest('.modal-body').length) {
+                isModalWindowOn = false;
+                container.fadeOut(function(){
+                    bodyFixReset();
+                    content.empty();
+                });
+            }
         }
     });
 
