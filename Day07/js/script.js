@@ -53,8 +53,32 @@ $(function(){
         container = $('.modal-container');
         content = $('.modal-content');
 
+    //bodyを固定する関数
+    function bodyFix() {
+        const scrollPosition = $(window).scrollTop();
+        $('body').css({
+            'position': 'fixed',
+            'width': '100%',
+            'z-index': '1',
+            'top': -scrollPosition
+        });
+    }
+
+    //以下、body固定を解除する関数
+    function bodyFixReset() {
+        const scrollPosition = $('body').offset().top;
+        $('body').css({
+            'position': 'relative',
+            'width': 'auto',
+            'top': 'auto'
+        });
+        //scroll位置を調整
+        $('html, body').scrollTop(-scrollPosition);
+    }
+
     //開くボタンをクリックしたらモーダルを表示する
     open.on('click',function(){
+        bodyFix();
         content.append(this.outerHTML);
         container.fadeIn().css('display','flex');;
         return false;
@@ -63,6 +87,7 @@ $(function(){
     //閉じるボタンをクリックしたらモーダルを閉じる
     close.on('click',function(){
         container.fadeOut(function(){
+            bodyFixReset();
             content.empty();
         });
     });
@@ -71,6 +96,7 @@ $(function(){
     $(document).on('click',function(e) {
         if(!$(e.target).closest('.modal-body').length) {
             container.fadeOut(function(){
+                bodyFixReset();
                 content.empty();
             });
         }
