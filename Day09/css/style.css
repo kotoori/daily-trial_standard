@@ -63,12 +63,22 @@ a:hover {
 .section {
   padding: 60px 0;
 }
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 80px 0;
+  }
+}
 
 .section-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 40px;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
 
 /*========================
@@ -83,10 +93,20 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  header {
+    display: block;
+  }
+}
 
 .header-title {
   font-size: 1.5rem;
   font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .header-title {
+    text-align: center;
+  }
 }
 
 .header-nav {
@@ -111,6 +131,11 @@ header {
 .header-nav-item.drawer {
   position: relative;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .header-nav-item {
+    margin-left: 0;
+  }
 }
 
 .header-nav-item-drawerbox {
@@ -155,15 +180,30 @@ top
   padding: 80px 0;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .top {
+    padding: 120px 0;
+  }
+}
 
 .top-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .top-title {
+    font-size: 2rem;
+  }
+}
 
 .top-subtitle {
   font-size: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  .top-subtitle {
+    font-size: 0.875rem;
+  }
 }
 
 /*========================
@@ -177,11 +217,32 @@ about
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .about-content {
+    display: block;
+  }
+}
 
-.about-content-left,
+.about-content-left {
+  width: 48%;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .about-content-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .about-content-right {
   width: 48%;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .about-content-right {
+    width: 100%;
+    font-size: 0.875rem;
+  }
 }
 
 /*========================
@@ -204,6 +265,13 @@ course
 
 .course-content-item {
   width: 30%;
+}
+@media screen and (max-width: 767px) {
+  .course-content-item {
+    width: 100%;
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
 }
 .course-content-item img {
   margin-bottom: 5px;
@@ -233,11 +301,6 @@ course
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; /* 子要素に水平方向に中央揃え */
-  /*モーダル本体に「active」クラス付与した時のスタイル*/
-}
-.modal-container.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 /*モーダル枠の指定*/
@@ -274,6 +337,11 @@ contact
   text-align: center;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .contact-text {
+    font-size: 0.875rem;
+  }
+}
 
 .contact-form input {
   display: block;
@@ -283,6 +351,11 @@ contact
   border: 3px solid #d8d8d8;
   border-radius: 999px;
   font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .contact-form input {
+    width: 100%;
+  }
 }
 
 .btn {
@@ -314,78 +387,7 @@ footer {
   text-align: right;
   font-size: 0.75rem;
 }
-
-/*========================
-SP用
-=========================*/
 @media screen and (max-width: 767px) {
-  /*========================
-  General Setting
-  =========================*/
-  .section {
-    padding: 80px 0;
-  }
-  .section-title {
-    font-size: 1.5rem;
-  }
-  /*========================
-  header
-  =========================*/
-  header {
-    display: block;
-  }
-  .header-title {
-    text-align: center;
-  }
-  .header-nav-item {
-    margin-left: 0;
-  }
-  /*========================
-  top
-  =========================*/
-  .top {
-    padding: 120px 0;
-  }
-  .top-title {
-    font-size: 2rem;
-  }
-  .top-subtitle {
-    font-size: 0.875rem;
-  }
-  /*========================
-  about
-  =========================*/
-  .about-content {
-    display: block;
-  }
-  .about-content-left {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .about-content-right {
-    font-size: 0.875rem;
-    width: 100%;
-  }
-  /*========================
-  course
-  =========================*/
-  .course-content-item {
-    width: 100%;
-    font-size: 0.875rem;
-    margin-bottom: 20px;
-  }
-  /*========================
-  contact
-  =========================*/
-  .contact-text {
-    font-size: 0.875rem;
-  }
-  .contact-form input {
-    width: 100%;
-  }
-  /*========================
-  footer
-  =========================*/
   footer {
     text-align: center;
     font-size: 0.625rem;

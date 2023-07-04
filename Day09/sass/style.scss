@@ -1,5 +1,20 @@
 @use "reset";
 
+$breakpoints: (
+//キー:値
+  'sp':  'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
+  'pc':  'screen and (min-width: 1101px)' //1101px以上（PC、タブレット）用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
 $main-color: #082b48;
 
 /*========================
@@ -10,7 +25,7 @@ html{
 }
 
 body{
-  color: #082b48;
+  color: $main-color;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fff;
   line-height: 1.5;
@@ -33,6 +48,9 @@ a:hover{
 
 .section{
   padding: 60px 0;
+  @include mq(sp){
+    padding: 80px 0;
+  }
 }
 
 .section-title{
@@ -40,6 +58,10 @@ a:hover{
   font-weight: bold;
   margin-bottom: 40px;
   text-align: center;
+
+  @include mq(sp){
+    font-size: 1.5rem;
+  }
 }
 
 /*========================
@@ -49,10 +71,18 @@ header{
   padding: 20px 0;
   display:flex;
   justify-content: space-between;
+
+  @include mq(sp){
+    display: block;
+  }
 }
 .header-title{
   font-size: 1.5rem;
   font-weight: bold;
+
+  @include mq(sp){
+    text-align: center;
+  }
 }
 
 .header-nav{
@@ -65,7 +95,7 @@ header{
 
   a{
     text-decoration: none;
-    color: #082b48;
+    color: $main-color;
     font-size: 15px;
     font-weight: 600;
 
@@ -73,6 +103,10 @@ header{
   &.drawer{
     position: relative;
     cursor: pointer;
+  }
+
+  @include mq(sp){
+    margin-left: 0;
   }
 }
 
@@ -120,15 +154,27 @@ top
   background-size: cover;
   padding: 80px 0;
   text-align: center;
+
+  @include mq(sp){
+    padding: 120px 0;
+  }
 }
 
 .top-title{
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
+
+  @include mq(sp){
+    font-size: 2rem;
+  }
 }
 .top-subtitle{
   font-size: 1.125rem;
+
+  @include mq(sp){
+    font-size: 0.875rem;
+  }
 }
 
 /*========================
@@ -137,12 +183,29 @@ about
 .about-content{
   display: flex;
   justify-content: space-between;
+
+  @include mq(sp){
+    display: block;
+  }
 }
 
-.about-content-left,
-.about-content-right{
+@mixin about-content-half(){
   width: 48%;
   height: auto;
+}
+.about-content-left{
+  @include about-content-half();
+  @include mq(sp){
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.about-content-right{
+  @include about-content-half();
+  @include mq(sp){
+    width: 100%;
+    font-size: 0.875rem;
+  }
 }
 
 /*========================
@@ -160,10 +223,17 @@ course
 .course-content-item{
   width: 30%;
 
+  @include mq(sp){
+    width: 100%;
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
+
   img{
     margin-bottom: 5px;
     cursor: pointer;
   }
+
 }
 
 /***
@@ -180,16 +250,10 @@ course
   background: rgba(0,0,0,50%);
   padding: 40px 20px;
   overflow: auto;
-    box-sizing: border-box;
+  box-sizing: border-box;
   display: none;              /* フェードイン時はFlexを使用し子要素を縦横中央に配置 */
   align-items: center;        /* 子要素を垂直方向に中央揃え */
   justify-content: center;    /* 子要素に水平方向に中央揃え */
-
-  /*モーダル本体に「active」クラス付与した時のスタイル*/
-  &.active{
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 /*モーダル枠の指定*/
@@ -218,6 +282,10 @@ contact
 .contact-text{
   text-align: center;
   margin-bottom: 20px;
+
+  @include mq(sp){
+    font-size: 0.875rem;
+  }
 }
 
 .contact-form{
@@ -229,6 +297,10 @@ contact
     border: 3px solid #d8d8d8;
     border-radius: 999px;
     font-size: 18px;
+
+    @include mq(sp){
+      width: 100%;
+    }
   }
 }
 
@@ -258,100 +330,13 @@ footer
 =========================*/
 footer{
   padding: 20px 0;
-  background-color: #082b48;
+  background-color: $main-color;
   color: #fff;
   text-align: right;
   font-size: 0.75rem;
-}
 
-/*========================
-SP用
-=========================*/
-@media screen and (max-width:767px){
-
-  /*========================
-  General Setting
-  =========================*/
-  .section{
-      padding: 80px 0;
-  }
-  .section-title{
-  font-size: 1.5rem;
-}
-  /*========================
-  header
-  =========================*/
-  header{
-      display: block;
-  }
-
-  .header-title{
-      text-align: center;
-  }
-
-  .header-nav-item{
-      margin-left: 0;
-  }
-
-  /*========================
-  top
-  =========================*/
-  .top{
-      padding: 120px 0;
-  }
-
-  .top-title{
-      font-size: 2rem;
-  }
-
-  .top-subtitle{
-      font-size: 0.875rem;
-  }
-
-  /*========================
-  about
-  =========================*/
-  .about-content{
-      display: block;
-  }
-
-  .about-content-left{
-      width: 100%;
-      margin-bottom: 20px;
-  }
-
-  .about-content-right{
-      font-size: 0.875rem;
-      width: 100%;
-  }
-
-  /*========================
-  course
-  =========================*/
-  .course-content-item{
-      width: 100%;
-      font-size: 0.875rem;
-      margin-bottom: 20px;
-  }
-
-  /*========================
-  contact
-  =========================*/
-  .contact-text{
-      font-size: 0.875rem;
-  }
-
-  .contact-form{
-    input{
-      width: 100%;
-    }
-  }
-
-  /*========================
-  footer
-  =========================*/
-  footer{
-      text-align: center;
-      font-size: 0.625rem;
+  @include mq(sp){
+    text-align: center;
+    font-size: 0.625rem;
   }
 }
