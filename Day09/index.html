@@ -16,11 +16,19 @@
         <nav>
             <ul class="header-nav">
                 <li class="header-nav-item"><a href="#about">デイトラとは</a></li>
-                <li class="header-nav-item"><a href="#course">コース一覧</a></li>
-                <li class="header-nav-item"><a href="#contact">お問い合わせ</a></li>
+                <li class="header-nav-item drawer"><a>コース一覧</a>
+                    <ul class="header-nav-item-drawerbox">
+                        <li class="header-nav-item-drawer-item"><a href="#course-beginner">初級</a></li>
+                        <li class="header-nav-item-drawer-item"><a href="#course-standard">中級</a></li>
+                        <li class="header-nav-item-drawer-item"><a href="#course-advance">上級</a></li>
+                    </ul>
+                </li>
+                <li class="header-nav-item drawer"><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
+
+    <a href="#" class="scroll_top"><img src="./img/scrool-top.png" alt="scroll top"></a>
 
     <section class="top">
         <div class="container">
@@ -52,19 +60,29 @@
         <div class="container">
             <h2 class="section-title">コース一覧</h2>
             <ul class="course-content">
-                <li class="course-content-item">
+                <li id="course-beginner" class="course-content-item">
                     <img src="./img/web_first.png" alt="Web制作コース初級編">
                     <p class="course-item-text">HTML / CSS / Bootstrap</p>
                 </li>
-                <li class="course-content-item">
+                <li id="course-standard" class="course-content-item">
                     <img src="./img/web_second.png" alt="Web制作コース中級編">
                     <p class="course-item-text">HTML / CSS / JavaScript / jQuery</p>
                 </li>
-                <li class="course-content-item">
+                <li id="course-advance" class="course-content-item">
                     <img src="./img/web_third.png" alt="Web制作コース上級編">
                     <p class="course-item-text">PHP / WordPress</p>
                 </li>
             </ul>
+        </div>
+
+        <!-- モーダル -->
+        <div class="modal-container">
+            <div class="modal-body">
+                <!-- 閉じるボタン -->
+                <div class="modal-close">×</div>
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal-content"></div>
+            </div>
         </div>
     </section>
 
@@ -84,5 +102,10 @@
             <p class="footer-text">Copyright(C) 2020 東京フリーランス ALL Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- jQuery本体を読み込む -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- jsコードを読み込む -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

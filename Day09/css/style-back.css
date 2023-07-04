@@ -68,6 +68,46 @@ header{
     font-weight: 600;
 }
 
+.header-nav-item.drawer{
+    position: relative;
+    cursor: pointer;
+}
+
+.header-nav-item-drawerbox{
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.header-nav-item-drawer-item{
+    display: none;      /* 初期状態は非表示、jQueryで表示/非表示を切り替え*/
+    text-align: center;
+    border-bottom: solid 1px #d8d8d8;
+}
+
+.header-nav-item-drawer-item a{
+    display: block;
+    width: 100%;    /* リンク範囲を親要素いっぱいに広げる */
+}
+
+/*========================
+scrollTop Button
+=========================*/
+.scroll_top{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 80px;
+    right: 2%;
+    display: none;
+    opacity: 0.3;
+}
+
+.scroll_top:hover{
+    opacity: 0.8;
+}
+
 /*========================
 top
 =========================*/
@@ -119,6 +159,56 @@ course
 
 .course-content-item img{
     margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/***
+モーダル
+***/
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,50%);
+	padding: 40px 20px;
+	overflow: auto;
+    box-sizing: border-box;
+	display: none;              /* フェードイン時はFlexを使用し子要素を縦横中央に配置 */
+	align-items: center;        /* 子要素を垂直方向に中央揃え */
+	justify-content: center;    /* 子要素に水平方向に中央揃え */
+}
+
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active{
+	visibility: visible;
+	opacity: 1;
+}
+/*モーダル枠の指定*/
+.modal-body{
+	position: relative;
+	width: 85%;
+}
+/*モーダルを閉じるボタンの指定*/
+.modal-close{
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	font-size: 40px;
+	color: #fff;
+	cursor: pointer;
+}
+/*モーダル内のコンテンツの指定*/
+.modal-content{
+	text-align: left;
 }
 
 /*========================
