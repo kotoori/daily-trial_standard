@@ -201,6 +201,9 @@ course
 	color: #fff;
 	cursor: pointer;
 }
+.modal-content{
+    user-select: none;  /* モーダル表示中に意図せず選択状態になってしまうのを防ぐ */
+}
 
 /*========================
 contact
