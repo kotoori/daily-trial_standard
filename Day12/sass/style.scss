@@ -126,6 +126,10 @@ header{
     width: 100vw;
     height: 600px;
     object-fit: cover;
+
+    @include mq(sp){
+      height: 420px;
+    }
   }
 }
 
