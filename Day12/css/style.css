@@ -106,7 +106,7 @@ header {
           align-items: center;
 }
 
-.header__nav__list__item {
+.header__nav__list__item:not(:first-child) {
   margin-left: 40px;
 }
 @media screen and (max-width: 767px) {

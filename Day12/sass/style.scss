@@ -90,8 +90,10 @@ header{
 }
 
 .header__nav__list__item{
-  margin-left: 40px;
-  @include mq(sp){
+  &:not(:first-child){
+    margin-left: 40px;
+  }
+    @include mq(sp){
     display: none;
   }
   a{
