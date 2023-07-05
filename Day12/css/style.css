@@ -85,12 +85,22 @@ header {
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
 }
+@media screen and (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+}
 
 .header-inner {
   height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header-inner {
+    height: 60px;
+  }
 }
 
 .header__logo {
@@ -127,6 +137,11 @@ header {
 .top {
   position: relative;
   margin-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .top {
+    margin-top: 60px;
+  }
 }
 .top img {
   width: 100vw;
@@ -194,9 +209,4 @@ header {
   height: 100%;
   padding: 24px 0;
   line-height: 1;
-}
-@media screen and (max-width: 767px) {
-  .top__content__button a {
-    font-size: 1.125rem;
-  }
 }

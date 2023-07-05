@@ -5,6 +5,8 @@ $color-sub-1: #e81919;
 $color-font-1: #fff;
 $color-font-2: #333;
 $size-header-hight: 100px;
+$size-header-hight-sp: 60px;
+
 $breakpoints: (
 //キー:値
   'sp':  'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
@@ -20,7 +22,6 @@ $breakpoints: (
     @content;
   }
 }
-
 
 html {
 	font-size: 100%;
@@ -69,11 +70,20 @@ header{
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0px 3px 3px #00000029;}
+  box-shadow: 0px 3px 3px #00000029;
+
+  @include mq(sp){
+    height: $size-header-hight-sp;
+  }
+}
 
 .header-inner{
   height: $size-header-hight;
   align-items: center;
+
+  @include mq(sp){
+    height: $size-header-hight-sp;
+  }
 }
 .header__logo{
   width: 205px;
@@ -108,6 +118,10 @@ header{
 .top{
   position: relative;
   margin-top: $size-header-hight;
+
+  @include mq(sp){
+    margin-top: $size-header-hight-sp;
+  }
   img{
     width: 100vw;
     height: 600px;
@@ -167,10 +181,6 @@ header{
     height: 100%;
     padding: 24px 0;
     line-height: 1;
-
-    @include mq(sp){
-      font-size: 1.125rem;
-    }
   }
 }
 
