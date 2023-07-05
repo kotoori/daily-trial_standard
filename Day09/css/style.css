@@ -330,6 +330,13 @@ course
   cursor: pointer;
 }
 
+.modal-content {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /* モーダル表示中に意図せず選択状態になってしまうのを防ぐ */
+}
+
 /*========================
 contact
 =========================*/
