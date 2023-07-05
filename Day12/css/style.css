@@ -146,7 +146,6 @@ header {
 .top__content__title {
   font-size: 4rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 32px;
 }
 @media screen and (max-width: 767px) {
@@ -158,7 +157,6 @@ header {
 .top__content__subtitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 767px) {

@@ -127,7 +127,6 @@ header{
 .top__content__title{
   font-size: 4rem;
   font-weight: bold;
-  color: $color-font-2;
   margin-bottom: 32px;
   @include mq(sp){
     font-size: 2.5rem;
@@ -137,7 +136,6 @@ header{
 .top__content__subtitle{
   font-size: 1.5rem;
   font-weight: bold;
-  color: $color-font-2;
   margin-bottom: 40px;
   @include mq(sp){
     font-size: 1.125rem;
