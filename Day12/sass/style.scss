@@ -1,10 +1,10 @@
 @use "reset";
 
-$main-color: #3f51b5;
-$sub-color-1: #e81919;
-$font-color-1: #fff;
-$font-color-2: #333;
-$header-hight: 100px;
+$color-main: #3f51b5;
+$color-sub-1: #e81919;
+$color-font-1: #fff;
+$color-font-2: #333;
+$size-header-hight: 100px;
 $breakpoints: (
 //キー:値
   'sp':  'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-	color: $font-color-2;
+	color: $color-font-2;
   background: #FFF;
   font-family: "游ゴシック体", "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino kaku Gothic ProN", sans-serif;
 }
@@ -61,9 +61,9 @@ img {
 header
 =================================*/
 header{
-  background-color: $main-color;
+  background-color: $color-main;
   width: 100vw;
-  height: $header-hight;
+  height: $size-header-hight;
   padding: 30px 0;
   position: fixed;
   top: 0;
@@ -95,18 +95,18 @@ header{
   }
   a{
     padding-bottom: 10px;
-    color: $font-color-1;
+    color: $color-font-1;
     text-decoration: none;
 
     &:hover{
-      border-bottom: 2px solid $sub-color-1;
+      border-bottom: 2px solid $color-sub-1;
     }
   }
 }
 
 .top{
   position: relative;
-  margin-top: $header-hight;
+  margin-top: $size-header-hight;
   img{
     width: 100vw;
     height: 600px;
@@ -126,7 +126,7 @@ header{
 .top__content__title{
   font-size: 4rem;
   font-weight: bold;
-  color: $font-color-2;
+  color: $color-font-2;
   margin-bottom: 32px;
   @include mq(sp){
     font-size: 2.5rem;
@@ -136,7 +136,7 @@ header{
 .top__content__subtitle{
   font-size: 1.5rem;
   font-weight: bold;
-  color: $font-color-2;
+  color: $color-font-2;
   margin-bottom: 40px;
   @include mq(sp){
     font-size: 1.125rem;
@@ -144,7 +144,7 @@ header{
 }
 
 .top__content__button{
-  background-color: $main-color;
+  background-color: $color-main;
   border: none;
   border-radius: 8px;
   box-shadow: 0 3px 6px #00000029;
@@ -161,7 +161,7 @@ header{
   a{
     font-size: 1.5rem;
     font-weight: bold;
-    color: $font-color-1;
+    color: $color-font-1;
     text-decoration: none;
     display: block;
     width: 100%;
