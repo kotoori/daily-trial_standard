@@ -43,6 +43,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: bottom; /* 画面下の隙間を消す */
 }
 
