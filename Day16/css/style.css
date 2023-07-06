@@ -51,6 +51,11 @@ img {
   max-width: 475px;
   margin: 50px auto;
 }
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+}
 
 .headline {
   margin-top: 50px;
@@ -321,6 +326,11 @@ img {
 }
 .pattern15::after {
   right: 0;
+}
+@media screen and (max-width: 767px) {
+  .pattern15::before, .pattern15::after {
+    width: 15vw;
+  }
 }
 
 .pattern16 {
