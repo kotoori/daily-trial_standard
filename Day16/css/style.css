@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+  background: #FFF;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; /* 画面下の隙間を消す */
+}
+
+.container {
+  max-width: 475px;
+  margin: 50px auto;
+}
+
+.headline {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+}
+
+.pattern1 {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #3F51B5;
+}
+
+.pattern2 {
+  padding-bottom: 5px;
+  border-bottom: 3px dashed #3F51B5;
+}
+
+.pattern3 {
+  color: #fff;
+  background-color: #3F51B5;
+  padding: 7px 0 5px 10px;
+}
+
+.pattern4 {
+  color: #fff;
+  background-color: #7385E9;
+  padding: 7px 0 4px 10px;
+  border-bottom: 3px solid #3F51B5;
+}
+
+.pattern5 {
+  padding: 4px 0 4px 10px;
+  border-left: 5px solid #3F51B5;
+}
+
+.pattern5-b {
+  padding: 4px 0 4px 10px;
+  position: relative;
+}
+.pattern5-b::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 36px;
+  background-color: #3F51B5;
+}
+
+.pattern6 {
+  display: inline-block;
+  position: relative;
+}
+.pattern6 span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+  position: relative;
+  z-index: 999;
+}
+.pattern6::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 50;
+  content: "";
+  display: block;
+  background-color: #DCEE39;
+  width: 100%;
+  height: 16px;
+}
+
+.pattern6-2 { /* z-index:-1 */
+  display: inline-block;
+  position: relative;
+}
+.pattern6-2::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: block;
+  background-color: #DCEE39;
+  width: 100%;
+  height: 16px;
+}
+
+.pattern7 {
+  padding: 7px 0 5px 10px;
+}
+.pattern7 span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+  background-color: #DCEE39;
+}
+
+.pattern8 {
+  color: #fff;
+  background-color: #3F51B5;
+  padding: 7px 0 5px 10px;
+  position: relative;
+}
+.pattern8::after {
+  content: "";
+  display: inline-block;
+  width: 19.5px;
+  height: 18px;
+  background-color: #3F51B5;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  -webkit-transform: rotate(44deg);
+          transform: rotate(44deg);
+  z-index: -1;
+}
+
+.pattern9 {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #3F51B5;
+  position: relative;
+}
+.pattern9::after {
+  content: "";
+  display: block;
+  width: 83px;
+  height: 2px;
+  background-color: #B53F4F;
+  position: absolute;
+  top: 35px;
+  left: 0;
+}
+
+.pattern10 {
+  padding: 4px 0 4px 10px;
+  position: relative;
+}
+.pattern10::before {
+  position: absolute;
+  top: 10px;
+  left: -2px;
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background-color: #3F51B5;
+}
+
+.pattern11 {
+  text-align: center;
+  position: relative;
+}
+.pattern11::before {
+  position: absolute;
+  top: 44px;
+  left: calc(50% - 26px);
+  content: "";
+  display: block;
+  width: 52px;
+  height: 4px;
+  background-color: #3F51B5;
+}
+
+.pattern12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pattern12 img {
+  margin-top: 50px;
+}
+.pattern12 span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+  padding-left: 15px;
+}
+
+.pattern13 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pattern13 img {
+  margin-top: 20px;
+}
+.pattern13 span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+  margin-right: 10px;
+}
+
+.pattern13a {
+  display: inline-block;
+  position: relative;
+}
+.pattern13a img {
+  position: absolute;
+  top: -12px;
+  right: -32px;
+}
+.pattern13a span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+}
+
+.box {
+  text-align: center;
+}
+
+.pattern14 {
+  display: inline-block;
+  position: relative;
+}
+.pattern14::before, .pattern14::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 32px;
+  background-color: #3F51B5;
+  position: absolute;
+  top: 0;
+}
+.pattern14::before {
+  top: 0;
+  left: -20px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+.pattern14::after {
+  top: 0;
+  right: -20px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.pattern15 {
+  text-align: center;
+  position: relative;
+}
+.pattern15::before, .pattern15::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 3px;
+  background-color: #3F51B5;
+  position: absolute;
+  top: 50%;
+}
+.pattern15::before {
+  left: 0;
+}
+.pattern15::after {
+  right: 0;
+}
+
+.pattern16 {
+  display: inline-block;
+  padding: 7px 12px 5px 10px;
+  background: repeating-linear-gradient(135deg, #7385E9, #7385E9 10px, #A7BAFF 10px, #A7BAFF 20px);
+}
+
+.pattern17 {
+  display: inline-block;
+  padding: 7px 12px 5px 10px;
+  position: relative;
+}
+.pattern17::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  content: "";
+  display: inline-block;
+  background: repeating-linear-gradient(135deg, #7385E9, #7385E9 10px, #A7BAFF 10px, #A7BAFF 20px);
+  width: 100%;
+  height: 16px;
+}

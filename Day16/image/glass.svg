@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.98" height="21.833" viewBox="0 0 18.98 21.833">
+  <g id="glass" transform="translate(-461 -130)">
+    <g id="楕円形_2" data-name="楕円形 2" transform="translate(461 130)" fill="#fff" stroke="#3f51b5" stroke-width="3">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="7" fill="none"/>
+    </g>
+    <rect id="長方形_11" data-name="長方形 11" width="3" height="8" transform="matrix(0.777, -0.629, 0.629, 0.777, 472.614, 145.615)" fill="#3f51b5"/>
+  </g>
+</svg>

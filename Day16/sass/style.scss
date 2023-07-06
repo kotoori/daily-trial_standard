@@ -1,0 +1,297 @@
+@use "reset";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: #000;
+  background: #FFF;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  vertical-align: top;  /* 画面下の隙間を消す */
+}
+
+.container{
+  max-width: 475px;
+  margin: 50px auto;
+
+}
+
+.headline{
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: calc(29px / 24px);
+}
+@mixin headline($font-color:#333){
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $font-color;
+    line-height: calc(29px / 24px);
+  }
+
+.pattern1{
+  padding-bottom: 5px;
+  border-bottom: 3px solid #3F51B5;
+}
+
+.pattern2{
+  padding-bottom: 5px;
+  border-bottom: 3px dashed #3F51B5;
+}
+
+.pattern3{
+  color: #fff;
+  background-color: #3F51B5;
+  padding: 7px 0 5px 10px;
+}
+
+.pattern4{
+  color: #fff;
+  background-color: #7385E9;
+  padding: 7px 0 4px 10px;
+  border-bottom: 3px solid #3F51B5;
+}
+
+.pattern5{
+  padding: 4px 0 4px 10px;
+  border-left: 5px solid #3F51B5;
+}
+
+.pattern5-b{
+  padding: 4px 0 4px 10px;
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height:36px;
+    background-color: #3F51B5;
+  }
+}
+
+.pattern6{
+  display: inline-block;
+  position: relative;
+  span{
+    @include headline();
+    position: relative;
+    z-index: 999;
+  }
+  &::after{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 50;
+    content: "";
+    display: block;
+    background-color: #DCEE39;
+    width: 100%;
+    height:16px;
+  }
+}
+
+.pattern6-2{  /* z-index:-1 */
+  display: inline-block;
+  position: relative;
+  &::after{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    content: "";
+    display: block;
+    background-color: #DCEE39;
+    width: 100%;
+    height:16px;
+  }
+}
+
+.pattern7{
+  padding: 7px 0 5px 10px;
+  span{
+    @include headline();
+    background-color: #DCEE39;
+  }
+}
+
+.pattern8{
+  color: #fff;
+  background-color: #3F51B5;
+  padding: 7px 0 5px 10px;
+  position: relative;
+  &::after{
+    content: "";
+    display: inline-block;
+    width: 19.5px;
+    height: 18px;
+    background-color: #3F51B5;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    transform: rotate(44deg);
+    z-index: -1;
+  }
+}
+
+.pattern9{
+  padding-bottom: 6px;
+  border-bottom: 2px solid #3F51B5;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 83px;
+    height: 2px;
+    background-color: #B53F4F;
+    position: absolute;
+    top: 35px;
+    left: 0;
+  }
+}
+
+.pattern10{
+  padding: 4px 0 4px 10px;
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 10px;
+    left: -2px;
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height:16px;
+    background-color: #3F51B5;
+  }
+}
+
+.pattern11{
+  text-align: center;
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 44px;
+    left: calc(50% - (52px / 2));
+    content: "";
+    display: block;
+    width: 52px;
+    height:4px;
+    background-color: #3F51B5;
+  }
+}
+
+.pattern12{
+  display: flex;
+  img{
+    margin-top: 50px;
+  }
+  span{
+    @include headline();
+    padding-left: 15px;
+  }
+}
+
+.pattern13{
+  display: flex;
+  img{
+    margin-top: 20px;
+  }
+  span{
+    @include headline();
+    margin-right: 10px;
+  }
+}
+
+.pattern13a{
+  display: inline-block;
+  position: relative;
+  img{
+    position: absolute;
+    top: -12px;
+    right: -32px;
+  }
+  span{
+    @include headline();
+  }
+}
+
+.box{
+  text-align: center;
+}
+.pattern14{
+  display: inline-block;
+  position: relative;
+  &::before,&::after{
+    content: "";
+    display: block;
+    width: 3px;
+    height:32px;
+    background-color: #3F51B5;
+    position: absolute;
+    top: 0;
+  }
+  &::before{
+    top: 0;
+    left: -20px;
+    transform: rotate(-20deg);
+  }
+  &::after{
+    top: 0;
+    right: -20px;
+    transform: rotate(20deg);
+  }
+}
+
+.pattern15{
+  text-align: center;
+  position: relative;
+  &::before,&::after{
+    content: "";
+    display: block;
+    width: 130px;
+    height:3px;
+    background-color: #3F51B5;
+    position: absolute;
+    top: 50%;
+  }
+  &::before{
+    left: 0;
+  }
+  &::after{
+    right: 0;
+  }
+}
+
+.pattern16{
+  display: inline-block;
+  padding: 7px 12px 5px 10px;
+  background: repeating-linear-gradient(135deg, #7385E9, #7385E9 10px, #A7BAFF 10px, #A7BAFF 20px);
+}
+
+.pattern17{
+  display: inline-block;
+  padding: 7px 12px 5px 10px;
+  position: relative;
+  &::after{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    content: "";
+    display: inline-block;
+    background: repeating-linear-gradient(135deg, #7385E9, #7385E9 10px, #A7BAFF 10px, #A7BAFF 20px);
+    width: 100%;
+    height:16px;
+  }
+}
+
