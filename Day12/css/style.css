@@ -284,7 +284,7 @@ card
   margin-top: 2vw;
 }
 @media screen and (min-width: 1101px) {
-  .card__content:not(:nth-child(3n)) {
+  .card__content:not(:nth-child(3n)) { /* 3の倍数個以外は右余白をつける */
     margin-right: 2%;
   }
 }
@@ -295,20 +295,17 @@ card
   .card__content:nth-child(n+3) { /*  3個目以降は上に余白をつける */
     margin-top: 2vw;
   }
-  .card__content:not(:nth-child(2n)) {
-    margin-right: 0;
+  .card__content:not(:nth-child(2n)) { /* 2の倍数以外は右余白をつける */
     margin-right: 2%;
   }
 }
 @media screen and (max-width: 767px) {
   .card__content {
     width: 100%;
+    margin-right: 0;
   }
   .card__content:nth-child(n+2) { /*  2個目以降は上に余白をつける */
     margin-top: 2vw;
-  }
-  .card__content:not(:nth-child(3n)) {
-    margin-right: 0;
   }
 }
 

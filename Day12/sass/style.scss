@@ -272,9 +272,9 @@ card
     &:nth-child(n + 2){ /*  2個目以降は上に余白をつける */
       margin-top: 2vw;
     }
-    }
   }
 }
+
 .card__content{
   img{
     width: 100%;
