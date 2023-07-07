@@ -1,7 +1,7 @@
 $(function(){
     //ナビメニューのドロワー開閉(Click時)
     $('.header-nav-item.drawer').click(function(){
-        $(this).find('.header-nav-item-drawer-item').slideToggle();
+        $(this).find('.header-nav-item-drawerbox').slideToggle();
     })
 
     //Topへ戻るボタンの表示/非表示を切り替える
