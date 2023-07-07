@@ -25,7 +25,6 @@ body {
   overflow-wrap: break-word;
   padding-top: 100px;
 }
-
 @media (max-width: 767px) {
   body {
     padding-top: 60px;
@@ -60,7 +59,6 @@ img {
   padding-top: 100px;
   padding-bottom: 120px;
 }
-
 @media (max-width: 767px) {
   .section {
     padding-top: 40px;
@@ -74,14 +72,12 @@ img {
   margin: 0 auto;
   height: inherit;
 }
-
 @media (max-width: 1247px) {
   .inner {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
-
 @media (max-width: 767px) {
   .inner {
     padding-left: 16px;
@@ -110,7 +106,6 @@ img {
   max-width: 100%;
   line-height: 1.6;
 }
-
 @media (max-width: 767px) {
   .button-arrow-right {
     padding: 14px 32px;
@@ -127,7 +122,6 @@ img {
   text-align: center;
   line-height: 1;
 }
-
 .section-title::after {
   content: "";
   background: #3f51b5;
@@ -139,20 +133,17 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-
 @media (max-width: 767px) {
   .section-title::after {
     width: 48px;
   }
 }
-
 @media (max-width: 1247px) {
   .section-title {
     font-size: 50px;
     padding-bottom: 28px;
   }
 }
-
 @media (max-width: 767px) {
   .section-title {
     font-size: 42px;
@@ -170,7 +161,6 @@ img {
   z-index: 20;
   height: 100px;
 }
-
 @media (max-width: 767px) {
   .header {
     height: 60px;
@@ -185,7 +175,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-
 @media (max-width: 767px) {
   .header__inner {
     padding-top: 14px;
@@ -199,24 +188,20 @@ img {
   line-height: 1;
   text-align: center;
 }
-
 .header__logo img {
   width: 205px;
   vertical-align: top;
 }
-
 @media (max-width: 1247px) {
   .header__logo img {
     width: 180px;
   }
 }
-
 @media (max-width: 767px) {
   .header__logo img {
     width: 148px;
   }
 }
-
 .header__logo a {
   text-decoration: none;
   -webkit-transition: all 0.3s ease 0s;
@@ -227,13 +212,11 @@ img {
   margin-left: auto;
   height: inherit;
 }
-
 @media (max-width: 767px) {
   .header__nav {
     display: none;
   }
 }
-
 .header__nav ul {
   list-style: none;
   padding: 0;
@@ -246,18 +229,15 @@ img {
           align-items: center;
   height: inherit;
 }
-
 .header__nav ul li {
   width: 100px;
   height: inherit;
 }
-
 @media (max-width: 1247px) {
   .header__nav ul li {
     width: 78px;
   }
 }
-
 .header__nav ul li a {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -269,7 +249,6 @@ img {
   position: relative;
   height: inherit;
 }
-
 .header__nav ul li a::after {
   content: "";
   position: absolute;
@@ -282,11 +261,9 @@ img {
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
-
 .header__nav ul li a:hover::after {
   opacity: 1;
 }
-
 @media (max-width: 767px) {
   .header__nav ul li a {
     padding-top: 12px;
@@ -299,13 +276,11 @@ img {
   width: calc(50% - 102px);
   padding-right: 75px;
 }
-
 @media (max-width: 1247px) {
   .header__nav-left {
     padding-right: 26px;
   }
 }
-
 .header__nav-left ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -317,13 +292,11 @@ img {
   width: calc(50% - 102px);
   padding-left: 75px;
 }
-
 @media (max-width: 1247px) {
   .header__nav-right {
     padding-left: 26px;
   }
 }
-
 .header__nav-right ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -337,13 +310,11 @@ img {
   position: relative;
   overflow: hidden;
 }
-
 @media (max-width: 1247px) {
   .mainvisual {
     height: 600px;
   }
 }
-
 @media (max-width: 767px) {
   .mainvisual {
     height: 500px;
@@ -360,14 +331,12 @@ img {
   text-align: center;
   line-height: 1.2;
 }
-
 @media (max-width: 1247px) {
   .mainvisual__content {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
-
 @media (max-width: 767px) {
   .mainvisual__content {
     padding-left: 16px;
@@ -379,13 +348,11 @@ img {
   font-size: 64px;
   font-weight: 700;
 }
-
 @media (max-width: 1247px) {
   .mainvisual__title {
     font-size: 56px;
   }
 }
-
 @media (max-width: 767px) {
   .mainvisual__title {
     font-size: 36px;
@@ -397,13 +364,11 @@ img {
   font-weight: 700;
   margin-top: 24px;
 }
-
 @media (max-width: 1247px) {
   .mainvisual__lead {
     font-size: 30px;
   }
 }
-
 @media (max-width: 767px) {
   .mainvisual__lead {
     font-size: 20px;
@@ -413,13 +378,11 @@ img {
 .mainvisual__button {
   margin-top: 36px;
 }
-
 @media (max-width: 1247px) {
   .mainvisual__button {
     margin-top: 34px;
   }
 }
-
 @media (max-width: 767px) {
   .mainvisual__button {
     margin-top: 34px;
@@ -444,7 +407,6 @@ img {
   width: 384px;
   max-width: 100%;
 }
-
 @media (max-width: 767px) {
   .button-mainvisual {
     padding: 20px 36px;
