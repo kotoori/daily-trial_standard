@@ -1,0 +1,208 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+  background: #FFF;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; /* 画面下の隙間を消す */
+}
+
+.container {
+  max-width: 475px;
+  margin: 50px auto;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* button 共通 */
+.btn {
+  width: 230px;
+  height: 50px;
+  background-color: #3F51B5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.1875;
+  text-align: left;
+  padding-left: 16px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 30px;
+}
+
+/* button 1 */
+/* button 2 */
+.btn-pattern2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 12px;
+}
+
+.btn-pattern2-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 12px;
+}
+.btn-pattern2-a::after {
+  content: "▶";
+  display: block;
+}
+
+.btn-pattern2-a2 {
+  position: relative;
+  padding-right: 12px;
+}
+.btn-pattern2-a2::after {
+  content: "▶";
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 12px;
+}
+
+/* button 3 */
+.btn-pattern3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.btn-pattern3-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+.btn-pattern3-a::after {
+  content: "▶";
+  display: block;
+}
+
+.btn-pattern3-a2 { /* ボタンの文章が変わると,▶の位置調整が必要になる */
+  position: relative;
+  padding-right: 12px;
+}
+.btn-pattern3-a2::after {
+  content: "▶";
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 73px;
+}
+
+/* button4 */
+.btn-pattern4 {
+  padding-left: 25px;
+  -webkit-box-shadow: 0 5px 0 #25379B;
+          box-shadow: 0 5px 0 #25379B;
+}
+
+/* button5 */
+.btn-pattern5 {
+  padding-left: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3F51B5), to(#20295B));
+  background: linear-gradient(#3F51B5, #20295B);
+}
+
+/* button6 */
+.row {
+  height: 104px;
+  width: 100%;
+  background: #333333;
+  border: 1px solid #707070;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn-pattern6 {
+  padding-left: 25px;
+  background-color: rgba(51, 51, 51, 0);
+  border: 2px solid #FFFFFF;
+  border-radius: 0;
+  margin: auto;
+}
+
+/* button7 */
+.btn-pattern7 {
+  width: 123px;
+  height: 123px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* button8 */
+.btn8r {
+  border-radius: 115px;
+}
+
+/* button9 */
+.btn-pattern9 {
+  padding-left: 25px;
+  border-radius: 0;
+  position: relative;
+}
+.btn-pattern9::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #25379B;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
