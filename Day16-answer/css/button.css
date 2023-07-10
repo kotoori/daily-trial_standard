@@ -1,0 +1,261 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+@media (min-width: 1200px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1247px) {
+  .hidden-tab {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sp {
+    display: none;
+  }
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+
+.inner {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: inherit;
+}
+
+@media (max-width: 1247px) {
+  .inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.button {
+  padding: 80px 0;
+}
+
+.button__item {
+  padding: 1em;
+}
+
+.button__item--black {
+  background: #333;
+}
+
+.button01 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  background: #3f51b5;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.button02 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  background: #3f51b5;
+  color: #fff;
+  border-radius: 3px;
+  position: relative;
+}
+
+.button02::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: transparent url(../img/icon-arrow-right.png) no-repeat center center/contain;
+}
+
+.button03 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  background: #3f51b5;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.button03::after {
+  content: "";
+  display: inline-block;
+  background: transparent url(../img/icon-arrow-right.png) no-repeat center center/contain;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.button04 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  border-radius: 3px;
+  background: #3f51b5;
+  color: #fff;
+  -webkit-box-shadow: 0 5px 0 #25379b;
+          box-shadow: 0 5px 0 #25379b;
+}
+
+.button05 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3f51b5), to(#20295b));
+  background: linear-gradient(180deg, #3f51b5 0%, #20295b 100%);
+  color: #fff;
+}
+
+.button06 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.button07 {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+  background: #3f51b5;
+  color: #fff;
+  overflow: hidden;
+  padding: 36px 16px;
+}
+
+.button08 {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  border-radius: 115px;
+  min-width: 230px;
+  background: #3f51b5;
+  color: #fff;
+  position: relative;
+}
+
+.button08::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: transparent url(../img/icon-arrow-right.png) no-repeat center center/contain;
+}
+
+.button09 {
+  display: inline-block;
+  min-width: 230px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px 16px;
+  background: #3f51b5;
+  color: #fff;
+  border-bottom: 3px solid #26379c;
+}
