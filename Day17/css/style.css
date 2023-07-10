@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  background: #FFF;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom; /* 画面下の隙間を消す */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0 3%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .flex.flex-md {
+    display: block;
+  }
+}
+
+.color-bg-1 {
+  background-color: #EFEFEF;
+}
+
+.section__inner {
+  padding: 100px 0 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .section__inner {
+    padding: 70px 0 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section__inner {
+    padding: 40px 0 60px;
+  }
+}
+
+.section__title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 80px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .section__title {
+    margin-bottom: 78px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section__title {
+    margin-bottom: 48px;
+  }
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3f51b5;
+  margin: 24px auto 0;
+}
+
+/*=================================
+header
+=================================*/
+header {
+  background-color: #3f51b5;
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1607843137);
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+}
+
+.header-inner {
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header-inner {
+    height: 60px;
+  }
+}
+
+.header__logo {
+  width: 205px;
+}
+@media screen and (max-width: 767px) {
+  .header__logo {
+    margin: auto;
+  }
+}
+.header__logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav__item:not(:first-child) {
+  margin-left: 40px;
+}
+.header__nav__item a {
+  padding-bottom: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.header__nav__item a:hover {
+  border-bottom: 2px solid #e81919;
+}
+
+/*=================================
+top
+=================================*/
+.top {
+  position: relative;
+  margin-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .top {
+    margin-top: 60px;
+  }
+}
+.top img {
+  width: 100vw;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .top img {
+    height: 420px;
+  }
+}
+
+.top__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.top__content__title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .top__content__title {
+    font-size: 2.5rem;
+  }
+}
+
+.top__content__subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .top__content__subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.top__content__button {
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: 384px;
+  height: 72px;
+}
+.top__content__button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 767px) {
+  .top__content__button {
+    width: 50%;
+  }
+}
+.top__content__button a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 24px 0;
+  line-height: 1;
+}
+
+/*=================================
+card
+=================================*/
+.card.flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card__content {
+  width: 32%;
+  background-color: #fff;
+  padding: 16px;
+  padding-bottom: 11px; /* 下余白は、textのline-heightを考慮 */
+  border-radius: 4px;
+}
+.card__content:nth-child(n+4) { /*  4個目以降は上に余白をつける */
+  margin-top: 2vw;
+}
+@media screen and (min-width: 1101px) {
+  .card__content:not(:nth-child(3n)) { /* 3の倍数個以外は右余白をつける */
+    margin-right: 2%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .card__content {
+    width: 49%;
+  }
+  .card__content:nth-child(n+3) { /*  3個目以降は上に余白をつける */
+    margin-top: 2vw;
+  }
+  .card__content:not(:nth-child(2n)) { /* 2の倍数以外は右余白をつける */
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card__content {
+    width: 100%;
+    margin-right: 0;
+  }
+  .card__content:nth-child(n+2) { /*  2個目以降は上に余白をつける */
+    margin-top: 2vw;
+  }
+}
+
+.card__content img {
+  width: 100%;
+  height: auto;
+}
+
+.card__content__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #6F7579;
+  margin: 16px 0 11px; /* 下余白は、textのline-heightを考慮 */
+}
+@media screen and (max-width: 767px) {
+  .card__content__title {
+    text-align: center;
+  }
+}
+
+.card__content__text {
+  color: #6F7579;
+  line-height: 1.625;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .card__content__text {
+    line-height: 1.4;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card__content__text {
+    line-height: 1.2;
+  }
+}
