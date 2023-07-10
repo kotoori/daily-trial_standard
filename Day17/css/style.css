@@ -47,6 +47,10 @@ img {
   vertical-align: bottom; /* 画面下の隙間を消す */
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -339,4 +343,123 @@ card
   .card__content__text {
     line-height: 1.2;
   }
+}
+
+/*=================================
+News
+=================================*/
+.news__content {
+  max-width: 800px;
+}
+
+.news__list {
+  margin-bottom: 60px;
+  line-height: 1.3125;
+}
+@media screen and (max-width: 767px) {
+  .news__list {
+    padding-bottom: 30px;
+  }
+}
+
+.news__row {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.news__row:not(:first-of-type) {
+  padding-top: 20px;
+}
+.news__row:not(:last-of-type) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #707070;
+}
+
+.news__meta {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.news__date {
+  width: 105px;
+  padding-top: 7px;
+}
+
+.news__tag {
+  background-color: transparent;
+  border-radius: 4px;
+  margin-right: 20px;
+  height: 32px;
+}
+.news__tag a {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  width: 80px;
+  padding: 6px 0;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .news__tag a {
+    font-size: 0.75rem;
+    padding: 4px 0;
+  }
+}
+.news__tag.news__label-1 {
+  background-color: #666666;
+}
+.news__tag.news__label-2 {
+  color: #fff;
+  background-color: #3F51B5;
+}
+.news__tag.news__label-3 {
+  color: #fff;
+  background-color: #E81919;
+}
+.news__tag:hover {
+  opacity: 0.7;
+}
+
+.news__title {
+  width: calc(100% - 105px - 100px);
+}
+.news__title a {
+  color: #333;
+  display: inline-block;
+  padding-top: 6px;
+}
+.news__title a:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 767px) {
+  .news__title {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.news__more {
+  text-align: center;
+}
+.news__more a {
+  font-weight: bold;
+  color: #e81919;
+  position: relative;
+  padding-right: 17px;
+}
+.news__more a::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 11px;
+  position: absolute;
+  right: 0;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent url(../images/news-arrow@2x.png) no-repeat center center/contain;
+}
+.news__more a:hover {
+  opacity: 0.7;
 }

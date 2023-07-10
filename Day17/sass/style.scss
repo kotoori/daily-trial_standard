@@ -41,6 +41,10 @@ img {
   vertical-align: bottom;  /* 画面下の隙間を消す */
 }
 
+a{
+  text-decoration: none;
+}
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -304,3 +308,114 @@ card
   }
 }
 
+/*=================================
+News
+=================================*/
+.news__content{
+  max-width: 800px;
+}
+
+.news__list{
+  margin-bottom: 60px;
+  line-height: calc(21 / 16);
+  @include mq(sp){
+    padding-bottom: 30px;
+  }
+}
+
+
+.news__row{
+  justify-content: flex-start;
+  &:not(:first-of-type){
+    padding-top: 20px;
+  }
+  &:not(:last-of-type){
+    padding-bottom: 12px;
+    border-bottom: 1px solid #707070;
+  }
+
+}
+
+.news__meta{
+  justify-content: flex-start;
+}
+
+.news__date{
+  width: 105px;
+  padding-top: 7px;
+}
+
+.news__tag{
+  background-color: transparent;
+  border-radius: 4px;
+  margin-right: 20px;
+  height: 32px;
+  a{
+    color: $color-font-1;
+    font-weight: bold;
+    display: block;
+    width: 80px;
+    padding: 6px 0;
+    text-align: center;
+    @include mq(sp){
+      font-size: 0.75rem;
+      padding: 4px 0;
+    }
+  }
+
+  &.news__label-1{
+    background-color: #666666;
+  }
+  &.news__label-2{
+    color: $color-font-1;
+    background-color: #3F51B5;
+  }
+  &.news__label-3{
+    color: $color-font-1;
+    background-color: #E81919;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.news__title{
+  width: calc(100% - 105px - 100px);
+  a{
+    color: $color-font-2;
+    display: inline-block;
+    padding-top: 6px;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  @include mq(sp){
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.news__more{
+  text-align: center;
+  a{
+    font-weight: bold;
+    color: $color-sub-1;
+    position: relative;
+    padding-right: 17px;
+    &::after{
+      content: "";
+      display: block;
+      width: 7px;
+      height: 11px;
+      position: absolute;
+      right:0;
+      top: 60%;
+      transform: translateY(-50%);
+      background: transparent url(../images/news-arrow@2x.png) no-repeat center center / contain;
+    }
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  
+}
