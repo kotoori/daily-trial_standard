@@ -136,6 +136,13 @@ img {
   }
 }
 
+.pattern6-bg{  /* z-index:-1 */
+  display: inline-block;
+  background: linear-gradient(transparent 50%, #DCEE39 0);
+}
+
+
+
 .pattern7{
   padding: 7px 0 5px 10px;
   span{
@@ -163,6 +170,25 @@ img {
   }
 }
 
+.pattern8-2 {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+}
+.pattern8-2:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  // border-left: 15px solid yellow;
+  // border-right: 15px solid greenyellow;
+  // border-bottom: 15px solid pink;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+
 .pattern9{
   padding-bottom: 6px;
   border-bottom: 2px solid #3F51B5;
@@ -174,7 +200,7 @@ img {
     height: 2px;
     background-color: #B53F4F;
     position: absolute;
-    top: 35px;
+    top: 100%;
     left: 0;
   }
 }
@@ -184,8 +210,9 @@ img {
   position: relative;
   &::before{
     position: absolute;
-    top: 10px;
+    top: 50%;
     left: -2px;
+    transform: translateY(-50%);
     content: "";
     display: inline-block;
     width: 4px;
@@ -200,7 +227,8 @@ img {
   &::before{
     position: absolute;
     top: 44px;
-    left: calc(50% - (52px / 2));
+    left: 50%;
+    transform: translateX(-50%);
     content: "";
     display: block;
     width: 52px;
@@ -217,6 +245,22 @@ img {
   span{
     @include headline();
     padding-left: 15px;
+  }
+}
+
+.pattern12-bg{
+  position: relative;
+  padding-left: 30px;
+  &::before{
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background: url(../image/check.svg) no-repeat center center / contain;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -243,6 +287,24 @@ img {
     @include headline();
   }
 }
+
+.pattern13-bg{
+  position: relative;
+  display: inline-block;
+  padding-right: 27px;
+  &::before{
+    content: "";
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    background: url(../image/glass.svg) no-repeat center center / contain;
+    position: absolute;
+    right: 0;
+    top:-30%;
+  }
+}
+
+
 
 .box{
   text-align: center;
@@ -293,6 +355,29 @@ img {
     &::before,&::after{
       width: 15vw;
     }
+  }
+}
+
+.pattern15-line{
+  position: relative;
+  text-align: center;
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 100%;
+    background-color: #3F51B5;
+  }
+  span{
+    @include headline();
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    padding: 0 12px;
   }
 }
 

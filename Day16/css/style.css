@@ -149,6 +149,12 @@ img {
   height: 16px;
 }
 
+.pattern6-bg { /* z-index:-1 */
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(0, #DCEE39));
+  background: linear-gradient(transparent 50%, #DCEE39 0);
+}
+
 .pattern7 {
   padding: 7px 0 5px 10px;
 }
@@ -181,6 +187,23 @@ img {
   z-index: -1;
 }
 
+.pattern8-2 {
+  position: relative;
+  padding: 0.6em;
+  background: #e0edff;
+}
+
+.pattern8-2:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+  width: 0;
+  height: 0;
+}
+
 .pattern9 {
   padding-bottom: 6px;
   border-bottom: 2px solid #3F51B5;
@@ -193,7 +216,7 @@ img {
   height: 2px;
   background-color: #B53F4F;
   position: absolute;
-  top: 35px;
+  top: 100%;
   left: 0;
 }
 
@@ -203,8 +226,10 @@ img {
 }
 .pattern10::before {
   position: absolute;
-  top: 10px;
+  top: 50%;
   left: -2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   content: "";
   display: inline-block;
   width: 4px;
@@ -219,7 +244,9 @@ img {
 .pattern11::before {
   position: absolute;
   top: 44px;
-  left: calc(50% - 26px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   content: "";
   display: block;
   width: 52px;
@@ -242,6 +269,23 @@ img {
   color: #333;
   line-height: 1.2083333333;
   padding-left: 15px;
+}
+
+.pattern12-bg {
+  position: relative;
+  padding-left: 30px;
+}
+.pattern12-bg::before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background: url(../image/check.svg) no-repeat center center/contain;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .pattern13 {
@@ -276,6 +320,22 @@ img {
   font-weight: bold;
   color: #333;
   line-height: 1.2083333333;
+}
+
+.pattern13-bg {
+  position: relative;
+  display: inline-block;
+  padding-right: 27px;
+}
+.pattern13-bg::before {
+  content: "";
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background: url(../image/glass.svg) no-repeat center center/contain;
+  position: absolute;
+  right: 0;
+  top: -30%;
 }
 
 .box {
@@ -331,6 +391,34 @@ img {
   .pattern15::before, .pattern15::after {
     width: 15vw;
   }
+}
+
+.pattern15-line {
+  position: relative;
+  text-align: center;
+}
+.pattern15-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: #3F51B5;
+}
+.pattern15-line span {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2083333333;
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  padding: 0 12px;
 }
 
 .pattern16 {

@@ -57,7 +57,7 @@ img {
   display: block;
   box-sizing: border-box;
   margin: 0 auto 30px;
- ;
+  cursor: pointer;
 }
 
 /* button 1 */
@@ -94,6 +94,20 @@ img {
   }
 }
 
+.btn-pattern2-img{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;           /* traosformとセットで中央寄せ */
+    right: 12px;
+    transform: translateY(-50%); /* topとセットで中央寄せ */
+    width: 14px;
+    height:14px;
+    background: transparent url(../image/arrow.svg);
+  }
+}
+
 /* button 3 */
 .btn-pattern3{
   display: flex;
@@ -126,6 +140,21 @@ img {
     right: 73px;
   }
 }
+
+.btn-pattern3-img{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;           /* traosformとセットで中央寄せ */
+    right: 73px;
+    transform: translateY(-50%); /* topとセットで中央寄せ */
+    width: 14px;
+    height:14px;
+    background: transparent url(../image/arrow.svg);
+  }
+}
+
 
 /* button4 */
 .btn-pattern4{
@@ -163,9 +192,9 @@ img {
   width: 123px;
   height: 123px;
   text-align: center;
+  line-height: calc(19 / 16);
   padding: 0;
   border-radius: 50%;
-
 }
 
 /* button8 */
