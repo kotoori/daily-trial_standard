@@ -473,12 +473,17 @@ Price
 .price__content__table{
   width: 100%;
   height: 100%;
+  table-layout: fixed;
   @include mq(tab){
     height: 286px;
   }
   @include mq(sp){
     height: 200px;
   }
+}
+
+.price__table__header:first-of-type{
+  width: 24%;
 }
 
 .price__table__header,
@@ -491,12 +496,8 @@ Price
   height: calc(100% / 5);
 }
 
-.Price__table__row__title{
-  width: 24%;
-}
 
 .Price__table__row__data{
-  width: 38%;
   color:$color-font-2;
   font-weight: bold;
   background-color: #FFF;

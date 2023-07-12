@@ -533,6 +533,7 @@ Price
 .price__content__table {
   width: 100%;
   height: 100%;
+  table-layout: fixed;
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
   .price__content__table {
@@ -545,6 +546,10 @@ Price
   }
 }
 
+.price__table__header:first-of-type {
+  width: 24%;
+}
+
 .price__table__header,
 .Price__table__row__title {
   background-color: #999999;
@@ -555,12 +560,7 @@ Price
   height: 20%;
 }
 
-.Price__table__row__title {
-  width: 24%;
-}
-
 .Price__table__row__data {
-  width: 38%;
   color: #333;
   font-weight: bold;
   background-color: #FFF;
