@@ -8,9 +8,13 @@ $(function(){
   const drawerList = $('.drawer__list');
 
   drawerMenu.on('click',function(){
-    console.log("click");
-    drawerList.slideToggle();
+    $(this).find(drawerList).slideToggle();
   })
+
+  /* 全てのドロワーメニューを閉じる */
+  function drawerClose(){
+    drawerList.hide();
+  }
 
   /*==============================
   Topに戻るボタン
@@ -38,7 +42,10 @@ $(function(){
     let target = $(href == "#" || href == "" ? 'html' : href);
     let targetY = target.offset().top;
     // animateで移動します
-    $('html, body').animate({scrollTop : targetY}, scrollTime, 'swing');
+    $('html, body').animate({scrollTop : targetY}, scrollTime, 'swing',
+      function(){
+        drawerClose();
+      });
     return false;
   })
 }); /* jQuery  $(function(){ */
