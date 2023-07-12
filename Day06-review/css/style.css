@@ -68,6 +68,34 @@ header{
     font-weight: 600;
 }
 
+.drawer__menu{
+    position: relative;
+    cursor: pointer;
+}
+
+.drawer__list{
+    position: absolute;
+    width: 100%;
+    display: none;  /* 初期状態は非表示 */
+}
+
+.drawer__list__item{
+    background-color: #fff;
+    text-align: center;
+    width: inherit;
+    border-top: 1px solid #d8d8d8;
+}
+
+.drawer__list__item a{
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+
+.drawer__list__item:nth-child(1){
+    border: none;
+}
+
 /*========================
 top
 =========================*/

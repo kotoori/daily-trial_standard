@@ -16,7 +16,14 @@
         <nav>
             <ul class="header-nav">
                 <li class="header-nav-item"><a href="#about">デイトラとは</a></li>
-                <li class="header-nav-item"><a href="#course">コース一覧</a></li>
+                <li class="header-nav-item drawer__menu">
+                    <a>コース一覧</a>
+                    <ul class="drawer__list">
+                        <li class="drawer__list__item"><a href="#course-web-first">初級</a></li>
+                        <li class="drawer__list__item"><a href="#course-web-second">中級</a></li>
+                        <li class="drawer__list__item"><a href="#course-web-third">上級</a></li>
+                    </ul>
+                </li>
                 <li class="header-nav-item"><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
@@ -52,15 +59,15 @@
         <div class="container">
             <h2 class="section-title">コース一覧</h2>
             <ul class="course-content">
-                <li class="course-content-item">
+                <li class="course-content-item" id="course-web-first">
                     <img src="./img/web_first.png" alt="Web制作コース初級編">
                     <p class="course-item-text">HTML / CSS / Bootstrap</p>
                 </li>
-                <li class="course-content-item">
+                <li class="course-content-item"  id="course-web-second">
                     <img src="./img/web_second.png" alt="Web制作コース中級編">
                     <p class="course-item-text">HTML / CSS / JavaScript / jQuery</p>
                 </li>
-                <li class="course-content-item">
+                <li class="course-content-item"  id="course-web-third">
                     <img src="./img/web_third.png" alt="Web制作コース上級編">
                     <p class="course-item-text">PHP / WordPress</p>
                 </li>
@@ -84,5 +91,9 @@
             <p class="footer-text">Copyright(C) 2020 東京フリーランス ALL Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
