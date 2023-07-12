@@ -169,6 +169,50 @@ course
     margin-bottom: 5px;
 }
 
+/************* モーダル **************/
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,50%);
+    padding: 40px 20px;
+    overflow: auto;
+    box-sizing: border-box;
+    display: none;        /* フェードイン時はFlexを使用し子要素を縦横中央に配置 */
+    align-items: center;    /* 子要素を垂直方向に中央揃え */
+    justify-content: center;  /* 子要素に水平方向に中央揃え */
+}
+
+/*モーダル枠の指定*/
+.modal-body{
+    position: relative;
+    width: 85%;
+}
+/*モーダルを閉じるボタンの指定*/
+.modal-close{
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*モーダル内のコンテンツの指定*/
+.modal-content{
+    user-select: none;
+    text-align: left;
+}
+
 /*========================
 contact
 =========================*/

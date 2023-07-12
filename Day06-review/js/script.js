@@ -48,4 +48,64 @@ $(function(){
       });
     return false;
   })
+
+  /*==============================
+  モーダルで画像を拡大表示
+  ==============================*/
+  const open = $('.course-content-item img');
+  const close = $('.modal-close');
+  const container = $('.modal-container');
+  const content = $('.modal-content')
+
+  //bodyを固定する関数
+  function bodyFix() {
+    const scrollPosition = $(window).scrollTop();
+    $('body').css({
+      'position': 'fixed',
+      'width': '100%',
+      'z-index': '1',
+      'top': -scrollPosition
+    });
+  }
+
+  //以下、body固定を解除する関数
+  function bodyFixReset() {
+    const offsetPosition = $('body').offset().top;
+    const scrollPosition = $(window).scrollTop();
+    $('body').css({
+      'position': 'relative',
+      'width': 'auto',
+      'top': 'auto'
+    });
+    //scroll位置を調整
+    $('html, body').scrollTop(scrollPosition - offsetPosition);
+  }
+
+  //開くボタンをクリックしたらモーダルを表示する
+  open.on('click',function(){
+    content.append(this.outerHTML);
+    bodyFix();
+    container.fadeIn().css('display','flex');
+    return false;
+  })
+
+  //モーダルを閉じる関数
+  function modalClose(){
+    container.fadeOut(function(){
+      bodyFixReset();
+      content.empty();
+    });
+  }
+
+  //閉じるボタンをクリックしたらモーダルを閉じる
+  close.on('click',function(){
+    modalClose();
+  });
+
+  //モーダルの外側をクリックしたらモーダルを閉じる
+  $(document).on('click',function(e) {
+    if(!$(e.target).closest('.modal-body').length) {
+      modalClose();
+    }
+  });
 }); /* jQuery  $(function(){ */
