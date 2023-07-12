@@ -424,6 +424,7 @@ Price
 =================================*/
 .price__content{
   display: flex;
+  align-items: flex-start;
   @include mq(tab){
     display: block;
   }
@@ -487,13 +488,18 @@ Price
 }
 
 .price__table__header,
+.Price__table__row__title,
+.Price__table__row__data{
+  height: 57px;
+}
+
+.price__table__header,
 .Price__table__row__title{
   background-color: #999999;
   color: $color-font-1;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  height: calc(100% / 5);
 }
 
 
@@ -545,6 +551,7 @@ Access
   padding-top: 50%; /* = height ÷ width × 100 */
   margin: 0 auto;
   iframe{
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -567,8 +574,7 @@ Access
 }
 .access__info__head,
 .access__info__text{
-  line-height: calc(27 / 16);
-  padding-top: 10px;
+  padding-top: 16px;
 }
 
 .access__button{
