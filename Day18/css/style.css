@@ -644,6 +644,11 @@ Time
 .time__table th:first-child {
   width: 232px;
 }
+@media screen and (max-width: 767px) {
+  .time__table th:first-child {
+    width: 115px;
+  }
+}
 .time__table th:nth-last-child(2) {
   background-color: #5160EA;
 }
@@ -665,6 +670,47 @@ Time
 }
 .time__table.type2 td:nth-last-child(1) {
   background-color: #E99BAD;
+}
+
+/*=================================
+No Border
+=================================*/
+.table__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.table {
+  background-color: #EFEFEF;
+  border: 1px solid transparent;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.head {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  background: #DDDDDD;
+  height: 64px;
+}
+
+.data {
+  padding-left: 24px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bold;
+  background-color: #fff;
+  height: 64px;
+}
+@media screen and (max-width: 767px) {
+  .data {
+    padding-left: 12px;
+  }
+}
+.data span {
+  color: #DF3939;
+  font-size: 1.5rem;
 }
 
 /*=================================
