@@ -540,6 +540,75 @@ Price
 }
 
 /*=================================
+Time
+=================================*/
+.time__content{
+  max-width: 800px;
+}
+
+.time__table{
+  margin: 0 auto;
+  table-layout: fixed;
+  width: 100%;
+  &:not(:first-child){
+    margin-top: 32px;
+  }
+}
+
+.time__table,
+.time__table th,
+.time__table td{
+  border-collapse: collapse;
+  border: 1px solid #707070;
+}
+
+.time__table th,
+.time__table td{
+  text-align: center;
+  vertical-align: middle;;
+  height: 48px;
+}
+
+.time__table th{
+  background-color: #999999;
+  color: $color-font-1;
+  font-weight: bold;
+  &:first-child{
+    width: 232px;
+
+  }
+  &:nth-last-child(2){
+    background-color: #5160EA;
+  }
+  &:nth-last-child(1){
+    background-color: #EA5174;
+  }
+}
+
+.time__table td{
+  background-color: #FFF;
+  color: $color-font-2;
+  font-weight: bold;
+}
+
+.time__table{
+  &.type1 tr{
+    &:nth-child(odd) td{
+      background-color: #DDDDDD;
+    }
+  }
+  &.type2 td{
+    &:nth-last-child(2){
+      background-color: #B3C9E9;
+    }
+    &:nth-last-child(1){
+      background-color: #E99BAD;
+    }
+
+  }
+}
+
+/*=================================
 Access
 =================================*/
 .access__content{
