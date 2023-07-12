@@ -97,6 +97,26 @@ header{
 }
 
 /*========================
+topに戻るボタン
+=========================*/
+.return-top{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 40px;
+    bottom: 70px;
+    display: none; /* 初期状態は非表示 */
+}
+
+.return-top img{
+    opacity: 0.3;
+}
+
+.return-top img:hover{
+    opacity: 0.9;
+}
+
+/*========================
 top
 =========================*/
 .top{
