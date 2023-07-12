@@ -550,6 +550,7 @@ Time
   margin: 0 auto;
   table-layout: fixed;
   width: 100%;
+  background-color: #fff;
   &:not(:first-child){
     margin-top: 32px;
   }
@@ -588,17 +589,15 @@ Time
 }
 
 .time__table td{
-  background-color: #FFF;
   color: $color-font-2;
   font-weight: bold;
 }
 
 .time__table{
-  &.type1 tr{
-    &:nth-child(odd) td{
+  &.type1 tr:nth-child(2n + 1){
       background-color: #DDDDDD;
-    }
   }
+
   &.type2 td{
     &:nth-last-child(2){
       background-color: #B3C9E9;
