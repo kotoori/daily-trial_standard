@@ -463,3 +463,137 @@ News
 .news__more a:hover {
   opacity: 0.7;
 }
+
+/*=================================
+Price
+=================================*/
+.price__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .price__content {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .price__content {
+    display: block;
+  }
+}
+
+.price__content__image {
+  max-width: 454px;
+  width: 38%;
+  margin-right: 40px;
+}
+.price__content__image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .price__content__image {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .price__content__image {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+}
+
+.price__content__info {
+  width: calc(62% - 40px);
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .price__content__info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .price__content__info {
+    width: 100%;
+  }
+}
+
+.price__content__table,
+.price__table__header,
+.Price__table__row__title,
+.Price__table__row__data {
+  border: 1px solid #707070;
+  border-collapse: collapse;
+}
+
+.price__content__table {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .price__content__table {
+    height: 286px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .price__content__table {
+    height: 200px;
+  }
+}
+
+.price__table__header,
+.Price__table__row__title {
+  background-color: #999999;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  height: 20%;
+}
+
+.Price__table__row__title {
+  width: 24%;
+}
+
+.Price__table__row__data {
+  width: 38%;
+  color: #333;
+  font-weight: bold;
+  background-color: #FFF;
+  padding-right: 25px;
+  text-align: right;
+  vertical-align: middle;
+}
+.Price__table__row__data.is-special {
+  color: #e81919;
+}
+.Price__table__row__data.is-special span {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+@media screen and (max-width: 767px) {
+  .Price__table__row__data.is-special span {
+    font-size: 0.75rem;
+  }
+}
+
+.price__content__text {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  color: #333;
+}
+.price__content__text a {
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+.price__content__text a:hover {
+  opacity: 0.7;
+}
