@@ -684,3 +684,188 @@ Access
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+
+/*=================================
+Contact
+=================================*/
+.contact__container {
+  max-width: 800px;
+  background-color: #FFF;
+  padding: 60px;
+}
+@media screen and (max-width: 767px) {
+  .contact__container {
+    padding: 10px;
+    width: calc(90% - 20px);
+  }
+}
+
+.contact__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 767px) {
+  .contact__text {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.contact__text label {
+  width: 160px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  line-height: 27/16;
+}
+@media screen and (min-width: 1101px) {
+  .contact__text label:nth-child(n+3) {
+    margin-top: 70px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contact__text label:nth-child(n+3) {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__text label {
+    margin-top: 0;
+  }
+  .contact__text label:nth-child(n+2) {
+    margin-top: 30px;
+  }
+}
+.contact__text input, .contact__text select, .contact__text textarea {
+  width: calc(100% - 160px);
+  border: 1px solid #707070;
+  padding: 12px 16px;
+}
+.contact__text input::-webkit-input-placeholder, .contact__text select::-webkit-input-placeholder, .contact__text textarea::-webkit-input-placeholder {
+  color: #CCCCCC;
+}
+.contact__text input::-moz-placeholder, .contact__text select::-moz-placeholder, .contact__text textarea::-moz-placeholder {
+  color: #CCCCCC;
+}
+.contact__text input:-ms-input-placeholder, .contact__text select:-ms-input-placeholder, .contact__text textarea:-ms-input-placeholder {
+  color: #CCCCCC;
+}
+.contact__text input::-ms-input-placeholder, .contact__text select::-ms-input-placeholder, .contact__text textarea::-ms-input-placeholder {
+  color: #CCCCCC;
+}
+.contact__text input::placeholder, .contact__text select::placeholder, .contact__text textarea::placeholder {
+  color: #CCCCCC;
+}
+@media screen and (min-width: 1101px) {
+  .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__text input, .contact__text select, .contact__text textarea {
+    width: 100%;
+    margin: 10px 0 30px;
+  }
+}
+.contact__text input, .contact__text select {
+  height: 38px;
+}
+.contact__text textarea {
+  height: 240px;
+}
+
+.contact__radio {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .contact__radio {
+    margin-bottom: 30px;
+  }
+}
+.contact__radio input {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+@media screen and (max-width: 767px) {
+  .contact__radio input {
+    margin-bottom: 10px;
+  }
+}
+.contact__radio label {
+  color: #333;
+  margin-right: 36px;
+}
+@media screen and (max-width: 767px) {
+  .contact__radio label {
+    margin-right: 18px;
+    display: inline-block;
+    width: calc(100% - 20px - 24px);
+    margin-bottom: 10px;
+  }
+}
+
+.contact__policy-check {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact__policy-check input {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 24px;
+}
+@media screen and (max-width: 767px) {
+  .contact__policy-check input {
+    margin-right: 10px;
+  }
+}
+.contact__policy-check label > a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.contact__policy-check label > a:hover {
+  opacity: 0.7;
+}
+
+.contact__button {
+  display: block;
+  max-width: 304px;
+  width: 90%;
+  height: 56px;
+  text-align: center;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+  position: relative;
+}
+.contact__button:hover {
+  opacity: 0.7;
+}
+.contact__button::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 16px;
+  background: transparent url(../images/button-arrow@2x.png) no-repeat center/contain;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
