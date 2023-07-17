@@ -777,19 +777,24 @@ Contact
   padding: 0 16px;
 }
 .contact__text input::-webkit-input-placeholder, .contact__text select::-webkit-input-placeholder, .contact__text textarea::-webkit-input-placeholder {
-  color: hsl(0, 0%, 80%);
+  color: #CCCCCC;
+  font-size: 0.875rem;
 }
 .contact__text input::-moz-placeholder, .contact__text select::-moz-placeholder, .contact__text textarea::-moz-placeholder {
-  color: hsl(0, 0%, 80%);
+  color: #CCCCCC;
+  font-size: 0.875rem;
 }
 .contact__text input:-ms-input-placeholder, .contact__text select:-ms-input-placeholder, .contact__text textarea:-ms-input-placeholder {
-  color: hsl(0, 0%, 80%);
+  color: #CCCCCC;
+  font-size: 0.875rem;
 }
 .contact__text input::-ms-input-placeholder, .contact__text select::-ms-input-placeholder, .contact__text textarea::-ms-input-placeholder {
-  color: hsl(0, 0%, 80%);
+  color: #CCCCCC;
+  font-size: 0.875rem;
 }
 .contact__text input::placeholder, .contact__text select::placeholder, .contact__text textarea::placeholder {
-  color: hsl(0, 0%, 80%);
+  color: #CCCCCC;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 1101px) {
   .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
@@ -812,6 +817,7 @@ Contact
 }
 .contact__text textarea {
   height: 240px;
+  padding-top: 12px;
 }
 
 .contact__kind {
@@ -894,6 +900,7 @@ Contact
   color: #fff;
   font-weight: bold;
   margin: 0 auto;
+  border: none;
   border-radius: 8px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);

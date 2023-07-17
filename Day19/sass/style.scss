@@ -689,7 +689,8 @@ Contact
     border: 1px solid #707070;
     padding: 0 16px;
     &::placeholder{
-      color: hsl(0, 0%, 80%);
+      color: #CCCCCC;
+      font-size: 0.875rem;
     }
     @include mq(pc){
       &:nth-child(n + 3){
@@ -711,6 +712,7 @@ Contact
   }
   textarea{
     height: 240px;
+    padding-top: 12px;
   }
 }
 
@@ -782,6 +784,7 @@ Contact
   color: $color-font-1;
   font-weight: bold;
   margin: 0 auto;
+  border: none;
   border-radius: 8px;
   box-shadow: 0 3px 6px #00000029;
   position: relative;
