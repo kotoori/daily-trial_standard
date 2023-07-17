@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- ページ属性情報 -->
+  <title>form テンプレート</title>
+  <meta name="description" content="ブラウザごとのformのスタイルをリセットして、オリジナルのスタイルを適用する" />
+
+  <!-- favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- css --->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form method="post" action="">
+      <!-- text -->
+      <h2 class="form-title">text</h2>
+      <input class="text-test" type="text">
+
+      <!-- textarea -->
+      <h2 class="form-title">textarea</h2>
+      <textarea class="textarea-text"></textarea>
+
+      <!-- radio -->
+      <h2 class="form-title">radio</h2>
+      <label><input class="radio-test" type="radio" name="radio-name"><span>ラジオ１</span></label>
+      <label><input class="radio-test" type="radio" name="radio-name"><span>ラジオ２</span></label>
+      <label><input class="radio-test" type="radio" name="radio-name"><span>ラジオ３</span></label>
+    </form>
+
+    <!-- checkbox -->
+    <h2 class="form-title">check box</h2>
+    <label><input class="check-test" type="checkbox" name="check-name"><span>チェック１</span></label>
+    <label><input class="check-test" type="checkbox" name="check-name"><span>チェック２</span></label>
+    <label><input class="check-test" type="checkbox" name="check-name"><span>チェック３</span></label>
+
+    <!-- select box(drop down menu) -->
+    <h2 class="form-title">select box(drop down menu)</h2>
+    <select class="select-test">
+      <option>セレクトA</option>
+      <option>セレクトB</option>
+      <option>セレクトC</option>
+    </select>
+
+    <!-- ボタン(inputタグ) -->
+    <h2 class="form-title">ボタン(inputタグ)</h2>
+    <input class="submit-test" type="submit" value="送信">
+
+    <!-- ボタン(buttonタグ) -->
+    <h2 class="form-title">ボタン(buttonタグ)</h2>
+    <button class="submit-test2" type="submit" value="送信">送信する</button>
+
+    <!-- ファイル選択 -->
+    <h2 class="form-title">ファイル選択</h2>
+    <label id="file-test-label" for="file-test">ファイルを選択</label>
+    <input type="file" id="file-test">
+    <input type="text" id="file-test-name" disabled>
+
+  </div> <!-- container -->
+
+  <!-- jquery --->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
