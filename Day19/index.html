@@ -201,7 +201,7 @@
         <dt class="access__info__head">アクセス</dt>
         <dd class="access__info__text">〇〇駅から右に５分</dd>
       </dl>
-      <div class="access__button">
+      <div class="btn access__button btn__arrow">
         <a href="https://goo.gl/maps/hBod3nXg8qhkm7Af8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
       </div>
     </div><!-- container-->
@@ -227,18 +227,14 @@
           <textarea name="text" id="contact__text" placeholder="お問い合わせを入力してください"></textarea>
         </div>
         <div class="contact__radio">
-          <input type="radio" name="radio1" id="contact__radio1">
-          <label for="contact__radio1">ラジオ１</label>
-          <input type="radio" name="radio2" id="contact__radio2">
-          <label for="contact__radio2">ラジオ２</label>
-          <input type="radio" name="radio3" id="contact__radio3">
-          <label for="contact__radio3">ラジオ３</label>
+          <label><input type="radio" name="radio" value="1"><span>ラジオ１</span></label>
+          <label><input type="radio" name="radio" value="2"><span>ラジオ２</span></label>
+          <label><input type="radio" name="radio" value="3"><span>ラジオ３</span></label>
         </div>
         <div class="contact__policy-check">
-          <input type="checkbox" name="policy-check" required="required">
-          <label><a href="#">プライバシーポリシー</a>に合意する</label>
+          <label><input type="checkbox" name="policy-check"><span><a href="#">プライバシーポリシー</a>に合意する</span></label>
         </div>
-        <button type="submit" class="btn contact__button">送信する</button>
+        <button type="submit" class="btn contact__button btn__arrow">送信する</button>
       </form>
 
 

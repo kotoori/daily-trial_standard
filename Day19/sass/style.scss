@@ -102,6 +102,41 @@ a{
   }
 }
 
+.btn{
+  appearance: none;
+	display: inline-block;
+  max-width: 304px;
+  width: 90%;
+  height: 56px;
+	background-color: rgba(0, 0, 0, 0.32);
+	border: none;
+	border-radius: 8px;
+  box-shadow: 0 3px 6px #00000029;
+	cursor: pointer;
+	font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  &:hover, &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+  &.btn__arrow{
+    position: relative;
+    &::after{
+      content: "";
+      display: block;
+      width: 17px;
+      height: 16px;
+      background: transparent url(../images/button-arrow@2x.png) no-repeat center / contain;
+      position: absolute;
+      right: 12px;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}
 /*=================================
 header
 =================================*/
@@ -578,34 +613,14 @@ Access
 }
 
 .access__button{
+  display: block;
+  margin: 30px auto 0;
+  background-color: $color-main;
+  padding: 20px 0;
   a{
     display: block;
-    max-width: 304px;
-    width: 90%;
-    height: 56px;
-    text-align: center;
-    background-color: $color-main;
     color: $color-font-1;
     font-weight: bold;
-    padding: 20px 0;
-    margin: 30px auto 0;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px #00000029;
-    position: relative;
-    &:hover{
-      opacity: 0.7;
-    }
-    &::after{
-      content: "";
-      display: block;
-      width: 17px;
-      height: 16px;
-      background: transparent url(../images/button-arrow@2x.png) no-repeat center / contain;
-      position: absolute;
-      right: 12px;
-      top:50%;
-      transform: translateY(-50%);
-    }
   }
 }
 
@@ -750,19 +765,53 @@ Contact
     margin-bottom: 30px;
   }
   input{
-    transform: scale(1.5);
-    @include mq(sp){
-      margin-bottom: 10px;
+    display: none;
+    & + span {
+      cursor: pointer;
+      display: inline-block;
+      padding-left: 28px;
+      position: relative;
+      &::before {
+        background: #fff;
+        border: 1px solid #707070;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::after {
+        background: #3F51B5;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    &:checked + span::after {
+      opacity: 1;
     }
   }
   label{
     color: $color-font-2;
     margin-right: 36px;
     @include mq(sp){
-      margin-right: 18px;
       display: inline-block;
-      width: calc(100% - 20px - 24px);
-      margin-bottom: 10px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 }
@@ -771,49 +820,63 @@ Contact
   color: $color-font-2;
   text-align: center;
   margin-bottom: 30px;
+
   input{
-    transform: scale(1.5);
-    margin-right: 24px;
-    @include mq(sp){
-      margin-right: 10px;
+    display: none;
+
+    & + span {
+      cursor: pointer;
+      display: inline-block;
+      padding-left: 49px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid #707070;
+        border-radius: 0;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 16px;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent url(../images/check@2x.png) center center / contain;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+      }
+      & > a{
+        color: $color-font-2;
+        font-weight: bold;
+        text-decoration: underline;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
     }
-  }
-  label>a{
-    color: $color-font-2;
-    font-weight: bold;
-    text-decoration: underline;
-    &:hover{
-      opacity: 0.7;
+    &:checked + span::after {
+      opacity: 1;
     }
   }
 }
 
-.contact__button{
-  display: block;
-  max-width: 304px;
-  width: 90%;
-  height: 56px;
-  text-align: center;
-  background-color: $color-main;
-  color: $color-font-1;
-  font-weight: bold;
-  margin: 0 auto;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px #00000029;
-  position: relative;
-  &:hover{
-    opacity: 0.7;
-  }
-  &::after{
-    content: "";
+.btn {
+  &.contact__button{
     display: block;
-    width: 17px;
-    height: 16px;
-    background: transparent url(../images/button-arrow@2x.png) no-repeat center / contain;
-    position: absolute;
-    right: 12px;
-    top:50%;
-    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color: $color-main;
+    color: $color-font-1;
   }
 }
