@@ -724,6 +724,35 @@ Contact
   color: #333;
   line-height: 27/16;
 }
+.contact__text label.is-required {
+  position: relative;
+}
+.contact__text label.is-required::after {
+  content: "必須";
+  display: block;
+  width: 44px;
+  height: 22px;
+  color: #fff;
+  background-color: #e81919;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 22px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  position: absolute;
+}
+@media screen and (min-width: 1101px) {
+  .contact__text label.is-required::after {
+    top: 24px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__text label.is-required::after {
+    top: -3px;
+    right: -60px;
+  }
+}
 @media screen and (min-width: 1101px) {
   .contact__text label:nth-child(n+3) {
     margin-top: 70px;
@@ -745,22 +774,22 @@ Contact
 .contact__text input, .contact__text select, .contact__text textarea {
   width: calc(100% - 160px);
   border: 1px solid #707070;
-  padding: 12px 16px;
+  padding: 0 16px;
 }
 .contact__text input::-webkit-input-placeholder, .contact__text select::-webkit-input-placeholder, .contact__text textarea::-webkit-input-placeholder {
-  color: #CCCCCC;
+  color: hsl(0, 0%, 80%);
 }
 .contact__text input::-moz-placeholder, .contact__text select::-moz-placeholder, .contact__text textarea::-moz-placeholder {
-  color: #CCCCCC;
+  color: hsl(0, 0%, 80%);
 }
 .contact__text input:-ms-input-placeholder, .contact__text select:-ms-input-placeholder, .contact__text textarea:-ms-input-placeholder {
-  color: #CCCCCC;
+  color: hsl(0, 0%, 80%);
 }
 .contact__text input::-ms-input-placeholder, .contact__text select::-ms-input-placeholder, .contact__text textarea::-ms-input-placeholder {
-  color: #CCCCCC;
+  color: hsl(0, 0%, 80%);
 }
 .contact__text input::placeholder, .contact__text select::placeholder, .contact__text textarea::placeholder {
-  color: #CCCCCC;
+  color: hsl(0, 0%, 80%);
 }
 @media screen and (min-width: 1101px) {
   .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
@@ -783,6 +812,22 @@ Contact
 }
 .contact__text textarea {
   height: 240px;
+}
+
+.contact__kind {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* 標準のスタイルを無効にする */
+  background: transparent url(../images/select-arrow@2x.png) no-repeat center right 12px/17px 14px;
+}
+.contact__kind:invalid {
+  color: #CCCCCC;
+}
+.contact__kind option {
+  color: #333;
+}
+.contact__kind option:first-child {
+  color: #CCCCCC;
 }
 
 .contact__radio {

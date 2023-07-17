@@ -642,6 +642,31 @@ Contact
     font-weight: bold;
     color: $color-font-2;
     line-height: 27 / 16;
+    &.is-required{
+      position: relative;
+      &::after{
+        content: "必須";
+        display: block;
+        width: 44px;
+        height: 22px;
+        color: $color-font-1;
+        background-color: $color-sub-1;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 22px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        position: absolute;
+        @include mq(pc){
+          top: 24px;
+          left: 0;
+        }
+        @include mq(sp){
+          top: -3px;
+          right: -60px;
+        }
+      }
+    }
     @include mq(pc){
       &:nth-child(n + 3){
         margin-top: 70px;
@@ -662,9 +687,9 @@ Contact
   input, select, textarea{
     width: calc(100% - 160px);
     border: 1px solid #707070;
-    padding: 12px 16px;
+    padding: 0 16px;
     &::placeholder{
-      color: #CCCCCC;
+      color: hsl(0, 0%, 80%);
     }
     @include mq(pc){
       &:nth-child(n + 3){
@@ -686,6 +711,20 @@ Contact
   }
   textarea{
     height: 240px;
+  }
+}
+
+.contact__kind{
+  appearance: none; /* 標準のスタイルを無効にする */
+  background: transparent url(../images/select-arrow@2x.png) no-repeat center right 12px/ 17px 14px;
+  &:invalid{
+    color: #CCCCCC;
+  }
+  option{
+    color: $color-font-2;
+    &:first-child{
+      color: #CCCCCC;
+    }
   }
 }
 
