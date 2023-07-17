@@ -771,68 +771,81 @@ Contact
     margin-top: 30px;
   }
 }
-.contact__text input, .contact__text select, .contact__text textarea {
-  width: calc(100% - 160px);
+.contact__text input, .contact__text textarea, .contact__text select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
   border: 1px solid #707070;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.875rem;
   padding: 0 16px;
+  width: calc(100% - 160px);
 }
-.contact__text input::-webkit-input-placeholder, .contact__text select::-webkit-input-placeholder, .contact__text textarea::-webkit-input-placeholder {
+.contact__text input:focus, .contact__text textarea:focus, .contact__text select:focus {
+  border: 2px solid #707070;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+.contact__text input::-webkit-input-placeholder, .contact__text textarea::-webkit-input-placeholder, .contact__text select::-webkit-input-placeholder {
   color: #CCCCCC;
   font-size: 0.875rem;
 }
-.contact__text input::-moz-placeholder, .contact__text select::-moz-placeholder, .contact__text textarea::-moz-placeholder {
+.contact__text input::-moz-placeholder, .contact__text textarea::-moz-placeholder, .contact__text select::-moz-placeholder {
   color: #CCCCCC;
   font-size: 0.875rem;
 }
-.contact__text input:-ms-input-placeholder, .contact__text select:-ms-input-placeholder, .contact__text textarea:-ms-input-placeholder {
+.contact__text input:-ms-input-placeholder, .contact__text textarea:-ms-input-placeholder, .contact__text select:-ms-input-placeholder {
   color: #CCCCCC;
   font-size: 0.875rem;
 }
-.contact__text input::-ms-input-placeholder, .contact__text select::-ms-input-placeholder, .contact__text textarea::-ms-input-placeholder {
+.contact__text input::-ms-input-placeholder, .contact__text textarea::-ms-input-placeholder, .contact__text select::-ms-input-placeholder {
   color: #CCCCCC;
   font-size: 0.875rem;
 }
-.contact__text input::placeholder, .contact__text select::placeholder, .contact__text textarea::placeholder {
+.contact__text input::placeholder, .contact__text textarea::placeholder, .contact__text select::placeholder {
   color: #CCCCCC;
   font-size: 0.875rem;
 }
 @media screen and (min-width: 1101px) {
-  .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
+  .contact__text input:nth-child(n+3), .contact__text textarea:nth-child(n+3), .contact__text select:nth-child(n+3) {
     margin-top: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
-  .contact__text input:nth-child(n+3), .contact__text select:nth-child(n+3), .contact__text textarea:nth-child(n+3) {
+  .contact__text input:nth-child(n+3), .contact__text textarea:nth-child(n+3), .contact__text select:nth-child(n+3) {
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 767px) {
-  .contact__text input, .contact__text select, .contact__text textarea {
+  .contact__text input, .contact__text textarea, .contact__text select {
     width: 100%;
     margin: 10px 0 30px;
   }
 }
-.contact__text input, .contact__text select {
+.contact__text input {
+  background-image: none;
   height: 38px;
 }
 .contact__text textarea {
+  background-image: none;
   height: 240px;
   padding-top: 12px;
 }
-
-.contact__kind {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; /* 標準のスタイルを無効にする */
+.contact__text select {
   background: transparent url(../images/select-arrow@2x.png) no-repeat center right 12px/17px 14px;
+  height: 38px;
 }
-.contact__kind:invalid {
+.contact__text select:invalid {
   color: #CCCCCC;
 }
-.contact__kind option {
+.contact__text select option {
   color: #333;
 }
-.contact__kind option:first-child {
+.contact__text select option:first-child {
   color: #CCCCCC;
 }
 
