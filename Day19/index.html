@@ -47,7 +47,7 @@
       <div class="container">
         <p class="top__content__title">一番伝えたいことを書く</p>
         <p class="top__content__subtitle">リードリードリード</p>
-        <button class="btn top__content__button"><a href="#">お問い合わせ</a></button>
+        <button class="top__content__button"><a href="#">お問い合わせ</a></button>
       </div>
     </div>
   </div>
@@ -211,21 +211,21 @@
     <h2 class="section__title">Contact</h2>
     <div class="container contact__container">
       <form action="#" method="post" class="contact__form">
-        <div class="contact__text">
-          <label for="contact__name" class="is-required">お名前</label>
-          <input type="text" name="name" id="contact__name" class="is-required" placeholder="山田　太郎" required="required">
-          <label for="contact__email"  class="is-required">メールアドレス</label>
-          <input type="email" name="email" id="contact__email" class="is-required" placeholder="text@example.com" required="required">
-          <label for="contact__kind">お問い合わせ種別</label>
-          <select name="kind" id="contact__kind" required>
+        <dl class="contact__text">
+          <dt><label for="contact__name" class="is-required">お名前</label></dt>
+          <dd><input type="text" name="name" id="contact__name" class="is-required" placeholder="山田　太郎" required="required"></dd>
+          <dt><label for="contact__email"  class="is-required">メールアドレス</label></dt>
+          <dd><input type="email" name="email" id="contact__email" class="is-required" placeholder="text@example.com" required="required"></dd>
+          <dt><label for="contact__kind">お問い合わせ種別</label></dt>
+          <dd><select name="kind" id="contact__kind" required>
             <option value="" class="contact__kind-default">−−−</option>
             <option value="1">種別1</option>
             <option value="2">種別2</option>
             <option value="3">種別3</option>
-          </select>
-          <label for="contact__text">お問い合わせ内容</label>
-          <textarea name="text" id="contact__text" placeholder="お問い合わせを入力してください"></textarea>
-        </div>
+          </select></dd>
+          <dt><label for="contact__text">お問い合わせ内容</label></dt>
+          <dd><textarea name="text" id="contact__text" placeholder="お問い合わせを入力してください"></textarea></dd>
+        </dl>
         <div class="contact__radio">
           <label><input type="radio" name="radio" value="1"><span>ラジオ１</span></label>
           <label><input type="radio" name="radio" value="2"><span>ラジオ２</span></label>

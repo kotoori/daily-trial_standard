@@ -711,6 +711,8 @@ Contact
   max-width: 800px;
   background-color: #FFF;
   padding: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
   .contact__container {
@@ -736,12 +738,53 @@ Contact
     margin-bottom: 20px;
   }
 }
-.contact__text label {
+.contact__text dt {
   width: 160px;
-  margin-top: 10px;
+}
+@media screen and (min-width: 1101px) {
+  .contact__text dt:nth-child(n+3) {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contact__text dt:nth-child(n+3) {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__text dt {
+    margin-top: 0;
+  }
+  .contact__text dt:nth-child(n+2) {
+    margin-top: 30px;
+  }
+}
+.contact__text dd {
+  width: calc(100% - 160px);
+}
+@media screen and (min-width: 1101px) {
+  .contact__text dd:nth-child(n+3) {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .contact__text dd:nth-child(n+3) {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__text dd {
+    width: 100%;
+    margin: 10px 0 30px;
+  }
+}
+.contact__text label {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
   font-weight: bold;
   color: #333;
-  line-height: 27/16;
+  line-height: 1.6875;
 }
 .contact__text label.is-required {
   position: relative;
@@ -762,7 +805,7 @@ Contact
 }
 @media screen and (min-width: 1101px) {
   .contact__text label.is-required::after {
-    top: 24px;
+    top: 30px;
     left: 0;
   }
 }
@@ -770,24 +813,6 @@ Contact
   .contact__text label.is-required::after {
     top: -3px;
     right: -60px;
-  }
-}
-@media screen and (min-width: 1101px) {
-  .contact__text label:nth-child(n+3) {
-    margin-top: 70px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .contact__text label:nth-child(n+3) {
-    margin-top: 50px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .contact__text label {
-    margin-top: 0;
-  }
-  .contact__text label:nth-child(n+2) {
-    margin-top: 30px;
   }
 }
 .contact__text input, .contact__text textarea, .contact__text select {
@@ -801,7 +826,7 @@ Contact
   font-family: inherit;
   font-size: 0.875rem;
   padding: 0 16px;
-  width: calc(100% - 160px);
+  width: 100%;
 }
 .contact__text input:focus, .contact__text textarea:focus, .contact__text select:focus {
   border: 2px solid #707070;
@@ -829,22 +854,6 @@ Contact
   color: #CCCCCC;
   font-size: 0.875rem;
 }
-@media screen and (min-width: 1101px) {
-  .contact__text input:nth-child(n+3), .contact__text textarea:nth-child(n+3), .contact__text select:nth-child(n+3) {
-    margin-top: 60px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .contact__text input:nth-child(n+3), .contact__text textarea:nth-child(n+3), .contact__text select:nth-child(n+3) {
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .contact__text input, .contact__text textarea, .contact__text select {
-    width: 100%;
-    margin: 10px 0 30px;
-  }
-}
 .contact__text input {
   background-image: none;
   height: 38px;
@@ -869,7 +878,7 @@ Contact
 }
 
 .contact__radio {
-  margin-bottom: 60px;
+  margin-bottom: 67px;
 }
 @media screen and (max-width: 767px) {
   .contact__radio {
@@ -921,7 +930,7 @@ Contact
 }
 .contact__radio label {
   color: #333;
-  margin-right: 36px;
+  margin-right: 32px;
 }
 @media screen and (max-width: 767px) {
   .contact__radio label {
@@ -935,7 +944,7 @@ Contact
 .contact__policy-check {
   color: #333;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .contact__policy-check input {
   display: none;
@@ -970,7 +979,7 @@ Contact
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: transparent url(../images/check@2x.png) center center/contain;
+  background: transparent url(../images/check@2x.png) no-repeat center/contain;
   opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
