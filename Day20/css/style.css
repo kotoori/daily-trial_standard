@@ -216,7 +216,6 @@ header {
 .header__nav__item a {
   padding-bottom: 8px;
   color: #fff;
-  text-decoration: none;
 }
 .header__nav__item a:hover {
   border-bottom: 2px solid #e81919;
@@ -1001,4 +1000,203 @@ Contact
   margin: 0 auto;
   background-color: #3f51b5;
   color: #fff;
+}
+
+/*=================================
+go to top
+=================================*/
+.goto-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+}
+.goto-top:hover {
+  opacity: 0.7;
+}
+
+/*=================================
+footer
+=================================*/
+footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#333333));
+  background: linear-gradient(#666666, #333333);
+  padding-top: 60px;
+}
+
+.footer__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 46px;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__contents {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__contents {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__company {
+  width: 205px;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__company {
+    margin: 0 auto 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__company {
+    margin: 0 auto 25px;
+  }
+}
+
+.footer__company__logo {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.footer__company__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer__company__info {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.footer__company__info_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.footer__company__info_row:not(:first-child) {
+  margin-top: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__company__info_row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__company__info_row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer__link__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__link__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__link__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  .footer__link__item:not(:first-child) {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__link__item {
+    margin: 0 10px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__link__item {
+    margin: 0 10px 25px;
+  }
+}
+.footer__link__item :hover {
+  opacity: 0.7;
+}
+.footer__link__item a {
+  color: #fff;
+}
+
+.footer__sns__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 205px;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__sns__items {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__sns__items {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer__sns__item {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 1101px) {
+  .footer__sns__item:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__sns__item {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__sns__item {
+    margin: 0 20px;
+  }
+}
+.footer__sns__item :hover {
+  opacity: 0.7;
+}
+
+.footer__copyright {
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  padding-bottom: 24px;
 }

@@ -188,7 +188,6 @@ header{
   a{
     padding-bottom: 8px;
     color: $color-font-1;
-    text-decoration: none;
 
     &:hover{
       border-bottom: 2px solid $color-sub-1;
@@ -887,3 +886,158 @@ Contact
     color: $color-font-1;
   }
 }
+
+/*=================================
+go to top
+=================================*/
+.goto-top{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+/*=================================
+footer
+=================================*/
+footer{
+  background: linear-gradient(#666666, #333333);
+  padding-top: 60px;
+}
+
+.footer__contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  @include mq(tab){
+    display: block;
+  }
+  @include mq(sp){
+    display: block;
+    margin-bottom: 30px;
+  }
+
+}
+
+.footer__company{
+  width: 205px;
+  @include mq(tab){
+    margin:0 auto 40px;
+  }
+  @include mq(sp){
+    margin:0 auto 25px;
+  }
+}
+
+.footer__company__logo{
+  width: 100%;
+  margin-bottom: 32px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer__company__info{
+  color: $color-font-1;
+  font-size: 0.875rem;
+}
+.footer__company__info_row{
+  display: flex;
+  justify-content: flex-start;
+  &:not(:first-child){
+    margin-top: 14px;
+  }
+  @include mq(tab){
+    justify-content: center;
+  }
+  @include mq(sp){
+    justify-content: center;
+  }
+}
+
+.footer__link{
+}
+
+.footer__link__items{
+  display: flex;
+  justify-content: space-between;
+  @include mq(tab){
+    justify-content: center;
+  }
+  @include mq(sp){
+    justify-content: center;
+  }
+}
+
+.footer__link__item{
+  @include mq(pc){
+    &:not(:first-child){
+      margin-left: 40px;
+    }
+  }
+  @include mq(tab){
+    margin: 0 10px 40px;
+  }
+  @include mq(sp){
+    margin: 0 10px 25px;
+  }
+
+  :hover{
+    opacity: 0.7;
+  }
+  a{
+    color: $color-font-1;
+  }
+}
+
+.footer__sns{
+}
+
+.footer__sns__items{
+  display: flex;
+  justify-content: flex-end;
+  width: 205px;
+  @include mq(tab){
+    width: 100%;
+    justify-content: center;
+  }
+  @include mq(sp){
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.footer__sns__item{
+  width: 30px;
+  height: 30px;
+  @include mq(pc){
+    &:not(:first-child){
+      margin-left: 16px;
+    }
+  }
+  @include mq(tab){
+    margin: 0 20px;
+  }
+  @include mq(sp){
+    margin: 0 20px;
+  }
+  :hover{
+    opacity: 0.7;
+  }
+}
+
+.footer__copyright{
+  color: $color-font-1;
+  font-size: 0.875rem;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+
+
