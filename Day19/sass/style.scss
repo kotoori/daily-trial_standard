@@ -887,3 +887,127 @@ Contact
     color: $color-font-1;
   }
 }
+
+/*=================================
+Contact2(余力課題)
+=================================*/
+.contact__form__dl{
+  height: 877px;
+}
+
+.contact__form__row{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 60px;
+  &:first-child{
+    margin-top: 0;
+  }
+
+}
+
+.contact__form__item{
+  width: 160px;
+  font-weight: bold;
+  &.is-required{
+    position: relative;
+    &::after{
+      content: "必須";
+      display: block;
+      background-color: $color-sub-1;
+      border: none;
+      border-radius: 4px;
+      color: $color-font-1;
+      font-size: 0.875rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      position: absolute;
+      left: 0;
+      top: 24px;
+    }
+  }
+}
+
+.contact__form__user{
+  width: calc(100% - 160px);
+}
+
+.contact__form__name{
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #707070;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0 16px;
+  width: 100%;
+  height:38px;
+  &:focus {
+    border: 2px solid #707070;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+
+.contact__form__file__label{
+  background-color: $color-main;
+  color: $color-font-1;
+  width: 183px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.contact__form__file__input{
+  display: none;
+}
+
+.contact__form__file__text{
+  margin-top: 12px;
+  font-weight: bold;
+  line-height: calc(24 / 16);
+}
+
+.contact__form__file__display{
+  position: relative;
+  display: none;
+}
+.contact__form__file__name {
+  appearance: none;
+  background: #DDDDDD;
+  border: 1px solid #AAAAAA;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  padding: 0 16px;
+  width: 100%;
+  height:38px;
+  margin-top: 12px;
+  &:focus {
+    border: 2px solid #707070;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.contact__form__file__cancel{
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 12px;
+  right: 3px;
+  box-sizing: content-box;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.7;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
