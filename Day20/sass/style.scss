@@ -932,18 +932,29 @@ footer{
 }
 
 .footer__company{
-  width: 205px;
+  width: calc(205px / 1200px * 100%);
   @include mq(tab){
+    width: 100%;
     margin:0 auto 40px;
   }
   @include mq(sp){
+    width: 100%;
     margin:0 auto 25px;
   }
 }
 
 .footer__company__logo{
-  width: 100%;
+  width: 205px;
   margin-bottom: 32px;
+  @include mq(tab){
+    margin: 0 auto 32px;
+  }
+  @include mq(sp){
+    margin: 0 auto 32px;
+  }
+}
+
+.footer__company__logo{
   img{
     width: 100%;
     height: auto;
@@ -969,17 +980,18 @@ footer{
 }
 
 .footer__link{
+  width: calc((1200px - 205px * 2) / 1200px * 100%);
+  @include mq(tab){
+    width: 100%;
+  }
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .footer__link__items{
   display: flex;
-  justify-content: space-between;
-  @include mq(tab){
-    justify-content: center;
-  }
-  @include mq(sp){
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
 .footer__link__item{
@@ -1004,18 +1016,22 @@ footer{
 }
 
 .footer__sns{
+  width: calc(205px / 1200px * 100%);
+  @include mq(tab){
+    width: 100%;
+  }
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .footer__sns__items{
   display: flex;
   justify-content: flex-end;
-  width: 205px;
   @include mq(tab){
-    width: 100%;
     justify-content: center;
   }
   @include mq(sp){
-    width: 100%;
     justify-content: center;
   }
 }

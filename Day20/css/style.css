@@ -1055,23 +1055,36 @@ footer {
 }
 
 .footer__company {
-  width: 205px;
+  width: 17.0833333333%;
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
   .footer__company {
+    width: 100%;
     margin: 0 auto 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__company {
+    width: 100%;
     margin: 0 auto 25px;
   }
 }
 
 .footer__company__logo {
-  width: 100%;
+  width: 205px;
   margin-bottom: 32px;
 }
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__company__logo {
+    margin: 0 auto 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__company__logo {
+    margin: 0 auto 32px;
+  }
+}
+
 .footer__company__logo img {
   width: 100%;
   height: auto;
@@ -1108,27 +1121,27 @@ footer {
   }
 }
 
+.footer__link {
+  width: 65.8333333333%;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__link {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__link {
+    width: 100%;
+  }
+}
+
 .footer__link__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .footer__link__items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footer__link__items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 1101px) {
@@ -1153,6 +1166,20 @@ footer {
   color: #fff;
 }
 
+.footer__sns {
+  width: 17.0833333333%;
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .footer__sns {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__sns {
+    width: 100%;
+  }
+}
+
 .footer__sns__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1160,11 +1187,9 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 205px;
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
   .footer__sns__items {
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1172,7 +1197,6 @@ footer {
 }
 @media screen and (max-width: 767px) {
   .footer__sns__items {
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
