@@ -216,8 +216,10 @@ header {
 .header__nav__item a {
   padding-bottom: 8px;
   color: #fff;
+  -webkit-transition: border-bottom 0.3s ease 0s;
+  transition: border-bottom 0.3s ease 0s;
 }
-.header__nav__item a:hover {
+.header__nav__item a.is-active, .header__nav__item a:hover {
   border-bottom: 2px solid #e81919;
 }
 
