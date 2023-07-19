@@ -1,0 +1,222 @@
+$breakpoints: (
+//キー:値
+  'sp':  'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
+  'tab': 'screen and (min-width: 768px) and (max-width: 1100px)', //768以上（タブレット・PC）用の表示）
+  'pc':  'screen and (min-width: 1101px)' //1101px以上（PC）用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+$main-color: #3F51B5;
+$font-color: #fff;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: #000;
+  background: #FFF;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  vertical-align: top;  /* 画面下の隙間を消す */
+}
+
+.container{
+  max-width: 475px;
+  margin: 50px auto;
+  @include mq(sp){
+    padding: 0 15px;
+  }
+}
+
+/* button 共通 */
+.btn{
+  width: 230px;
+  height: 50px;
+  background-color: $main-color;
+  color: $font-color;
+  font-size: 16px;
+  font-weight: bold;
+  border:none;
+  border-radius: 3px;
+  line-height: calc(19 / 16);
+  text-align: left;
+  padding-left: 16px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto 30px;
+  cursor: pointer;
+}
+
+/* button 1 */
+/* button 2 */
+.btn-pattern2{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-right: 12px;
+}
+
+.btn-pattern2-a{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-right: 12px;
+  &::after{
+    content: "▶";
+    display:block;
+  }
+}
+
+.btn-pattern2-a2{
+  position: relative;
+  padding-right: 12px;
+  &::after{
+    content: "▶";
+    display:block;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+  }
+}
+
+.btn-pattern2-img{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;           /* traosformとセットで中央寄せ */
+    right: 12px;
+    transform: translateY(-50%); /* topとセットで中央寄せ */
+    width: 14px;
+    height:14px;
+    background: transparent url(../image/arrow.svg);
+  }
+}
+
+/* button 3 */
+.btn-pattern3{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-pattern3-a{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+  &::after{
+    content: "▶";
+    display:block;
+  }
+}
+
+.btn-pattern3-a2{ /* ボタンの文章が変わると,▶の位置調整が必要になる */
+  position: relative;
+  padding-right: 12px;
+  &::after{
+    content: "▶";
+    display:block;
+    position: absolute;
+    top: 18px;
+    right: 73px;
+  }
+}
+
+.btn-pattern3-img{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;           /* traosformとセットで中央寄せ */
+    right: 73px;
+    transform: translateY(-50%); /* topとセットで中央寄せ */
+    width: 14px;
+    height:14px;
+    background: transparent url(../image/arrow.svg);
+  }
+}
+
+
+/* button4 */
+.btn-pattern4{
+  padding-left: 25px;
+  box-shadow: 0 5px 0 #25379B;
+}
+
+/* button5 */
+.btn-pattern5{
+  padding-left: 25px;
+  background: linear-gradient($main-color,#20295B);
+}
+
+/* button6 */
+.row{
+  height: 104px;
+  width: 100%;
+  background: #333333;
+  border: 1px solid #707070;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn-pattern6{
+  padding-left: 25px;
+  background-color: #33333300;
+  border: 2px solid #FFFFFF;
+  border-radius: 0;
+  margin: auto;
+}
+
+/* button7 */
+.btn-pattern7{
+  width: 123px;
+  height: 123px;
+  text-align: center;
+  line-height: calc(19 / 16);
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* button8 */
+.btn8r{
+  border-radius: 115px;
+}
+
+/* button9 */
+.btn-pattern9{
+  padding-left: 25px;
+  border-radius: 0;
+  position: relative;
+
+  &::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #25379B;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
