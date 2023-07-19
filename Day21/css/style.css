@@ -223,6 +223,7 @@ img {
   width: 150px;
 }
 
+/* 一瞬拡大 */
 .btn-pattern3-img {
   position: relative;
 }
@@ -237,7 +238,24 @@ img {
   height: 14px;
   background: transparent url(../image/arrow.svg);
 }
+.btn-pattern3-img:hover {
+  -webkit-animation: zoom 0.3s;
+          animation: zoom 0.3s;
+}
 
+@-webkit-keyframes zoom {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes zoom {
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
 /* button4 凹むボタン */
 .btn-pattern4 {
   padding-left: 25px;
@@ -253,11 +271,17 @@ img {
           transform: translateY(5px);
 }
 
-/* button5 */
+/* button5 文字にモザイク*/
 .btn-pattern5 {
   padding-left: 25px;
   background: -webkit-gradient(linear, left top, left bottom, from(#3F51B5), to(#20295B));
   background: linear-gradient(#3F51B5, #20295B);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn-pattern5:hover {
+  color: transparent;
+  text-shadow: 0 0 5px #FFF;
 }
 
 /* button6 */
@@ -275,12 +299,19 @@ img {
   margin-bottom: 30px;
 }
 
+/* 文字を抜いてシャドウをかける */
 .btn-pattern6 {
   padding-left: 25px;
-  background-color: rgba(51, 51, 51, 0);
+  background-color: #333333;
   border: 2px solid #FFFFFF;
   border-radius: 0;
   margin: auto;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn-pattern6:hover {
+  color: #333333;
+  text-shadow: -1px 1px 5px #FFF, 1px -1px 5px #FFF;
 }
 
 /* button7 */

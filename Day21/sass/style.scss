@@ -200,6 +200,7 @@ img {
   }
 }
 
+/* 一瞬拡大 */
 .btn-pattern3-img{
   position: relative;
   &::after{
@@ -212,8 +213,15 @@ img {
     height:14px;
     background: transparent url(../image/arrow.svg);
   }
+  &:hover{
+    animation: zoom 0.3s;
+  }
 }
-
+@keyframes zoom {
+	50% {
+		transform: scale(1.05);
+	}
+}
 
 /* button4 凹むボタン */
 .btn-pattern4{
@@ -227,10 +235,15 @@ img {
   }
 }
 
-/* button5 */
+/* button5 文字にモザイク*/
 .btn-pattern5{
   padding-left: 25px;
   background: linear-gradient($main-color,#20295B);
+  transition: all 0.3s ease 0s;
+  &:hover{
+    color: transparent;
+    text-shadow: 0 0 5px #FFF;
+  }
 }
 
 /* button6 */
@@ -244,12 +257,18 @@ img {
   margin-bottom: 30px;
 }
 
+/* 文字を抜いてシャドウをかける */
 .btn-pattern6{
   padding-left: 25px;
-  background-color: #33333300;
+  background-color: #333333;
   border: 2px solid #FFFFFF;
   border-radius: 0;
   margin: auto;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    color: #333333;
+    text-shadow: -1px 1px 5px #FFF, 1px -1px 5px #FFF;
+  }
 }
 
 /* button7 */
