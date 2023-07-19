@@ -1,0 +1,353 @@
+// -----
+// 設定
+// -----
+
+// 色
+$color-main: #3f51b5; // ベース色
+$color-active: #e81919; // アクティブ色
+$color-background-base: #fff; // 背景色
+$color-text-base: #333; // テキスト色
+$hover-opacity: 0.6; // 透過度
+
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// 階層
+$layer: (
+	modal: 100, // モダール
+	drawer: 40, // ドロワー
+	floating: 30, // フローティングアイテム
+	header: 20, // ヘッダー
+	footer: 10, // フッター
+	default: 1,
+);
+
+// 余白
+$padding-pc: 24px;
+$padding-tab: 24px;
+$padding-sp: 16px;
+
+// ヘッダー高さ
+$header-height-pc: 100px;
+$header-height-sp: 60px;
+
+// フォント
+$font-family-default: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif; // 標準フォント
+$font-family-english: sans-serif;
+$font-family-base: $font-family-default;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$line-height-base: 1.6;
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"tab-only": "(min-width: 768px) and (max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",
+	"tab": "(max-width: #{$layout-width-inner + $padding-pc * 2 - 1px})",
+	"pc": "(min-width: #{$layout-width-inner})",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// -----
+// 初期化
+// -----
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	color: $color-text-base;
+	line-height: $line-height-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: $color-background-base;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+	padding-top: $header-height-pc;
+
+	@include mq('sp') {
+		padding-top: $header-height-sp;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+// -----
+// 補完クラス
+// -----
+
+// PCだけ非表示
+.hidden-pc {
+	@include mq('pc') {
+		display: none;
+	}
+}
+
+// タブレットだけ非表示
+.hidden-tab {
+	@include mq('tab-only') {
+		display: none;
+	}
+}
+
+// スマホだけ非表示
+.hidden-sp {
+	@include mq('sp') {
+		display: none;
+	}
+}
+
+// セクション
+.section {
+	padding-top: 100px;
+	padding-bottom: 120px;
+
+	@include mq('sp') {
+		padding-top: 40px;
+		padding-bottom: 80px;
+	}
+}
+
+// インナー
+.inner {
+	width: $layout-width-inner;
+	max-width: 100%;
+	margin: 0 auto;
+	height: inherit;
+
+	@include mq('tab') {
+		padding-left: $padding-tab;
+		padding-right: $padding-tab;
+	}
+
+	@include mq('sp') {
+		padding-left: $padding-sp;
+		padding-right: $padding-sp;
+	}
+}
+
+// -----
+// ホバー
+// -----
+.button {
+	padding: 80px 0;
+}
+
+.button__item {
+	padding: 1em;
+}
+
+.hover01 {
+	display: inline-block;
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		opacity: $hover-opacity;
+	}
+}
+
+.hover02 {
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0;
+	padding: 15px 16px;
+	background: #fff;
+	border: 0.1875em solid $color-main;
+	color: $color-main;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background: $color-main;
+		color: #fff;
+	}
+}
+
+.hover03 {
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	border-bottom: 5px solid darken($color-main, 16%);
+	background: $color-main;
+	color: #fff;
+	display: inline-block;
+	margin: 0;
+	padding: 15px 16px;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		border-bottom-color: transparent;
+		transform: translateY(5px);
+	}
+}
+
+.hover04 {
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+	background: $color-main;
+	margin: 0;
+	padding: 15px 16px;
+	color: #fff;
+	display: inline-block;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+		transform: translateY(-5px);
+	}
+}
+
+.hover05 {
+	display: inline-block;
+	min-width: 230px;
+	min-height: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.6s ease 0s;
+
+	&:hover {
+		transform: rotateX(360deg);
+	}
+}
+
+.hover06 {
+	display: inline-block;
+	min-width: 230px;
+	min-height: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.6s ease 0s;
+
+	&:hover {
+		transform: rotateY(360deg);
+	}
+}
+
+.hover07 {
+	display: inline-block;
+	min-width: 230px;
+	min-height: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.6s ease 0s;
+
+	&:hover {
+		transform: rotateZ(360deg);
+	}
+}
+
+.hover08 {
+	display: inline-block;
+	min-width: 230px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0;
+	padding: 15px 16px;
+	background: $color-main;
+	color: #fff;
+	border-radius: 3px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		transform: scale(1.1, 1.1);
+	}
+}
+
+.hover09 {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	color: $color-main;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		color: $color-active;
+	}
+}
+
+.hover10 {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	color: $color-main;
+	transition: all 0.3s ease 0s;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: $color-main;
+		transition: all 0.3s ease 0s;
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}
