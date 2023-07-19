@@ -188,10 +188,11 @@ header{
   a{
     padding-bottom: 8px;
     color: $color-font-1;
+    border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease 0s;
     &.is-active,
     &:hover{
-      border-bottom: 2px solid $color-sub-1;
+      border-bottom-color: $color-sub-1;
     }
   }
 }
