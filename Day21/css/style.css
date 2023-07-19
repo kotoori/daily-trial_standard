@@ -45,8 +45,16 @@ img {
   cursor: pointer;
 }
 
-/* button 1 */
-/* button 2 */
+/* button 1 透明に近づける*/
+.btn-pattern1 {
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.btn-pattern1:hover {
+  opacity: 0.7;
+}
+
+/* button 2 色が反転 */
 .btn-pattern2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,8 +68,16 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 12px;
+  border: 3px solid #3F51B5;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn-pattern2:hover {
+  background-color: #FFF;
+  color: #3F51B5;
 }
 
+/* 浮き上がって影 */
 .btn-pattern2-a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,15 +91,28 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 12px;
+  -webkit-box-shadow: 0 0 6px #ffb4b4;
+          box-shadow: 0 0 6px #ffb4b4;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 .btn-pattern2-a::after {
   content: "▶";
   display: block;
 }
+.btn-pattern2-a:hover {
+  -webkit-box-shadow: 0 6px 6px #f45151;
+          box-shadow: 0 6px 6px #f45151;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
 
+/* Y軸で回転 */
 .btn-pattern2-a2 {
   position: relative;
   padding-right: 12px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .btn-pattern2-a2::after {
   content: "▶";
@@ -92,9 +121,16 @@ img {
   top: 18px;
   right: 12px;
 }
+.btn-pattern2-a2:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
 
+/* 時計回りに回転 */
 .btn-pattern2-img {
   position: relative;
+  -webkit-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
 }
 .btn-pattern2-img::after {
   content: "";
@@ -107,8 +143,12 @@ img {
   height: 14px;
   background: transparent url(../image/arrow.svg);
 }
+.btn-pattern2-img:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
 
-/* button 3 */
+/* button 3 画像が拡大 */
 .btn-pattern3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,8 +162,15 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 6px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn-pattern3:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
+/* 色を変える */
 .btn-pattern3-a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,15 +184,33 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 6px;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 .btn-pattern3-a::after {
   content: "▶";
   display: block;
 }
+.btn-pattern3-a:hover {
+  color: #fe8a8a;
+}
 
+/* アンダーラインが登場 */
 .btn-pattern3-a2 { /* ボタンの文章が変わると,▶の位置調整が必要になる */
   position: relative;
   padding-right: 12px;
+}
+.btn-pattern3-a2::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  bottom: 5px;
+  left: 16px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .btn-pattern3-a2::after {
   content: "▶";
@@ -153,6 +218,9 @@ img {
   position: absolute;
   top: 18px;
   right: 73px;
+}
+.btn-pattern3-a2:hover::before {
+  width: 150px;
 }
 
 .btn-pattern3-img {
@@ -170,11 +238,19 @@ img {
   background: transparent url(../image/arrow.svg);
 }
 
-/* button4 */
+/* button4 凹むボタン */
 .btn-pattern4 {
   padding-left: 25px;
   -webkit-box-shadow: 0 5px 0 #25379B;
           box-shadow: 0 5px 0 #25379B;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.btn-pattern4:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 /* button5 */
@@ -212,8 +288,15 @@ img {
   width: 123px;
   height: 123px;
   text-align: center;
+  line-height: 1.1875;
   padding: 0;
   border-radius: 50%;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.btn-pattern7:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
 }
 
 /* button8 */
@@ -236,4 +319,31 @@ img {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.hover9 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.hover9::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #2196F3;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.hover9:hover {
+  cursor: pointer;
+}
+
+.hover9:hover::after {
+  width: 100%;
 }

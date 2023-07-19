@@ -60,31 +60,54 @@ img {
   cursor: pointer;
 }
 
-/* button 1 */
-/* button 2 */
+/* button 1 透明に近づける*/
+.btn-pattern1{
+  transition: opacity 0.3s ease 0s;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+/* button 2 色が反転 */
 .btn-pattern2{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
   padding-right: 12px;
+  border: 3px solid $main-color;
+  transition: all 0.3s ease 0s;
+
+  &:hover{
+    background-color: #FFF;
+    color: $main-color;
+  }
 }
 
+/* 浮き上がって影 */
 .btn-pattern2-a{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
   padding-right: 12px;
+  box-shadow: 0 0 6px #ffb4b4;
+  transition: all 0.2s ease 0s;
   &::after{
     content: "▶";
     display:block;
   }
+  &:hover{
+    box-shadow: 0 6px 6px #f45151;
+    transform: translateY(-6px);
+  }
 }
 
+/* Y軸で回転 */
 .btn-pattern2-a2{
   position: relative;
   padding-right: 12px;
+  transition: all 1s ease 0s;
   &::after{
     content: "▶";
     display:block;
@@ -92,10 +115,15 @@ img {
     top: 18px;
     right: 12px;
   }
+  &:hover{
+    transform: rotateY(360deg);
+  }
 }
 
+/* 時計回りに回転 */
 .btn-pattern2-img{
   position: relative;
+  transition: all 1s linear 0s;
   &::after{
     content: "";
     position: absolute;
@@ -106,38 +134,69 @@ img {
     height:14px;
     background: transparent url(../image/arrow.svg);
   }
+  &:hover{
+    transform: rotateZ(360deg);
+  }
 }
 
-/* button 3 */
+/* button 3 画像が拡大 */
 .btn-pattern3{
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
   gap: 6px;
+  transition: all 0.3s ease 0s;
+
+  &:hover{
+    transform: scale(1.1, 1.1);
+  }
 }
 
+/* 色を変える */
 .btn-pattern3-a{
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
   gap: 6px;
+  transition: color 0.3s ease 0s;
   &::after{
     content: "▶";
     display:block;
   }
+
+  &:hover{
+    color: #fe8a8a;
+  }
 }
 
+/* アンダーラインが登場 */
 .btn-pattern3-a2{ /* ボタンの文章が変わると,▶の位置調整が必要になる */
   position: relative;
   padding-right: 12px;
+  &::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFF;
+    position: absolute;
+    bottom: 5px;
+    left: 16px;
+    transition: all 0.5s ease 0s  ;
+  }
   &::after{
     content: "▶";
     display:block;
     position: absolute;
     top: 18px;
     right: 73px;
+  }
+  &:hover{
+    &::before{
+      width: 150px;
+    }
   }
 }
 
@@ -156,10 +215,16 @@ img {
 }
 
 
-/* button4 */
+/* button4 凹むボタン */
 .btn-pattern4{
   padding-left: 25px;
   box-shadow: 0 5px 0 #25379B;
+  transition: all 0.2s ease 0s;
+
+  &:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+  }
 }
 
 /* button5 */
@@ -195,6 +260,11 @@ img {
   line-height: calc(19 / 16);
   padding: 0;
   border-radius: 50%;
+  transition: all 1s ease 0s;
+
+  &:hover{
+    transform: rotateX(360deg);
+  }
 }
 
 /* button8 */
@@ -220,3 +290,26 @@ img {
   }
 }
 
+
+.hover9 {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+  margin-bottom: 50px;
+}
+.hover9::after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: #2196F3;
+	transition: all 0.3s ease 0s;
+}
+.hover9:hover {
+	cursor: pointer;
+}
+.hover9:hover::after {
+	width: 100%;
+}
