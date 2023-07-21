@@ -1,3 +1,26 @@
+/*========================
+Swiper
+=========================*/
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+/*========================
+nav active
+=========================*/
 const section = ['card','news','price','access','contact'];
 const navItem = '.header__nav .header__nav__item';
 

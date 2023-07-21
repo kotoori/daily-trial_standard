@@ -14,6 +14,8 @@
 
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -39,19 +41,44 @@
     </div>
   </header>
 
+
+  
   <!-- top -->
   <div class="top">
-    <img src="./images/mainvisual.png" alt="Main Visual">
-    <div class="top__content">
-      <div class="container">
-        <p class="top__content__title">一番伝えたいことを書く</p>
-        <p class="top__content__subtitle">リードリードリード</p>
-        <div class="top__content__button">
-          <a href="#">お問い合わせ</a>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./images/mainvisual.png" alt="Main Visual">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/mv2_1280x600.jpg" alt="Main Visual 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/mv3_1280x600.jpg" alt="Main Visual 3">
+        </div>
+      </div><!-- swiper-wrapper -->
+
+      <div class="top__content">
+        <div class="container">
+          <p class="top__content__title">一番伝えたいことを書く</p>
+          <p class="top__content__subtitle">リードリードリード</p>
+          <div class="top__content__button">
+            <a href="#">お問い合わせ</a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div><!-- swaiper -->
+  </div> <!-- top -->
+
 
   <!-- Card -->
   <section id="card" class=" section__inner color-bg-1">
@@ -288,8 +315,12 @@
     </div>
   </footer>
 
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 </html>
