@@ -8,6 +8,25 @@ $color-font-3: #6F7579;
 $color-bg-1: #EFEFEF;
 $size-header-hight: 100px;
 $size-header-hight-sp: 60px;
+$font-family-en: 'Lato', sans-serif;
+$font-family-jp: 'Noto Sans JP', sans-serif;
+
+@font-face {
+  src:url("../fonts/Lato-Bold.ttf") format("truetype"),
+      url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-family: 'Lato';
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
+@font-face {
+  src:url("../fonts/NotoSansJP-Bold.ttf") format("truetype"),
+      url("../fonts/NotoSansJP-Regular.ttf") format("truetype");
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
+
+
 
 $breakpoints: (
 //キー:値
@@ -32,9 +51,8 @@ html {
 body {
 	color: $color-font-2;
   background: #FFF;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: 'Noto Sans JP', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
-
 img {
 	max-width: 100%;
   height: auto;
@@ -47,6 +65,10 @@ a{
 
 address{
   font-style: normal;
+}
+
+button{
+  font-family: $font-family-jp;
 }
 
 .container{
@@ -84,6 +106,7 @@ address{
 .section__title{
   font-size: 3rem;
   font-weight: bold;
+  font-family: $font-family-en;
   color: $color-font-2;
   margin-bottom:80px;
   text-align: center;
@@ -192,6 +215,7 @@ header{
   a{
     padding-bottom: 8px;
     color: $color-font-1;
+    font-family: $font-family-en;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease 0s;
     &.is-active,
@@ -383,6 +407,7 @@ News
 .news__date{
   width: 105px;
   padding-top: 7px;
+  font-family: $font-family-en;
 }
 
 .news__tag{
@@ -439,6 +464,7 @@ News
   text-align: center;
   a{
     font-weight: bold;
+    font-family: $font-family-en;
     color: $color-sub-1;
     position: relative;
     padding-right: 17px;
@@ -538,6 +564,7 @@ Price
   background-color: #999999;
   color: $color-font-1;
   font-weight: bold;
+  font-family: $font-family-en;
   text-align: center;
   vertical-align: middle;
 }
@@ -1018,6 +1045,7 @@ footer{
   }
   a{
     color: $color-font-1;
+    font-family: $font-family-en;
   }
 }
 
@@ -1064,6 +1092,7 @@ footer{
 .footer__copyright{
   color: $color-font-1;
   font-size: 0.875rem;
+  font-family: $font-family-en;
   text-align: center;
   padding-bottom: 24px;
 }

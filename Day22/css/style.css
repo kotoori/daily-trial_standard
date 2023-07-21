@@ -31,6 +31,18 @@ ol, ul {
   list-style-type: none;
 }
 
+@font-face {
+  src: url("../fonts/Lato-Bold.ttf") format("truetype"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
+@font-face {
+  src: url("../fonts/NotoSansJP-Bold.ttf") format("truetype"), url("../fonts/NotoSansJP-Regular.ttf") format("truetype");
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
 html {
   font-size: 100%;
 }
@@ -38,7 +50,7 @@ html {
 body {
   color: #333;
   background: #FFF;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 img {
@@ -53,6 +65,10 @@ a {
 
 address {
   font-style: normal;
+}
+
+button {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .container {
@@ -100,6 +116,7 @@ address {
 .section__title {
   font-size: 3rem;
   font-weight: bold;
+  font-family: "Lato", sans-serif;
   color: #333;
   margin-bottom: 80px;
   text-align: center;
@@ -220,6 +237,7 @@ header {
 .header__nav__item a {
   padding-bottom: 8px;
   color: #fff;
+  font-family: "Lato", sans-serif;
   border-bottom: 2px solid transparent;
   -webkit-transition: border-bottom 0.3s ease 0s;
   transition: border-bottom 0.3s ease 0s;
@@ -429,6 +447,7 @@ News
 .news__date {
   width: 105px;
   padding-top: 7px;
+  font-family: "Lato", sans-serif;
 }
 
 .news__tag {
@@ -489,6 +508,7 @@ News
 }
 .news__more a {
   font-weight: bold;
+  font-family: "Lato", sans-serif;
   color: #e81919;
   position: relative;
   padding-right: 17px;
@@ -609,6 +629,7 @@ Price
   background-color: #999999;
   color: #fff;
   font-weight: bold;
+  font-family: "Lato", sans-serif;
   text-align: center;
   vertical-align: middle;
 }
@@ -1171,6 +1192,7 @@ footer {
 }
 .footer__link__item a {
   color: #fff;
+  font-family: "Lato", sans-serif;
 }
 
 .footer__sns {
@@ -1236,6 +1258,7 @@ footer {
 .footer__copyright {
   color: #fff;
   font-size: 0.875rem;
+  font-family: "Lato", sans-serif;
   text-align: center;
   padding-bottom: 24px;
 }
