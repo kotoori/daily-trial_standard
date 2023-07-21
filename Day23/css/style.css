@@ -326,6 +326,7 @@ top
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
   width: 384px;
   height: 72px;
+  margin: 0 auto;
 }
 .top__content__button:hover {
   opacity: 0.8;
