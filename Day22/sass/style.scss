@@ -12,21 +12,36 @@ $font-family-en: 'Lato', sans-serif;
 $font-family-jp: 'Noto Sans JP', sans-serif;
 
 @font-face {
-  src:url("../fonts/Lato-Bold.ttf") format("truetype"),
-      url("../fonts/Lato-Regular.ttf") format("truetype");
+  src:url("../fonts/Lato-Bold.ttf") format("truetype");
   font-family: 'Lato';
+  font-weight: bold;
   font-style: normal;
   font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
 }
+
 @font-face {
-  src:url("../fonts/NotoSansJP-Bold.ttf") format("truetype"),
-      url("../fonts/NotoSansJP-Regular.ttf") format("truetype");
-  font-family: 'Noto Sans JP';
+  src:url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-family: 'Lato';
+  font-weight: normal;
   font-style: normal;
   font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
 }
 
+@font-face {
+  src:url("../fonts/NotoSansJP-Bold.ttf") format("truetype");
+  font-family: 'Noto Sans JP';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
 
+@font-face {
+  src:url("../fonts/NotoSansJP-Regular.ttf") format("truetype");
+  font-family: 'Noto Sans JP';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* フォントファイルを読み込むまで代替フォントを使って表示 */
+}
 
 $breakpoints: (
 //キー:値
@@ -51,7 +66,7 @@ html {
 body {
 	color: $color-font-2;
   background: #FFF;
-  font-family: 'Noto Sans JP', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: $font-family-jp, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 img {
 	max-width: 100%;
