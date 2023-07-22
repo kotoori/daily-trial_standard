@@ -361,6 +361,7 @@ top
 .swiper-button-prev, .swiper-rtl .swiper-button-next,
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
   --swiper-navigation-sides-offset: 40px;
+  transform: translateX(-50%);
 }
 
 
