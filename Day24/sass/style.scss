@@ -323,6 +323,14 @@ top
 }
 
 /*** Swiper pagination ***/
+  /*** Swiper pagination ***/
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    --swiper-pagination-bottom: 16px;
+  }
+
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   --swiper-pagination-bullet-horizontal-gap: 8px;
