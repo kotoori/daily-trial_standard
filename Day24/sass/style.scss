@@ -6,6 +6,7 @@ $color-font-1: #fff;
 $color-font-2: #333;
 $color-font-3: #6F7579;
 $color-bg-1: #EFEFEF;
+$size-inner-width: 1200px;
 $size-header-hight: 100px;
 $size-header-hight-sp: 60px;
 $font-family-en: 'Lato', sans-serif;
@@ -87,7 +88,7 @@ button{
 }
 
 .container{
-  max-width: 1200px;
+  max-width: $size-inner-width;
   margin: 0 auto;
   box-sizing: content-box;
   padding: 0 3%;
@@ -368,10 +369,14 @@ top
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next,
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
-  --swiper-navigation-sides-offset: 40px;
-  transform: translateX(-50%);
+  --swiper-navigation-sides-offset: calc(50% - (#{$size-inner-width} / 2));
+  @include mq(tab){
+    --swiper-navigation-sides-offset: 40px;
+  }
+  @include mq(sp){
+    --swiper-navigation-sides-offset: 20px;
+  }
 }
-
 
 /*=================================
 card
@@ -1037,7 +1042,7 @@ footer{
 }
 
 .footer__company{
-  width: calc(205px / 1200px * 100%);
+  width: calc(205px / #{$size-inner-width} * 100%);
   @include mq(tab){
     width: 100%;
     margin:0 auto 40px;
@@ -1085,7 +1090,7 @@ footer{
 }
 
 .footer__link{
-  width: calc((1200px - 205px * 2) / 1200px * 100%);
+  width: calc((#{$size-inner-width} - 205px * 2) / #{$size-inner-width} * 100%);
   @include mq(tab){
     width: 100%;
   }
@@ -1122,7 +1127,7 @@ footer{
 }
 
 .footer__sns{
-  width: calc(205px / 1200px * 100%);
+  width: calc(205px / #{$size-inner-width} * 100%);
   @include mq(tab){
     width: 100%;
   }
