@@ -43,3 +43,8 @@ jQuery(window).scroll(function() {
     cnt++;
   }
 });
+
+/*========================
+wow
+=========================*/
+new WOW().init();
