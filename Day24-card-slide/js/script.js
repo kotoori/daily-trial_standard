@@ -11,6 +11,7 @@ const swiperTop = new Swiper('.swiper__top', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -28,6 +29,7 @@ const swiperCard = new Swiper('.swiper__card', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
