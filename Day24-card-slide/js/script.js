@@ -1,12 +1,12 @@
 /*========================
 Swiper
 =========================*/
-const swiper = new Swiper('.swiper', {
+const swiperTop = new Swiper('.swiper__top', {
   // Optional parameters
   loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
 
   // If we need pagination
   pagination: {
@@ -20,12 +20,43 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+const swiperCard = new Swiper('.swiper__card', {
+  // Optional parameters
+  loop: true,
+  spaceBetween: '24px',
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  breakpoints: {
+    //ウィンドウ幅：768px以上の時(tab)
+    768: {
+      slidesPerView:2,
+      slidesPerGroup: 2,
+    },
+    //ウィンドウ幅：1101px以上の時(pc)
+    1101: {
+      slidesPerView:3,
+      slidesPerGroup: 3,
+    },
+  },
+});
 
 /*========================
 nav active
 =========================*/
 const section = ['card','news','price','access','contact'];
-const navItem = '.header__nav .header__nav__item';
+const navItem = ('.header__nav .header__nav__item');
 
 jQuery(window).scroll(function() {
 	let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置

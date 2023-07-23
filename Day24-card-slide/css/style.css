@@ -341,110 +341,152 @@ top
   line-height: 1;
 }
 
-.swiper {
+.swiper__top {
   width: inherit;
   height: inherit;
+  /*** Swiper pagination ***/
+  /*** Swiper button ***/
 }
-.swiper img {
+.swiper__top img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-/*** Swiper pagination ***/
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper__top .swiper-horizontal > .swiper-pagination-bullets,
+.swiper__top .swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper__top .swiper-pagination-custom,
+.swiper__top .swiper-pagination-fraction {
+  --swiper-pagination-bottom: 16px;
+}
+.swiper__top .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper__top .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   --swiper-pagination-bullet-horizontal-gap: 8px;
 }
-
-.swiper-pagination-bullet {
+.swiper__top .swiper-pagination-bullet {
   --swiper-pagination-bullet-size: 16px;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-inactive-color: #FFFFFF9E;
 }
-
-.swiper-pagination-bullet-active {
+.swiper__top .swiper-pagination-bullet-active {
   --swiper-pagination-bullet-opacity: 1;
   --swiper-pagination-color: #2F7DC8;
 }
-
-/*** Swiper button ***/
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper__top .swiper-button-next,
+.swiper__top .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+}
+.swiper__top .swiper-button-next::after,
+.swiper__top .swiper-button-prev::after {
   content: "";
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-.swiper-button-next::after {
+.swiper__top .swiper-button-next::after {
   background-image: url("../images/arrow-next@2x.png");
 }
-
-.swiper-button-prev::after {
+.swiper__top .swiper-button-prev::after {
   background-image: url("../images/arrow-prev@2x.png");
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  width: 40px;
-  height: 40px;
-}
-
-.swiper-button-prev, .swiper-rtl .swiper-button-next,
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
+.swiper__top .swiper-button-prev, .swiper__top .swiper-rtl .swiper-button-next,
+.swiper__top .swiper-button-next, .swiper__top .swiper-rtl .swiper-button-prev {
   --swiper-navigation-sides-offset: 40px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 /*=================================
 card
 =================================*/
-.card.flex {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.swiper__card {
+  width: 100%;
+  padding-bottom: 52px;
+  /*** Swiper pagination ***/
+  /*** Swiper button ***/
+}
+.swiper__card .swiper-horizontal > .swiper-pagination-bullets,
+.swiper__card .swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper__card .swiper-pagination-custom,
+.swiper__card .swiper-pagination-fraction {
+  --swiper-pagination-bottom: 12px;
+}
+.swiper__card .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper__card .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+.swiper__card .swiper-pagination-bullet {
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color:#FFFFFF9E;
+}
+.swiper__card .swiper-pagination-bullet-active {
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-color: #2F7DC8;
+}
+.swiper__card .swiper-button-next,
+.swiper__card .swiper-button-prev {
+  width: 12px;
+  height: 12px;
+  --swiper-navigation-top-offset: auto;
+  bottom: 14px;
+}
+.swiper__card .swiper-button-next::after,
+.swiper__card .swiper-button-prev::after {
+  content: "";
+  width: 5px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1101px) {
+  .swiper__card .swiper-button-next {
+    right: calc(50% - 41px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .swiper__card .swiper-button-next {
+    right: calc(50% - 53px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .swiper__card .swiper-button-next {
+    right: calc(50% - 77px);
+  }
+}
+@media screen and (min-width: 1101px) {
+  .swiper__card .swiper-button-prev {
+    left: calc(50% - 41px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .swiper__card .swiper-button-prev {
+    left: calc(50% - 53px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .swiper__card .swiper-button-prev {
+    left: calc(50% - 77px);
+  }
+}
+.swiper__card .swiper-button-next::after {
+  background-image: url("../images/card-arrow-next.png");
+}
+.swiper__card .swiper-button-prev::after {
+  background-image: url("../images/card-arrow-prev.png");
+}
+.swiper__card .swiper-button-prev, .swiper__card .swiper-rtl .swiper-button-next,
+.swiper__card .swiper-button-next, .swiper__card .swiper-rtl .swiper-button-prev {
+  --swiper-navigation-sides-offset: 40px;
 }
 
 .card__content {
-  width: 32%;
   background-color: #fff;
   padding: 16px;
   padding-bottom: 11px; /* 下余白は、textのline-heightを考慮 */
   border-radius: 4px;
+  width: 100%;
 }
-.card__content:nth-child(n+4) { /*  4個目以降は上に余白をつける */
-  margin-top: 2vw;
-}
-@media screen and (min-width: 1101px) {
-  .card__content:not(:nth-child(3n)) { /* 3の倍数個以外は右余白をつける */
-    margin-right: 2%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .card__content {
-    width: 49%;
-  }
-  .card__content:nth-child(n+3) { /*  3個目以降は上に余白をつける */
-    margin-top: 2vw;
-  }
-  .card__content:not(:nth-child(2n)) { /* 2の倍数以外は右余白をつける */
-    margin-right: 2%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .card__content {
-    width: 100%;
-    margin-right: 0;
-  }
-  .card__content:nth-child(n+2) { /*  2個目以降は上に余白をつける */
-    margin-top: 2vw;
-  }
-}
-
 .card__content img {
   width: 100%;
   height: auto;
@@ -530,13 +572,12 @@ News
   font-weight: bold;
   display: block;
   width: 80px;
-  padding: 6px 0;
+  line-height: 32px;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
   .news__tag a {
     font-size: 0.75rem;
-    padding: 4px 0;
   }
 }
 .news__tag.news__label-1 {
