@@ -23,7 +23,7 @@ const swiperTop = new Swiper('.swiper__top', {
 const swiperCard = new Swiper('.swiper__card', {
   // Optional parameters
   loop: true,
-  spaceBetween: '24px',
+  spaceBetween: 24,
 
   // If we need pagination
   pagination: {
