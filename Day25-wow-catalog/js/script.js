@@ -47,10 +47,7 @@ jQuery(window).scroll(function() {
 /*========================
 wow
 =========================*/
-new WOW().init();
-
-
-const animePattern = ['hinge' ,
+const animePattern = [
 'bounce' ,
 'flash' ,
 'pulse' ,
@@ -115,26 +112,47 @@ const animePattern = ['hinge' ,
 ];
 
 const animePatternNum = animePattern.length;
-const title = $('#card .section__title');
-const cards = $('#card .card');
+const cntMax = animePatternNum;
 
-let cnt = 0;
-let beforePattern = '';
 $(function(){
+  /* cardセクションのwowアニメーション種類を変更＆初期化 */
+//  const target = $('#card .card');
+  const target = $('#card .card__content');
+const title = $('#card .section__title');
+  let beforePattern = '';
+
+  function wowCatalog(n){
+    target.removeClass(`wow ${beforePattern}`);  /* 現在のwowクラスを削除 */
+    target.removeAttr('style');  /* 初期化時？につくstyle属性も削除 */
+
+    // console.log(`wow ${animePattern[n]}`);
+    target.addClass(`wow ${animePattern[n]}`); /* 次のwowクラスを付加 */
+    title[0].innerHTML = `${n + 1}: ${animePattern[n]}`; /* sectionタイトルにwowクラス名を表示 */
+    beforePattern = animePattern[n];  /* 付加したwowクラスを保存(後で消すため) */
+
+    new WOW().init(); /* wow 初期化 */
+  }
+
+  /* wowCatalog()を呼び出す */
+  let cnt = 0;
   const countUp = function() {
     wowCatalog(cnt);
     cnt++;
-    if(cnt >= animePatternNum){
+    if(cnt >= cntMax){
       cnt = 0;
     }
   }
-  time = setInterval(countUp, 3000);
 
-  function wowCatalog(n){
-    title[0].innerHTML = `${animePatternNum} / ${n + 1}: ${animePattern[n]}`;
-    cards.removeClass(`wow ${beforePattern}`);
-    beforePattern = animePattern[n];
-    console.log(`wow ${animePattern[n]}`);
-    cards.addClass(`wow ${animePattern[n]}`);
+  /* 3000ms毎にcountUp()を呼び出す */
+  const intervalTime = 3000;
+  time = setInterval(countUp, intervalTime);
+
+  /* cardセクションにスクロール */
+  function toCard(){
+    let cardTop = jQuery('#card').offset().top; /* cardエリアのトップ位置 */
+    $('html,body').animate({ scrollTop: cardTop }, '1');
   }
+  setTimeout(toCard, 1500); /* ロード直後にスクロールしてもブラウザ機能で元の位置に戻ってしまうので、時間をおいてからスクロール */
+
 });
+
