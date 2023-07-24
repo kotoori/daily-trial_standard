@@ -118,15 +118,37 @@ $(function(){
   /* cardセクションのwowアニメーション種類を変更＆初期化 */
 //  const target = $('#card .card');
   const target = $('#card .card__content');
-const title = $('#card .section__title');
+  const title = $('#card .section__title');
   let beforePattern = '';
+  const wowDuration = "data-wow-duration";
+  const wowDelay = "data-wow-delay";
+  const wowOffset = "data-wow-offset";
+  const wowIteration = "data-wow-iteration";
+  const wowOptions = {[wowDuration]: "1s",   /* アニメーションの時間 */
+                      [wowDelay]: "0s",      /* アニメーションがスタートするまでの時間 */
+                      [wowOffset]: 0,     /* アニメーションがスタートする距離 */
+                      [wowIteration]: 1,  /* 	アニメーションの繰り返し回数 */
+                    }
+
 
   function wowCatalog(n){
+    console.log(typeof(wowOptions));
+    console.log()
     target.removeClass(`wow ${beforePattern}`);  /* 現在のwowクラスを削除 */
     target.removeAttr('style');  /* 初期化時？につくstyle属性も削除 */
-
+    for(let wowOption in wowOptions){
+      if( wowOptions.hasOwnProperty(wowOption) ) {
+        target.removeAttr(wowOption);  /* オプションもいったん削除 */
+      }
+    }
     // console.log(`wow ${animePattern[n]}`);
     target.addClass(`wow ${animePattern[n]}`); /* 次のwowクラスを付加 */
+    for(let wowOption in wowOptions){
+      if( wowOptions.hasOwnProperty(wowOption) ) {
+        target.attr({[wowOption]:wowOptions[wowOption]});  /* オプション追加 */
+      }
+    }
+
     title[0].innerHTML = `${n + 1}: ${animePattern[n]}`; /* sectionタイトルにwowクラス名を表示 */
     beforePattern = animePattern[n];  /* 付加したwowクラスを保存(後で消すため) */
 
