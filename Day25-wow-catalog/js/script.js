@@ -112,7 +112,6 @@ const animePattern = [
 ];
 
 const animePatternNum = animePattern.length;
-const cntMax = animePatternNum;
 
 $(function(){
   /* cardセクションのwowアニメーション種類を変更＆初期化 */
@@ -124,16 +123,21 @@ $(function(){
   const wowDelay = "data-wow-delay";
   const wowOffset = "data-wow-offset";
   const wowIteration = "data-wow-iteration";
+
+/*** wow-catalog設定値 *********************************/
+  /* 1.wowアニメーションのオプション設定 */
   const wowOptions = {[wowDuration]: "1s",   /* アニメーションの時間 */
                       [wowDelay]: "0s",      /* アニメーションがスタートするまでの時間 */
                       [wowOffset]: 0,     /* アニメーションがスタートする距離 */
                       [wowIteration]: 1,  /* 	アニメーションの繰り返し回数 */
-                    }
+                    };
 
+  /* 2.次のアニメーションに遷移する時間
+    (wowDuration * wowIteration + wowDelay + 1000msくらいを設定するとちょうどいいかも) */
+  const intervalTime = 2000;
+/******************************************************/
 
   function wowCatalog(n){
-    console.log(typeof(wowOptions));
-    console.log()
     target.removeClass(`wow ${beforePattern}`);  /* 現在のwowクラスを削除 */
     target.removeAttr('style');  /* 初期化時？につくstyle属性も削除 */
     for(let wowOption in wowOptions){
@@ -155,6 +159,7 @@ $(function(){
     new WOW().init(); /* wow 初期化 */
   }
 
+  const cntMax = animePatternNum;
   /* wowCatalog()を呼び出す */
   let cnt = 0;
   const countUp = function() {
@@ -165,8 +170,7 @@ $(function(){
     }
   }
 
-  /* 3000ms毎にcountUp()を呼び出す */
-  const intervalTime = 3000;
+  /* 指定時間ごとにcountUp()を呼び出す */
   time = setInterval(countUp, intervalTime);
 
   /* cardセクションにスクロール */
