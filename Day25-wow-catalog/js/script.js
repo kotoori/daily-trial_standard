@@ -163,7 +163,7 @@ $(function(){
   /* 1.wowアニメーションのオプション設定 */
   const wowDuration = "--animate-duration: 1s";
   const wowDelay = "--animate-delay: 0s";
-  const wowOffset = "data-wow-offset";
+  //const wowOffset = "data-wow-offset";
   const wowIteration = "--animate-repeat: 1";
 
   /* 2.次のアニメーションに遷移する時間
@@ -174,7 +174,6 @@ $(function(){
   function wowCatalog(n){
     target.removeClass(`animate__animated animate__${beforePattern}`);  /* 現在のwowクラスを削除 */
     target.removeAttr('style');
-    // console.log(`wow ${animePattern[n]}`);
     target.addClass(`animate__animated animate__${animePattern[n]}`); /* 次のwowクラスを付加 */
     target.attr({'style':`${wowDelay};${wowDuration};${wowIteration}`});  /* オプション追加 */
 
@@ -193,10 +192,11 @@ $(function(){
     if(cnt >= cntMax){
       cnt = 0;
     }
-    time = setTimeout(countUp, intervalTime);
+  /* 指定時間たったら再びcountUp()を呼び出す （setIntervalを使ってもいいけど、今回はsetTimeoutで実装)*/
+  time = setTimeout(countUp, intervalTime);
   }
 
-  /* 指定時間ごとにcountUp()を呼び出す */
+  /* 1s後にcountUp()を呼び出す */ 
   time = setTimeout(countUp, 1000);
 
   /* cardセクションにスクロール */
