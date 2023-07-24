@@ -48,3 +48,93 @@ jQuery(window).scroll(function() {
 wow
 =========================*/
 new WOW().init();
+
+
+const animePattern = ['hinge' ,
+'bounce' ,
+'flash' ,
+'pulse' ,
+'shake' ,
+'swing' ,
+'tada' ,
+'wobble' ,
+'bounceIn' ,
+'bounceInDown' ,
+'bounceInLeft' ,
+'bounceInRight' ,
+'bounceInUp' ,
+'bounceOut' ,
+'bounceOutDown' ,
+'bounceOutLeft' ,
+'bounceOutRight' ,
+'bounceOutUp' ,
+'fadeIn' ,
+'fadeInDown' ,
+'fadeInDownBig' ,
+'fadeInLeft' ,
+'fadeInLeftBig' ,
+'fadeInRight' ,
+'fadeInRightBig' ,
+'fadeInUp' ,
+'fadeInUpBig' ,
+'fadeOut' ,
+'fadeOutDown' ,
+'fadeOutDownBig' ,
+'fadeOutLeft' ,
+'fadeOutLeftBig' ,
+'fadeOutRight' ,
+'fadeOutRightBig' ,
+'fadeOutUp' ,
+'fadeOutUpBig' ,
+'flip' ,
+'flipInX' ,
+'flipInY' ,
+'flipOutX' ,
+'flipOutY' ,
+'lightSpeedIn' ,
+'lightSpeedOut' ,
+'rotateIn' ,
+'rotateInDownLeft' ,
+'rotateInDownRight' ,
+'rotateInUpLeft' ,
+'rotateInUpRight' ,
+'rotateOut' ,
+'rotateOutDownLeft' ,
+'rotateOutDownRight' ,
+'rotateOutUpLeft' ,
+'rotateOutUpRight' ,
+'slideInDown' ,
+'slideInLeft' ,
+'slideInRight' ,
+'slideOutLeft' ,
+'slideOutRight' ,
+'slideOutUp' ,
+'hinge' ,
+'rollIn' ,
+'rollOut',
+];
+
+const animePatternNum = animePattern.length;
+const title = $('#card .section__title');
+const cards = $('#card .card');
+
+let cnt = 0;
+let beforePattern = '';
+$(function(){
+  const countUp = function() {
+    wowCatalog(cnt);
+    cnt++;
+    if(cnt >= animePatternNum){
+      cnt = 0;
+    }
+  }
+  time = setInterval(countUp, 3000);
+
+  function wowCatalog(n){
+    title[0].innerHTML = `${animePatternNum} / ${n + 1}: ${animePattern[n]}`;
+    cards.removeClass(`wow ${beforePattern}`);
+    beforePattern = animePattern[n];
+    console.log(`wow ${animePattern[n]}`);
+    cards.addClass(`wow ${animePattern[n]}`);
+  }
+});
