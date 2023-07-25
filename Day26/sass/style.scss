@@ -874,14 +874,25 @@ Contact
   }
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 .contact__radio{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 67px;
   @include mq(sp){
     margin-bottom: 30px;
   }
   input{
-    display: none;
     & + span {
       cursor: pointer;
       display: inline-block;
@@ -916,8 +927,23 @@ Contact
         transition: all 0.3s ease 0s;
       }
     }
+
     &:checked + span::after {
       opacity: 1;
+    }
+
+    &:focus + span::before{
+      box-shadow:0 0 0 2px #3F51B540;
+    }
+
+    &:disabled + span{
+      opacity:.5;
+    }
+    &:disabled + span::before{
+        background-color: #eee;
+    }
+    &:disabled + span::after{
+        content:none;
     }
   }
   label{
@@ -938,8 +964,6 @@ Contact
   margin-bottom: 35px;
 
   input{
-    display: none;
-
     & + span {
       cursor: pointer;
       display: inline-block;
@@ -984,6 +1008,20 @@ Contact
     }
     &:checked + span::after {
       opacity: 1;
+    }
+
+    &:focus + span::before{
+      box-shadow:0 0 0 2px #3F51B540;
+    }
+
+    &:disabled + span{
+      opacity:.5;
+    }
+    &:disabled + span::before{
+        background-color: #eee;
+    }
+    &:disabled + span::after{
+        content:none;
     }
   }
 }

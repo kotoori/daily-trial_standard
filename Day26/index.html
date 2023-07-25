@@ -257,13 +257,13 @@
           <dt><label for="contact__text">お問い合わせ内容</label></dt>
           <dd><textarea name="text" id="contact__text" placeholder="お問い合わせを入力してください"></textarea></dd>
         </dl>
-        <div class="contact__radio">
-          <label><input type="radio" name="radio" value="1"><span>ラジオ１</span></label>
-          <label><input type="radio" name="radio" value="2"><span>ラジオ２</span></label>
-          <label><input type="radio" name="radio" value="3"><span>ラジオ３</span></label>
-        </div>
+        <ul role="radiogroup" class="contact__radio">
+          <li><label><input role="radio" type="radio" name="radio" value="1" class="visually-hidden"><span>ラジオ１</span></label></li>
+          <li><label><input role="radio" type="radio" name="radio" value="2" class="visually-hidden"><span>ラジオ２</span></label></li>
+          <li><label><input role="radio" type="radio" name="radio" value="3" class="visually-hidden"><span>ラジオ３</span></label></li>
+        </ul>
         <div class="contact__policy-check">
-          <label><input type="checkbox" name="policy-check"><span><a href="#">プライバシーポリシー</a>に合意する</span></label>
+          <label><input role="checkbox" aria-checked="false" type="checkbox" name="policy-check" class="visually-hidden"><span><a href="#">プライバシーポリシー</a>に合意する</span></label>
         </div>
         <button type="submit" class="btn contact__button btn__arrow">送信する</button>
       </form>

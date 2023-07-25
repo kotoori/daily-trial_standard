@@ -991,16 +991,32 @@ Contact
   color: #CCCCCC;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .contact__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 67px;
 }
 @media screen and (max-width: 767px) {
   .contact__radio {
     margin-bottom: 30px;
   }
-}
-.contact__radio input {
-  display: none;
 }
 .contact__radio input + span {
   cursor: pointer;
@@ -1042,6 +1058,19 @@ Contact
 .contact__radio input:checked + span::after {
   opacity: 1;
 }
+.contact__radio input:focus + span::before {
+  -webkit-box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2509803922);
+          box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2509803922);
+}
+.contact__radio input:disabled + span {
+  opacity: 0.5;
+}
+.contact__radio input:disabled + span::before {
+  background-color: #eee;
+}
+.contact__radio input:disabled + span::after {
+  content: none;
+}
 .contact__radio label {
   color: #333;
   margin-right: 32px;
@@ -1059,9 +1088,6 @@ Contact
   color: #333;
   text-align: center;
   margin-bottom: 35px;
-}
-.contact__policy-check input {
-  display: none;
 }
 .contact__policy-check input + span {
   cursor: pointer;
@@ -1108,6 +1134,19 @@ Contact
 }
 .contact__policy-check input:checked + span::after {
   opacity: 1;
+}
+.contact__policy-check input:focus + span::before {
+  -webkit-box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2509803922);
+          box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2509803922);
+}
+.contact__policy-check input:disabled + span {
+  opacity: 0.5;
+}
+.contact__policy-check input:disabled + span::before {
+  background-color: #eee;
+}
+.contact__policy-check input:disabled + span::after {
+  content: none;
 }
 
 .btn.contact__button {
