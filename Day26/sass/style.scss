@@ -591,11 +591,10 @@ News
     font-weight: bold;
     display: block;
     width: 80px;
-    padding: 6px 0;
     text-align: center;
+    line-height: 32px;
     @include mq(sp){
       font-size: 0.75rem;
-      padding: 4px 0;
     }
   }
 

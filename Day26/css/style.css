@@ -661,13 +661,12 @@ News
   font-weight: bold;
   display: block;
   width: 80px;
-  padding: 6px 0;
   text-align: center;
+  line-height: 32px;
 }
 @media screen and (max-width: 767px) {
   .news__tag a {
     font-size: 0.75rem;
-    padding: 4px 0;
   }
 }
 .news__tag.news__label-1 {
