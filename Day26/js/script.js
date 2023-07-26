@@ -48,3 +48,65 @@ jQuery(window).scroll(function() {
 wow
 =========================*/
 new WOW().init();
+
+/*========================
+drawer
+=========================*/
+const hamburger = $('.hamburger');
+const closeButton = $('.header__nav__close');
+const drawerBg = $('.nav-bg');
+const drawerMenu = $('.header__nav');
+const drawerItem = $('.header__nav__item a');
+const openClass = 'is-open';
+
+$(function(){
+  hamburger.on('click',function(){
+    console.log('drawer open');
+    bodyFix();
+    hamburger.addClass(openClass);
+    drawerBg.addClass(openClass);
+    drawerMenu.addClass(openClass);
+  })
+
+  closeButton.on('click',function(){
+    console.log('drawer close');
+    bodyFixReset();
+    hamburger.removeClass(openClass);
+    drawerBg.removeClass(openClass);
+    drawerMenu.removeClass(openClass);
+  })
+
+  drawerItem.on('click',function(){
+    console.log('drawer close');
+    bodyFixReset();
+    hamburger.removeClass(openClass);
+    drawerBg.removeClass(openClass);
+    drawerMenu.removeClass(openClass);
+  })
+
+  //bodyを固定する関数
+function bodyFix() {
+  const scrollPosition = $(window).scrollTop();
+  $('body').css({
+    'position': 'fixed',
+    'width': '100%',
+    'z-index': '1',
+    'top': -scrollPosition
+  });
+}
+
+//body固定を解除する関数
+function bodyFixReset() {
+  const offsetPosition = $('body').offset().top;
+  const scrollPosition = $(window).scrollTop();
+  $('body').css({
+    'position': 'relative',
+    'width': 'auto',
+    'top': 'auto'
+  });
+  /* scroll位置を調整 */
+  $('html, body').scrollTop(scrollPosition - offsetPosition);
+}
+
+});
+
