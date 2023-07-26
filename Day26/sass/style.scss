@@ -221,21 +221,18 @@ header{
 .header__nav{
   @include mq(sp){
     position: absolute;
-    z-index: 999;
-    width: calc(200px / 375px * 100%);
-    height: 100vh;
-    top:0;
-    right: 0;
-    background-color: #FFF;
-    box-shadow: 0 0 3px #00000029;
-    transform: translateX(100%);
-    transition: transform 0.3s ease 0s;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
     &.is-open{
-      transform: translateX(0);
-      &::before{
-        content: "";
-        cursor: pointer;
-      }
+      z-index: 999;
+      opacity: 1;
+      visibility: visible;
     }
   }
   .header__nav__close{
@@ -259,12 +256,8 @@ header{
 .header__nav__item{
   @include mq(sp){
     width: 100%;
-    height: 56px;
-    border-bottom: 1px dotted #707070;
+    height: 48px;
     position: relative;
-    &:hover{
-      background-color: $color-bg-1;
-    }
   }
   &:not(:first-child){
     margin-left: 40px;
@@ -288,21 +281,25 @@ header{
       }
     }
     @include mq(sp){
-      color: #707070;
+      color: $color-font-1;
+      font-weight: bold;
       display: block;
       width: 100%;
       height: 100%;
-      padding: 20px;
+      padding: 16px;
+      &:hover{
+        opacity: 0.7;
+      }
       &::after{
         content: "";
         display: block;
         position: absolute;
-        right: 20px;
+        right: 16px;
         top: 50%;
         transform: translateY(-50%);
-        width: 8px;
-        height: 11px;
-        background: transparent url(../images/arrow-b@3x.png) center center /contain;
+        width: 18px;
+        height: 16px;
+        background: transparent url(../images/arrow-w@3x.png) no-repeat center center /contain;
       }
     }
   }
@@ -310,16 +307,21 @@ header{
 
 .nav-bg{
   position: fixed;
-  z-index: 800;
+  z-index: -1;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  background-color: #3F51B5CC;
+  box-shadow: 0 0 3px #00000029;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
   &.is-open{
-    display: block;
-  }
+    z-index: 800;
+    opacity: 1;
+    visibility: visible;
+    }
 }
 
 .hamburger{
@@ -328,10 +330,12 @@ header{
     display: block;
     width: 22px;
     height: 20px;
-    background: transparent url(../images/hamburger@3x.png) center center / contain;
     cursor: pointer;
+    background: transparent url(../images/hamburger@3x.png) no-repeat center center / contain;
+    position: relative;
+    z-index: 900;
     &.is-open{
-      display:none;
+      background: transparent url(../images/batsu@3x.png) no-repeat center center / contain;
     }
   }
 }

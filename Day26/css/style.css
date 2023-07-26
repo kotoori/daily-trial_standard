@@ -244,28 +244,21 @@ header {
 @media screen and (max-width: 767px) {
   .header__nav {
     position: absolute;
-    z-index: 999;
-    width: 53.3333333333%;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    background-color: #FFF;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.3s ease 0s;
-    transition: -webkit-transform 0.3s ease 0s;
-    transition: transform 0.3s ease 0s;
-    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    top: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
   .header__nav.is-open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  .header__nav.is-open::before {
-    content: "";
-    cursor: pointer;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .header__nav .header__nav__close {
@@ -289,12 +282,8 @@ header {
 @media screen and (max-width: 767px) {
   .header__nav__item {
     width: 100%;
-    height: 56px;
-    border-bottom: 1px dotted #707070;
+    height: 48px;
     position: relative;
-  }
-  .header__nav__item:hover {
-    background-color: #EFEFEF;
   }
 }
 .header__nav__item:not(:first-child) {
@@ -325,38 +314,49 @@ header {
 }
 @media screen and (max-width: 767px) {
   .header__nav__item a {
-    color: #707070;
+    color: #fff;
+    font-weight: bold;
     display: block;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 16px;
+  }
+  .header__nav__item a:hover {
+    opacity: 0.7;
   }
   .header__nav__item a::after {
     content: "";
     display: block;
     position: absolute;
-    right: 20px;
+    right: 16px;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    width: 8px;
-    height: 11px;
-    background: transparent url(../images/arrow-b@3x.png) center center/contain;
+    width: 18px;
+    height: 16px;
+    background: transparent url(../images/arrow-w@3x.png) no-repeat center center/contain;
   }
 }
 
 .nav-bg {
   position: fixed;
-  z-index: 800;
+  z-index: -1;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  background-color: rgba(63, 81, 181, 0.8);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .nav-bg.is-open {
-  display: block;
+  z-index: 800;
+  opacity: 1;
+  visibility: visible;
 }
 
 .hamburger {
@@ -367,11 +367,13 @@ header {
     display: block;
     width: 22px;
     height: 20px;
-    background: transparent url(../images/hamburger@3x.png) center center/contain;
     cursor: pointer;
+    background: transparent url(../images/hamburger@3x.png) no-repeat center center/contain;
+    position: relative;
+    z-index: 900;
   }
   .hamburger.is-open {
-    display: none;
+    background: transparent url(../images/batsu@3x.png) no-repeat center center/contain;
   }
 }
 
