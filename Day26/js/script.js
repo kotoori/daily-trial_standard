@@ -60,11 +60,13 @@ const openClass = 'is-open';
 
 $(function(){
   hamburger.on('click',function(){
+    e.preventDefault();
     if(hamburger.hasClass(openClass) ){
       drawerClose();
     }else{
       drawerOpen();
     }
+    return false;
   })
 
   drawerItem.on('click',function(){
