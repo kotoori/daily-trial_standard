@@ -1,0 +1,15 @@
+@use "reset" as reset;
+
+#header {
+  background: #666;
+  height: 62px;
+  position: fixed;
+  width: 100%;
+  padding: 8px;
+}
+
+.hiraku-open-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
