@@ -368,12 +368,43 @@ header {
     width: 22px;
     height: 20px;
     cursor: pointer;
-    background: transparent url(../images/hamburger@3x.png) no-repeat center center/contain;
     position: relative;
     z-index: 900;
   }
-  .hamburger.is-open {
-    background: transparent url(../images/batsu@3x.png) no-repeat center center/contain;
+  .hamburger .hamburger__bar {
+    display: block;
+    width: 22px;
+    height: 4px;
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .hamburger .hamburger__bar:nth-child(1) {
+    top: 0;
+  }
+  .hamburger .hamburger__bar:nth-child(2) {
+    top: 8px;
+  }
+  .hamburger .hamburger__bar:nth-child(3) {
+    top: 16px;
+  }
+  .hamburger.is-open .hamburger__bar:nth-child(1) {
+    top: 8px;
+    width: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .hamburger.is-open .hamburger__bar:nth-child(2) {
+    opacity: 0;
+    height: 0;
+  }
+  .hamburger.is-open .hamburger__bar:nth-child(3) {
+    top: 8px;
+    width: 26px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 
