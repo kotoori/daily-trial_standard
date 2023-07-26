@@ -53,7 +53,6 @@ new WOW().init();
 drawer
 =========================*/
 const hamburger = $('.hamburger');
-const closeButton = $('.header__nav__close');
 const drawerBg = $('.nav-bg');
 const drawerMenu = $('.header__nav');
 const drawerItem = $('.header__nav__item a');
@@ -62,13 +61,11 @@ const openClass = 'is-open';
 $(function(){
   hamburger.on('click',function(e){
     e.preventDefault();
-    drawerOpen();
-    return false;
-  })
-
-  closeButton.on('click',function(e){
-    e.preventDefault();
-    drawerClose();
+    if(hamburger.hasClass(openClass)){
+      drawerClose();
+    }else{
+      drawerOpen();
+    }
     return false;
   })
 

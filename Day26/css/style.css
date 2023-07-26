@@ -268,22 +268,54 @@ header {
     cursor: pointer;
   }
 }
-.header__nav .header__nav__close {
+.header__nav .hamburger {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  .header__nav .header__nav__close {
+  .header__nav .hamburger {
+    display: block;
     width: 22px;
-    height: 22px;
+    height: 20px;
     position: absolute;
     top: 20px;
-    left: -38px;
+    left: calc(-22px - 4.2666666667vw);
     cursor: pointer;
-    background: transparent url(../images/batsu@3x.png) center center/contain;
   }
-}
-.header__nav.is-open .header__nav__close {
-  display: block;
+  .header__nav .hamburger .hamburger__bar {
+    display: block;
+    width: 22px;
+    height: 4px;
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+  .header__nav .hamburger .hamburger__bar:nth-child(1) {
+    top: 0;
+  }
+  .header__nav .hamburger .hamburger__bar:nth-child(2) {
+    top: 8px;
+  }
+  .header__nav .hamburger .hamburger__bar:nth-child(3) {
+    top: 16px;
+  }
+  .header__nav .hamburger.is-open .hamburger__bar:nth-child(1) {
+    top: 8px;
+    width: 26px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header__nav .hamburger.is-open .hamburger__bar:nth-child(2) {
+    opacity: 0;
+    height: 0;
+  }
+  .header__nav .hamburger.is-open .hamburger__bar:nth-child(3) {
+    top: 8px;
+    width: 26px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -357,22 +389,6 @@ header {
 }
 .nav-bg.is-open {
   display: block;
-}
-
-.hamburger {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-  .hamburger {
-    display: block;
-    width: 22px;
-    height: 20px;
-    background: transparent url(../images/hamburger@3x.png) center center/contain;
-    cursor: pointer;
-  }
-  .hamburger.is-open {
-    display: none;
-  }
 }
 
 /*=================================

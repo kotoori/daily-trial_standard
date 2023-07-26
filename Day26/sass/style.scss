@@ -238,23 +238,55 @@ header{
       }
     }
   }
-  .header__nav__close{
-    display: none;
+  .hamburger{
+    display:none;
     @include mq(sp){
+      display: block;
       width: 22px;
-      height: 22px;
+      height: 20px;
       position: absolute;
       top:20px;
-      left: -38px;
+      left: calc(-22px - (16px / 375px * 100vw));
       cursor: pointer;
-      background: transparent url(../images/batsu@3x.png) center center / contain;
+
+      .hamburger__bar{
+        display: block;
+        width: 22px;
+        height: 4px;
+        background-color: #FFF;
+        position: absolute;
+        left: 0;
+        transition: all 0.4s ease 0s;
+        &:nth-child(1){
+          top: 0;
+        }
+        &:nth-child(2){
+          top: 8px;
+        }
+        &:nth-child(3){
+          top: 16px;
+        }
+      }
+      &.is-open .hamburger__bar{
+        &:nth-child(1){
+          top: 8px;
+          width: 26px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+          height: 0;
+        }
+        &:nth-child(3){
+          top: 8px;
+          width: 26px;
+          transform: rotate(-45deg);
+        }
+
+      }
     }
   }
-  &.is-open .header__nav__close{
-    display: block;
-  }
 }
-
 
 .header__nav__item{
   @include mq(sp){
@@ -322,19 +354,6 @@ header{
   }
 }
 
-.hamburger{
-  display:none;
-  @include mq(sp){
-    display: block;
-    width: 22px;
-    height: 20px;
-    background: transparent url(../images/hamburger@3x.png) center center / contain;
-    cursor: pointer;
-    &.is-open{
-      display:none;
-    }
-  }
-}
 /*=================================
 top
 =================================*/
