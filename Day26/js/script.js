@@ -70,9 +70,8 @@ $(function(){
   })
 
   drawerItem.on('click',function(e){
-    e.preventDefault();
     drawerClose();
-    return false;
+    return true;
   })
 
   /* ドロワーメニューをオープンする関数 */
