@@ -60,16 +60,22 @@ const drawerItem = $('.header__nav__item a');
 const openClass = 'is-open';
 
 $(function(){
-  hamburger.on('click',function(){
+  hamburger.on('click',function(e){
+    e.preventDefault();
     drawerOpen();
+    return false;
   })
 
-  closeButton.on('click',function(){
+  closeButton.on('click',function(e){
+    e.preventDefault();
     drawerClose();
+    return false;
   })
 
-  drawerItem.on('click',function(){
+  drawerItem.on('click',function(e){
+    e.preventDefault();
     drawerClose();
+    return false;
   })
 
   /* ドロワーメニューをオープンする関数 */
