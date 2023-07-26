@@ -61,52 +61,55 @@ const openClass = 'is-open';
 
 $(function(){
   hamburger.on('click',function(){
-    console.log('drawer open');
+    drawerOpen();
+  })
+
+  closeButton.on('click',function(){
+    drawerClose();
+  })
+
+  drawerItem.on('click',function(){
+    drawerClose();
+  })
+
+  /* ドロワーメニューをオープンする関数 */
+  function drawerOpen(){
     bodyFix();
     hamburger.addClass(openClass);
     drawerBg.addClass(openClass);
     drawerMenu.addClass(openClass);
-  })
-
-  closeButton.on('click',function(){
-    console.log('drawer close');
-    bodyFixReset();
-    hamburger.removeClass(openClass);
-    drawerBg.removeClass(openClass);
+  }
+  /* ドロワーメニューをクローズする関数 */
+  function drawerClose(){
     drawerMenu.removeClass(openClass);
-  })
-
-  drawerItem.on('click',function(){
-    console.log('drawer close');
-    bodyFixReset();
-    hamburger.removeClass(openClass);
     drawerBg.removeClass(openClass);
-    drawerMenu.removeClass(openClass);
-  })
+    hamburger.removeClass(openClass);
+    bodyFixReset();
+  }
 
   //bodyを固定する関数
-function bodyFix() {
-  const scrollPosition = $(window).scrollTop();
-  $('body').css({
-    'position': 'fixed',
-    'width': '100%',
-    'z-index': '1',
-    'top': -scrollPosition
-  });
-}
+  function bodyFix() {
+    const scrollPosition = $(window).scrollTop();
+    $('body').css({
+      'position': 'fixed',
+      'width': '100%',
+      'z-index': '1',
+      'top': -scrollPosition
+    });
+  }
 
-//body固定を解除する関数
-function bodyFixReset() {
-  const offsetPosition = $('body').offset().top;
-  const scrollPosition = $(window).scrollTop();
-  $('body').css({
-    'position': 'relative',
-    'width': 'auto',
-    'top': 'auto'
-  });
-  /* scroll位置を調整 */
-  $('html, body').scrollTop(scrollPosition - offsetPosition);
-}
+  //body固定を解除する関数
+  function bodyFixReset() {
+    const offsetPosition = $('body').offset().top;
+    const scrollPosition = $(window).scrollTop();
+    $('body').css({
+      'position': 'relative',
+      'width': 'auto',
+      'top': 'auto'
+    });
+    /* scroll位置を調整 */
+    $('html, body').scrollTop(scrollPosition - offsetPosition);
+  }
 
 });
 
