@@ -252,8 +252,8 @@ header {
     background-color: #FFF;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(105%);
+            transform: translateX(105%);
     -webkit-transition: -webkit-transform 0.3s ease 0s;
     transition: -webkit-transform 0.3s ease 0s;
     transition: transform 0.3s ease 0s;
@@ -278,7 +278,7 @@ header {
     height: 20px;
     position: absolute;
     top: 20px;
-    left: calc(-22px - 4.2666666667vw);
+    left: calc(-22px - 4.2666666667vw - 5%);
     cursor: pointer;
   }
   .header__nav .hamburger .hamburger__bar {
