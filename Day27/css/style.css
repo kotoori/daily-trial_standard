@@ -1307,11 +1307,11 @@ go to top
   }
 }
 .goto-top.is-visible {
-  visibility: visible; /* 初期値は非表示&クリック不可 */
-  opacity: 0.7; /* 初期値は透明 */
+  visibility: visible;
+  opacity: 1;
 }
 .goto-top.is-visible:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 /*=================================
