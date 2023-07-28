@@ -37,7 +37,7 @@ function headerHight(){
   return jQuery(headerItem).innerHeight();
 }
 
-jQuery(window).scroll(function() {
+jQuery(window).on('scroll', function() {
 
   const scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
 
@@ -142,7 +142,7 @@ $(function(){
 スムーススクロール
 =========================*/
 $(function(){
-  jQuery('a[href^="#"]').click(function(e){
+  jQuery('a[href^="#"]').on('click', function(e){
     e.preventDefault();
 
     let href = jQuery(this).attr("href");
