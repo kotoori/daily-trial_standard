@@ -115,33 +115,37 @@ $(function(){
 
   //bodyを固定する関数
   function bodyFix() {
-    const scrollPosition = $(window).scrollTop();
-    $('body').css({
-      'position': 'fixed',
-      'width': '100%',
-      'z-index': '1',
-      'top': -scrollPosition
-    });
+    const bodyPosition = jQuery('body').css('position');
+    if(bodyPosition !== 'fixed'){  /* 画面が固定されていない時だけ実行 */
+      const scrollPosition = $(window).scrollTop();
+      $('body').css({
+        'position': 'fixed',
+        'width': '100%',
+        'z-index': '1',
+        'top': -scrollPosition
+      });
+    }
   }
 
   //body固定を解除する関数
   function bodyFixReset() {
-    const offsetPosition = $('body').offset().top;
-    const scrollPosition = $(window).scrollTop();
-    $('body').css({
-      'position': bodyPositionDefault,
-      'width': 'auto',
-      'top': 'auto'
-    });
-    /* scroll位置を調整 */
-    $('html, body').scrollTop(scrollPosition - offsetPosition);
+    const bodyPosition = jQuery('body').css('position');
+    if(bodyPosition === 'fixed'){  /* 画面が固定されている時だけ実行 */
+      const offsetPosition = $('body').offset().top;
+      const scrollPosition = $(window).scrollTop();
+      $('body').css({
+        'position': bodyPositionDefault,
+        'width': 'auto',
+        'top': 'auto'
+      });
+      /* scroll位置を調整 */
+      $('html, body').scrollTop(scrollPosition - offsetPosition);
+    }
   }
-});
 
 /*========================
 スムーススクロール
 =========================*/
-$(function(){
   jQuery('a[href^="#"]').on('click', function(e){
     e.preventDefault();
 
@@ -158,15 +162,12 @@ $(function(){
     }
 
     //画面固定されていたら、スクロール実行前に固定を解除する
-    const bodyPosition = jQuery('body').css('position');
-    if(bodyPosition === 'fixed'){
-      bodyFixReset();
-    }
+    bodyFixReset();
 
     // animateで移動します
     jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
 
     return false;
   })
-});
+}); /* $(function(){}) */
 
