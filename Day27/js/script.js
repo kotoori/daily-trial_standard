@@ -28,7 +28,7 @@ nav active　
 toTopボタンの表示/非表示
 =========================*/
 const headerItem = $('header');
-const section = ['card','news','price','access','contact'];
+const section = ['#card','#news','#price','#access','#contact'];
 const navItem = '.header__nav .header__nav__item';
 
 
@@ -48,8 +48,8 @@ jQuery(window).scroll(function() {
   let cnt = 1;
   for(let target of section){
     jQuery(`${navItem}:nth-child(${cnt}) a`).removeClass('is-active');
-    let areaTop = jQuery(`#${target}`).offset().top; // 対象エリアの上部の位置
-    let areaBottom = areaTop + jQuery(`#${target}`).innerHeight(); // 対象エリアの下部の位置
+    let areaTop = jQuery(target).offset().top; // 対象エリアの上部の位置
+    let areaBottom = areaTop + jQuery(target).innerHeight(); // 対象エリアの下部の位置
     if((scrollArea >= areaTop) && (scrollArea < areaBottom)){
       jQuery(`${navItem}:nth-child(${cnt}) a`).addClass('is-active');
     }
@@ -142,11 +142,11 @@ $(function(){
 スムーススクロール
 =========================*/
 $(function(){
-  $('a[href^="#"]').click(function(e){
+  jQuery('a[href^="#"]').click(function(e){
     e.preventDefault();
 
-    let href = $(this).attr("href");
-    let target = $(href === "#" ? 'html' : href);
+    let href = jQuery(this).attr("href");
+    let target = jQuery(href === "#" ? 'html' : href);
     let targetY = target.offset().top;
 
     //固定headerの高さをスクロール量からひく
@@ -158,13 +158,13 @@ $(function(){
     }
 
     //画面固定されていたら、スクロール実行前に固定を解除する
-    const bodyPosition = $('body').css('position');
+    const bodyPosition = jQuery('body').css('position');
     if(bodyPosition === 'fixed'){
       bodyFixReset();
     }
 
     // animateで移動します
-    $('html, body').animate({scrollTop : targetY}, 500, 'swing');
+    jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
 
     return false;
   })
