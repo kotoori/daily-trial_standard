@@ -1293,6 +1293,10 @@ go to top
   right: 24px;
   width: 60px;
   height: 60px;
+  visibility: hidden; /* 初期値は非表示&クリック不可 */
+  opacity: 0; /* 初期値は透明 */
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 @media screen and (max-width: 767px) {
   .goto-top {
@@ -1302,8 +1306,12 @@ go to top
     height: 40px;
   }
 }
-.goto-top:hover {
-  opacity: 0.7;
+.goto-top.is-visible {
+  visibility: visible; /* 初期値は非表示&クリック不可 */
+  opacity: 0.7; /* 初期値は透明 */
+}
+.goto-top.is-visible:hover {
+  opacity: 1;
 }
 
 /*=================================

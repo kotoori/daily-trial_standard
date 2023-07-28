@@ -22,26 +22,48 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+
 /*========================
-nav active
+nav active　
+toTopボタンの表示/非表示
 =========================*/
+const headerItem = $('header');
 const section = ['card','news','price','access','contact'];
 const navItem = '.header__nav .header__nav__item';
 
+
+//固定ヘッダーの高さを返す関数 
+function headerHight(){
+  return jQuery(headerItem).innerHeight();
+}
+
 jQuery(window).scroll(function() {
-	let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
-  scrollTop += 100; /* 固定ヘッダの高さ100px分をスクロール位置に足す */
+
+  const scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+
+  //スクロール量に応じてNavのラインを切り替える
+  let scrollArea = scrollTop + headerHight(); /* 固定ヘッダの高さ100px分をスクロール位置に足す */
+  scrollArea += 5;  /* スクロール量の小数点以下の誤差を吸収 ＆ 残り5pxになったら次のセクションに入ったと判定する */
 
   let cnt = 1;
   for(let target of section){
     jQuery(`${navItem}:nth-child(${cnt}) a`).removeClass('is-active');
     let areaTop = jQuery(`#${target}`).offset().top; // 対象エリアの上部の位置
     let areaBottom = areaTop + jQuery(`#${target}`).innerHeight(); // 対象エリアの下部の位置
-    if((scrollTop > areaTop) && (scrollTop <= areaBottom)){
+    if((scrollArea >= areaTop) && (scrollArea < areaBottom)){
       jQuery(`${navItem}:nth-child(${cnt}) a`).addClass('is-active');
     }
     cnt++;
   }
+
+  //スクロール量に応じてtoTopボタンの表示を切り替える
+  const toTop = $('.goto-top');
+  const activeClass = 'is-visible';
+  if(scrollTop >= 100){
+    toTop.addClass(activeClass);
+  }else{
+    toTop.removeClass(activeClass);
+}
 });
 
 /*========================
@@ -59,6 +81,8 @@ const drawerItem = $('.header__nav__item a');
 const openClass = 'is-open';
 
 $(function(){
+  const bodyPositionDefault = $('body').css('position'); 
+
   hamburger.on('click',function(e){
     e.preventDefault();
     if(hamburger.hasClass(openClass)){
@@ -105,13 +129,44 @@ $(function(){
     const offsetPosition = $('body').offset().top;
     const scrollPosition = $(window).scrollTop();
     $('body').css({
-      'position': 'relative',
+      'position': bodyPositionDefault,
       'width': 'auto',
       'top': 'auto'
     });
     /* scroll位置を調整 */
     $('html, body').scrollTop(scrollPosition - offsetPosition);
   }
+});
 
+/*========================
+スムーススクロール
+=========================*/
+$(function(){
+  $('a[href^="#"]').click(function(e){
+    e.preventDefault();
+
+    let href = $(this).attr("href");
+    let target = $(href === "#" ? 'html' : href);
+    let targetY = target.offset().top;
+
+    //固定headerの高さをスクロール量からひく
+    if(href !== "#"){
+      targetY -= headerHight();
+      if(targetY < 0){
+        targetY = 0;
+      }
+    }
+
+    //画面固定されていたら、スクロール実行前に固定を解除する
+    const bodyPosition = $('body').css('position');
+    if(bodyPosition === 'fixed'){
+      bodyFixReset();
+    }
+
+    // animateで移動します
+    $('html, body').animate({scrollTop : targetY}, 500, 'swing');
+
+    return false;
+  })
 });
 

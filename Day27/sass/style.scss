@@ -1156,6 +1156,9 @@ go to top
   right: 24px;
   width: 60px;
   height: 60px;
+  visibility: hidden; /* 初期値は非表示&クリック不可 */
+  opacity: 0; /* 初期値は透明 */
+  transition: all 0.3s ease 0s;
 
   @include mq(sp){
     bottom: 12px;
@@ -1164,8 +1167,13 @@ go to top
     height: 40px;
   }
 
-  &:hover{
-    opacity: 0.7;
+  &.is-visible{
+    visibility: visible; /* 初期値は非表示&クリック不可 */
+    opacity: 0.7; /* 初期値は透明 */
+
+    &:hover{
+      opacity: 1;
+    }
   }
 }
 
