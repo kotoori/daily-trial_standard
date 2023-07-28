@@ -28,7 +28,7 @@ nav active　
 toTopボタンの表示/非表示
 =========================*/
 const headerItem = $('header');
-const section = ['#card','#news','#price','#access','#contact'];
+const section = ['#tab, #card','#news','#price','#access','#contact'];
 const navItem = '.header__nav .header__nav__item';
 
 
@@ -169,5 +169,29 @@ $(function(){
 
     return false;
   })
+
+/*========================
+Tab
+=========================*/
+  const tab = ('.tab__tab__item');
+  const panel = ('.panel');
+  const activeClass = 'is-active';
+
+  jQuery(tab).on('click', function(){
+    for(let target of jQuery(tab)){
+      jQuery(target).removeClass(activeClass);
+    }
+    for(let target of jQuery(panel)){
+      jQuery(target).removeClass(activeClass);
+    }
+
+    const nth = jQuery(tab).index(this) + 1;
+    console.log(nth);
+    console.log(jQuery(`${panel}:nth-child(${nth})`));
+    jQuery(`${tab}:nth-of-type(${nth})`).addClass(activeClass);
+    jQuery(`${panel}:nth-of-type(${nth})`).addClass(activeClass);
+  })
+
+
 }); /* $(function(){}) */
 
