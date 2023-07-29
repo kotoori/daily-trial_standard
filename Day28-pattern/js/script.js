@@ -184,6 +184,8 @@ Tab
     const nth = jQuery(tab).index(this) + 1;
     jQuery(`${tab}:nth-of-type(${nth})`).addClass(activeClass);
     jQuery(`${panel}:nth-of-type(${nth})`).addClass(activeClass);
+
+    return false;
   })
 
 
