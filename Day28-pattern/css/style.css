@@ -563,9 +563,14 @@ Panel
       flex-wrap: nowrap;
 }
 
+.tab__tab li {
+  width: 17%;
+}
+
 .tab__tab__item {
   display: block;
-  width: 17%;
+  width: 100%;
+  height: 100%;
   font-size: 1.125rem;
   font-weight: bold;
   color: #333;
@@ -589,8 +594,11 @@ Panel
   color: #fff;
   opacity: 0.4;
 }
-.tab__tab__item.is-active, .tab__tab__item:hover.is-active {
+.tab__tab__item.is-active li {
   width: 21%;
+}
+.tab__tab__item.is-active, .tab__tab__item:hover.is-active {
+  width: 100%;
   font-size: 1.25rem;
   color: #fff;
   background-color: #3f51b5;
