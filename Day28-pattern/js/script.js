@@ -178,16 +178,10 @@ Tab
   const activeClass = 'is-active';
 
   jQuery(tab).on('click', function(){
-    for(let target of jQuery(tab)){
-      jQuery(target).removeClass(activeClass);
-    }
-    for(let target of jQuery(panel)){
-      jQuery(target).removeClass(activeClass);
-    }
+    jQuery(tab).removeClass(activeClass);
+    jQuery(panel).removeClass(activeClass);
 
     const nth = jQuery(tab).index(this) + 1;
-    console.log(nth);
-    console.log(jQuery(`${panel}:nth-child(${nth})`));
     jQuery(`${tab}:nth-of-type(${nth})`).addClass(activeClass);
     jQuery(`${panel}:nth-of-type(${nth})`).addClass(activeClass);
   })
