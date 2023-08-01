@@ -21,8 +21,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
-
 /*========================
 nav active　
 toTopボタンの表示/非表示
@@ -174,10 +172,8 @@ $(function(){
 /*========================
 Q & A
 =========================*/
-  console.log('qa');
-  const qaButton = jQuery('.qa__item__q__button');
-  qaButton.on('click', function(e){
-    console.log('click');
+  const qaButton = ('.qa__item__q__button');
+  jQuery(qaButton).on('click', function(e){
     e.preventDefault();
 
     const qaAnswer = jQuery(this).parents('.qa__item').find('.qa__item__answer');
@@ -185,7 +181,17 @@ Q & A
     jQuery(qaAnswer).slideToggle();
 
     return false;
-  })
+  });
+
+  const qa2Item = ('.qa2__item');
+  const qa2Button = ('.qa2__item__button');
+  jQuery(qa2Button).on('click', function(){
+    console.log("click");
+    const targetItem = jQuery(this).parents(qa2Item);
+    jQuery(targetItem).toggleClass(openClass);
+    jQuery(targetItem).find('.qa2__item__text').slideToggle();
+
+  });
 
 
 }); /* $(function(){}) */
