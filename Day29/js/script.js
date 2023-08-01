@@ -28,7 +28,7 @@ nav active　
 toTopボタンの表示/非表示
 =========================*/
 const headerItem = $('header');
-const section = ['#card','#news','#price','#access','#contact'];
+const section = ['#card','#news','#price','#access','#qa','#contact'];
 const navItem = '.header__nav .header__nav__item';
 
 
@@ -169,5 +169,23 @@ $(function(){
 
     return false;
   })
-}); /* $(function(){}) */
 
+
+/*========================
+Q & A
+=========================*/
+  console.log('qa');
+  const qaButton = jQuery('.qa__item__q__button');
+  qaButton.on('click', function(e){
+    console.log('click');
+    e.preventDefault();
+
+    const qaAnswer = jQuery(this).parents('.qa__item').find('.qa__item__answer');
+    jQuery(this).toggleClass(openClass);
+    jQuery(qaAnswer).slideToggle();
+
+    return false;
+  })
+
+
+}); /* $(function(){}) */

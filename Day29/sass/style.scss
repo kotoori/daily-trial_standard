@@ -846,6 +846,93 @@ Access
 }
 
 /*=================================
+Q & A
+=================================*/
+.qa__container{
+  max-width: 900px;
+}
+
+.qa__content{
+
+}
+
+.qa__item{
+  &:not(:first-child){
+    margin-top: 24px;
+  }
+}
+
+.qa__item__question{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  background-color: $color-main;
+}
+
+.qa__item__q__text{
+  font-weight: bold;
+  color: $color-bg-1;
+  padding: 12px 0 12px 56px;
+  position: relative;
+  &::before{
+    content: "Q";
+    display: block;
+    width: 20px;
+    font-size: 0.9375rem;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.qa__item__q__button{
+  appearance: none;
+  border:none;
+  width: 14px;
+  height: 14px;
+  margin-right: 14px;
+  display: block;
+  cursor: pointer;
+  background: transparent url(../images/plus@2x.png) no-repeat center center / contain;
+  &:hover,&:focus{
+    border: none;
+    outline: none;
+    opacity: 0.7;
+  }
+  &.is-open{
+    background: transparent url(../images/minus@2x.png) no-repeat center center / contain;
+  }
+}
+
+.qa__item__answer{
+  overflow: hidden;
+  background-color:#FFF;
+  border: 1px solid $color-main;
+}
+
+.qa__item__a__text{
+  font-weight: bold;
+  color: $color-main;
+  line-height: calc(24 / 16);
+  padding: 16px 30px 16px 56px;
+  display: block;
+  position: relative;
+  &::before{
+    content: "A";
+    display: block;
+    width: 20px;
+    font-size: 0.9375rem;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+/*=================================
 Contact
 =================================*/
 .contact__container{

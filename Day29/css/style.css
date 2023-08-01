@@ -947,6 +947,96 @@ Access
 }
 
 /*=================================
+Q & A
+=================================*/
+.qa__container {
+  max-width: 900px;
+}
+
+.qa__item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.qa__item__question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3f51b5;
+}
+
+.qa__item__q__text {
+  font-weight: bold;
+  color: #EFEFEF;
+  padding: 12px 0 12px 56px;
+  position: relative;
+}
+.qa__item__q__text::before {
+  content: "Q";
+  display: block;
+  width: 20px;
+  font-size: 0.9375rem;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.qa__item__q__button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  width: 14px;
+  height: 14px;
+  margin-right: 14px;
+  display: block;
+  cursor: pointer;
+  background: transparent url(../images/plus@2x.png) no-repeat center center/contain;
+}
+.qa__item__q__button:hover, .qa__item__q__button:focus {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+}
+.qa__item__q__button.is-open {
+  background: transparent url(../images/minus@2x.png) no-repeat center center/contain;
+}
+
+.qa__item__answer {
+  overflow: hidden;
+  background-color: #FFF;
+  border: 1px solid #3f51b5;
+}
+
+.qa__item__a__text {
+  font-weight: bold;
+  color: #3f51b5;
+  line-height: 1.5;
+  padding: 16px 30px 16px 56px;
+  display: block;
+  position: relative;
+}
+.qa__item__a__text::before {
+  content: "A";
+  display: block;
+  width: 20px;
+  font-size: 0.9375rem;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/*=================================
 Contact
 =================================*/
 .contact__container {
