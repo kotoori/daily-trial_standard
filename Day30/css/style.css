@@ -1453,14 +1453,19 @@ Contact
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
   position: absolute;
-  top: calc(50% + 50px);
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
   height: 652px;
-  max-height: calc(100% - 150px);
+  max-height: calc(100% - (100px + 50px));
+}
+@media screen and (max-width: 767px) {
+  .policy__box {
+    max-height: calc(100% - (60px + 50px));
+  }
 }
 
 .policy__content {
@@ -1468,6 +1473,11 @@ Contact
   height: 100%;
   padding: 60px;
   overflow: scroll;
+}
+@media screen and (max-width: 767px) {
+  .policy__content {
+    padding: 30px;
+  }
 }
 
 .policy__title {

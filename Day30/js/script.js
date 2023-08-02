@@ -207,7 +207,7 @@ policy modal
   });
 
   jQuery(modalClose).on('click', function(e){
-    jQuery(e).preventDefault;
+    e.preventDefault();
     const target = jQuery(this).data("target");
     jQuery(`.${target}`).fadeOut();
     bodyFixReset();
