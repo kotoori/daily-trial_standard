@@ -846,6 +846,163 @@ Access
 }
 
 /*=================================
+Q & A
+=================================*/
+.qa__container{
+  max-width: 900px;
+}
+
+.qa__content{
+}
+
+.qa__item{
+  margin-top: 24px;
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+.qa__question{
+  position: relative;
+}
+
+.qa__question__button{
+  font-size: 1rem;
+  font-weight: bold;
+  color: $color-font-1;
+  text-align: left;
+  padding: 12px 56px;
+  background-color: $color-main;
+  width: 100%;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+  &::before{
+    content: "Q";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 0.9375rem;
+  }
+  &:focus{
+    outline: none; 
+  }
+  &:hover{
+    opacity: 0.7; 
+  }
+}
+.qa__question__icon{
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: transparent url(../images/plus@2x.png) no-repeat center center / contain;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  &.is-open{
+    background: transparent url(../images/minus@2x.png) no-repeat center center / contain;
+  }
+}
+
+.qa__answer{
+  background-color: #fff;
+  border: 1px solid $color-main;
+  display: none; /* 初期値は非表示 */
+}
+
+.qa__answer__text{
+  font-weight: 700;
+  color: $color-main;
+  line-height: calc(24 / 16);
+  padding: 16px 30px 16px 55px;
+  position: relative;
+  &::before{
+    content: "A";
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    font-size: 0.9375rem;
+  }    
+}
+
+/*** qa2 ***/
+.qa2__content{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  @include mq(sp){
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+.qa2__item{
+  width: calc(50% - (40px / 2));
+  max-width: 440px;
+  @include mq(sp){
+    width: 100%;
+    margin: 20px auto 0;
+    &:first-child{
+      margin-top: 0;
+    }
+
+  }
+}
+
+.qa2__question{
+}
+
+.qa2__question__button{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $color-main;
+  line-height: 1;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #fff;
+  border: 1px solid $color-main;
+  border-radius: 30px;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: transparent url(../images/arrow-bottom@2x.png) no-repeat center center / contain;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.is-open{
+    &::after{
+      background: transparent url(../images/arrow-top@2x.png) no-repeat center center / contain;
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.qa2__answer{
+  margin-top: 40px;
+  display: none;  /* 初期値は非表示 */
+}
+
+.qa2__answer__text{
+  color: $color-main;
+  line-height: calc(24 / 16);
+}
+
+
+/*=================================
 Contact
 =================================*/
 .contact__container{
