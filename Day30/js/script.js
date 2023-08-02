@@ -209,7 +209,7 @@ policy modal
   jQuery(modalClose).on('click', function(e){
     e.preventDefault();
     const target = jQuery(this).data("target");
-    jQuery(`.${target}`).fadeOut();
+    jQuery(target).fadeOut();
     bodyFixReset();
     return false;
   });
