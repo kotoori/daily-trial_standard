@@ -1448,7 +1448,7 @@ Contact
   display: none;
 }
 
-.policy__box {
+.policy__content {
   background-color: #fff;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
@@ -1459,20 +1459,14 @@ Contact
           transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
-  height: 652px;
+  height: 90%;
   max-height: calc(100% - (100px + 50px));
+  padding: 60px;
 }
 @media screen and (max-width: 767px) {
-  .policy__box {
+  .policy__content {
     max-height: calc(100% - (60px + 50px));
   }
-}
-
-.policy__content {
-  width: 100%;
-  height: 100%;
-  padding: 60px;
-  overflow: scroll;
 }
 @media screen and (max-width: 767px) {
   .policy__content {
@@ -1504,6 +1498,7 @@ Contact
 .policy__items {
   margin-top: 40px;
   text-align: left;
+  height: calc(100% - 88px - 108px);
   max-height: 336px;
   overflow: scroll;
 }

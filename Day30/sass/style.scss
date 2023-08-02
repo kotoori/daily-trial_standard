@@ -1306,7 +1306,8 @@ Contact
   z-index: 200;
   display: none;
 }
-.policy__box{
+
+.policy__content{
   background-color: #fff;
   box-shadow: 0 0 3px #00000029;
   position: absolute;
@@ -1315,17 +1316,12 @@ Contact
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
-  height: 652px;
+  height: 90%;
   max-height: calc(100% - (#{$size-header-hight} + 50px));
   @include mq(sp){
     max-height: calc(100% - (#{$size-header-hight-sp} + 50px));
   }
-}
-.policy__content{
-  width: 100%;
-  height: 100%;
   padding: 60px;
-  overflow: scroll;
   @include mq(sp){
     padding: 30px;
   }
@@ -1354,6 +1350,7 @@ Contact
 .policy__items{
   margin-top: 40px;
   text-align: left;
+  height: calc(100% - 88px - 108px);
   max-height: 336px;
   overflow: scroll;
 }
