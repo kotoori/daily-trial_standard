@@ -195,20 +195,21 @@ Q&A アコーディオン
 /*========================
 policy modal
 =========================*/
-  const modalOpen = ('.policy-open');
+  const modalOpen = ('.js-policy-open');
   const modalClose = ('.js-policy-close');
-  const modalWindow = ('.contact__policy-check__modal');
 
   jQuery(modalOpen).on('click', function(e){
     jQuery(e).preventDefault;
+    const target = jQuery(this).data("target");
     bodyFix();
-    jQuery(modalWindow).fadeIn();
+    jQuery(`.${target}`).fadeIn();
     return false;
   });
 
   jQuery(modalClose).on('click', function(e){
     jQuery(e).preventDefault;
-    jQuery(modalWindow).fadeOut();
+    const target = jQuery(this).data("target");
+    jQuery(`.${target}`).fadeOut();
     bodyFixReset();
     return false;
   });
