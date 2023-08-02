@@ -202,7 +202,6 @@ policy modal
   jQuery(modalOpen).on('click', function(e){
     jQuery(e).preventDefault;
     bodyFix();
-    jQuery(modalWindow).removeClass('is-close');
     jQuery(modalWindow).addClass(openClass);
     return false;
   });
@@ -210,7 +209,6 @@ policy modal
   jQuery(modalClose).on('click', function(e){
     jQuery(e).preventDefault;
     jQuery(modalWindow).removeClass(openClass);
-    jQuery(modalWindow).addClass('is-close');
     bodyFixReset();
     return false;
   });
