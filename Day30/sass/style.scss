@@ -5,6 +5,7 @@ $color-sub-1: #e81919;
 $color-font-1: #fff;
 $color-font-2: #333;
 $color-font-3: #6F7579;
+$color-font-4: #707070;
 $color-bg-1: #EFEFEF;
 $size-inner-width: 1200px;
 $size-header-hight: 100px;
@@ -320,7 +321,7 @@ header{
       }
     }
     @include mq(sp){
-      color: #707070;
+      color: $color-font-4;
       display: block;
       width: 100%;
       height: 100%;
@@ -1266,7 +1267,7 @@ Contact
         opacity: 0;
         transition: all 0.3s ease 0s;
       }
-      & > a{
+      & > .policy-open{
         color: $color-font-2;
         font-weight: bold;
         text-decoration: underline;
@@ -1294,6 +1295,116 @@ Contact
     }
   }
 }
+
+.contact__policy-check__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  display: none;
+  &.is-open{
+    display: block;
+    animation: appear 0.3s ease;
+  }
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.policy__content{
+  background-color: #fff;
+  box-shadow: 0 0 3px #00000029;
+  position: absolute;
+  top: calc(50% + 50px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  padding: 60px;
+}
+
+.policy__title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $color-font-4;
+  padding-bottom: 24px;
+  text-align: center;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: $color-main;
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.policy__item{
+  margin-top: 40px;
+  text-align: left;
+}
+
+.policy__item__head{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $color-font-4;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background-color: $color-main;
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+.policy__item__text{
+  color: $color-font-4;
+  line-height: calc(24 / 16);
+  margin-top: 16px;
+}
+
+.policy__button{
+  margin-top: 60px;
+  color: $color-font-1;
+  background-color: $color-main;
+  max-width: 176px;
+  height: 48px;
+  padding: 0;
+}
+
+.policy__close__icon{
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent url(../images/btn-batsu@2x.png) no-repeat center center / contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  &:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
 
 .btn {
   &.contact__button{

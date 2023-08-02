@@ -1412,12 +1412,12 @@ Contact
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.contact__policy-check input + span > a {
+.contact__policy-check input + span > .policy-open {
   color: #333;
   font-weight: bold;
   text-decoration: underline;
 }
-.contact__policy-check input + span > a:hover {
+.contact__policy-check input + span > .policy-open:hover {
   opacity: 0.7;
 }
 .contact__policy-check input:checked + span::after {
@@ -1435,6 +1435,129 @@ Contact
 }
 .contact__policy-check input:disabled + span::after {
   content: none;
+}
+
+.contact__policy-check__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  display: none;
+}
+.contact__policy-check__modal.is-open {
+  display: block;
+  -webkit-animation: appear 0.3s ease;
+          animation: appear 0.3s ease;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.policy__content {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
+  position: absolute;
+  top: calc(50% + 50px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 900px;
+  padding: 60px;
+}
+
+.policy__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #707070;
+  padding-bottom: 24px;
+  text-align: center;
+  position: relative;
+}
+.policy__title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #3f51b5;
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.policy__item {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.policy__item__head {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #707070;
+  position: relative;
+}
+.policy__item__head::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background-color: #3f51b5;
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.policy__item__text {
+  color: #707070;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.policy__button {
+  margin-top: 60px;
+  color: #fff;
+  background-color: #3f51b5;
+  max-width: 176px;
+  height: 48px;
+  padding: 0;
+}
+
+.policy__close__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent url(../images/btn-batsu@2x.png) no-repeat center center/contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+.policy__close__icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .btn.contact__button {

@@ -173,23 +173,47 @@ $(function(){
 /*========================
 Q&A アコーディオン
 =========================*/
-const qaButton = ('.qa__question__button');
-jQuery(qaButton).on('click', function(){
-  const qaIcon = ('.qa__question__icon');
-  const qaTarget = jQuery(this).parents('.qa__item');
-  const qaAnswer = jQuery(qaTarget).find('.qa__answer');
+  const qaButton = ('.qa__question__button');
+  jQuery(qaButton).on('click', function(){
+    const qaIcon = ('.qa__question__icon');
+    const qaTarget = jQuery(this).parents('.qa__item');
+    const qaAnswer = jQuery(qaTarget).find('.qa__answer');
 
-  jQuery(this).siblings(qaIcon).toggleClass(openClass);
-  jQuery(qaAnswer).slideToggle();
-});
+    jQuery(this).siblings(qaIcon).toggleClass(openClass);
+    jQuery(qaAnswer).slideToggle();
+  });
 
-const qa2Button = ('.qa2__question__button');
-jQuery(qa2Button).on('click', function(){
-  const qa2Target = jQuery(this).parents('.qa2__item');
-  const qa2Answer = jQuery(qa2Target).find('.qa2__answer');
+  const qa2Button = ('.qa2__question__button');
+  jQuery(qa2Button).on('click', function(){
+    const qa2Target = jQuery(this).parents('.qa2__item');
+    const qa2Answer = jQuery(qa2Target).find('.qa2__answer');
 
-  jQuery(this).toggleClass(openClass);
-  jQuery(qa2Answer).slideToggle();
-});
+    jQuery(this).toggleClass(openClass);
+    jQuery(qa2Answer).slideToggle();
+  });
+
+/*========================
+policy modal
+=========================*/
+  const modalOpen = ('.policy-open');
+  const modalClose = ('.js-policy-close');
+  const modalWindow = ('.contact__policy-check__modal');
+
+  jQuery(modalOpen).on('click', function(e){
+    jQuery(e).preventDefault;
+    bodyFix();
+    jQuery(modalWindow).removeClass('is-close');
+    jQuery(modalWindow).addClass(openClass);
+    return false;
+  });
+
+  jQuery(modalClose).on('click', function(e){
+    jQuery(e).preventDefault;
+    jQuery(modalWindow).removeClass(openClass);
+    jQuery(modalWindow).addClass('is-close');
+    bodyFixReset();
+    return false;
+  });
+
 
 }); /* $(function(){}) */
