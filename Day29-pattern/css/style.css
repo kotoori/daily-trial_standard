@@ -953,6 +953,10 @@ Q & A
   max-width: 900px;
 }
 
+.qa__content {
+  width: 100%;
+}
+
 .qa__item:not(:first-child) {
   margin-top: 24px;
 }
@@ -984,9 +988,7 @@ Q & A
   font-size: 0.9375rem;
   position: absolute;
   left: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 12px;
 }
 
 .qa__item__q__button {
