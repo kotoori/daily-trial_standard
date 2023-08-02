@@ -1305,18 +1305,6 @@ Contact
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 200;
   display: none;
-  &.is-open{
-    display: block;
-    animation: appear 0.3s ease;
-  }
-}
-@keyframes appear {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
 }
 
 .policy__content{

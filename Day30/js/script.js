@@ -202,13 +202,13 @@ policy modal
   jQuery(modalOpen).on('click', function(e){
     jQuery(e).preventDefault;
     bodyFix();
-    jQuery(modalWindow).addClass(openClass);
+    jQuery(modalWindow).fadeIn();
     return false;
   });
 
   jQuery(modalClose).on('click', function(e){
     jQuery(e).preventDefault;
-    jQuery(modalWindow).removeClass(openClass);
+    jQuery(modalWindow).fadeOut();
     bodyFixReset();
     return false;
   });

@@ -1447,29 +1447,7 @@ Contact
   z-index: 200;
   display: none;
 }
-.contact__policy-check__modal.is-open {
-  display: block;
-  -webkit-animation: appear 0.3s ease;
-          animation: appear 0.3s ease;
-}
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .policy__content {
   background-color: #fff;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
