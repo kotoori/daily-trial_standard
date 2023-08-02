@@ -1267,7 +1267,7 @@ Contact
         opacity: 0;
         transition: all 0.3s ease 0s;
       }
-      & > .policy-open{
+      & > a{
         color: $color-font-2;
         font-weight: bold;
         text-decoration: underline;

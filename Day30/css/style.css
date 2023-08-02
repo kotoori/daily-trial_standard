@@ -1412,12 +1412,12 @@ Contact
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.contact__policy-check input + span > .policy-open {
+.contact__policy-check input + span > a {
   color: #333;
   font-weight: bold;
   text-decoration: underline;
 }
-.contact__policy-check input + span > .policy-open:hover {
+.contact__policy-check input + span > a:hover {
   opacity: 0.7;
 }
 .contact__policy-check input:checked + span::after {
