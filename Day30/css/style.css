@@ -1448,7 +1448,7 @@ Contact
   display: none;
 }
 
-.policy__content {
+.policy__box {
   background-color: #fff;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.1607843137);
@@ -1459,7 +1459,15 @@ Contact
           transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
+  height: 652px;
+  max-height: calc(100% - 150px);
+}
+
+.policy__content {
+  width: 100%;
+  height: 100%;
   padding: 60px;
+  overflow: scroll;
 }
 
 .policy__title {
