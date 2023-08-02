@@ -1339,9 +1339,16 @@ Contact
   }
 }
 
-.policy__item{
+.policy__items{
   margin-top: 40px;
   text-align: left;
+  max-height: 336px;
+  overflow: scroll;
+}
+.policy__item{
+  &:not(:first-child){
+    margin-top: 40px;
+  }
 }
 
 .policy__item__head{
