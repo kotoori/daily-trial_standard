@@ -501,6 +501,9 @@ Feature
 .feature__card__image {
   width: 100%;
 }
+.feature__card__image img {
+  width: 100%;
+}
 
 .feature__card__text {
   width: 100%;
@@ -645,6 +648,9 @@ Product
 .product__card__image {
   width: 100%;
 }
+.product__card__image img {
+  width: 100%;
+}
 
 .product__card__text {
   width: 100%;
@@ -739,6 +745,9 @@ News
   .news__card__image {
     width: 100%;
   }
+}
+.news__card__image img {
+  width: 100%;
 }
 
 .news__card__text {
