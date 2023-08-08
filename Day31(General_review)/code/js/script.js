@@ -62,7 +62,7 @@ jQuery(function(){
   /* .js-form-check要素が変更されるたびに、全必須項目(.js-form-check)をチェックする */
   const formInputText = '.contact__form__input[type="text"].js-form-check';
   const formInputEmail = '.contact__form__input[type="email"].js-form-check';
-  const formInputRadioType = '.contact__form__input[type="radio"][name="type"]:checked.js-form-check';
+  const formInputRadioType = '.contact__form__input[type="radio"][name="entry.622663929"]:checked.js-form-check';
   const formInputCheckBox = '.contact__form__input[type="checkbox"].js-form-check';
   const formTextarea = '.contact__form__textarea.js-form-check';
 
@@ -126,6 +126,58 @@ jQuery(function(){
     }
 
     return false;
+  });
+
+  /*===============================
+  contactフォームをクリアする
+  ===============================*/
+  function contactFormClear(){
+    for(let target of jQuery(formInputText)){
+      target.value = "";
+    }
+
+    for(let target of jQuery(formInputEmail)){
+      target.value = "";
+    }
+
+    for(let target of jQuery(formTextarea)){
+      target.value = "";
+    }
+
+    const formRadioTypeDefault = '.contact__form__input[type="radio"][name="entry.622663929"][value="法人"]';
+    jQuery(formRadioTypeDefault).prop("checked", true);
+
+    for(let target of jQuery(formInputCheckBox)){
+      jQuery(target).prop("checked",false);
+    }
+  }
+  
+  /*===============================
+  contactフォームをgoogleフォームで実装
+  送信時にgoogleフォームに飛ばないようにする
+  ===============================*/
+  const contactForm = '#contact__form';
+  jQuery(contactForm).submit(function (event) {
+    let formData = jQuery(contactForm).serialize();
+    console.log(formData);
+    $.ajax({
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfPbRB2p8Bfo211ELoB_WKlhgGiKA7VokBKzpFiDYBWH_29Q/formResponse",
+      data: formData,
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function () {
+          jQuery(formSubmitBtn).prop("disabled",true);
+          jQuery(formSubmitBtn).removeClass(activeClass);
+          contactFormClear();
+        },
+        200: function () {
+          jQuery(formSubmitBtn).prop("disabled",true);
+          jQuery(formSubmitBtn).removeClass(activeClass);
+        }
+      }
+    });
+    event.preventDefault();
   });
 
 });// jQuery
