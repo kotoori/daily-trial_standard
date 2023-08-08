@@ -1050,6 +1050,9 @@ Contact
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
+.contact__form__input[type=radio] + span:hover {
+  cursor: pointer;
+}
 .contact__form__input[type=radio]:checked + span {
   background-color: #3EA1D1;
   color: #FFF;
@@ -1074,6 +1077,9 @@ Contact
   transition: width 0.1s ease 0s, -webkit-transform 0.1s ease 0s;
   transition: width 0.1s ease 0s, transform 0.1s ease 0s;
   transition: width 0.1s ease 0s, transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s;
+}
+.contact__form__input[type=checkbox] + span:hover {
+  cursor: pointer;
 }
 .contact__form__input[type=checkbox]:checked + span::before {
   width: 11px;

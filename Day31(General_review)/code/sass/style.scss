@@ -859,6 +859,9 @@ Contact
       letter-spacing: 0.1em;
       border: 1px solid $color-bg-white;
       transition: all 0.2s ease 0s;
+      &:hover{
+        cursor: pointer;
+      }
     }
     &:checked{
       + span{
@@ -885,7 +888,10 @@ Contact
         top: 0;
         transition: width 0.1s ease 0s,transform 0.1s ease 0s;
       }
-    }
+      &:hover{
+        cursor: pointer;
+      }
+  }
     &:checked{
       + span{
         &::before{
