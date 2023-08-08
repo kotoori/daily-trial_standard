@@ -20,11 +20,11 @@
   <!-- drawer.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
 
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <!-- animate.css(wow.js) -->
   <link rel="stylesheet" type="text/css" href="./css/animate.css">
 
-
+  <!-- style.css -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 </head>
 <body class="drawer drawer--right">
@@ -260,28 +260,28 @@
         <dl class="contact__form__list">
           <div class="contact__form__list__row"><!-- name -->
             <dt><label for="contact__name" class="contact__form__label"><span class="contact__form__item required">お名前</span></label></dt>
-            <dd><input type="text" name="name" id="contact__name" class="contact__form__input"></dd>
+            <dd><input type="text" name="name" id="contact__name" class="contact__form__input js-form-check"></dd>
           </div>
           <div class="contact__form__list__row"><!-- email -->
             <dt><label for="contact__email" class="contact__form__label"><span class="contact__form__item required">メールアドレス</span></label></dt>
-            <dd><input type="email" name="email" id="contact__email" class="contact__form__input"></dd>
+            <dd><input type="email" name="email" id="contact__email" class="contact__form__input js-form-check"></dd>
           </div>
           <div class="contact__form__list__row"><!-- type -->
             <dt><div class="contact__form__label"><span class="contact__form__item required">法人/個人の選択</span></div></dt>
             <dd>
               <ul class="radio__type__list">
-                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="1" class="contact__form__input visually-hidden" checked><span>法人</span></label></li>
-                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="2" class="contact__form__input visually-hidden"><span>個人</span></label> </li>
+                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="1" class="contact__form__input visually-hidden js-form-check" checked><span>法人</span></label></li>
+                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="2" class="contact__form__input visually-hidden js-form-check"><span>個人</span></label> </li>
               </ul>
             </dd>
           </div>
           <div class="contact__form__list__row"><!-- textarea-->
             <dt><label for="contact__from__text" class="contact__form__label"><span class="contact__form__item required">お問い合わせ内容</span></label></dt>
-            <dd><textarea name="text" id="contact__from__text" class="contact__form__textarea"></textarea></dd>
+            <dd><textarea name="text" id="contact__from__text" class="contact__form__textarea js-form-check"></textarea></dd>
           </div>
         </dl>
         <div class="contact__form__privacy-policy">
-          <label><input type="checkbox" class="contact__form__input visually-hidden"><span><a href="" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span></label>
+          <label><input type="checkbox" class="contact__form__input visually-hidden js-form-check"><span><a href="" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span></label>
         </div>
         <button type="submit" class="btn contact__form__btn" disabled>送信</button>
       </form>
@@ -328,7 +328,7 @@
   <script src="https://kit.fontawesome.com/9708b46e1a.js" crossorigin="anonymous"></script>
   <!-- WOW.js -->
   <script src="./js/wow.min.js"></script>
-
+  <!-- script.js -->
   <script src="./js/script.js"></script>
 
 </body>

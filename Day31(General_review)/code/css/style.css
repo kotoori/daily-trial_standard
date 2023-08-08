@@ -1159,11 +1159,18 @@ Contact
   letter-spacing: 0.1em;
   width: 137px;
   height: 46px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 @media screen and (max-width: 767px) {
   .contact__form__btn {
     margin: 29px auto 0;
   }
+}
+.contact__form__btn.is-active {
+  color: #FFF;
+  background-color: #3EA1D1;
+  cursor: pointer;
 }
 
 /*===============================
