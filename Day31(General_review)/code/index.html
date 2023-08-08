@@ -12,6 +12,10 @@
   <!-- favicon -->
   <link rel="icon" href="./images/favicon.ico">
 
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
   <!-- drawer.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -23,38 +27,42 @@
   <!-- header (drawer.js) -->
     <header class="header" role="banner">
       <div class="inner">
-        <h1 class="header__logo"><a href="#"><img src="./images/logo.png" alt="sobolon"></a></h1>
-        <button type="button" class="drawer-toggle drawer-hamburger">
-          <span class="sr-only">toggle navigation</span>
-          <span class="drawer-hamburger-icon"></span>
-        </button>
-        <nav class="drawer-nav header__nav" role="navigation">
-          <ul class="drawer-menu header__nav__list">
-            <li class="header__nav__item"><a class="drawer-menu-item header__nav__link" href="#a-concept">Concept</a></li>
-            <li class="header__nav__item"><a class="drawer-menu-item header__nav__link" href="#a-feature">Feature</a></li>
-            <li class="header__nav__item"><a class="drawer-menu-item header__nav__link" href="#a-product">Products</a></li>
-            <li class="header__nav__item"><a class="drawer-menu-item header__nav__link" href="#a-news">News</a></li>
-            <li class="header__nav__item"><a class="drawer-menu-item header__nav__link" href="#a-contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="header__wrapper">
+          <h1 class="header__logo"><a href="#"><img src="./images/logo.png" alt="sobolon"></a></h1>
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+          </button>
+          <nav class="drawer-nav header__nav" role="navigation">
+            <ul class="drawer-menu header__nav__list">
+              <li class="header__nav__item"><a class="header__nav__link" href="#a-concept">Concept</a></li>
+              <li class="header__nav__item"><a class="header__nav__link" href="#a-feature">Feature</a></li>
+              <li class="header__nav__item"><a class="header__nav__link" href="#a-product">Products</a></li>
+              <li class="header__nav__item"><a class="header__nav__link" href="#a-news">News</a></li>
+              <li class="header__nav__item"><a class="header__nav__link" href="#a-contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div> <!-- header__wrapper -->
       </div><!-- inner -->
     </header>
     
   <!-- first view -->
   <div class="first-view">
     <div class="inner">
-      <div class="sirst-view__wrapper">
+      <div class="first-view__wrapper">
         <span class="first-view__image"></span>
         <div class="first-view__text">
-          <p class="first-view__text__main">“可愛い” で 地球を守る！</p>
-          <p class="first-view__text__sub">海洋マイクロプラスチックを素材とした ハンドメイドアクセサリー「sobolon」</p>
+          <div class="first-view__text__box">
+            <p class="first-view__text__main">“可愛い” で<br class="is-pc">地球を守る！</p>
+            <p class="first-view__text__sub">海洋マイクロプラスチックを素材とした ハンドメイドアクセサリー「sobolon」</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- concept -->
-  <section class="concept container" id="a-concept">
+  <section class="concept section__container" id="a-concept">
     <div class="inner">
       <h2 class="section__title">Concept</h2>
       <div class="concept__contents">
@@ -62,7 +70,7 @@
           <img src="./images/concept-1.png" alt="Concept Image">
         </div>
         <div class="concept__text">
-          <p class="concept__text__main">可愛くてステキなのは当たり前。 地球にやさしくあるのも当たり前。</p>
+          <p class="concept__text__main">可愛くてステキなのは当たり前。<br>地球にやさしくあるのも当たり前。</p>
           <p class="concept__text__sub">「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。</p>
         </div>
       </div>
@@ -71,60 +79,62 @@
   </section>
 
   <!-- Feature -->
-  <section class="feature container" id="a-feature">
+  <section class="feature section__container" id="a-feature">
     <div class="inner">
       <h2 class="section__title">Feature</h2>
-      <div class="feature__contents">
-        <div class="feature__card">
-          <a href="#">
+      <ul class="feature__contents">
+        <li class="feature__card">
+          <a href="" class="feature__card__link">
             <div class="feature__card__image">
               <img src="./images/feature-1.png" alt="素材は海で採れた マイクロプラスチック">
             </div>
             <div class="feature__card__text">
-                <p class="feature__card__text__main">素材は海で採れた マイクロプラスチック</p>
+                <p class="feature__card__text__main">素材は海で採れた<br>マイクロプラスチック</p>
             </div>
           </a>
-        </div><!-- feature__card -->
-        <div class="feature__card">
-          <a href="">
+        </li><!-- feature__card -->
+        <li class="feature__card">
+          <a href="" class="feature__card__link">
             <div class="feature__card__image">
               <img src="./images/feature-2.png" alt="個性あふれる “可愛い”デザイン">
             </div>
             <div class="feature__card__text">
-                <p class="feature__card__text__main">個性あふれる “可愛い”デザイン</p>
+                <p class="feature__card__text__main">個性あふれる<br>“可愛い”デザイン</p>
             </div>
           </a>
-        </div><!-- feature__card -->
-        <div class="feature__card"><a href="">
-          <div class="feature__card__image">
-            <img src="./images/feature-3.png" alt="世界にひとつだけの 一点物アクセサリー">
-          </div>
-          <div class="feature__card__text">
-              <p class="feature__card__text__main">世界にひとつだけの 一点物アクセサリー</p>
+        </li><!-- feature__card -->
+        <li class="feature__card">
+          <a href="" class="feature__card__link">
+            <div class="feature__card__image">
+              <img src="./images/feature-3.png" alt="世界にひとつだけの 一点物アクセサリー">
+            </div>
+            <div class="feature__card__text">
+              <p class="feature__card__text__main">世界にひとつだけの<br>一点物アクセサリー</p>
             </div>
           </a>
-        </div><!-- feature__card -->
-      </div><!-- feature__contents -->
+        </li><!-- feature__card -->
+      </ul><!-- feature__contents -->
     </div><!-- inner -->
   </section>
 
   <!-- second view -->
-  <div class="second-view">
-    <div class="inner">
-      <div class="second_view__text">
-        <p class="second-view__text__main">消費者である私たちが、 地球環境のためにできることは何か？</p>
-        <p class="second-view__text__main">そんな視点からこのブランドは生まれました。 オシャレを楽しむ気持ちを大切にしながらも、 ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら… その変化は少しずつ、だけども本質的に、 この世界をHappyに変えていくのだと、私たちは考えます。</p>
+  <div class="second-view section__container">
+    <span class="second-view__overlay"></span>
+    <div class="second_view__text">
+      <div class="inner">
+        <p class="second-view__text__main">消費者である私たちが、<br>地球環境のためにできることは何か？</p>
+        <p class="second-view__text__sub">そんな視点からこのブランドは生まれました。<br>オシャレを楽しむ気持ちを大切にしながらも、<br class="is-pc">ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br>その変化は少しずつ、だけども本質的に、<br>この世界をHappyに変えていくのだと、私たちは考えます。</p>
       </div>
     </div>
   </div>
 
   <!-- Product -->
-  <section class="product" id="a-product">
+  <section class="product section__container" id="a-product">
     <div class="inner product__inner">
       <h2 class="section__title">Products</h2>
-      <div class="product__contents">
-        <div class="product__card">
-          <a href="">
+      <ul class="product__contents">
+        <li class="product__card">
+          <a class="product__card__link" href="">
             <div class="product__card__image">
               <img src="./images/product-1.png" alt="しかくイヤリング">
             </div>
@@ -133,9 +143,9 @@
               <dd class="product__card__price">￥3,695</dd>
             </dl>
           </a>
-        </div><!-- product__card-->
-        <div class="product__card">
-          <a href="">
+        </li><!-- product__card-->
+        <li class="product__card">
+          <a class="product__card__link" href="">
             <div class="product__card__image">
               <img src="./images/product-2.png" alt="しかく指輪">
             </div>
@@ -144,9 +154,9 @@
               <dd class="product__card__price">￥2,390</dd>
             </dl>
           </a>
-        </div><!-- product__card-->
-        <div class="product__card">
-          <a href="">
+        </li><!-- product__card-->
+        <li class="product__card">
+          <a class="product__card__link" href="">
             <div class="product__card__image">
               <img src="./images/product-3.png" alt="ピンバッジ">
             </div>
@@ -155,121 +165,125 @@
               <dd class="product__card__price">￥2,580</dd>
             </dl>
           </a>
-        </div><!-- product__card-->
-      </div><!-- product__contents -->
+        </li><!-- product__card-->
+      </ul><!-- product__contents -->
       <div class="btn product__btn">
-        <a href="">MORE</a>
+        <a href="" class="more__btn__link">MORE</a>
       </div>
     </div><!-- inner -->
   </section>
 
   <!-- News -->
-  <section class="news container" id="a-news">
+  <section class="news section__container" id="a-news">
     <div class="inner news__inner">
       <h2 class="section__title">News</h2>
-    </div>
-    <div class="news__contents">
-      <div class="news__card">
-        <a href="">
-          <div class="news__card__image">
-            <img src="./images/news-1.png" alt="">
-          </div>
-          
-          <div class="news__card__date">
-            <time datetime="2020-02-04">2020年2月4日</time>
-          </div>
-          <dl class="news__card__text">
-            <dt class="news__card__title">き業展終了！次回は2/11(火)フェスタ出店します。</dt>
-            <dd class="news__card__dital">「き業展」2日目！大盛況に終わりました\( ˆoˆ )/来てくださったみなさん本当にありがとうございました！やっぱり、地元多治見での出店はみ…</dd>
-          </dl>
-        </a>
-      </div><!-- news__card -->
-      <div class="news__card">
-        <a href="">
-          <div class="news__card__image">
-            <img src="./images/news-1.png" alt="">
-          </div>
-          
-          <div class="news__card__date">
-            <time datetime="2020-01-20">22020年1月20日</time>
-          </div>
-          <dl class="news__card__text">
-            <dt class="news__card__title">“可愛い” で 地球を守る！ 海洋マイクロプラスチックを使ったハンドメイドアクセサリー屋さん 【sobolon】</dt>
-            <dd class="news__card__dital">こんにちは！私は、「 “可愛い” で地球を守る！」をテーマに、昨今、環境問題として話題になっている、マイクロプラスチックを使ったアクセサリー…</dd>
-          </dl>
-        </a>
-      </div><!-- news__card -->
-      <div class="news__card">
-        <a href="">
-          <div class="news__card__image">
-            <img src="./images/news-1.png" alt="">
-          </div>
-          
-          <div class="news__card__date">
-            <time datetime="2020-11-23">2020年11月23日</time>
-          </div>
-          <dl class="news__card__text">
-            <dt class="news__card__title">sobolonの矛盾</dt>
-            <dd class="news__card__dital">こんにちは！“可愛い”で 地球を守る！マイクロプラスチックアクセサリー【 sobolon 】のリーダーひなこです！sobolonを知らない…</dd>
-          </dl>
-        </a>
-      </div><!-- news__card -->
-    </div><!-- news__contents -->
-    <div class="btn news__btn">
-      <a href="">MORE</a>
-    </div>
+      <ul class="news__contents">
+        <li class="news__card">
+          <a href="" class="news__card__link">
+            <div class="news__card__image">
+              <img src="./images/news-1.png" alt="Image">
+            </div>
+            <div class="news__card__text">
+              <div class="news__card__date">
+                <time datetime="2020-02-04">2020年2月4日</time>
+              </div>
+              <dl class="news__card__content">
+                <dt class="news__card__title">き業展終了！次回は2/11(火)フェスタ出店します。</dt>
+                <dd class="news__card__dital">「き業展」2日目！大盛況に終わりました\( ˆoˆ )/来てくださったみなさん本当にありがとうございました！やっぱり、地元多治見での出店はみ…</dd>
+              </dl>
+            </div>
+          </a>
+        </li><!-- news__card -->
+        <li class="news__card">
+          <a href="" class="news__card__link">
+            <div class="news__card__image">
+              <img src="./images/news-2.png" alt="Image">
+            </div>
+            <div class="news__card__text">
+              <div class="news__card__date">
+                <time datetime="2020-01-20">2020年1月20日</time>
+              </div>
+              <dl class="news__card__content">
+                <dt class="news__card__title">“可愛い” で 地球を守る！ 海洋マイクロプラスチックを使ったハンドメイドアクセサリー屋さん 【sobolon】</dt>
+                <dd class="news__card__dital">こんにちは！私は、「 “可愛い” で地球を守る！」をテーマに、昨今、環境問題として話題になっている、マイクロプラスチックを使ったアクセサリー…</dd>
+              </dl>
+
+            </div>
+          </a>
+        </li><!-- news__card -->
+        <li class="news__card">
+          <a href="" class="news__card__link">
+            <div class="news__card__image">
+              <img src="./images/news-3.png" alt="Image">
+            </div>
+            <div class="news__card__text">
+              <div class="news__card__date">
+                <time datetime="2020-11-23">2020年11月23日</time>
+              </div>
+              <dl class="news__card__content">
+                <dt class="news__card__title">sobolonの矛盾</dt>
+                <dd class="news__card__dital">こんにちは！“可愛い”で 地球を守る！マイクロプラスチックアクセサリー【 sobolon 】のリーダーひなこです！sobolonを知らない…</dd>
+              </dl>
+            </div>
+          </a>
+        </li><!-- news__card -->
+      </ul><!-- news__contents -->
+      <div class="btn news__btn">
+        <a href="" class="more__btn__link">MORE</a>
+      </div>
+    </div><!-- inner -->
   </section>
 
   <!-- third view -->
-  <div class="third-view">
+  <div class="third-view section__container">
     <div class="inner">
-      <div class="third-view__image">
-        <img src="./images/concept-2.png" alt="“可愛い” で 地球を守る！">
-      </div>
-      <div class="third-view__text">
-        <p class="third-view__text__main">合言葉は、 「 “可愛い” で 地球を守る！」</p>
-        <p class="third-view__text__sub">深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。</p>
-      </div>
-    </div>
+      <div class="third-view__contents">
+        <div class="third-view__image">
+          <img src="./images/concept-2.png" alt="“可愛い” で 地球を守る！">
+        </div>
+        <div class="third-view__text">
+          <p class="third-view__text__main">合言葉は、<br>「 “可愛い” で 地球を守る！」</p>
+          <p class="third-view__text__sub">深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。</p>
+        </div>
+      </div><!-- third-view__contents-->
+    </div><!-- inner -->
   </div>
 
   <!-- contact -->
-  <section class="contact" id="a-contact">
+  <section class="contact section__container" id="a-contact">
     <div class="inner contact__inner">
       <h2 class="section__title-blue">Contact</h2>
-    </div>
-    <p class="contact__text"><span>＊</span>は入力必須項目です</p>
-    <form action="" class="contact__form">
-      <dl class="contact__form__list">
-        <div class="contact__form__list__row">
-          <dt><label for="contact__name"><span class="contact__form__item required">お名前</span></label></dt>
-          <dd><input type="text" name="name" id="contact__name" class="contact__form__input"></dd>
+      <p class="contact__text"><span>＊</span>は入力必須項目です</p>
+      <form action="" class="contact__form">
+        <dl class="contact__form__list">
+          <div class="contact__form__list__row"><!-- name -->
+            <dt><label for="contact__name" class="contact__form__label"><span class="contact__form__item required">お名前</span></label></dt>
+            <dd><input type="text" name="name" id="contact__name" class="contact__form__input"></dd>
+          </div>
+          <div class="contact__form__list__row"><!-- email -->
+            <dt><label for="contact__email" class="contact__form__label"><span class="contact__form__item required">メールアドレス</span></label></dt>
+            <dd><input type="email" name="email" id="contact__email" class="contact__form__input"></dd>
+          </div>
+          <div class="contact__form__list__row"><!-- type -->
+            <dt><div class="contact__form__label"><span class="contact__form__item required">法人/個人の選択</span></div></dt>
+            <dd>
+              <ul class="radio__type__list">
+                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="1" class="contact__form__input visually-hidden" checked><span>法人</span></label></li>
+                <li class="radio__type__item"><label class="radio__type__label"><input type="radio" name="type" value="2" class="contact__form__input visually-hidden"><span>個人</span></label> </li>
+              </ul>
+            </dd>
+          </div>
+          <div class="contact__form__list__row"><!-- textarea-->
+            <dt><label for="contact__from__text" class="contact__form__label"><span class="contact__form__item required">お問い合わせ内容</span></label></dt>
+            <dd><textarea name="text" id="contact__from__text" class="contact__form__textarea"></textarea></dd>
+          </div>
+        </dl>
+        <div class="contact__form__privacy-policy">
+          <label><input type="checkbox" class="contact__form__input visually-hidden"><span><a href="" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span></label>
         </div>
-        <div class="contact__form__list__row">
-          <dt><label for="contact__email"><span class="contact__form__item required">メールアドレス</span></label></dt>
-          <dd><input type="email" name="email" id="contact__email" class="contact__form__input"></dd>
-        </div>
-        <div class="contact__form__list__row">
-          <dt><span class="contact__form__item required">法人/個人の選択</span></dt>
-          <dd>
-            <ul>
-              <li class="type__item"><label><input type="radio" name="type" value="1" class="contact__form__input"><span>法人</span></label></li>
-              <li class="type__item"><label><input type="radio" name="type" value="2" class="contact__form__input"><span>個人</span></label> </li>
-            </ul>
-          </dd>
-        </div>
-        <div class="contact__form__list__row">
-          <dt><label for="contact__from__text"><span class="conatct__form__item required">お問い合わせ内容</span></label></dt>
-          <dd><textarea name="text" id="contact__from__text" class="contact__form__textarea"></textarea></dd>
-        </div>
-      </dl>
-      <div class="contact__form__privacy-policy">
-        <label><input type="checkbox"><span class="contact__form__textarea"><a href="" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span></label>
-      </div>
-      <div class="contact__form__btn">
-        <button class="btn contact__form__button">送信</button>
-      </div>
-    </form>
+        <button type="submit" class="btn contact__form__btn" disabled>送信</button>
+      </form>
+    </div><!-- inner -->
   </section>
 
   <!-- footer -->
@@ -283,13 +297,13 @@
     </div>
     <ul class="footer__sns__list">
       <li class="footer__sns__item">
-        <i class="fa-brands fa-twitter fotter__sns__icon"></i>
+        <i class="fa-brands fa-twitter footer__sns__icon"></i>
       </li>
       <li class="footer__sns__item">
-        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram footer__sns__icon"></i>
       </li>
       <li class="footer__sns__item">
-        <i class="fa-brands fa-line"></i>
+        <i class="fa-brands fa-line footer__sns__icon"></i>
       </li>
     </ul>
     <div class="footer__copyright">

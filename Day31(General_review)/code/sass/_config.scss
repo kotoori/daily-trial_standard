@@ -1,0 +1,67 @@
+/*=======================
+config.scss
+ページ全体で使う定義を記載する
+=======================*/
+
+/* レスポンシブ対応 */
+$breakpoints: (
+//キー:値
+  'sp':  'screen and (max-width: 767px)', //スマホ用の表示
+  'pc':  'screen and (min-width: 768px)' //PC用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+/*** 色 ***/
+$color-main: #3EA1D1;
+
+$color-font-black: #333333;
+$color-font-gray: #888888;
+$color-font-white: #FFF;
+
+$color-bg-gray: #F7F7F7;
+$color-bg-white: #FFF;
+
+$color-shadow: #60606029;
+
+$color-price: #989898;
+$color-sv-overlay: rgba(0, 0, 0, 0.12);
+$color-sv-border: rgba(112, 112, 112, 0.12);
+$color-news-border: #E0E0E0;
+$color-form-label: #3EA1D1B3;
+$color-form-required: #E7728E;
+$color-form-placeholder: #D5D5D5;
+
+
+/* サイズ */
+$width-max: 1200px;
+$width-max-product: 940px;
+$width-max-news: 1040px;
+$height-header-pc: 70px;
+$height-header-sp: 60px;
+
+/* font */
+$font-family: 'Hiragino Mincho ProN' ,'Noto Serif JP', serif;
+
+/* z-index */
+$layer: (
+	header: 900, // ヘッダー
+
+  //first view
+  fv-image: 10,
+  fv-text: 20,
+
+  //second view
+  sv-overlay: 10,
+  sv-text: 20,
+
+  //default
+  default: 1,
+  );
