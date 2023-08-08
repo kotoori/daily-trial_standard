@@ -636,12 +636,15 @@ Product
 }
 @media screen and (min-width: 768px) {
   .product__card__link .product__card__image {
+    overflow: hidden;
+  }
+  .product__card__link .product__card__image img {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-  .product__card__link:hover .product__card__image {
-    -webkit-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
+  .product__card__link:hover .product__card__image img {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
   }
 }
 
@@ -724,12 +727,15 @@ News
 }
 @media screen and (min-width: 768px) {
   .news__card__link .news__card__image {
+    overflow: hidden;
+  }
+  .news__card__link .news__card__image img {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-  .news__card__link:hover .news__card__image {
-    -webkit-transform: scale(1.05, 1.05);
-            transform: scale(1.05, 1.05);
+  .news__card__link:hover .news__card__image img {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
   }
 }
 @media screen and (max-width: 767px) {
@@ -789,7 +795,7 @@ News
   }
 }
 
-.news__card__dital {
+.news__card__detail {
   font-size: 0.875rem;
   color: #888888;
   line-height: 1.7142857143;

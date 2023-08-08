@@ -513,11 +513,16 @@ Product
   text-decoration: none;
   @include mq(pc){
     .product__card__image{
-      transition: all 0.3s ease 0s;
+      overflow: hidden;
+      img{
+        transition: all 0.3s ease 0s;
+      }
     }
     &:hover{
       .product__card__image{
-        transform: scale(1.05, 1.05);
+        img{
+          transform: scale(1.1, 1.1);
+        }
       }
     }
   }
@@ -595,11 +600,16 @@ News
 
   @include mq(pc){
     .news__card__image{
-      transition: all 0.3s ease 0s;
+      overflow: hidden;
+      img{
+        transition: all 0.3s ease 0s;
+      }
     }
     &:hover{
       .news__card__image{
-        transform: scale(1.05, 1.05);
+        img{
+          transform: scale(1.1, 1.1);
+        }
       }
     }
   }
@@ -651,7 +661,7 @@ News
   }
 }
 
-.news__card__dital{
+.news__card__detail{
   font-size: 0.875rem;
   color: $color-font-gray;
   line-height: calc(24 / 14);
