@@ -442,10 +442,8 @@ second view
 .second_view__text{
   width: 100%;
   color: $color-font-white;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding: 121px 0;
+  position: relative;
   z-index: map-get($layer, 'sv-text');
   @include mq(sp){
     top: 175px;
