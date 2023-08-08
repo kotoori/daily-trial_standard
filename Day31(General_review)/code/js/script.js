@@ -10,7 +10,12 @@ jQuery(function(){
   ============================*/
   $('.drawer').drawer();
 
-
+  //ドロワーメニューを閉じる（開いていたら）
+  function drawerClose(){
+    if(jQuery('body').hasClass('drawer-open')){
+      $('.drawer').drawer('close');
+    }
+  }
   /*===============================
   WOW.js option
   ・PC時だけ、横並びカード等のWOWアニメーション時間をdelayIntervalずつずらす
@@ -48,6 +53,9 @@ jQuery(function(){
       let headerHight = jQuery('header').innerHeight();
       targetY = jQuery(href).offset().top - headerHight;
     }
+
+    //drawerメニューが開いていたら閉じる
+    drawerClose();
 
     // animateで移動します
     jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
