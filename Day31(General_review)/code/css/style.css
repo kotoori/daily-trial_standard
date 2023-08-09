@@ -474,6 +474,7 @@ Feature
 
 .feature__card {
   width: 28.3333333333%;
+  max-width: 340px;
   -webkit-box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.1607843137);
           box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.1607843137);
 }
@@ -490,7 +491,7 @@ Feature
 @media screen and (max-width: 767px) {
   .feature__card {
     width: 100%;
-    margin-top: 48px;
+    margin: 48px auto 0;
   }
 }
 
@@ -615,6 +616,7 @@ Product
 
 .product__card {
   width: 27.6595744681%;
+  max-width: 340px;
 }
 @media screen and (min-width: 768px) {
   .product__card:not(:nth-child(3n+1)) {
@@ -627,7 +629,7 @@ Product
 @media screen and (max-width: 767px) {
   .product__card {
     width: 100%;
-    margin-top: 48px;
+    margin: 48px auto 0;
   }
 }
 
@@ -963,7 +965,7 @@ Contact
   border-bottom: 20px solid transparent;
   position: absolute;
   top: 0;
-  right: -9px;
+  right: -10px;
 }
 @media screen and (max-width: 767px) {
   .contact__form__label {

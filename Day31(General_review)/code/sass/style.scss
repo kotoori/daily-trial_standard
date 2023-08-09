@@ -379,6 +379,7 @@ Feature
 
 .feature__card{
   width: calc(340px / $width-max * 100%);
+  max-width: 340px;
   box-shadow: 3px 3px 15px $color-shadow;
   @include mq(pc){
     transition: all 0.3s ease 0s;
@@ -388,7 +389,7 @@ Feature
   }
   @include mq(sp){
     width: 100%;
-    margin-top: 48px;
+    margin: 48px auto 0;
   }
 }
 
@@ -495,6 +496,7 @@ Product
 
 .product__card{
   width: calc(260px / 940px * 100%);
+  max-width: 340px;
   @include mq(pc){
     &:not(:nth-child(3n+1)){
       margin-left: calc((940px - 260px * 3) / 940px / 2 * 100%);
@@ -505,7 +507,7 @@ Product
   }
   @include mq(sp){
     width: 100%;
-    margin-top: 48px;
+    margin: 48px auto 0;
   }
 }
 
@@ -799,7 +801,7 @@ Contact
     border-bottom: 20px solid transparent;
     position: absolute;
     top: 0;
-    right: -9px;
+    right: -10px;
   }
   @include mq(sp){
     display: inline-block;

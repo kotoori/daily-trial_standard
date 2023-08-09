@@ -1224,9 +1224,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
-.fadeInUp2 {
-  -webkit-animation-name: fadeInUp2;
-  animation-name: fadeInUp2;
+@media screen and (min-width: 768px) {
+  .fadeInUp2 {
+    
+    -webkit-animation-name: fadeInUp2;
+    animation-name: fadeInUp2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fadeInUp2 {
+    
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
 }
 
 @-webkit-keyframes fadeInUpBig {

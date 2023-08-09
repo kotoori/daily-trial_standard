@@ -18,12 +18,16 @@ jQuery(function(){
   }
   /*===============================
   WOW.js option
+  ・PC時だけ、First Viewのテキストと画像のアニメーション開始をずらす
   ・PC時だけ、横並びカード等のWOWアニメーション時間をdelayIntervalずつずらす
   ===============================*/
   const delayInterval = 0.2; /* 0.2s */
 
   if(window.matchMedia('(min-width:768px)').matches) {
     /* PC（768px以上)のとき、横並びカードのWOWオプションを指定 */
+
+    $('.first-view__text').attr('data-wow-delay',"0.3s");
+
 
     setWowDelayForCard('.feature__contents','.feature__card');
     setWowDelayForCard('.product__contents','.product__card');
