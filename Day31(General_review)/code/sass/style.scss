@@ -40,9 +40,9 @@ br.is-pc{
 }
 
 .section__container{
-  margin-top: 160px;
+  margin-top: 162px;
   @include mq(sp){
-    margin-top: 96px;
+    margin-top: 93px;
   }
 }
 
@@ -94,7 +94,6 @@ br.is-pc{
   font-size: 0.875rem;
   font-weight: 600;
   color: $color-main;
-  letter-spacing: 0.1em;
   background-color: $color-bg-white;
   transition: all 0.3s ease 0s;
   &:hover{
@@ -150,6 +149,7 @@ header
   @include mq(sp){
     width: 30px;
     padding: 22px 15px 20px;
+    top: -3px;
   }
 }
 
@@ -195,13 +195,13 @@ header
 .header__nav__item{
   @include mq(pc){
     &:nth-child(n + 2){
-      margin-left: 48px;
+      margin-left: 46px;
     }
   }
   @include mq(sp){
     margin-top: 40px;
     &:first-child{
-      margin-top: 46px;
+      margin-top: 48px;
     }
     margin-right: 15px;
     text-align: right;
@@ -212,11 +212,12 @@ header
   text-decoration: none;
   border: none;
   color: $color-font-black;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   @include mq(sp){
     font-size: 1.125rem;
     font-weight: 600;
     color: $color-font-white;
+    letter-spacing: 0;
   }
 
   &:hover{
@@ -272,7 +273,7 @@ first view
 .first-view__text{
   background-color: $color-bg-white;
   width: 27.5%;
-  height: 50%;
+  height: 49.5%;
   position: absolute;
   left: 0;
   top: 50%;
@@ -311,7 +312,7 @@ first view
 }
 
 .first-view__text__sub{
-  margin-top: 15px;
+  margin-top: 12px;
   line-height: calc(27 / 16);
   @include mq(sp){
     margin-top: 27px;
@@ -346,7 +347,7 @@ concept
   @include mq(sp){
     width: 100%;
     padding-left: 0;
-    margin-top: 40px;
+    margin-top: 34px;
   }
 }
 
@@ -358,7 +359,7 @@ concept
 
 .concept__text__sub{
   line-height: calc(27 / 16);
-  margin-top: 36px;
+  margin-top: 35px;
   @include mq(sp){
     margin-top: 20px;
   }
@@ -407,7 +408,7 @@ Feature
 .feature__card__text{
   width: 100%;
   background-color: $color-bg-white;
-  padding: 32px 0;
+  padding: 26px 0;
 }
 
 .feature__card__text__main{
@@ -426,6 +427,7 @@ second view
   position: relative;
   z-index: map-get($layer, 'default');
   @include mq(sp){
+    height: 490px;
     background: transparent url(../images/sp/bg.png) no-repeat center center / cover;
   }
 }
@@ -449,7 +451,7 @@ second view
   transform: translateY(-50%);
   z-index: map-get($layer, 'sv-text');
   @include mq(sp){
-    top: 175px;
+    top: 180px;
     transform: translateY(0);
   }
 }
@@ -544,18 +546,14 @@ Product
 
 .product__card__name{
   font-size: 0.875rem;
-  line-height: calc(24 / 14);
+  line-height: 1.9;
   color: $color-font-black;
 }
 
 .product__card__price{
   font-size: 0.875rem;
   color: $color-price;
-  margin-top: 13px;
-
-  @include mq(sp){
-    margin-top: 11px;
-  }
+  margin-top: 10px;
 }
 
 .product__btn{
@@ -575,7 +573,7 @@ News
 }
 
 .news__contents{
-  margin-top: 50px;
+  margin-top: 48px;
   @include mq(sp){
     margin-top: 48px;
   }
@@ -583,8 +581,11 @@ News
 
 .news__card{
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid $color-news-border;
+  @include mq(sp){
+    padding-bottom: 20px;
+  }
 
   &:not(:first-child){
     margin-top: 22px;
@@ -599,6 +600,7 @@ News
   height: 100%;
   text-decoration: none;
   display: flex;
+  align-items: center;
 
   @include mq(pc){
     .news__card__image{
@@ -633,6 +635,7 @@ News
 .news__card__text{
   width: calc(100% - (260px / 1040px * 100%));
   padding-left: 40px;
+
   @include mq(sp){
     width: 100%;
     padding-left: 0;
@@ -642,7 +645,7 @@ News
 .news__card__date{
   font-size: 0.875rem;
   color: $color-font-black;
-  margin-top: 5px;
+  margin-top: 8px;
   @include mq(sp){
     margin-top: 25px;
   }
@@ -683,6 +686,7 @@ third view
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
+  margin-top: -2px;
   @include mq(sp){
     display: block;
   }
@@ -697,6 +701,7 @@ third view
 .third-view__text{
   width: calc(520px / 1200px * 100%);
   @include mq(sp){
+    margin-top: 35px;
     width: 100%;
   }
 }
@@ -719,7 +724,7 @@ third view
   @include mq(sp){
     font-size: 0.875rem;
     line-height: calc(24 /14);
-    margin-top: 15px;
+    margin-top: 19px;
   }
 }
 
@@ -729,10 +734,10 @@ Contact
 .contact{
   margin-top: 225px;
   background: transparent url(../images/contact.png) no-repeat center center / cover;
-  padding: 72px 0 85px;
+  padding: 72px 0 82px;
   @include mq(sp){
-    margin-top: 91px;
-    padding: 57px 0;
+    margin-top: 87px;
+    padding: 55px 0;
   }
 }
 
@@ -747,7 +752,7 @@ Contact
   font-size: 0.875rem;
   color: $color-font-black;
   line-height: calc(24 / 14);
-  margin-top: 59px;
+  margin-top: 56px;
   text-align: center;
   @include mq(sp){
     margin-top: 28px;
@@ -780,7 +785,7 @@ Contact
   @include mq(sp){
     display: block;
     &:nth-child(n + 2){
-      margin-top: 42px;
+      margin-top: 33px;
     }
   }
 }
@@ -906,8 +911,8 @@ Contact
         background-color: $color-bg-white;
         border: 1px solid $color-main;
         position: absolute;
-        left: 0;
-        top: 0;
+        left:-1px;
+        top: -3px;
         transition: width 0.1s ease 0s,transform 0.1s ease 0s;
       }
       &:hover{
@@ -925,8 +930,8 @@ Contact
           border-right: 1px solid $color-main;
           border-bottom: 1px solid $color-main;
           position: absolute;
-          left: 5px;
-          top: -5px;
+          left: 4px;
+          top: -8px;
           transform: rotate(45deg);
         }
       }
@@ -960,10 +965,10 @@ Contact
 }
 
 .contact__form__privacy-policy{
-  margin-top: 33px;
+  margin-top: 35px;
   text-align: center;
   @include mq(sp){
-    margin-top: 27px;
+    margin-top: 23px;
     line-height: calc(27 / 16);
   }
 }
@@ -982,7 +987,7 @@ Contact
   height: 46px;
   transition: all 0.3s ease 0s;
   @include mq(sp){
-    margin: 29px auto 0;
+    margin: 26px auto 0;
   }
   &.is-active{
     color: $color-font-white;
@@ -1025,7 +1030,7 @@ footer
   font-size: 0.75rem;
   color: $color-font-black;
   &:nth-child(n + 2){
-    margin-left: 32px;
+    margin-left: 33px;
   }
   &:hover{
     opacity: 0.7;
@@ -1072,9 +1077,9 @@ footer
 }
 
 .footer__copyright{
-  margin: 24px 0 17px;
+  margin: 21px 0 17px;
   @include mq(sp){
-    margin: 18px 0 17px;
+    margin: 15px 0 17px;
   }
 }
 
