@@ -71,6 +71,7 @@ header
   position: fixed;
   top: 0;
   left: 0;
+  z-index: map-get($layer, header);
   display: flex;
 }
 
@@ -249,3 +250,55 @@ Feature
   text-align: center;
 }
 
+/*===============================
+About
+===============================*/
+.about{
+  background: transparent url(../images/bg.png) no-repeat center center / cover;
+  width: 100%;
+  height: $size-height-about;
+  position: relative;
+  z-index: map-get($layer, about)
+}
+
+.about__overlay{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color-about-overlay;
+  border: 1px solid $color-about-border;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: map-get($layer,about-overlay);
+}
+
+.about__text__wrapper{
+  height: inherit;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: map-get($layer,about-text);
+}
+
+.about__text{
+  color: $color-font-sub;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about__text__main{
+  font-size: 1.375rem;
+  font-weight: bold;
+  line-height: calc(37 / 22);
+}
+
+.about__text__sub{
+  margin-top: 27px;
+  font-weight: bold;
+  line-height: calc(27 / 16);
+}

@@ -101,6 +101,7 @@ header
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,4 +287,58 @@ Feature
   color: #333;
   line-height: 1.6875;
   text-align: center;
+}
+
+/*===============================
+About
+===============================*/
+.about {
+  background: transparent url(../images/bg.png) no-repeat center center/cover;
+  width: 100%;
+  height: 478px;
+  position: relative;
+  z-index: 100;
+}
+
+.about__overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(112, 112, 112, 0.12);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.about__text__wrapper {
+  height: inherit;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.about__text {
+  color: #fff;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.about__text__main {
+  font-size: 1.375rem;
+  font-weight: bold;
+  line-height: 1.6818181818;
+}
+
+.about__text__sub {
+  margin-top: 27px;
+  font-weight: bold;
+  line-height: 1.6875;
 }
