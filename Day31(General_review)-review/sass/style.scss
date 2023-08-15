@@ -34,14 +34,33 @@ img {
 
 .inner{
   width: 100%;
-  max-width: calc(#{$size-width-max} + 40px *2);
+  max-width: calc(#{$size-width-contents-max} + 40px *2);
   padding: 0 40px;
   margin: 0 auto;
 }
 
-.section__title{
-
+.section-mt{
+  margin-top: 160px;
 }
+.section__title{
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 16px;
+  position: relative;
+  &::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: $color-main;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /*===============================
 header
 ===============================*/
@@ -146,21 +165,87 @@ Concept
 }
 
 .concept__contents{
-
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
 }
 
 .concept__image{
-
+  flex: 0 0 50%;
+  img{
+    width: 100%;
+  }
 }
 
 .concept__text{
+  flex: 0 1 50%;
+  padding-left: 80px;
+}
+
+.contact__text__main{
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: calc(34 / 20);
+}
+
+.contact__text__sub{
+  margin-top: 36px;
+  line-height: cacl(27 / 16);
+}
+
+/*===============================
+Feature
+===============================*/
+.feature{
 
 }
 
-.top__text__main{
-
+.feature__list{
+  margin-top: 64px;
+  display: flex;
 }
 
-.top__text__sub{
-  
+.feature__item{
+  flex: 0 1 calc($size-width-card-max / $size-width-contents-max * 100%);
+  box-shadow: 3px 3px 15px $color-shadow-feature;
+  &:not(:first-child){
+    margin-left: calc(($size-width-contents-max - $size-width-card-max * 3) / 2 / $size-width-contents-max * 100%);
+  }
 }
+
+.feature__item__link{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+
+  &:hover{
+    .feature__item__image{
+      img{
+        transform: scale(1.05, 1.05);
+      }
+    }
+
+  }
+}
+
+.feature__item__image{
+  width: 100%;
+  overflow: hidden;
+  img{
+    width: 100%;
+    transition: transform 0.3s ease 0s;
+  }
+}
+
+.feature__item__text{
+  background-color: $color-bg-main;
+  padding: 26.5px 0;
+}
+
+.feature__item__text__main{
+  font-weight: bold;
+  color: $color-font-main;
+  line-height: calc(27 / 16);
+  text-align: center;
+}
+

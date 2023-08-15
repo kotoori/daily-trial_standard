@@ -67,6 +67,30 @@ img {
   margin: 0 auto;
 }
 
+.section-mt {
+  margin-top: 160px;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 16px;
+  position: relative;
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #3EA1D1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 /*===============================
 header
 ===============================*/
@@ -172,3 +196,94 @@ top
 /*===============================
 Concept
 ===============================*/
+.concept__contents {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.concept__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.concept__image img {
+  width: 100%;
+}
+
+.concept__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding-left: 80px;
+}
+
+.contact__text__main {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.contact__text__sub {
+  margin-top: 36px;
+  line-height: cacl(27/16);
+}
+
+/*===============================
+Feature
+===============================*/
+.feature__list {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feature__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 28.3333333333%;
+          flex: 0 1 28.3333333333%;
+  -webkit-box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
+          box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
+}
+.feature__item:not(:first-child) {
+  margin-left: 7.5%;
+}
+
+.feature__item__link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+.feature__item__link:hover .feature__item__image img {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.feature__item__image {
+  width: 100%;
+  overflow: hidden;
+}
+.feature__item__image img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.feature__item__text {
+  background-color: #FFF;
+  padding: 26.5px 0;
+}
+
+.feature__item__text__main {
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6875;
+  text-align: center;
+}
