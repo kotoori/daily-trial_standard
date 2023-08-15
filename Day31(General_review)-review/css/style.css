@@ -75,6 +75,8 @@ header
   height: 70px;
   background-color: #FFF;
   position: fixed;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,4 +131,44 @@ header
 
 /*===============================
 top
+===============================*/
+.top {
+  margin-top: 70px;
+}
+
+.top__contents {
+  position: relative;
+}
+
+.top__image {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 55%;
+  background: transparent url(../images/top.png) no-repeat right/82.5%;
+}
+
+.top__text {
+  background-color: #FFF;
+  padding: 83px 44px 88px 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.top__text__main {
+  font-size: 1.625rem;
+  font-weight: bold;
+  line-height: 1.6923076923;
+}
+
+.top__text__sub {
+  margin-top: 14px;
+  line-height: 1.6875;
+}
+
+/*===============================
+Concept
 ===============================*/
