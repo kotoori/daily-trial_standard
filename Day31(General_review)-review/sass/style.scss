@@ -1,1 +1,100 @@
-@use "reset";
+@use "_reset.scss" as reset;
+@use "_config.scss" as *;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: #333;
+  background: #FFF;
+  font-family: $font-family;
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  vertical-align: top;  /* img下の隙間を消す */
+}
+
+/*===============================
+共通クラス
+===============================*/
+@include mq(sp){
+	.is-pc{
+    display: none;
+  }
+}
+
+@include mq(pc){
+	.is-sp{
+    display: none;
+  }
+}
+
+.inner{
+  width: 100%;
+  max-width: calc(#{$size-width-max} + 40px *2);
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/*===============================
+header
+===============================*/
+.header{
+  width: 100%;
+  height: $size-height-header-pc;
+  background-color: $color-bg-main;
+  position: fixed;
+  display: flex;
+}
+
+.header__contents{
+  display: flex;
+  align-items: center;
+}
+.site-title{
+  
+}
+
+.site-logo-link{
+  display: block;
+  width: 100%;
+  height: 100%;
+  img{
+    width: 120px;
+    height: auto;
+  }
+}
+
+.header__nav{
+  margin-left: auto;
+}
+
+.header__nav__list{
+  display: flex;
+}
+
+.header__nav__item{
+  &:not(:first-child){
+    margin-left: 48px;
+  }
+}
+
+.header__nav__link{
+  display: block;
+  height: $size-height-header-pc; //リンク範囲を広げる
+  padding: 27px 0;
+  text-decoration: none;
+  color: $color-font-main;
+  letter-spacing: 0.1em;
+  transition: color 0.2s ease 0s;
+  &:hover{
+    color: $color-main;
+  }
+}
+
+/*===============================
+top
+===============================*/

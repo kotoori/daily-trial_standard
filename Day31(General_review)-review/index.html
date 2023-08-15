@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&display=swap" rel="stylesheet">
   <!-- original css -->
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 
@@ -27,23 +31,25 @@
 
 <body class="drawer drawer--right">
   <!-- header -->
-  <header class="header inner">
-    <h1 class="site-title">
-      <a href="#"><img src="./images/logo.png" alt="sobolon"></a>
-    </h1>
-    <button type="button" class="drawer-toggle drawer-hamburger">
-      <span class="sr-only">toggle navigation</span>
-      <span class="drawer-hamburger-icon"></span>
-    </button>
-    <nav class="drawer-nav">
-      <ul class="drawer-menu header__nav__list">
-        <li><a class="header__nav__item" href="#a-concept">Concept</a></li>
-        <li><a class="header__nav__item" href="#a-feature">Feature</a></li>
-        <li><a class="header__nav__item" href="#a-produts">Products</a></li>
-        <li><a class="header__nav__item" href="#a-news">News</a></li>
-        <li><a class="header__nav__item" href="#a-contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="inner header__contents">
+      <h1 class="site-title">
+        <a href="#" class="site-logo-link"><img src="./images/logo.png" alt="sobolon"></a>
+      </h1>
+      <button type="button" class="drawer-toggle drawer-hamburger is-sp">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <nav class="drawer-nav header__nav">
+        <ul class="drawer-menu header__nav__list">
+          <li class="header__nav__item"><a class="header__nav__link" href="#a-concept">Concept</a></li>
+          <li class="header__nav__item"><a class="header__nav__link" href="#a-feature">Feature</a></li>
+          <li class="header__nav__item"><a class="header__nav__link" href="#a-produts">Products</a></li>
+          <li class="header__nav__item"><a class="header__nav__link" href="#a-news">News</a></li>
+          <li class="header__nav__item"><a class="header__nav__link" href="#a-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- /.header -->
 
