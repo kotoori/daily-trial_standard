@@ -91,6 +91,40 @@ img {
           transform: translateX(-50%);
 }
 
+.section__footer {
+  margin-top: 48px;
+}
+
+.btn {
+  display: inline-block;
+  width: 157px;
+  height: 46px;
+  line-height: 46px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #3EA1D1;
+  background-color: #FFF;
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #3EA1D1;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #3EA1D1;
+}
+
+.more__btn__link {
+  display: block;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
 /*===============================
 header
 ===============================*/
@@ -341,4 +375,66 @@ About
   margin-top: 27px;
   font-weight: bold;
   line-height: 1.6875;
+}
+
+/*===============================
+product
+===============================*/
+.products__inner {
+  max-width: 1020px;
+}
+
+.products__list {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products__item {
+  width: 27.6595744681%;
+}
+.products__item:not(:first-child) {
+  margin-left: 8.5106382979%;
+}
+
+.products__item__link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+.products__item__link:hover .products__item__image img {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.products__item__image {
+  width: 100%;
+  overflow: hidden;
+}
+.products__item__image img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.products__item__text {
+  padding-top: 19px;
+  background-color: #FFF;
+}
+
+.products__item__name {
+  display: block;
+  font-size: 0.875rem;
+  color: #333;
+  line-height: 1.7142857143;
+}
+
+.products__item__price {
+  display: block;
+  margin-top: 9px;
+  font-size: 0.875rem;
+  color: #989898;
 }
