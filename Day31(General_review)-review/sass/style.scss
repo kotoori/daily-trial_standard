@@ -476,3 +476,34 @@ News
   color: $color-font-news-detail;
 }
 
+/*===============================
+about2
+===============================*/
+.about2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.about2__image{
+  flex: 0 0 50%;
+  img{
+    width: 100%;
+  }
+}
+
+.about2__text{
+  flex: 0 1 50%;
+  padding-right: calc(80px / $size-width-contents-max * 100%);
+}
+
+.about2__text__main{
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: calc(48 / 28);
+}
+
+.about2__text__sub{
+  margin-top: 33px;
+  line-height: calc(27 / 16);
+}

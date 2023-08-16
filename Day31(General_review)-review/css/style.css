@@ -520,3 +520,46 @@ News
   font-size: 0.875rem;
   color: #888888;
 }
+
+/*===============================
+about2
+===============================*/
+.about2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about2__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.about2__image img {
+  width: 100%;
+}
+
+.about2__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding-right: 6.6666666667%;
+}
+
+.about2__text__main {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.7142857143;
+}
+
+.about2__text__sub {
+  margin-top: 33px;
+  line-height: 1.6875;
+}
