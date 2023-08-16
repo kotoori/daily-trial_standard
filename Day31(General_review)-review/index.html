@@ -253,40 +253,46 @@
     <!-- /.about2 -->
 
     <!-- Contact -->
-    <section class="contact inner contact__inner">
-      <h2 class="section__title-contact">Contact</h2>
-      <form action="" method="post" class="contact__form">
-        <p class="contact__form__text"><span>＊</span>は入力必須項目です</p>
-        <!-- name -->
-        <dl class="contact__form__item">
-          <dt><label for="customer__name" class="contact__form__label">お名前</label></dt>
-          <dd><input type="text" name="name" id="customer__name" class="contact__form__input" required></dd>
-        </dl>
-        <!-- email -->
-        <dl class="contact__form__item">
-          <dt><label for="customer__email" class="contact__form__label">メールアドレス</label></dt>
-          <dd><input type="email" name="email" id="customer__email" class="contact__form__input" required></dd>
-        </dl>
-        <!-- type -->
-        <dl class="contact__form__item">
-          <dt class="contact__form__label">法人/個人の選択</dt>
-          <dd>
-            <label><input type="radio" name="type" class="contact__form__input" required checked><span class="customer__type">法人</span></label>
-            <label><input type="radio" name="type" class="contact__form__input" required><span class="customer__type">法人</span></label>
-          </dd>
-        </dl>
-        <!-- inquiry -->
-        <dl class="contact__form__item">
-          <dt><label for="customer__inquiry" class="contact__form__label">お問い合わせ内容</label></dt>
-          <dd><textarea name="inquiry" id="customer__inquiry" class="contact__form__textarea" required></textarea></dd>
-        </dl>
-        <!-- privacy policy -->
-        <label><input type="checkbox"  class="contact__form__input" required>
-          <span class="contact__form__privacy-policy"><a href="#" target="_blank" rel="noopener noreferrer" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span>
-        </label>
-        <!-- submit -->
-        <button class="btn contact__form__submit" disable>送信</button>
-      </form>
+    <section class="contact">
+      <div class="inner contact__inner">
+        <h2 class="section__title-contact">Contact</h2>
+        <form action="" method="post" class="contact__form">
+          <p class="contact__form__text"><span>＊</span>は入力必須項目です</p>
+          <dl class="contact__form__list">
+            <!-- name -->
+            <div class="contact__form__item">
+              <dt><label for="customer__name" class="contact__form__label contact__form__required"><span>お名前</span></label></dt>
+              <dd><input type="text" name="name" id="customer__name" class="contact__form__input" required></dd>
+            </div>
+            <!-- email -->
+            <div class="contact__form__item">
+              <dt><label for="customer__email" class="contact__form__label contact__form__required"><span>メールアドレス</span></label></dt>
+              <dd><input type="email" name="email" id="customer__email" class="contact__form__input" required></dd>
+            </div>
+            <!-- type -->
+            <div class="contact__form__item">
+              <dt>
+                <div class="contact__form__label contact__form__required"><span>法人/個人の選択</span></div>
+              </dt>
+              <dd class="contact__form__flex__radio">
+                <label><input type="radio" name="type" class="contact__form__input visually-hidden" required checked><span class="customer__type">法人</span></label>
+                <label><input type="radio" name="type" class="contact__form__input visually-hidden" required><span class="customer__type">個人</span></label>
+              </dd>
+            </div>
+            <!-- inquiry -->
+            <div class="contact__form__item">
+              <dt><label for="customer__inquiry" class="contact__form__label contact__form__required"><span>お問い合わせ内容</span></label></dt>
+              <dd><textarea name="inquiry" id="customer__inquiry" class="contact__form__textarea" required></textarea></dd>
+            </div>
+          </dl>
+          <!-- privacy policy -->
+          <label class="contact__form__privacy-policy"><input type="checkbox" class="contact__form__input visually-hidden" required>
+            <span><a href="#" target="_blank" rel="noopener noreferrer" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span>
+          </label>
+          <!-- submit -->
+          <button class="btn contact__form__submit" disabled>送信</button>
+        </form>
+      </div>
     </section>
   </main>
   <!-- /.contact -->
