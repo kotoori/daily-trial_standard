@@ -400,3 +400,79 @@ product
   color: $color-font-price;
 }
 
+/*===============================
+News
+===============================*/
+.news{
+}
+.news__inner{
+  max-width: calc($size-width-news-max + 40px * 2);
+}
+
+.news__list
+{
+  margin-top: 50px;
+}
+
+.news__item{
+  padding-bottom: 24px;
+  border-bottom: 1px solid $color-news-border;
+
+  &:not(:first-child){
+    margin-top: 22px;
+  }
+}
+
+.news__item__link{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  &:hover{
+    .news__item__image__box > img{
+      transform: translate(-50%, -50%) scale(1.05, 1.05);
+    }
+  }
+}
+
+.news__item__image{
+  flex: 0 0 260px;
+}
+
+.news__item__image__box{
+  padding-top: calc(160px / 260px * 100%);
+  overflow: hidden;
+  position: relative;
+
+  > img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease 0s;
+  }
+}
+
+.news__item__text{
+  flex: 0 1 100%;
+  padding-left: 40px;
+  color: $color-font-main;
+}
+
+.news__item__time{
+  font-size: 0.875rem;
+}
+
+.news__item__title{
+  margin-top: 10px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: calc(31 / 18);
+}
+
+.news__item__detail{
+  margin-top: 13px;
+  font-size: 0.875rem;
+  color: $color-font-news-detail;
+}
+

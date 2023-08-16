@@ -50,7 +50,7 @@ img {
 /*===============================
 共通クラス
 ===============================*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
   .is-pc {
     display: none;
   }
@@ -437,4 +437,86 @@ product
   margin-top: 9px;
   font-size: 0.875rem;
   color: #989898;
+}
+
+/*===============================
+News
+===============================*/
+.news__inner {
+  max-width: 1120px;
+}
+
+.news__list {
+  margin-top: 50px;
+}
+
+.news__item {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.news__item:not(:first-child) {
+  margin-top: 22px;
+}
+
+.news__item__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.news__item__link:hover .news__item__image__box > img {
+  -webkit-transform: translate(-50%, -50%) scale(1.05, 1.05);
+          transform: translate(-50%, -50%) scale(1.05, 1.05);
+}
+
+.news__item__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 260px;
+          flex: 0 0 260px;
+}
+
+.news__item__image__box {
+  padding-top: 61.5384615385%;
+  overflow: hidden;
+  position: relative;
+}
+.news__item__image__box > img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.news__item__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  padding-left: 40px;
+  color: #333;
+}
+
+.news__item__time {
+  font-size: 0.875rem;
+}
+
+.news__item__title {
+  margin-top: 10px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.7222222222;
+}
+
+.news__item__detail {
+  margin-top: 13px;
+  font-size: 0.875rem;
+  color: #888888;
 }
