@@ -141,6 +141,11 @@ header
 
 .header__nav{
   margin-left: auto;
+  @include mq(sp){
+    top: $size-height-header-sp;
+    background-color: $color-main;
+    width: 270px;
+  }
 }
 
 .header__nav__list{
@@ -201,11 +206,6 @@ header
 }
 
 @include mq(sp){
-  .drawer-nav{
-    top: $size-height-header-sp;
-    background-color: $color-main;
-    width: 270px;
-  }
   .drawer--right{
     .drawer-nav{
       right: -105%;
