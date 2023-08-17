@@ -44,6 +44,9 @@ img {
 
 .section-mt{
   margin-top: 160px;
+  @include mq(sp){
+    margin-top: 96px;
+  }
 }
 .section__title{
   font-size: 2.5rem;
@@ -282,20 +285,30 @@ Concept
 
 .concept__contents{
   margin-top: 64px;
-  display: flex;
-  align-items: center;
+  @include mq(pc){
+    display: flex;
+    align-items: center;
+  }
 }
 
 .concept__image{
-  flex: 0 0 50%;
+  width: 100%;
+  @include mq(pc){
+    flex: 0 0 50%;
+  }
   img{
     width: 100%;
   }
 }
 
 .concept__text{
-  flex: 0 1 50%;
-  padding-left: 80px;
+  @include mq(pc){
+    flex: 0 1 50%;
+    padding-left: 80px;
+  }
+  @include mq(sp){
+    margin-top: 33px;
+  }
 }
 
 .contact__text__main{
@@ -307,6 +320,9 @@ Concept
 .contact__text__sub{
   margin-top: 36px;
   line-height: calc(27 / 16);
+  @include mq(sp){
+    margin-top: 24px;
+  }
 }
 
 /*===============================
@@ -541,6 +557,7 @@ News
   width: calc(100% - 260px);
   padding-left: 40px;
   color: $color-font-main;
+  word-wrap: break-word;
 }
 
 .news__item__time{
