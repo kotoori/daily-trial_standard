@@ -766,6 +766,7 @@ Contact
   border-radius: 2px;
   -webkit-box-shadow: 5px 5px 16px rgba(96, 96, 96, 0.16);
           box-shadow: 5px 5px 16px rgba(96, 96, 96, 0.16);
+  resize: vertical;
   display: block;
   width: 100%;
   min-height: 122px;
