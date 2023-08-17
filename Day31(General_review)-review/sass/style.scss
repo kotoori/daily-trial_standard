@@ -639,33 +639,50 @@ News
 about2
 ===============================*/
 .about2{
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  @include mq(pc){
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 .about2__image{
-  flex: 0 0 50%;
+  @include mq(pc){
+    flex: 0 0 50%;
+  }
   img{
     width: 100%;
   }
 }
 
 .about2__text{
-  flex: 0 1 50%;
-  padding-right: calc(80px / $size-width-contents-max * 100%);
-  margin-top: -5px;
+  @include mq(pc){
+    flex: 0 1 50%;
+    padding-right: calc(80px / $size-width-contents-max * 100%);
+    margin-top: -5px;
+  }
+  @include mq(sp){
+    margin-top: 33px;
+  }
 }
 
 .about2__text__main{
   font-size: 1.75rem;
   font-weight: bold;
   line-height: calc(48 / 28);
+  @include mq(sp){
+    font-size: 1.25rem;
+    line-height: calc(34 / 20);
+  }
 }
 
 .about2__text__sub{
-  margin-top: 32px;
+  margin-top: 20px;
   line-height: calc(27 / 16);
+  @include mq(sp){
+    font-size: 0.875rem;
+    line-height: calc(24 / 14);
+  }
 }
 
 /*===============================
