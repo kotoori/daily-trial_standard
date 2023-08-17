@@ -561,21 +561,32 @@ News
   &:not(:first-child){
     margin-top: 23px;
   }
+  @include mq(sp){
+    width: calc(310px / (375px - 15px * 2)  * 100%);
+    margin: 0 auto;
+  }
 }
 
 .news__item__link{
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  &:hover{
-    .news__item__image__box > img{
-      transform: translate(-50%, -50%) scale(1.05, 1.05);
+  @include mq(pc){
+    display: flex;
+    align-items: center;
+    &:hover{
+      .news__item__image__box > img{
+        transform: translate(-50%, -50%) scale(1.05, 1.05);
+      }
     }
   }
 }
 
 .news__item__image{
-  flex: 0 0 260px;
+  @include mq(pc){
+    flex: 0 0 260px;
+  }
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .news__item__image__box{
@@ -594,11 +605,16 @@ News
 }
 
 .news__item__text{
-//  flex: 0 1 100%;
-  width: calc(100% - 260px);
-  padding-left: 40px;
   color: $color-font-main;
-  word-wrap: break-word;
+  @include mq(pc){
+    width: calc(100% - 260px);
+    padding-left: 40px;
+    word-wrap: break-word;
+  }
+  @include mq(sp){
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .news__item__time{
