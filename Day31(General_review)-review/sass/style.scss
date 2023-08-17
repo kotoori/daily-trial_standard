@@ -960,6 +960,9 @@ footer
   padding: 48px 0 17px;
   background-color: $color-bg-sub;
   text-align: center;
+  @include mq(sp){
+    padding: 40px 0 17px;
+  }
 }
 
 .footer__logo{
@@ -978,13 +981,20 @@ footer
 
 .footer__nav{
   margin-top: 21px;
-  display: flex;
-  justify-content: center;
+  @include mq(pc){
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer__nav__item{
   &:not(:first-child){
-    margin-left: 32px;
+    @include mq(pc){
+      margin-left: 32px;
+    }
+    @include mq(sp){
+      margin-top: 16px;
+    }
   }
 }
 
@@ -994,7 +1004,9 @@ footer
   text-decoration: none;
   padding: 10px 0;
   &:hover{
-    opacity: 0.7;
+    @include mq(pc){
+      opacity: 0.7;
+    }
   }
 }
 
@@ -1002,6 +1014,9 @@ footer
   margin-top: 36px;
   display: flex;
   justify-content: center;
+  @include mq(sp){
+    margin-top: 32px;
+  }
 }
 
 .footer__sns__icon{
@@ -1016,12 +1031,17 @@ footer
   text-decoration: none;
   padding: 11px;
   &:hover{
-    opacity: 0.7;
+    @include mq(pc){
+      opacity: 0.7;
+    }
   }
 }
 
 .footer__copyright{
   margin-top: 22px;
+  @include mq(sp){
+    margin-top: 18px;
+  }
 }
 
 .footer__copyright__text{
