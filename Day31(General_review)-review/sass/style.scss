@@ -351,7 +351,10 @@ Feature
     }
   }
   @include mq(sp){
-    margin-top: 49px;
+    margin: 49px auto 0;
+    width: 100%;
+    max-width: $size-width-card-max;
+
   }
 }
 
@@ -473,14 +476,23 @@ product
 }
 
 .products__list{
- margin-top: 64px;
- display: flex;
+  @include mq(pc){
+    margin-top: 64px;
+    display: flex;
+  }
 }
 
 .products__item{
-  width: calc(260px / $size-width-product-max * 100%);
-  &:not(:first-child){
-    margin-left: calc(($size-width-product-max - 260px * 3) / 2 / $size-width-product-max * 100%);
+  @include mq(pc){
+    width: calc(260px / $size-width-product-max * 100%);
+    &:not(:first-child){
+      margin-left: calc(($size-width-product-max - 260px * 3) / 2 / $size-width-product-max * 100%);
+    }
+  }
+  @include mq(sp){
+    width: calc(260px / (375px - 15px * 2) * 100%);
+    max-width: $size-width-card-max;
+    margin: 48px auto 0;
   }
 }
 
@@ -490,9 +502,11 @@ product
   text-decoration: none;
 
   &:hover{
-    .products__item__image{
-      img{
-        transform: scale(1.05, 1.05);
+    @include mq(pc){
+      .products__item__image{
+        img{
+          transform: scale(1.05, 1.05);
+        }
       }
     }
   }
