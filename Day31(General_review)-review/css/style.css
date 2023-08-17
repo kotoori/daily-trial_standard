@@ -398,22 +398,38 @@ Concept
 /*===============================
 Feature
 ===============================*/
-.feature__list {
-  margin-top: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .feature__list {
+    margin-top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .feature__list {
+    margin-top: 48px;
+  }
 }
 
 .feature__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 28.3333333333%;
-          flex: 0 1 28.3333333333%;
   -webkit-box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
           box-shadow: 3px 3px 15px rgba(96, 96, 96, 0.16);
 }
-.feature__item:not(:first-child) {
-  margin-left: 7.5%;
+@media screen and (min-width: 768px) {
+  .feature__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 28.3333333333%;
+            flex: 0 1 28.3333333333%;
+  }
+  .feature__item:not(:first-child) {
+    margin-left: 7.5%;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .feature__item {
+    margin-top: 49px;
+  }
 }
 
 .feature__item__link {
@@ -421,9 +437,11 @@ Feature
   width: 100%;
   text-decoration: none;
 }
-.feature__item__link:hover .feature__item__image img {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
+@media screen and (min-width: 768px) {
+  .feature__item__link:hover .feature__item__image img {
+    -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+  }
 }
 
 .feature__item__image {
