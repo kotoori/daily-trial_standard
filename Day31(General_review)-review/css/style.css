@@ -259,7 +259,7 @@ header
 
 @media screen and (max-width: 767.9px) {
   .drawer--right .drawer-nav {
-    right: -105%;
+    right: calc(-270px - 5px);
   }
   .drawer--right.drawer-open .drawer-hamburger {
     right: 0;
@@ -294,7 +294,7 @@ top
 }
 @media screen and (max-width: 767.9px) {
   .top__image {
-    padding-top: 110.6666666667%;
+    padding-top: 120.2898550725%;
     background: transparent url(../images/sp/top.png) no-repeat center center/contain;
   }
 }

@@ -147,7 +147,7 @@ header
   @include mq(sp){
     top: $size-height-header-sp;
     background-color: $color-main;
-    width: 270px;
+    width: $size-width-drawer-nav;
   }
 }
 
@@ -211,7 +211,7 @@ header
 @include mq(sp){
   .drawer--right{
     .drawer-nav{
-      right: -105%;
+      right: calc(-#{$size-width-drawer-nav} - 5px);
     }
     &.drawer-open .drawer-hamburger{
       right: 0;
@@ -244,7 +244,7 @@ top
   padding-top: calc(660px / 1200px * 100%);
   background: transparent url(../images/top.png) no-repeat right  / 82.5%;
   @include mq(sp){
-    padding-top: calc(415px / 375px * 100%);
+    padding-top: calc(415px / (375px - 15px * 2) * 100%);
     background: transparent url(../images/sp/top.png) no-repeat center center / contain;
   }
 }
