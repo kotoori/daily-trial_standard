@@ -396,9 +396,15 @@ Feature
 About
 ===============================*/
 .about{
-  background: transparent url(../images/bg.png) no-repeat center center / cover;
+  @include mq(pc){
+    background: transparent url(../images/bg.png) no-repeat center center / cover;
+    height: $size-height-about-pc;
+  }
+  @include mq(sp){
+    background: transparent url(../images/sp/bg.png) no-repeat center center / cover;
+    height: $size-height-about-sp;
+  }
   width: 100%;
-  height: $size-height-about;
   position: relative;
   z-index: map-get($layer, about)
 }
@@ -417,32 +423,42 @@ About
   z-index: map-get($layer,about-overlay);
 }
 
-.about__text__wrapper{
-  height: inherit;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: map-get($layer,about-text);
-}
-
 .about__text{
   color: $color-font-sub;
   position: absolute;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  z-index: map-get($layer,about-text);
+  @include mq(pc){
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 40px;
+  }
+  @include mq(sp){
+    left: 0px;
+    top: 175px;
+    padding: 0 15px;
+  }
 }
 
 .about__text__main{
   font-size: 1.375rem;
   font-weight: bold;
   line-height: calc(37 / 22);
+  @include mq(sp){
+    font-size: 1.25rem;
+    line-height: calc(34 / 20);
+  }
 }
 
 .about__text__sub{
   margin-top: 27px;
   font-weight: bold;
   line-height: calc(27 / 16);
+  @include mq(sp){
+    margin-top: 20px;
+    font-size: 0.875rem;
+    line-height: calc(24 / 14);
+  }
 }
 
 /*===============================
