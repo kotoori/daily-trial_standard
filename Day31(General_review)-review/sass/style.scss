@@ -692,6 +692,10 @@ Contact
   margin-top: 225px;
   background: transparent url(../images/contact.png) no-repeat center center /cover;
   padding: 70px 0 82px;
+  @include mq(sp){
+    margin-top: 96px;
+    padding: 57px 0;
+  }
 }
 
 .contact__inner{
@@ -705,6 +709,10 @@ Contact
 
 .contact__form{
   margin-top: 56px;
+  @include mq(sp){
+    margin-top: 33px;
+    width: calc(320px / (375px - 15px * 2) * 100%);
+  }
 }
 
 .contact__form__text{
@@ -721,50 +729,66 @@ Contact
 
 .contact__form__list{
   margin-top: 18px;
+  @include mq(sp){
+    margin-top: 26px;
+  }
 }
 
 .contact__form__item{
-  display: flex;
   width: 100%;
+  @include mq(pc){
+    display: flex;
+    & > dt{
+      flex: 0 0 190px;
+    }
+    & > dd{
+      flex: 0 1 100%;
+    }
+  }
   &:not(:first-child){
     margin-top: 32px;
-  }
-  & > dt{
-    flex: 0 0 190px;
-  }
-  & > dd{
-    flex: 0 1 100%;
   }
 }
 
 .contact__form__label{
-  display: block;
-  margin-right: 16px;
-  width: calc(100% - 16px);
   height: 40px;
   line-height: 40px;
   background-color: $color-bg-contact-label;
   text-align: center;
 
-  position: relative;
-  &:after{
-    content: "";
+  @include mq(pc){
     display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 20px 6px;
-    border-color: transparent transparent transparent  $color-bg-contact-label;
-    position: absolute;
-    top: 0;
-    right: -6px;
+    margin-right: 16px;
+    width: calc(100% - 16px);
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 6px;
+      border-color: transparent transparent transparent  $color-bg-contact-label;
+      position: absolute;
+      top: 0;
+      right: -6px;
+    }
+  }
+  @include mq(sp){
+    display: inline-block;
+    padding: 0 26px 0 15px;
   }
 
   & > span{
-    font-size: 1.125rem;
     font-weight: bold;
     color: $color-font-sub;
-    margin-left: -8px;
+    @include mq(pc){
+      font-size: 1.125rem;
+      margin-left: -8px;
+    }
+    @include mq(sp){
+      font-size: 0.875rem;
+    }
   }
   &.contact__form__required > span{
     position: relative;
@@ -776,6 +800,9 @@ Contact
       position: absolute;
       top: -3px;
       right: -1em;
+      @include mq(sp){
+        font-size: 0.625rem;
+      }
     }
   }
 }
@@ -794,6 +821,10 @@ Contact
     color: $color-font-main;
     letter-spacing: 0.05em;
     padding: 0 0.5em;
+    @include mq(sp){
+      margin-top: 3px;
+      font-size: 0.875rem;
+    }
   }
 
   &[type="radio"]{
@@ -821,9 +852,10 @@ Contact
   }
   &[type="checkbox"]{
     & + span{
+      display: inline-block;  /* 文章が折り返したときpaddingに重ならないようにする */
       color: $color-font-main;
       line-height: calc(27 / 16);
-      padding: 3px 0 3px 30px;
+      padding-left: 30px;
       position: relative;
       
       &::before{
@@ -834,7 +866,7 @@ Contact
         border: 1px solid $color-main;
         background-color: $color-bg-main;
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
         transition: width 0.2s ease 0s, transform 0.2s ease 0s;
       }
@@ -845,7 +877,7 @@ Contact
       border-top: none;
       border-left: none;
       transform: rotate(45deg);
-      top: -5px;
+      top: 0;
       left: 5px;
     }
     &:focus-visible + span::before{
@@ -860,6 +892,9 @@ Contact
 
 .contact__form__flex__radio{
   font-size: 0; /* inline-block間の隙間を消す */
+  @include mq(sp){
+    margin-top: 3px;
+  }
 }
 
 .contact__form__textarea{
@@ -875,18 +910,27 @@ Contact
   color: $color-font-main;
   letter-spacing: 0.05em;
   padding: 4px 0.5em;
+  @include mq(sp){
+    margin-top: 3px;
+    font-size: 0.875rem;
+  }
+
+}
+.contact__form__privacy-policy__wrapper{
+  text-align: center;
+  margin-top: 31px;
+  @include mq(sp){
+    margin-top: 20px;
+  }
 }
 
 .contact__form__privacy-policy{
-  display: block;
-  margin-top: 31px;
-  text-align: center;
+  display: inline-block;
 }
 
 .privacy-policy__link{
   color: $color-main;
   line-height: calc(27 / 16);
-  padding: 3px 0;
 }
 
 .contact__form__submit{
@@ -900,6 +944,9 @@ Contact
   color: $color-main;
   background-color: $color-bg-main;
   transition: all 0.3s ease 0s;
+  @include mq(sp){
+    margin: 29px auto 0;
+  }
   &.is-active{
     color: $color-font-sub;
     background-color: $color-main;

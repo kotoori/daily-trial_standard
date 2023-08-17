@@ -815,6 +815,12 @@ Contact
   background: transparent url(../images/contact.png) no-repeat center center/cover;
   padding: 70px 0 82px;
 }
+@media screen and (max-width: 767.9px) {
+  .contact {
+    margin-top: 96px;
+    padding: 57px 0;
+  }
+}
 
 .contact__inner {
   max-width: 590px;
@@ -826,6 +832,12 @@ Contact
 
 .contact__form {
   margin-top: 56px;
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form {
+    margin-top: 33px;
+    width: 92.7536231884%;
+  }
 }
 
 .contact__form__text {
@@ -843,54 +855,82 @@ Contact
 .contact__form__list {
   margin-top: 18px;
 }
+@media screen and (max-width: 767.9px) {
+  .contact__form__list {
+    margin-top: 26px;
+  }
+}
 
 .contact__form__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contact__form__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact__form__item > dt {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 190px;
+            flex: 0 0 190px;
+  }
+  .contact__form__item > dd {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
 }
 .contact__form__item:not(:first-child) {
   margin-top: 32px;
 }
-.contact__form__item > dt {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 190px;
-          flex: 0 0 190px;
-}
-.contact__form__item > dd {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-}
 
 .contact__form__label {
-  display: block;
-  margin-right: 16px;
-  width: calc(100% - 16px);
   height: 40px;
   line-height: 40px;
   background-color: rgba(62, 161, 209, 0.7);
   text-align: center;
-  position: relative;
 }
-.contact__form__label:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 20px 0 20px 6px;
-  border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
-  position: absolute;
-  top: 0;
-  right: -6px;
+@media screen and (min-width: 768px) {
+  .contact__form__label {
+    display: block;
+    margin-right: 16px;
+    width: calc(100% - 16px);
+    position: relative;
+  }
+  .contact__form__label:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 6px;
+    border-color: transparent transparent transparent rgba(62, 161, 209, 0.7);
+    position: absolute;
+    top: 0;
+    right: -6px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__label {
+    display: inline-block;
+    padding: 0 26px 0 15px;
+  }
 }
 .contact__form__label > span {
-  font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
-  margin-left: -8px;
+}
+@media screen and (min-width: 768px) {
+  .contact__form__label > span {
+    font-size: 1.125rem;
+    margin-left: -8px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__label > span {
+    font-size: 0.875rem;
+  }
 }
 .contact__form__label.contact__form__required > span {
   position: relative;
@@ -903,6 +943,11 @@ Contact
   position: absolute;
   top: -3px;
   right: -1em;
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__label.contact__form__required > span::after {
+    font-size: 0.625rem;
+  }
 }
 
 .contact__form__input {
@@ -922,6 +967,12 @@ Contact
   color: #333;
   letter-spacing: 0.05em;
   padding: 0 0.5em;
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__input[type=text], .contact__form__input[type=email] {
+    margin-top: 3px;
+    font-size: 0.875rem;
+  }
 }
 .contact__form__input[type=radio] + span {
   border-radius: 1px;
@@ -945,9 +996,10 @@ Contact
   outline: -webkit-focus-ring-color auto 1px;
 }
 .contact__form__input[type=checkbox] + span {
+  display: inline-block; /* 文章が折り返したときpaddingに重ならないようにする */
   color: #333;
   line-height: 1.6875;
-  padding: 3px 0 3px 30px;
+  padding-left: 30px;
   position: relative;
 }
 .contact__form__input[type=checkbox] + span::before {
@@ -958,7 +1010,7 @@ Contact
   border: 1px solid #3EA1D1;
   background-color: #FFF;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   -webkit-transition: width 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
   transition: width 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
@@ -972,7 +1024,7 @@ Contact
   border-left: none;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: -5px;
+  top: 0;
   left: 5px;
 }
 .contact__form__input[type=checkbox]:focus-visible + span::before {
@@ -984,6 +1036,11 @@ Contact
 
 .contact__form__flex__radio {
   font-size: 0; /* inline-block間の隙間を消す */
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__flex__radio {
+    margin-top: 3px;
+  }
 }
 
 .contact__form__textarea {
@@ -1003,17 +1060,30 @@ Contact
   letter-spacing: 0.05em;
   padding: 4px 0.5em;
 }
+@media screen and (max-width: 767.9px) {
+  .contact__form__textarea {
+    margin-top: 3px;
+    font-size: 0.875rem;
+  }
+}
+
+.contact__form__privacy-policy__wrapper {
+  text-align: center;
+  margin-top: 31px;
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__privacy-policy__wrapper {
+    margin-top: 20px;
+  }
+}
 
 .contact__form__privacy-policy {
-  display: block;
-  margin-top: 31px;
-  text-align: center;
+  display: inline-block;
 }
 
 .privacy-policy__link {
   color: #3EA1D1;
   line-height: 1.6875;
-  padding: 3px 0;
 }
 
 .contact__form__submit {
@@ -1028,6 +1098,11 @@ Contact
   background-color: #FFF;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+@media screen and (max-width: 767.9px) {
+  .contact__form__submit {
+    margin: 29px auto 0;
+  }
 }
 .contact__form__submit.is-active {
   color: #fff;
