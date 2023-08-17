@@ -225,6 +225,9 @@ top
 ===============================*/
 .top{
   margin-top: $size-height-header-pc;
+  @include mq(sp){
+    margin-top: $size-height-header-sp;
+  }
 }
 
 .top__contents{
@@ -237,15 +240,24 @@ top
   height: 0;
   padding-top: calc(660px / 1200px * 100%);
   background: transparent url(../images/top.png) no-repeat right  / 82.5%;
+  @include mq(sp){
+    padding-top: calc(415px / 375px * 100%);
+    background: transparent url(../images/sp/top.png) no-repeat center center / contain;
+  }
 }
 
 .top__text{
   background-color: $color-bg-main;
-  padding: 83px 44px 88px 0;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  @include mq(pc){
+    padding: 83px 44px 88px 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @include mq(sp){
+    padding-top: 31px;
+  }
 }
 .top__text__main{
   font-size: 1.625rem;
@@ -256,6 +268,9 @@ top
 .top__text__sub{
   margin-top: 14px;
   line-height: calc(27 / 16);
+  @include mq(sp){
+    margin-top: 18px;
+  }
 }
 
 /*===============================
@@ -522,7 +537,8 @@ News
 }
 
 .news__item__text{
-  flex: 0 1 100%;
+//  flex: 0 1 100%;
+  width: calc(100% - 260px);
   padding-left: 40px;
   color: $color-font-main;
 }
