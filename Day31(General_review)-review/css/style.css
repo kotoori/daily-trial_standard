@@ -75,7 +75,7 @@ img {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
   position: relative;
 }
 .section__title::after, .section__title-contact::after {
@@ -113,7 +113,6 @@ img {
   margin: 0 auto;
   font-size: 0.875rem;
   font-weight: bold;
-  letter-spacing: 0.1em;
   border: 1px solid #3EA1D1;
   color: #3EA1D1;
   background-color: #FFF;
@@ -141,7 +140,7 @@ header
 ===============================*/
 .header {
   width: 100%;
-  height: 70px;
+  height: 71px;
   background-color: #FFF;
   position: fixed;
   top: 0;
@@ -187,11 +186,10 @@ header
 
 .header__nav__link {
   display: block;
-  height: 70px;
+  height: 71px;
   padding: 27px 0;
   text-decoration: none;
   color: #333;
-  letter-spacing: 0.1em;
   -webkit-transition: color 0.2s ease 0s;
   transition: color 0.2s ease 0s;
 }
@@ -203,7 +201,7 @@ header
 top
 ===============================*/
 .top {
-  margin-top: 70px;
+  margin-top: 71px;
 }
 
 .top__contents {
@@ -276,7 +274,7 @@ Concept
 
 .contact__text__sub {
   margin-top: 36px;
-  line-height: cacl(27/16);
+  line-height: 1.6875;
 }
 
 /*===============================
@@ -391,6 +389,10 @@ About
 /*===============================
 product
 ===============================*/
+.products {
+  margin-top: 164px;
+}
+
 .products__inner {
   max-width: 1020px;
 }
@@ -440,7 +442,7 @@ product
   display: block;
   font-size: 0.875rem;
   color: #333;
-  line-height: 1.7142857143;
+  line-height: 1.9;
 }
 
 .products__item__price {
@@ -466,7 +468,7 @@ News
   border-bottom: 1px solid #E0E0E0;
 }
 .news__item:not(:first-child) {
-  margin-top: 22px;
+  margin-top: 23px;
 }
 
 .news__item__link {
@@ -530,6 +532,7 @@ News
   margin-top: 13px;
   font-size: 0.875rem;
   color: #888888;
+  line-height: 1.7142857143;
 }
 
 /*===============================
@@ -562,6 +565,7 @@ about2
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   padding-right: 6.6666666667%;
+  margin-top: -5px;
 }
 
 .about2__text__main {
@@ -571,7 +575,7 @@ about2
 }
 
 .about2__text__sub {
-  margin-top: 33px;
+  margin-top: 32px;
   line-height: 1.6875;
 }
 
@@ -581,7 +585,7 @@ Contact
 .contact {
   margin-top: 225px;
   background: transparent url(../images/contact.png) no-repeat center center/cover;
-  padding: 75px 0 82px;
+  padding: 70px 0 82px;
 }
 
 .contact__inner {
@@ -593,13 +597,12 @@ Contact
 }
 
 .contact__form {
-  margin-top: 64px;
+  margin-top: 56px;
 }
 
 .contact__form__text {
   font-size: 0.875rem;
   line-height: 1.7142857143;
-  letter-spacing: 0.1em;
   text-align: center;
 }
 .contact__form__text > span {
@@ -610,7 +613,7 @@ Contact
 }
 
 .contact__form__list {
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .contact__form__item {
@@ -659,6 +662,7 @@ Contact
   font-size: 1.125rem;
   font-weight: bold;
   color: #fff;
+  margin-left: -8px;
 }
 .contact__form__label.contact__form__required > span {
   position: relative;
@@ -669,7 +673,7 @@ Contact
   color: #E7728E;
   line-height: 1;
   position: absolute;
-  top: 0;
+  top: -3px;
   right: -1em;
 }
 
@@ -701,7 +705,6 @@ Contact
   border: 1px solid #FFF;
   font-size: 1rem;
   color: #3EA1D1;
-  letter-spacing: 0.1em;
   text-align: center;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
@@ -722,8 +725,8 @@ Contact
 .contact__form__input[type=checkbox] + span::before {
   content: "";
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #3EA1D1;
   background-color: #FFF;
   position: absolute;
@@ -735,7 +738,7 @@ Contact
   transition: width 0.2s ease 0s, transform 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
 }
 .contact__form__input[type=checkbox]:checked + span::before {
-  width: 11px;
+  width: 10px;
   background-color: transparent;
   border-top: none;
   border-left: none;
@@ -774,7 +777,7 @@ Contact
 
 .contact__form__privacy-policy {
   display: block;
-  margin-top: 27px;
+  margin-top: 31px;
   text-align: center;
 }
 
@@ -786,7 +789,7 @@ Contact
 
 .contact__form__submit {
   display: block;
-  margin: 51px auto 0;
+  margin: 46px auto 0;
   width: 137px;
   font-size: 0.875rem;
   font-weight: bold;
@@ -822,7 +825,7 @@ footer
 }
 
 .footer__nav {
-  margin-top: 24px;
+  margin-top: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -860,6 +863,7 @@ footer
 }
 
 .sns__link {
+  font-size: 1.3rem;
   color: #3EA1D1;
   text-decoration: none;
   padding: 11px;
@@ -869,7 +873,7 @@ footer
 }
 
 .footer__copyright {
-  margin-top: 24px;
+  margin-top: 22px;
 }
 
 .footer__copyright__text {
