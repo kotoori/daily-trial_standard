@@ -70,7 +70,7 @@ Contactフォーム入力チェック
   ===============================*/
   const formInputText = '.contact__form__input[type="text"].js-form-check';
   const formInputEmail = '.contact__form__input[type="email"].js-form-check';
-  const formInputRadioType = '.contact__form__input[type="radio"][name="type"]:checked.js-form-check';
+  const formInputRadio = '.contact__form__input[type="radio"].js-form-check';
   const formInputCheckBox = '.contact__form__input[type="checkbox"].js-form-check';
   const formTextarea = '.contact__form__textarea.js-form-check';
 
@@ -81,50 +81,54 @@ Contactフォーム入力チェック
   jQuery('.js-form-check').on('change', function(){
     let isInput = true;
 
-    console.log("cnange");
+//    /* checkValidity()を使ってチェック */
+//    /* ※ 今回はあえて自作のチェック処理を使うため、checkValidity()は使わないでおく */
+//    if(jQuery('.contact__form')[0].checkValidity() !== true){
+//      isInput = false;
+//    }
+
     if(isInput){
       /* input[type="text"]を全てチェック */
       for(let target of jQuery(formInputText)){
         if(target.value === ""){
-          console.log("false 1");
           isInput = false;
         }
       }
     }
 
     if(isInput){
-      /* input[type="email"]を全てチェック 未入力があればreturn */
+      /* input[type="email"]を全てチェック */
       for(let target of jQuery(formInputEmail)){
         if(target.value === ""){
-          console.log("false 2");
           isInput = false;
         }
       }
     }
 
     if(isInput){
-      /* textareaを全てチェック 未入力があればreturn */
+      /* textareaを全てチェック */
       for(let target of jQuery(formTextarea)){
         if(target.value === ""){
-          console.log("false 3");
           isInput = false;
         }
       }
     }
 
     if(isInput){
-      /* radioボタン[name="type"]をチェック 未選択ならreturn */
-      if(jQuery(formInputRadioType).val() === undefined){
-        console.log("false 4");
-        isInput = false;
+      /* input[type="radio"]を全てチェック */
+      for(let target of jQuery(formInputRadio)){
+        let attrName = jQuery(target).attr('name');
+        let targetName = `${formInputRadio}[name="${attrName}"]:checked`;
+        if(jQuery(targetName).val() === undefined){
+          isInput = false;
+        }
       }
     }
 
     if(isInput){
-      /* input[type="checkbox"]を全てチェック 未チェックがあればreturn */
+      /* input[type="checkbox"]を全てチェック */
       for(let target of jQuery(formInputCheckBox)){
         if(jQuery(target).prop("checked") === false){
-          console.log("false 5");
           isInput = false;
         }
       }

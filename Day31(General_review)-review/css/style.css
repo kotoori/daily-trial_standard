@@ -1163,6 +1163,7 @@ Contact
 .contact__form__submit.is-active {
   color: #fff;
   background-color: #3EA1D1;
+  cursor: pointer;
 }
 
 /*===============================
