@@ -32,4 +32,31 @@ jQuery(function(){
   });
 });
 
+/*===============================
+WOW.js
+===============================*/
+new WOW().init();
 
+jQuery(function(){
+  /*===============================
+  WOW.js option
+  ===============================*/
+  const delayInterval = 0.2; /* 0.2s */
+
+  if(window.matchMedia('(min-width:768px)').matches) {
+    /* PC（768px以上)のとき、横並びカードのWOWオプションを指定 */
+
+    setWowDelayForCard('.feature__list','.feature__item');
+    setWowDelayForCard('.products__list','.products__item');
+
+    /* 指定された横並びCardにWOW.jsアニメーションのdelayTimeを設定 */
+    /* delayTimeはdelayIntervalずつ、ずらして設定する */
+    function setWowDelayForCard(list,card){
+      let delayTime = 0;
+      $(list).children(card).each(function(index){
+        delayTime = index * delayInterval;
+        $(this).attr('data-wow-delay',delayTime + "s");
+      });
+    }
+  }
+});
