@@ -262,12 +262,12 @@
             <!-- name -->
             <div class="contact__form__item">
               <dt><label for="customer__name" class="contact__form__label contact__form__required"><span>お名前</span></label></dt>
-              <dd><input type="text" name="name" id="customer__name" class="contact__form__input" required></dd>
+              <dd><input type="text" name="name" id="customer__name" class="contact__form__input js-form-check" required></dd>
             </div>
             <!-- email -->
             <div class="contact__form__item">
               <dt><label for="customer__email" class="contact__form__label contact__form__required"><span>メールアドレス</span></label></dt>
-              <dd><input type="email" name="email" id="customer__email" class="contact__form__input" required></dd>
+              <dd><input type="email" name="email" id="customer__email" class="contact__form__input js-form-check" required></dd>
             </div>
             <!-- type -->
             <div class="contact__form__item">
@@ -275,19 +275,19 @@
                 <div class="contact__form__label contact__form__required"><span>法人/個人の選択</span></div>
               </dt>
               <dd class="contact__form__flex__radio">
-                <label><input type="radio" name="type" class="contact__form__input visually-hidden" required checked><span class="customer__type">法人</span></label>
-                <label><input type="radio" name="type" class="contact__form__input visually-hidden" required><span class="customer__type">個人</span></label>
+                <label><input type="radio" name="type" class="contact__form__input visually-hidden js-form-check" required checked><span class="customer__type">法人</span></label>
+                <label><input type="radio" name="type" class="contact__form__input visually-hidden js-form-check" required><span class="customer__type">個人</span></label>
               </dd>
             </div>
             <!-- inquiry -->
             <div class="contact__form__item">
               <dt><label for="customer__inquiry" class="contact__form__label contact__form__required"><span>お問い合わせ内容</span></label></dt>
-              <dd><textarea name="inquiry" id="customer__inquiry" class="contact__form__textarea" required></textarea></dd>
+              <dd><textarea name="inquiry" id="customer__inquiry" class="contact__form__textarea js-form-check" required></textarea></dd>
             </div>
           </dl>
           <!-- privacy policy -->
           <div class="contact__form__privacy-policy__wrapper">
-            <label class="contact__form__privacy-policy"><input type="checkbox" class="contact__form__input visually-hidden" required>
+            <label class="contact__form__privacy-policy"><input type="checkbox" class="contact__form__input visually-hidden js-form-check" required>
               <span><a href="#" target="_blank" rel="noopener noreferrer" class="privacy-policy__link">プライバシーポリシー</a>に同意します。</span>
             </label>
           </div>
