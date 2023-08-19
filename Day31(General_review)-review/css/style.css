@@ -1166,6 +1166,17 @@ Contact
   cursor: pointer;
 }
 
+.contact__form__message {
+  margin-top: 56px;
+  text-align: center;
+  line-height: 1.6875;
+  display: none;
+}
+.contact__form__message.error {
+  color: #E7728E;
+  font-weight: bold;
+}
+
 /*===============================
 footer
 ===============================*/

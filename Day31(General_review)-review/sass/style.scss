@@ -994,6 +994,17 @@ Contact
   }
 }
 
+.contact__form__message{
+  margin-top: 56px;
+  text-align: center;
+  line-height: calc(27 / 16);
+  display: none;
+  &.error{
+    color: $color-contact-attention;
+    font-weight: bold;
+  }
+}
+
 /*===============================
 footer
 ===============================*/

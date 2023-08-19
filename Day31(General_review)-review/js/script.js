@@ -152,27 +152,38 @@ jQuery('.js-form-check').on('change', function(){
 googleフォーム
 ===============================*/
 jQuery(function () {
-
-  jQuery('#js-form').submit(function (event) {
+  const $form = jQuery('#js-form');
+  $form.submit(function (event) {
     const formData = jQuery(this).serialize();
     const actionUrl = jQuery(this).attr("action");
-    console.log(actionUrl);
-    $.ajax({
+//    const actionUrl = "https://xxxxxx.com/"; /* 存在しないURL */
+//    const actionUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScLheJNTjUTTDnEGDhOKbdWw89lQ-WKUWNtppsSEeEcffJIjA/formResponse:9999" /* Openしてないポート番号 */
+
+  $.ajax({
       url: actionUrl,
       data: formData,
       type: "POST",
-      dataType: "xml",
+//      dataType: "xml", /* xmlだとerrorコールバックが呼ばれてしまう。serialize()で作ったデータはxmlではないらしい */
+      dataType: "html",
       statusCode: {
         0: function () {
-          //$(".end-message").slideDown();
-          //$(".submit-btn").fadeOut();
-          //window.location.href = "thanks.html";
+          //送信成功したときの処理
+          $form.slideUp();
+          jQuery('#js-submit-success').slideDown();
         },
         200: function () {
-          //$(".false-message").slideDown();
+          jQuery('#js-submit-failed').slideDown();
         }
-      }
+      },
+      success: function(data,textStatus,jqXHR){
+        //ajaxリクエスト成功時のコールバック
+      },
+      error: function(jqXHR,textStatus,errorThrown){
+        //ajaxリクエスト失敗時のコールバック
+        //console.log("error : " + `${textStatus}(${jqXHR.status}, ${errorThrown})`);
+      },
     });
+
     event.preventDefault();
   });
 

@@ -256,7 +256,7 @@
     <section id="a-contact" class="contact">
       <div class="inner contact__inner">
         <h2 class="section__title-contact wow fadeInUp">Contact</h2>
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScLheJNTjUTTDnEGDhOKbdWw89lQ-WKUWNtppsSEeEcffJIjA/formResponse" method="post" class="contact__form wow fadeInUp" id="js-form'">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScLheJNTjUTTDnEGDhOKbdWw89lQ-WKUWNtppsSEeEcffJIjA/formResponse" method="post" class="contact__form wow fadeInUp" id="js-form">
           <p class="contact__form__text"><span>＊</span>は入力必須項目です</p>
           <dl class="contact__form__list">
             <!-- name -->
@@ -294,6 +294,8 @@
           <!-- submit -->
           <button class="btn contact__form__submit" disabled>送信</button>
         </form>
+        <p class="contact__form__message" id="js-submit-success">送信完了しました。ありがとうございました。</p>
+        <p class="contact__form__message error" id="js-submit-failed">送信に失敗しました。<br>ブラウザを更新し、再度送信してください。</p>
       </div>
     </section>
   </main>
