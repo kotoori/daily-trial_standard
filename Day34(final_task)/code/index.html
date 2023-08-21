@@ -333,7 +333,60 @@
 
     <!-- Contact -->
     <section class="contact inner" id="a-contact">
-      
+      <div class="contact__contents">
+        <div class="contact__contents__header">
+          <h2 class="section__title">Contact Us</h2>
+          <p class="contact__header__text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+        </div>
+        <form action="" method="post" class="contact__form">
+          <dl class="contact__form__list">
+            <!-- select kind -->
+            <div class="contact__form__row">
+              <dt class="contact__form__item__title"><label for="label-kind">お問い合わせ種別</label></dt>
+              <dd class="contact__form__item__info">
+                <select name="" id="label-kind" class="contact__form__select">
+                  <option value="0" class="contact__form__select__item">選択してください</option>
+                  <option value="1" class="contact__form__select__item">種別1</option>
+                  <option value="2" class="contact__form__select__item">種別2</option>
+                  <option value="3" class="contact__form__select__item">種別3</option>
+                </select>
+            </dd>
+            </div>
+            <!-- input name -->
+            <div class="contact__form__row">
+              <dt class="contact__form__item__title"><label for="label-name" class="is-required">氏名</label></dt>
+              <dd class="contact__form__item__info"><input type="text" name="name" id="label-name" class="contact__form__input" placeholder="氏名" required></dd>
+            </div>
+            <!-- input kana -->
+            <div class="contact__form__row">
+              <dt class="contact__form__item__title"><label for="label-kana" class="is-required">フリガナ</label></dt>
+              <dd class="contact__form__item__info"><input type="text" name="kana" id="label-kana" class="contact__form__input" placeholder="フリガナ" required></dd>
+            </div>
+            <!-- input email -->
+            <div class="contact__form__row">
+              <dt class="contact__form__item__title"><label for="label-email">メールアドレス</label></dt>
+              <dd class="contact__form__item__info"><input type="email" name="" id="label-email" class="contact__form__input" placeholder="sample@gmail.com"></dd>
+            </div>
+            <!-- input radio gender -->
+            <div class="contact__form__row">
+              <dt class="contact__form__item__title">性別</dt>
+              <dd class="contact__form__item__info">
+                <label><input type="radio" name="gender" class="contact__form__input"><span class="radio-btn">男性</span></label>
+                <label><input type="radio" name="gender" class="contact__form__input"><span class="radio-btn">女性</span></label>
+              </dd>
+            </div>
+            <!-- textarea message -->
+            <div>
+              <dt class="contact__form__item__title"><label for="label-message">メッセージ</label></dt>
+              <dd class="contact__form__item__info"><textarea name="message" id="label-message" class="contact__form__textarea"></textarea></dd>
+            </div>
+          </dl>
+          <div class="contact__from__privacy__check">
+            <label><input type="checkbox" name="privacy" class="contact__form__input" required><span class="check-box">個人情報保護方針に同意する</span></label>
+          </div>
+          <button class="btn btn__cv">送信する</button>
+        </form>
+      </div><!-- ./contact__contents -->
     </section>
   </main>
 
