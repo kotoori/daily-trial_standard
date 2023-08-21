@@ -18,7 +18,8 @@
   <!-- css -->
   <!-- drawer.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" media="screen and (max-width:767px)">
-
+  <!-- swiper.css v8 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <!-- original -->
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
@@ -51,7 +52,7 @@
       <div class="fv__text">
         <p class="fv__text__main">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</p>
         <p class="fv__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
-        <a href="#a-contact" class="fv__text__button">お問い合わせしてみる</a>
+        <a href="#a-contact" class="btn btn__cv">お問い合わせしてみる</a>
       </div>
     </div><!-- /.fv -->
 
@@ -91,7 +92,7 @@
         </article>
       </div><!-- ./news__contents -->
       <div class="news__footer">
-        <a href="" class="btn__more news__more__link">MORE</a>
+        <a href="" class="btn btn__general btn__general__light">MORE</a>
       </div>
     </section>
 
@@ -128,7 +129,81 @@
 
     <!-- Results -->
     <section class="results inner" id="a-results">
+      <h2 class="section__title">Results</h2>
+      <div class="results__contents">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper results__list">
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+            <!-- Slides, results__item-->
+            <li class="swiper-slide results__item">
+              <div class="results__item__image">
+                <img src="./images/slide1.png" alt="とかくに人の世は住みにくい">
+              </div>
+              <div class="results__item__text">
+                <span class="results__item__text__main">とかくに人の世は住みにくい。</span>
+                <p class="results__item__text__sub">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+              </div>
+            </li>
+          </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
 
+        </div><!-- ./swiper -->
+      </div><!-- ./results__contents -->
+      <div class="results__footer">
+        <a href="" class="btn btn__general btn__general__dark">VIEW ALL</a>
+      </div>
     </section>
 
     <!-- Price -->
@@ -171,11 +246,11 @@
 
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
   <!-- iScroll, drawer.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-
+  <!-- swiper.js v8 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- original -->
   <script src="./js/script.js"></script>
 </body>

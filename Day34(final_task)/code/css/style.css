@@ -30,3 +30,8 @@ ol, ul {
   list-style: none;
   list-style-type: none;
 }
+
+.swiper {
+  width: 600px;
+  height: 700px;
+}
