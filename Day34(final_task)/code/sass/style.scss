@@ -38,6 +38,61 @@ img {
   }
 }
 
+.inner{
+  height:inherit;
+  width:100%;
+  max-width: $width-max1;
+  padding: 0 40px;
+  box-sizing: content-box;
+}
+
+/*===============================
+Header
+===============================*/
+.header{
+  width: 100%;
+  height: $height-header-pc;
+  background-color: $color-header-pc;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header__nav{
+  height: 100%;
+}
+
+.header__nav__list{
+  text-align: center;
+  @include mq(pc){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.header__nav__item{
+  @include mq(pc){
+    &:not(:first-child){
+      margin-left: 40px;
+    }
+  }
+}
+
+.header__nav__link{
+  text-decoration: none;
+  color: $color-main;
+  display: inline-block;
+  padding: 6px 7px;
+  transition: border-bottom 0.2s ease 0s;
+  &:hover{
+    border-bottom: 1px solid $color-main;
+  }
+}
+
+
+
 //↓暫定のスタイル　後で消す
 .swiper {
   width: 600px;
