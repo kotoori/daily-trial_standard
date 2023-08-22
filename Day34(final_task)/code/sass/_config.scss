@@ -13,26 +13,41 @@ $breakpoints: (
 // 色
 $color-main: #3E3E3E;
 $color-bg: #F3F3F3;
+$color-bg-2: #FFF;
 $color-font-dark: $color-main;
 $color-font-light: #FFFFFF;
-$color-border: #707070;
 $color-shadow-1: rgba(62, 62, 62, 0.2);
 $color-shadow-2: rgba(0, 0, 0, 0.16);
+
+
+
+//色 news
+$color-news-border: #CECDCD;
+$color-news-hover:rgba(73, 115, 255, 0.1);
+$color-news-tag: #3B69FF;
+
 
 $color-notice: #FF4646;
 
 $color-mark: #3B69FF;
 $color-mark-shadow: rgba(73, 115, 255, 0.2);
 
-$color-active-field: #4973FF;
+$color-active-field: rgba(73, 115, 255, 0.2);
 $color-active-field-shadow: #4973FF80;
 
 $color-btn-cv-normal: #FFAA3B;
 $color-btn-cv-hover: #F18900;
 $color-btn-cv-disable: #B2B2B2;
 
+$color-btn-general-bg-1: $color-bg-2;
+$color-btn-general-bg-2: $color-main;
+$color-btn-general-border-1: #707070;
+$color-btn-general-border-2: $color-bg-2;
+
+
 $color-header-pc: rgba(255, 255, 255, 0.1);
 $color-header-sp: #FFFFFF;
+
 
 // サイズ
 $width-max-1: 1200px;
