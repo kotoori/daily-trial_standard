@@ -35,8 +35,8 @@ $color-header-pc: rgba(255, 255, 255, 0.1);
 $color-header-sp: #FFFFFF;
 
 // サイズ
-$width-max1: 1200px;
-$width-max2: 960px;
+$width-max-1: 1200px;
+$width-max-2: 960px;
 $width-side-margin-sp: 16px;
 $height-header-pc: 83px;
 $height-header-sp: 68px;
@@ -46,6 +46,7 @@ $font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "
 $font-wight-regular: 400;
 $font-wight-medium: 500;  // mediumは日本語／英語で共通
 $font-wight-semibold: 600;
+$font-wight-bold: 700;
 
 // z-index
 $layer: (

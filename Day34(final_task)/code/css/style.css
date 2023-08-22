@@ -62,10 +62,35 @@ img {
 .inner {
   height: inherit;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   padding: 0 40px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.btn__cv {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #FFAA3B;
+  -webkit-box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+          box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+  padding: 16px 50px;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+.btn__cv:hover {
+  background-color: #F18900;
 }
 
 /*===============================
@@ -78,6 +103,28 @@ Header
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.header__logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    display: none;
+  }
+}
+
+.header__logo__link {
+  text-decoration: none;
+  font-size: 1.4375rem;
+  font-weight: 700;
+  color: #3E3E3E;
 }
 
 .header__nav {
@@ -104,7 +151,7 @@ Header
 
 @media screen and (min-width: 768px) {
   .header__nav__item:not(:first-child) {
-    margin-left: 40px;
+    margin-left: 3.3333333333%;
   }
 }
 
@@ -113,11 +160,47 @@ Header
   color: #3E3E3E;
   display: inline-block;
   padding: 6px 7px;
-  -webkit-transition: border-bottom 0.2s ease 0s;
-  transition: border-bottom 0.2s ease 0s;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-bottom 0.3s ease 0s;
+  transition: border-bottom 0.3s ease 0s;
 }
 .header__nav__link:hover {
   border-bottom: 1px solid #3E3E3E;
+}
+
+/*===============================
+first view
+===============================*/
+.fv {
+  background: transparent url(../images/mv.png) no-repeat center center/cover;
+}
+@media screen and (max-width: 767px) {
+  .fv {
+    background: transparent url(../images/mv.png) no-repeat 21% center/cover;
+  }
+}
+
+.fv__contents {
+  width: 50%;
+  margin-left: auto;
+  padding: 228px 0 153px;
+}
+
+.fv__heading {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.fv__lead {
+  margin-top: 27px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.5555555556;
+}
+
+.fv__btn {
+  margin-top: 35px;
 }
 
 .swiper {

@@ -41,9 +41,33 @@ img {
 .inner{
   height:inherit;
   width:100%;
-  max-width: $width-max1;
+  max-width: calc($width-max-1 + 40px * 2);
   padding: 0 40px;
-  box-sizing: content-box;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  appearance: none;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+
+}
+
+.btn__cv{
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: $color-font-light;
+  background-color: $color-btn-cv-normal;
+  box-shadow: 0 3px 5px $color-shadow-1;
+  padding: 16px 50px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease 0s;
+  &:hover{
+    background-color: $color-btn-cv-hover;
+  }
+
 }
 
 /*===============================
@@ -56,6 +80,23 @@ Header
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.header__logo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @include mq(pc){
+    display: none;
+  }
+}
+
+.header__logo__link{
+  text-decoration: none;
+  font-size: 1.4375rem;
+  font-weight: $font-wight-bold;
+  color: $color-main;
+
 }
 
 .header__nav{
@@ -75,7 +116,7 @@ Header
 .header__nav__item{
   @include mq(pc){
     &:not(:first-child){
-      margin-left: 40px;
+      margin-left: calc(40px / $width-max-1 * 100%);
     }
   }
 }
@@ -85,10 +126,46 @@ Header
   color: $color-main;
   display: inline-block;
   padding: 6px 7px;
-  transition: border-bottom 0.2s ease 0s;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease 0s;
   &:hover{
     border-bottom: 1px solid $color-main;
   }
+}
+
+/*===============================
+first view
+===============================*/
+.fv{
+  background: transparent url(../images/mv.png) no-repeat center center  / cover;
+  @include mq(sp){
+    background: transparent url(../images/mv.png) no-repeat 21% center  / cover;
+  }
+}
+
+.fv__contents{
+  width: 50%;
+  margin-left: auto;
+  padding: 228px 0 153px;
+}
+
+
+.fv__heading{
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: calc(48 / 32);
+
+}
+
+.fv__lead{
+  margin-top: 27px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: calc(28 / 18);
+}
+
+.fv__btn{
+  margin-top: 35px;
 }
 
 
