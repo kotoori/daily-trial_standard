@@ -34,6 +34,9 @@ body {
   color: #3E3E3E;
   background: #F3F3F3;
   font-family: "Montserrat", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
   font-weight: 500;
 }
 
