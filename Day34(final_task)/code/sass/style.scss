@@ -1,5 +1,40 @@
 @use "reset";
 
+@use "config" as *;
+@use "mixin" as *;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: $color-main;
+  background: $color-bg;
+  font-family: $font-family;
+  font-weight: $font-wight-medium;
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  vertical-align: top;  /* img下の隙間を消す */
+}
+
+/*===============================
+共通クラス
+===============================*/
+@include mq(sp){
+	.is-pc{
+    display: none;
+  }
+}
+
+@include mq(pc){
+	.is-sp{
+    display: none;
+  }
+}
+
 //↓暫定のスタイル　後で消す
 .swiper {
   width: 600px;

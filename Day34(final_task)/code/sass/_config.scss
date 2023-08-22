@@ -1,0 +1,53 @@
+//=======================
+//config.scss
+//ページ全体で使う定義を記載する
+//=======================*/
+
+// ブレークポイント
+$breakpoints: (
+//キー:値
+  'sp':  'screen and (max-width: 767px)', //スマホ用の表示
+  'pc':  'screen and (min-width: 768px)' //PC用の表示
+) !default;
+
+// 色
+$color-main: #3E3E3E;
+$color-bg: #F3F3F3;
+$color-font-dark: $color-main;
+$color-font-light: #FFFFFF;
+$color-border: #707070;
+$color-shadow-1: rgba(62, 62, 62, 0.2);
+$color-shadow-2: rgba(0, 0, 0, 0.16);
+
+$color-notice: #FF4646;
+
+$color-mark: #3B69FF;
+$color-mark-shadow: rgba(73, 115, 255, 0.2);
+
+$color-active-field: #4973FF;
+$color-active-field-shadow: #4973FF80;
+
+$color-btn-cv-normal: #FFAA3B;
+$color-btn-cv-hover: #F18900;
+$color-btn-cv-disable: #B2B2B2;
+
+// サイズ
+$width-max1: 1200px;
+$width-max2: 960px;
+$width-side-margin-sp: 16px;
+$height-header-pc: 83px;
+$height-header-sp: 68px;
+
+// font
+$font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+$font-wight-regular: 400;
+$font-wight-medium: 500;  // mediumは日本語／英語で共通
+$font-wight-semibold: 600;
+
+// z-index
+$layer: (
+	header: 900, // ヘッダー
+
+  //default
+  default: 1,
+  );

@@ -1,0 +1,14 @@
+//=======================
+//mixin.scss
+//ページ全体で使うmixinを記載する
+//=======================
+@use "config" as *;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
