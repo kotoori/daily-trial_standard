@@ -105,6 +105,9 @@ img {
   font-size: 2.25rem;
   font-weight: $font-wight-semibold;
   color: $color-font-dark;
+  &.section__title-center{
+    text-align: center;
+  }
 }
 
 .section__title-light{
@@ -229,7 +232,6 @@ News
   background-color: $color-bg-2;
   box-shadow: 0 5px 12px $color-shadow-1;
   padding: 60px 60px 40px;
-  text-align: center;
 }
 
 .news__contents{
@@ -285,12 +287,12 @@ News
   border: 2px solid $color-news-tag;
   border-radius: 50px;
   padding: 8px 0;
+  text-align: center;
 }
 
 .news__item__text{
   width: 100%;
   flex-shrink: 1;
-  text-align: left;
   padding-left: 40px;
   padding-right: 83px;
 }
@@ -315,7 +317,6 @@ Service
 }
 
 .service__wrap{
-  text-align: center;
 }
 
 .service__contents{
@@ -354,13 +355,13 @@ Service
   font-weight: $font-wight-semibold;
   line-height: calc(28 / 20);
   letter-spacing: 0.2em;
+  text-align: center;
 }
 
 .service__item__text{
   margin-top: 11px;
   font-size: 0.875rem;
   line-height: calc(24 / 14);
-  text-align: left;
 }
 
 /*===============================
@@ -477,7 +478,6 @@ Price
 ===============================*/
 .price{
   margin-top: 120px;
-  text-align: center;
 
   @include mq(pc){
     width: calc($width-max-2 / $width-max-1 * 100%);
@@ -503,6 +503,7 @@ Price
   font-size: 1.5rem;
   font-weight: $font-wight-semibold;
   color: $color-font-light;
+  text-align: center;
   background-color: $color-main;
   vertical-align: middle;
   border-style: solid;
@@ -522,7 +523,6 @@ Price
   color: $color-main;
   background-color: $color-bg-2;
   vertical-align: middle;
-  text-align: left;
   padding: 0 40px;
   border-style: solid;
   border-width: 1px;
@@ -531,7 +531,6 @@ Price
 }
 
 .price__text{
-text-align: left;
 font-size: 0.75rem;
 margin-top: 12px;
 }
@@ -554,6 +553,7 @@ Comments
   width: calc(666px / 1200px * 100%);
   padding: 120px 60px;
   background-color: $color-bg-2;
+  box-shadow: 0 5px 12px $color-shadow-1;
   min-width: 400px;
 }
 
@@ -583,5 +583,103 @@ Comments
 
 .comments__image{
   width: calc(534px / 1200px * 100%);
+}
 
+/*===============================
+FAQ
+===============================*/
+.faq{
+  background: transparent url(../images/qa-bg.png) no-repeat center -20px / cover;
+  padding: 60px 0 120px;
+}
+
+.faq__list{
+  margin-top: 60px;
+  width: 612px;
+  margin-left: auto;
+}
+
+.faq__item{
+  background-color: $color-bg-2;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  &:not(:first-child){
+    margin-top: 32px;
+  }
+}
+
+.faq__accordion__button{
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  padding: 12px 16px 12px 16px;
+}
+.faq__item__q{
+  padding-left: 40px;
+  position: relative;
+  &::after{
+    content: "Q";
+    display: block;
+    font-weight: $font-wight-semibold;
+    color: $color-font-light;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background-color: $color-faq-q-mark;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.faq__item__q__text{
+  font-size: 1rem;
+  font-weight: bold;
+  color: $color-font-dark;
+  line-height: calc(24 / 16);
+}
+
+.faq__item__a{
+  margin-top: 20px;
+  line-height: calc(24 / 16);
+  background-color: $color-faq-a-bg;
+  padding: 12px 16px 12px 16px;
+  border-radius: 4px;
+  display: none;
+}
+
+.faq__item__btn-mark{
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.faq__item__btn-mark__border{
+  display: block;
+  width: 17px;
+  height: 3px;
+  background-color: $color-faq-button;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%);
+  &:first-child{
+    transition: all 0.3s ease 0s;
+    transform: translate(-50%) rotate(-90deg);
+
+    .faq__item__btn-mark.is-open &{
+      transform: translate(-50%) rotate(0deg);
+      opacity: 0.3;
+    }
+  }
 }

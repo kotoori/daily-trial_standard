@@ -29,3 +29,24 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
 });
+
+/*===============================
+FAQ button
+===============================*/
+jQuery(function(){
+  const item = '.faq__item';
+  const accordion = '.faq__item__a';
+  const btnMark = '.faq__item__btn-mark';
+  const openClass = 'is-open';
+
+  jQuery(item).on('click', function(){
+    //ボタンマークのアニメーションを発火させる
+    const targetBtnMark = jQuery(this).find(btnMark);
+    jQuery(targetBtnMark).toggleClass(openClass);
+
+    //アコーディオンを開閉する
+    const targetAccordion = jQuery(this).find(accordion);
+    jQuery(targetAccordion).slideToggle();
+  });
+});
+
