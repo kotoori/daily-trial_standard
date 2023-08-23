@@ -66,7 +66,6 @@ $font-wight-bold: 700;
 // z-index
 $layer: (
 	header: 900, // ヘッダー
-
-  //default
-  default: 1,
-  );
+  main: 500, //main
+  default: 1, //default
+);
