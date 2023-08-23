@@ -522,3 +522,64 @@ Results
 .results__footer {
   margin-top: 40px;
 }
+
+/*===============================
+Price
+===============================*/
+.price {
+  margin-top: 120px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .price {
+    width: 80%;
+    max-width: 960px;
+  }
+}
+
+.price__table {
+  margin: 60px auto 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.price__table__row {
+  height: 60px;
+  width: 100%;
+}
+
+.price__table__head {
+  width: 262px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #3E3E3E;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #3E3E3E #3E3E3E #F3F3F3;
+}
+.price__table__row:last-child > .price__table__head {
+  border-color: #3E3E3E;
+}
+
+.price__table__data {
+  width: calc(100% - 262px);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3E3E3E;
+  background-color: #FFF;
+  vertical-align: middle;
+  text-align: left;
+  padding: 0 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #707070 #707070 #707070;
+}
+
+.price__text {
+  text-align: left;
+  font-size: 0.75rem;
+  margin-top: 12px;
+}

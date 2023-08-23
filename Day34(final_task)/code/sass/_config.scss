@@ -19,13 +19,14 @@ $color-font-light: #FFFFFF;
 $color-shadow-1: rgba(62, 62, 62, 0.2);
 $color-shadow-2: rgba(0, 0, 0, 0.16);
 
-
-
 //色 news
 $color-news-border: #CECDCD;
 $color-news-hover:rgba(73, 115, 255, 0.1);
 $color-news-tag: #3B69FF;
 
+//色 price
+$color-price-th-border: $color-bg;
+$color-price-td-border: #707070;
 
 $color-notice: #FF4646;
 
@@ -35,6 +36,7 @@ $color-mark-shadow: rgba(73, 115, 255, 0.2);
 $color-active-field: rgba(73, 115, 255, 0.2);
 $color-active-field-shadow: #4973FF80;
 
+//色　ボタン
 $color-btn-cv-normal: #FFAA3B;
 $color-btn-cv-hover: #F18900;
 $color-btn-cv-disable: #B2B2B2;
