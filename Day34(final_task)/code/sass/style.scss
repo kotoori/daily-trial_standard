@@ -43,6 +43,7 @@ img {
   width:100%;
   max-width: calc($width-max-1 + 40px * 2);
   padding: 0 40px;
+  margin: 0 auto;
 }
 
 .btn{
@@ -103,6 +104,12 @@ img {
 .section__title{
   font-size: 2.25rem;
   font-weight: $font-wight-semibold;
+  color: $color-font-dark;
+}
+
+.section__title-light{
+  @extend .section__title;
+  color: $color-font-light;
 }
 
 /*===============================
@@ -287,6 +294,64 @@ News
 
 .news__footer{
   margin-top: 40px;
+}
+
+/*===============================
+Service
+===============================*/
+.service{
+  background: linear-gradient(to bottom,  $color-main 0 80.8080%,$color-bg 80.8080% 100%);
+  margin-top: 120px;
+  padding-top: 64px;
+}
+
+.service__wrap{
+  text-align: center;
+}
+
+.service__contents{
+  background-color: $color-bg-2;
+  box-shadow: 0 5px 12px $color-shadow-1;
+  margin: 64px auto;
+  @include mq(pc){
+    width: calc($width-max-2 / $width-max-1 * 100%);
+    max-width: $width-max-2;
+    display: flex;
+    justify-content: space-around;;
+    padding: 60px 0;
+  }
+}
+
+.service__item{
+  width: calc(230px / $width-max-2 * 100%);
+  min-width: 160px;
+}
+
+.service__item__image{
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 10px 7px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.service__item__title{
+  display: block;
+  margin-top: 6px;
+  font-size: 1.25rem;
+  font-weight: $font-wight-semibold;
+  line-height: calc(28 / 20);
+  letter-spacing: 0.2em;
+}
+
+.service__item__text{
+  margin-top: 11px;
+  font-size: 0.875rem;
+  line-height: calc(24 / 14);
+  text-align: left;
 }
 
 

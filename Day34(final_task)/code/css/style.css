@@ -49,7 +49,7 @@ img {
 /*===============================
 共通クラス
 ===============================*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.99px) {
   .is-pc {
     display: none;
   }
@@ -64,6 +64,7 @@ img {
   width: 100%;
   max-width: 1280px;
   padding: 0 40px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -125,9 +126,14 @@ img {
   border: 1px solid #707070;
 }
 
-.section__title {
+.section__title, .section__title-light {
   font-size: 2.25rem;
   font-weight: 600;
+  color: #3E3E3E;
+}
+
+.section__title-light {
+  color: #FFFFFF;
 }
 
 /*===============================
@@ -211,7 +217,7 @@ first view
 .fv {
   background: transparent url(../images/mv.png) no-repeat center center/cover;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.99px) {
   .fv {
     background: transparent url(../images/mv.png) no-repeat 21% center/cover;
   }
@@ -338,6 +344,71 @@ News
 
 .news__footer {
   margin-top: 40px;
+}
+
+/*===============================
+Service
+===============================*/
+.service {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3E3E3E), color-stop(80.808%, #F3F3F3));
+  background: linear-gradient(to bottom, #3E3E3E 0 80.808%, #F3F3F3 80.808% 100%);
+  margin-top: 120px;
+  padding-top: 64px;
+}
+
+.service__wrap {
+  text-align: center;
+}
+
+.service__contents {
+  background-color: #FFF;
+  -webkit-box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+          box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+  margin: 64px auto;
+}
+@media screen and (min-width: 768px) {
+  .service__contents {
+    width: 80%;
+    max-width: 960px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 60px 0;
+  }
+}
+
+.service__item {
+  width: 23.9583333333%;
+  min-width: 160px;
+}
+
+.service__item__image {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 10px 7px;
+}
+.service__item__image img {
+  width: 100%;
+  height: auto;
+}
+
+.service__item__title {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+}
+
+.service__item__text {
+  margin-top: 11px;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  text-align: left;
 }
 
 .swiper {
