@@ -953,6 +953,21 @@ contact
   border: none;
   border-radius: 0;
 }
+.contact__form__input::-webkit-input-placeholder {
+  color: #9E9E9E;
+}
+.contact__form__input::-moz-placeholder {
+  color: #9E9E9E;
+}
+.contact__form__input:-ms-input-placeholder {
+  color: #9E9E9E;
+}
+.contact__form__input::-ms-input-placeholder {
+  color: #9E9E9E;
+}
+.contact__form__input::placeholder {
+  color: #9E9E9E;
+}
 .contact__form__input[type=text], .contact__form__input[type=email] {
   border-bottom: 1px solid #9E9E9E;
   border-radius: 0;

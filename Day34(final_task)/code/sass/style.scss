@@ -887,6 +887,9 @@ contact
   appearance: none;
   border: none;
   border-radius: 0;
+  &::placeholder{
+    color: $color-contact-placeholder;
+  }
 
   &[type="text"],&[type="email"]{
     border-bottom: 1px solid $color-contact-border-input;
