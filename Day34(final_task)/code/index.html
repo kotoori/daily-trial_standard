@@ -371,9 +371,7 @@
       <div class="access__text">
         <h2 class="section__title-light">Access</h2>
         <address class="access__address"><p>〒106-6126<br>東京都港区六本木 6丁目 10-1<br>六本木ヒルズ森タワー</p></address>
-        <div class="access__btn">
-          <a href="https://goo.gl/maps/17NovdsAiEuGk7V79" class="btn btn__general btn__general__dark" target="_blank" rel="noopener noreferrer">Google Maps</a>
-        </div>
+        <a href="https://goo.gl/maps/17NovdsAiEuGk7V79" class="btn btn__general btn__general__dark access__btn" target="_blank" rel="noopener noreferrer">Google Maps</a>
       </div>
       <div class="access__map__wrap">
         <div class="access__map">
@@ -383,61 +381,104 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact inner" id="a-contact">
-      <div class="contact__contents">
-        <div class="contact__contents__header">
-          <h2 class="section__title">Contact Us</h2>
-          <p class="contact__header__text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
-        </div>
-        <form action="" method="post" class="contact__form">
-          <dl class="contact__form__list">
-            <!-- select kind -->
-            <div class="contact__form__row">
-              <dt class="contact__form__item__title"><label for="label-kind">お問い合わせ種別</label></dt>
-              <dd class="contact__form__item__info">
-                <select name="" id="label-kind" class="contact__form__select">
-                  <option value="0" class="contact__form__select__item">選択してください</option>
-                  <option value="1" class="contact__form__select__item">種別1</option>
-                  <option value="2" class="contact__form__select__item">種別2</option>
-                  <option value="3" class="contact__form__select__item">種別3</option>
-                </select>
-            </dd>
-            </div>
-            <!-- input name -->
-            <div class="contact__form__row">
-              <dt class="contact__form__item__title"><label for="label-name" class="is-required">氏名</label></dt>
-              <dd class="contact__form__item__info"><input type="text" name="name" id="label-name" class="contact__form__input" placeholder="氏名" required></dd>
-            </div>
-            <!-- input kana -->
-            <div class="contact__form__row">
-              <dt class="contact__form__item__title"><label for="label-kana" class="is-required">フリガナ</label></dt>
-              <dd class="contact__form__item__info"><input type="text" name="kana" id="label-kana" class="contact__form__input" placeholder="フリガナ" required></dd>
-            </div>
-            <!-- input email -->
-            <div class="contact__form__row">
-              <dt class="contact__form__item__title"><label for="label-email">メールアドレス</label></dt>
-              <dd class="contact__form__item__info"><input type="email" name="" id="label-email" class="contact__form__input" placeholder="sample@gmail.com"></dd>
-            </div>
-            <!-- input radio gender -->
-            <div class="contact__form__row">
-              <dt class="contact__form__item__title">性別</dt>
-              <dd class="contact__form__item__info">
-                <label><input type="radio" name="gender" class="contact__form__input"><span class="radio-btn">男性</span></label>
-                <label><input type="radio" name="gender" class="contact__form__input"><span class="radio-btn">女性</span></label>
-              </dd>
-            </div>
-            <!-- textarea message -->
-            <div>
-              <dt class="contact__form__item__title"><label for="label-message">メッセージ</label></dt>
-              <dd class="contact__form__item__info"><textarea name="message" id="label-message" class="contact__form__textarea"></textarea></dd>
-            </div>
-          </dl>
-          <div class="contact__from__privacy__check">
-            <label><input type="checkbox" name="privacy" class="contact__form__input" required><span class="check-box">個人情報保護方針に同意する</span></label>
+    <section class="contact" id="a-contact">
+      <div class="inner">
+        <div class="contact__contents">
+          <div class="contact__contents__header">
+            <h2 class="section__title-light">Contact Us</h2>
+            <p class="contact__header__text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
           </div>
-          <button class="btn btn__cv">送信する</button>
-        </form>
-      </div><!-- ./contact__contents -->
+          <form action="" method="post" class="contact__form">
+            <dl class="contact__form__list">
+              <!-- select kind -->
+              <div class="contact__form__row">
+                <dt class="contact__form__row__left">
+                  <label for="label-kind" class="contact__form__item__label">
+                    <span class="contact__for__item__title">お問い合わせ種別</span>
+                  </label>
+                </dt>
+                <dd class="contact__form__row__right">
+                  <div class="contact__form__select__wrap">
+                    <select name="" id="label-kind" class="contact__form__select">
+                      <option value="" hidden>選択してください</option>
+                      <option value=""  class="contact__form__select__item">選択しない</option>
+                      <option value="1" class="contact__form__select__item">種別1</option>
+                      <option value="2" class="contact__form__select__item">種別2</option>
+                      <option value="3" class="contact__form__select__item">種別3</option>
+                    </select>
+                    <span class="contact__form__select__arrow"></span>
+                  </div>
+                </dd>
+              </div>
+              <!-- input name -->
+              <div class="contact__form__row">
+                <dt class="contact__form__row__left">
+                  <label for="label-name" class="contact__form__item__label is-required">
+                    <span class="contact__for__item__title">氏名</span>
+                  </label>
+                </dt>
+                <dd class="contact__form__row__right">
+                  <input type="text" name="name" id="label-name" class="contact__form__input js-form-check" placeholder="氏名" required>
+                </dd>
+              </div>
+              <!-- input kana -->
+              <div class="contact__form__row">
+                <dt class="contact__form__row__left">
+                  <label for="label-kana" class="contact__form__item__label is-required">
+                    <span class="contact__for__item__title">フリガナ</span>
+                  </label>
+                </dt>
+                <dd class="contact__form__row__right">
+                  <input type="text" name="kana" id="label-kana" class="contact__form__input js-form-check" placeholder="フリガナ" required>
+                </dd>
+              </div>
+              <!-- input email -->
+              <div class="contact__form__row">
+                <dt class="contact__form__row__left">
+                  <label for="label-email" class="contact__form__item__label">
+                    <span class="contact__for__item__title">メールアドレス</span>
+                  </label>
+                </dt>
+                <dd class="contact__form__row__right">
+                  <input type="email" name="" id="label-email" class="contact__form__input" placeholder="sample@gmail.com">
+                </dd>
+              </div>
+              <!-- input radio gender -->
+              <div class="contact__form__row">
+                <dt class="contact__form__row__left">
+                  <div class="contact__form__item__label">
+                    <span class="contact__for__item__title">性別</span>
+                  </div>
+                </dt>
+                <dd class="contact__form__row__right">
+                  <ul class="contact__form__radio__group">
+                    <li class="radio__item"><label class="visually-hidden-label"><input type="radio" name="gender" class="contact__form__input visually-hidden" onclick="jsRadioToggle(this, 1)"><span class="radio-btn">男性</span></label></li>
+                    <li class="radio__item"><label class="visually-hidden-label"><input type="radio" name="gender" class="contact__form__input visually-hidden" onclick="jsRadioToggle(this, 2)"><span class="radio-btn">女性</span></label></li>
+                  </ul>
+                </dd>
+              </div>
+              <!-- textarea message -->
+              <div class="contact__form__vertical">
+                <dt class="contact__form__vertical_top">
+                  <label for="label-message" class="contact__form__item__label">
+                    <span class="contact__for__item__title">メッセージ</span>
+                  </label>
+                </dt>
+                <dd class="contact__form__vertical_bottom">
+                  <textarea name="message" id="label-message" class="contact__form__textarea"></textarea>
+                </dd>
+              </div>
+            </dl>
+            <div class="contact__from__privacy__check">
+              <label class="visually-hidden-label">
+                <input type="checkbox" name="privacy" class="contact__form__input visually-hidden js-form-check" required>
+                <span class="check-box">個人情報保護方針に同意する</span>
+              </label>
+            </div>
+            <button class="btn btn__cv contact__form__btn" disabled>送信する</button>
+          </form>
+        </div><!-- ./contact__contents -->
+      </div><!-- ./inner -->
     </section>
   </main>
 

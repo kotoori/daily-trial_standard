@@ -35,13 +35,19 @@ $color-faq-q-mark: $color-mark;
 $color-faq-a-bg: rgba(73, 115, 255, 0.2);
 $color-faq-button: $color-mark;
 
-$color-notice: #FF4646;
+//色 Contact
+$color-contact-border: #707070;
+$color-contact-border-input: #9E9E9E;
+$color-contact-border-input_active: #4973FF;
+$color-contact-input-shadow: rgba(73, 115, 255, 0.5);
+$color-contact-mark-shadow: rgba(73, 115, 255, 0.2);
 
+
+$color-notice: #FF4646;
 $color-mark: #3B69FF;
-$color-mark-shadow: rgba(73, 115, 255, 0.2);
 
 $color-active-field: rgba(73, 115, 255, 0.2);
-$color-active-field-shadow: #4973FF80;
+
 
 //色 ボタン
 $color-btn-cv-normal: #FFAA3B;

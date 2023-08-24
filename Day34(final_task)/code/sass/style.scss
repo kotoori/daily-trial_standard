@@ -67,6 +67,10 @@ img {
   &:hover{
     background-color: $color-btn-cv-hover;
   }
+  &:disabled{
+    background-color: $color-btn-cv-disable;
+    cursor:auto;
+  }
 }
 
 .btn__general{
@@ -113,6 +117,20 @@ img {
 .section__title-light{
   @extend .section__title;
   color: $color-font-light;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden-label{
+  position: relative;
 }
 
 /*===============================
@@ -731,4 +749,335 @@ Access
     width: 100%;
     height: 100%;
   }
+}
+
+/*===============================
+contact
+===============================*/
+.contact{
+  background: transparent url(../images/contact-bg.png) no-repeat center center / cover;
+  padding: 60px 0;
+}
+
+.contact__contents{
+  margin: 0 auto;
+  border-radius: 12px;
+  background-color: $color-bg-2;
+
+  @include mq(pc){
+    width: calc($width-max-2 / $width-max-1 * 100%);
+    max-width: $width-max-2;
+  }
+}
+
+.contact__contents__header{
+  background: transparent url(../images/contact1.png) no-repeat center center / cover;
+  padding: 60px 0 56px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+}
+
+.contact__header__text{
+  margin-top: 12px;
+  color: $color-font-light;
+  line-height: calc(24 / 16);
+}
+
+.contact__form{
+  padding: 60px 120px;
+
+}
+
+.contact__form__list{
+  & > *{
+    &:not(:first-child){
+      margin-top: 32px;
+    }
+  }
+}
+
+.contact__form__row{
+  @include mq(pc){
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contact__form__row__left{
+  width: 188px;
+  flex-shrink: 0;
+}
+
+.contact__form__row__right{
+  width: calc(100% - 188px);
+}
+
+
+.contact__form__item__label{
+  display: block;
+  width: 100%;
+}
+
+.contact__for__item__title{
+  font-weight: bold;
+  position: relative;
+  .contact__form__item__label.is-required > &::after{
+    content: "必須";
+    display: block;
+    width: 40px;
+    height: 16px;
+    text-align: center;
+    background-color: $color-notice;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: $color-font-light;
+    line-height: 16px;
+    position: absolute;
+    right: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.contact__form__select__wrap{
+  display: inline-block;
+  position: relative;
+}
+
+.contact__form__select{
+  appearance: none;
+  border: 1px solid $color-contact-border;
+  border-radius: 0;
+  width: 178px;
+  height: 40px;
+  padding: 0 24px 0 12px;
+  font-size: 1rem;
+  font-weight: $font-wight-medium;
+  color: $color-font-dark;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0s;
+  &:hover,&:focus,&:focus-visible {
+    outline: none;
+    border: 1px solid $color-contact-border-input-active;
+    box-shadow: 0 0 5px $color-contact-mark-shadow;
+  }
+}
+
+.contact__form__select__arrow{
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid $color-main;
+  border-bottom: 3px solid $color-main;
+  pointer-events:none;
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.contact__form__select__item{
+
+}
+
+.contact__form__input{
+  appearance: none;
+  border: none;
+  border-radius: 0;
+
+  &[type="text"],&[type="email"]{
+    border-bottom: 1px solid $color-contact-border-input;
+    border-radius: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 24px 0 12px;
+    font-size: 16px;
+    font-weight: $font-wight-medium;
+    color: $color-font-dark;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    &:hover,&:focus,&:focus-visible {
+      outline: none;
+      border-bottom: 1px solid $color-contact-border-input-active;
+      box-shadow: 0 5px 4px -4px $color-contact-input-shadow;
+    }
+  }
+
+  &[type="radio"]{
+    font-size: 16px;
+  }
+
+  &[type="checkbox"]{
+    & + .check-box{
+      padding-left: 40px;
+      position: relative;
+      &:before{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-contact-border;
+        background-color: $color-bg-2;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        transition: border-color 0.3s ease 0s,
+                    box-shadow 0.3s ease 0s,
+                    background-color  0.3s ease 0s;
+
+      }
+      &:hover::before{
+        border-color: $color-mark;
+        box-shadow: 0 0 5px $color-contact-mark-shadow;
+      }
+      &:active::before{
+        border-color: $color-mark;
+        background-color: $color-contact-mark-shadow;
+      }
+
+      &:after{
+        content: "";
+        display: block;
+        width: 7px;
+        height: 14px;
+        border-right: 3px solid $color-mark;
+        border-bottom: 3px solid $color-mark;
+        cursor: pointer;
+        position: absolute;
+        left: 6px;
+        top: 0;
+        transform: rotate(45deg);
+        z-index: 20;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+      }
+    }
+    &:focus + .check-box::before,
+    &:focus-visible + .check-box::before{
+      border-color: $color-mark;
+      box-shadow: 0 0 5px $color-contact-mark-shadow;
+    }
+
+    &:checked + .check-box::after{
+      opacity: 1;
+    }
+
+  }
+}
+
+.contact__form__radio__group{
+  & > .radio__item{
+    display: inline-block;
+    &:not(:first-child){
+      margin-left: 40px;
+    }
+
+    & .radio-btn{
+      padding-left: 20px;
+      position: relative;
+
+      &::before{
+        content: "";
+        display: block;
+        width: 11px;
+        height: 11px;
+        border: 1px solid;
+        border-color: $color-contact-border;
+        border-radius: 50%;
+        background-color: $color-bg-2;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: border-color 0.3s ease 0s,
+                    box-shadow 0.3s ease 0s,
+                    background-color  0.3s ease 0s;
+      }
+      &:hover::before{
+        border-color: $color-mark;
+        box-shadow: 0 0 6px $color-contact-mark-shadow;
+      }
+      &:active::before{
+        border-color: $color-mark;
+        background-color: $color-contact-mark-shadow;
+      }
+      &::after{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $color-mark;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.2s ease 0s;
+      }
+    }
+
+    & .contact__form__input:focus+.radio-btn::before,
+    & .contact__form__input:focus-visible+.radio-btn::before{
+      border-color: $color-mark;
+      box-shadow: 0 0 6px $color-contact-mark-shadow;
+    }
+
+    & .contact__form__input:checked+.radio-btn::after{
+      opacity: 1;
+    }
+  }
+}
+
+.contact__form__vertical{
+
+}
+
+.contact__form__vertical_top{
+  
+}
+.contact__form__vertical_bottom{
+  margin-top: 8px;
+
+}
+.contact__form__textarea{
+  appearance: none;
+  border: 1px solid $color-contact-border;
+  border-radius: 0;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: $font-wight-medium;
+  color: $color-font-dark;
+  line-height: calc(24 / 16);
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  &:hover,&:focus,&:focus-visible {
+    outline: none;
+    border: 1px solid $color-contact-border-input-active;
+    box-shadow: 0 0 8px $color-contact-input-shadow;
+  }
+}
+
+.contact__from__privacy__check{
+  margin-top: 40px;
+
+  & span{
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+}
+
+.contact__form__btn{
+  margin-top: 40px;
 }
