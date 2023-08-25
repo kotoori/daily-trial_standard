@@ -212,7 +212,7 @@ jQuery(function () {
 
   jQuery('#js-form').submit(function (event) {
     const formData = jQuery(this).serialize();
-    const actionUrl = 'https://cors-anywhere.herokuapp.com/' + jQuery(this).attr("action");
+    const actionUrl = jQuery(this).attr("action");
 //    const actionUrl = "https://asdfsafdsasdfbb.com/";
 
     $.ajax({
@@ -222,21 +222,23 @@ jQuery(function () {
       dataType: "html",
       statusCode: {
         0: function () {
-          //送信成功したと仮定
-          console.log("status=0");
+          //送信成功したと仮定する
+          
+          jQuery('#js-form').addClass('is-hidden');
+          jQuery('.js-message-on').slideDown();
         },
         200: function () {
-          //送信失敗したときの処理
-          console.log("status=200");
+          //本来は送信成功したらこのコールバックが呼ばれる
+          //しかし、COSRエラーのため、ここにくることはない()
+          console.log("$.ajax statusCode:200");
         },
       },
-      success: function(){
-        console.log("success");
-      },
-      error: function(){
-        console.log("error");
-      },
-
+      // success: function(){
+      //   console.log("success");
+      // },
+      // error: function(){
+      //   console.log("error");
+      // },
     });
     event.preventDefault();
   });

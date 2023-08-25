@@ -875,6 +875,9 @@ contact
 .contact__form {
   padding: 60px 120px;
 }
+.contact__form.is-hidden {
+  display: none;
+}
 
 .contact__form__list > *:not(:first-child) {
   margin-top: 32px;
@@ -1181,6 +1184,18 @@ contact
 
 .contact__form__btn {
   margin-top: 40px;
+}
+
+.contact__result {
+  padding: 60px 40px;
+  display: none;
+}
+
+.contact__success__message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
 }
 
 /*===============================
