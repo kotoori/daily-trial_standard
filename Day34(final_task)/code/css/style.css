@@ -308,6 +308,7 @@ News
   width: 11px;
   height: 22px;
   background: transparent url(../images/news-arrow.svg) no-repeat center center/contain;
+  pointer-events: none;
   position: absolute;
   right: 16px;
   top: 50%;
@@ -495,8 +496,8 @@ Results
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 1px;
-  left: -6px;
+  bottom: 4px;
+  left: -4px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -605,15 +606,18 @@ Comments
 .comments {
   margin-top: 120px;
   padding-bottom: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F3F3F3), color-stop(20.442%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F3F3F3), color-stop(23.4375%, #3E3E3E));
+  background: linear-gradient(to bottom, #F3F3F3 0 20.442%, transparent 20.442% 100%), linear-gradient(to left, #F3F3F3 0 23.4375%, #3E3E3E 23.4375% 100%);
+  background-color: #F3F3F3;
+}
+
+.comments__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F3F3F3), color-stop(20.442%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F3F3F3), color-stop(23.4375%, #3E3E3E));
-  background: linear-gradient(to bottom, #F3F3F3 0 20.442%, transparent 20.442% 100%), linear-gradient(to left, #F3F3F3 0 23.4375%, #3E3E3E 23.4375% 100%);
-  background-color: #F3F3F3;
 }
 
 .comments__contents {
@@ -1260,19 +1264,33 @@ footer
 to Top
 ===============================*/
 .to-top {
+  width: 100%;
   position: fixed;
-  bottom: 30px;
-  right: calc(50% - 600px);
+  bottom: 0;
+  left: 0;
   z-index: 900;
+  pointer-events: none;
   display: none; /* 初期状態は非表示 スクロールで表示(js)*/
+  background-color: red;
+  opacity: 0.5;
+}
+
+.to-top__wrap {
+  background-color: blue;
+  pointer-events: none;
+  position: relative;
 }
 
 .to-top__link {
   display: block;
   width: 50px;
   height: 50px;
+  pointer-events: auto;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
 }
 .to-top__link:hover {
   opacity: 0.6;

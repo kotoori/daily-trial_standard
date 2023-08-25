@@ -268,6 +268,7 @@ News
     width: 11px;
     height: 22px;
     background: transparent url(../images/news-arrow.svg) no-repeat center center / contain;
+    pointer-events:none;
     position: absolute;
     right: 16px;
     top: 50%;
@@ -445,8 +446,8 @@ Results
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 1px;
-  left: -6px;
+  bottom: 4px;
+  left: -4px;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
@@ -559,14 +560,16 @@ Comments
 .comments{
   margin-top: 120px;
   padding-bottom: 120px;
-  display: flex;
-  align-items: center;
   background: linear-gradient(to bottom, $color-bg 0 20.442%,transparent 20.442% 100%),
               linear-gradient(to left, $color-bg 0 23.4375%, $color-main 23.4375% 100%);
   background-color: $color-bg;
 
 }
 
+.comments__wrap{
+  display: flex;
+  align-items: center;
+}
 .comments__contents{
   width: calc(666px / 1200px * 100%);
   padding: 120px 60px;
@@ -1187,18 +1190,35 @@ footer
 to Top
 ===============================*/
 .to-top{
+  width: 100%;
   position: fixed;;
-  bottom: 30px;
-  right: calc(50% - $width-max-1 / 2);
+  bottom:0;
+  left: 0;
   z-index: map-get($layer, to-top);
+  pointer-events:none;
   display: none; /* 初期状態は非表示 スクロールで表示(js)*/
+
+  background-color: red;
+  opacity: 0.5;
+  
 }
+
+.to-top__wrap{
+  background-color: blue;
+  pointer-events:none;
+  position: relative;
+}
+
 
 .to-top__link{
   display: block;
   width: 50px;
   height: 50px;
+  pointer-events:auto;
   transition: opacity 0.3s ease 0s;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
   &:hover{
     opacity: 0.6;
   }
