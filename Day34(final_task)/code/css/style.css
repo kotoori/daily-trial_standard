@@ -609,9 +609,6 @@ Comments
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F3F3F3), color-stop(20.442%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(0, #F3F3F3), color-stop(23.4375%, #3E3E3E));
   background: linear-gradient(to bottom, #F3F3F3 0 20.442%, transparent 20.442% 100%), linear-gradient(to left, #F3F3F3 0 23.4375%, #3E3E3E 23.4375% 100%);
   background-color: #F3F3F3;
-}
-
-.comments__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

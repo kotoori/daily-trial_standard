@@ -563,13 +563,10 @@ Comments
   background: linear-gradient(to bottom, $color-bg 0 20.442%,transparent 20.442% 100%),
               linear-gradient(to left, $color-bg 0 23.4375%, $color-main 23.4375% 100%);
   background-color: $color-bg;
-
-}
-
-.comments__wrap{
   display: flex;
   align-items: center;
 }
+
 .comments__contents{
   width: calc(666px / 1200px * 100%);
   padding: 120px 60px;
