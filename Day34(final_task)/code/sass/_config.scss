@@ -81,7 +81,8 @@ $font-wight-bold: 700;
 
 // z-index
 $layer: (
-	header: 900, // ヘッダー
-  main: 500, //main
+  to-top: 900, //to Topボタン
+  header: 800, // ヘッダー
+  main: 500, //mainセクション
   default: 1, //default
 );

@@ -1182,3 +1182,25 @@ footer
   letter-spacing: 0.025rem;
   opacity: 0.6;
 }
+
+/*===============================
+to Top
+===============================*/
+.to-top{
+  position: fixed;;
+  bottom: 30px;
+  right: 30px;
+  z-index: map-get($layer, to-top);
+  display: none; /* 初期状態は非表示 スクロールで表示(js)*/
+}
+
+.to-top__link{
+  display: block;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  transition: opacity 0.3s ease 0s;
+  &:hover{
+    opacity: 0.6;
+  }
+}

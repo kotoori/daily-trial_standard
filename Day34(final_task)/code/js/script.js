@@ -161,3 +161,46 @@ function jsRadioToggle(target, num){
     checkedItem = num;
   }
 }
+
+
+/*===============================
+ページ内リンク
+===============================*/
+jQuery(function(){
+/***
+ *Topに戻るボタン 画面スクロールでボタン表示/非表示
+ ***/
+  const topButton = $('.to-top');
+  const scrollAmount = 80;
+  const fadeTime = 300;
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() >= scrollAmount){
+      topButton.fadeIn(fadeTime);
+    }else{
+      topButton.fadeOut(fadeTime);
+    }
+  });
+});
+
+/***
+ *スムーススクロール
+ ***/
+
+jQuery('a[href^="#"]').on('click', function(e){
+	e.preventDefault();
+
+  let targetY = 0;
+  let href = jQuery(this).attr("href");
+  if(href === "#"){
+    targetY = jQuery('html').offset().top;
+  }else{
+    let headerHight = jQuery('header').innerHeight();
+    targetY = jQuery(href).offset().top - headerHight;
+  }
+
+  // animateで移動します
+  jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
+
+	return false;
+});

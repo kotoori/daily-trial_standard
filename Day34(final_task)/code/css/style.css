@@ -168,7 +168,7 @@ Header
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 900;
+  z-index: 800;
 }
 
 .header__logo {
@@ -1253,5 +1253,28 @@ footer
   font-weight: 400;
   color: #FFFFFF;
   letter-spacing: 0.025rem;
+  opacity: 0.6;
+}
+
+/*===============================
+to Top
+===============================*/
+.to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 900;
+  display: none; /* 初期状態は非表示 スクロールで表示(js)*/
+}
+
+.to-top__link {
+  display: block;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.to-top__link:hover {
   opacity: 0.6;
 }
