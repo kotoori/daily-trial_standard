@@ -1037,8 +1037,8 @@ contact
           transform: rotate(45deg);
   z-index: 20;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
+  -webkit-transition: opacity 0.2s ease 0s;
+  transition: opacity 0.2s ease 0s;
 }
 .contact__form__input[type=checkbox]:focus + .check-box::before, .contact__form__input[type=checkbox]:focus-visible + .check-box::before {
   border-color: #3B69FF;

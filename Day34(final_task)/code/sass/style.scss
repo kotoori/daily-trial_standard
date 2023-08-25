@@ -958,7 +958,7 @@ contact
         transform: rotate(45deg);
         z-index: 20;
         opacity: 0;
-        transition: opacity 0.3s ease 0s;
+        transition: opacity 0.2s ease 0s;
       }
     }
     &:focus + .check-box::before,
