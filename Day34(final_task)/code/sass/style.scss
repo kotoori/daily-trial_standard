@@ -1084,3 +1084,101 @@ contact
 .contact__form__btn{
   margin-top: 40px;
 }
+
+/*===============================
+footer
+===============================*/
+.footer{
+  background-color: $color-main;
+  padding: 60px 0;
+}
+
+.footer__contents{
+  margin: 0 auto ;
+  @include mq(pc){
+    width: calc($width-max-2 / $width-max-1 * 100%);
+    max-width: $width-max-2;
+    display: flex;
+  }
+}
+.footer__links{
+  @include mq(pc){
+    margin-right: auto;
+  }
+}
+
+.footer__sns__list{
+  display: flex;
+}
+
+.footer__sns__item{
+  &:not(:first-child){
+    margin-left: 27px;
+  }
+}
+
+.footer__sns__link{
+  display: block;
+  text-decoration: none;
+  font-size: 2.25rem;
+  font-weight: normal;
+  color: $color-font-light;
+  opacity: 0.6;
+  padding: 5px;
+  transition: opacity 0.3s ease 0s;
+  &:hover{
+    opacity: 0.9;
+  }
+}
+
+.footer__nav__list{
+  margin-top: 25px;
+}
+
+
+.footer__nav__item{
+  &:not(:first-child){
+    margin-top: 14px;
+  }
+}
+
+.footer__nav__link{
+  display: block;
+  text-decoration: none;
+  color: $color-font-light;
+  letter-spacing: 0.025rem;
+  padding: 10px 0;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.footer__text{
+  @include mq(pc){
+    margin-left: auto;
+    text-align: right;
+  }
+
+}
+
+.footer__logo__link{
+  display: block;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: $font-wight-bold;
+  color: $color-font-light;
+  transition: opacity 0.3s ease 0s;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.footer__copyright{
+  display: block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  font-weight: $font-wight-regular;
+  color: $color-font-light;
+  letter-spacing: 0.025rem;
+  opacity: 0.6;
+}
