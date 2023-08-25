@@ -204,3 +204,41 @@ jQuery('a[href^="#"]').on('click', function(e){
 
 	return false;
 });
+
+/*===============================
+Contactフォームの送信処理 for googleForm
+===============================*/
+jQuery(function () {
+
+  jQuery('#js-form').submit(function (event) {
+    const formData = jQuery(this).serialize();
+    const actionUrl = 'https://cors-anywhere.herokuapp.com/' + jQuery(this).attr("action");
+//    const actionUrl = "https://asdfsafdsasdfbb.com/";
+
+    $.ajax({
+      url: actionUrl,
+      data: formData,
+      type: "POST",
+      dataType: "html",
+      statusCode: {
+        0: function () {
+          //送信成功したと仮定
+          console.log("status=0");
+        },
+        200: function () {
+          //送信失敗したときの処理
+          console.log("status=200");
+        },
+      },
+      success: function(){
+        console.log("success");
+      },
+      error: function(){
+        console.log("error");
+      },
+
+    });
+    event.preventDefault();
+  });
+
+});
