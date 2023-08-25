@@ -1189,16 +1189,15 @@ to Top
 .to-top{
   position: fixed;;
   bottom: 30px;
-  right: 30px;
+  right: calc(50% - $width-max-1 / 2);
   z-index: map-get($layer, to-top);
   display: none; /* 初期状態は非表示 スクロールで表示(js)*/
 }
 
 .to-top__link{
   display: block;
-  width: 70px;
-  height: 70px;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
   transition: opacity 0.3s ease 0s;
   &:hover{
     opacity: 0.6;
