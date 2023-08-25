@@ -816,6 +816,7 @@ Access
 contact
 ===============================*/
 .contact {
+  margin-top: 120px;
   background: transparent url(../images/contact-bg.png) no-repeat center center/cover;
   padding: 60px 0;
 }
