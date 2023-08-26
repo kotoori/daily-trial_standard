@@ -94,12 +94,13 @@ img {
 
 .btn__cv {
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: 500;
   color: #FFFFFF;
+  letter-spacing: 0.025em;
   background-color: #FFAA3B;
   -webkit-box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
           box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
-  padding: 16px 50px;
+  padding: 17px 50px 15px;
   border-radius: 10px;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
@@ -273,7 +274,7 @@ first view
 .fv__contents {
   width: 50%;
   margin-left: auto;
-  padding: 228px 0 153px;
+  padding: 229px 0 153px;
 }
 
 .fv__heading {
@@ -287,10 +288,11 @@ first view
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 1.5555555556;
+  letter-spacing: 0.025em;
 }
 
 .fv__btn {
-  margin-top: 35px;
+  margin-top: 37px;
 }
 
 /*===============================

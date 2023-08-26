@@ -69,11 +69,12 @@ img {
 
 .btn__cv{
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: $font-wight-medium;
   color: $color-font-light;
+  letter-spacing: 0.025em;
   background-color: $color-btn-cv-normal;
   box-shadow: 0 3px 5px $color-shadow-1;
-  padding: 16px 50px;
+  padding: 17px 50px 15px;
   border-radius: 10px;
   transition: background-color 0.3s ease 0s;
   &:hover{
@@ -232,7 +233,7 @@ first view
 .fv__contents{
   width: 50%;
   margin-left: auto;
-  padding: 228px 0 153px;
+  padding: 229px 0 153px;
 }
 
 
@@ -248,10 +249,11 @@ first view
   font-size: 1.125rem;
   font-weight: bold;
   line-height: calc(28 / 18);
+  letter-spacing: 0.025em;
 }
 
 .fv__btn{
-  margin-top: 35px;
+  margin-top: 37px;
 }
 
 /*===============================
