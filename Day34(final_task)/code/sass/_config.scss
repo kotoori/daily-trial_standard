@@ -6,8 +6,11 @@
 // ブレークポイント
 $breakpoints: (
 //キー:値
-  'sp':  'screen and (max-width: 767.99px)', //スマホ用の表示
-  'pc':  'screen and (min-width: 768px)' //PC用の表示
+  'sp':  'screen and (max-width: 767px)', //スマホ用の表示
+  'tab': 'screen and (min-width: 768px) and (max-width: 1023px)', //タブレット用の表示）
+  'pc':  'screen and (min-width: 1024px)', //PC用の表示
+  'not-sp':  'not screen and (max-width: 767px)', //スマホ以外の表示
+  'not-pc':  'not screen and (min-width: 1024px)', //PC以外用の表示
 ) !default;
 
 // 色

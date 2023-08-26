@@ -26,17 +26,29 @@ img {
 /*===============================
 共通クラス
 ===============================*/
-@include mq(sp){
-	.is-pc{
+.is-pc{
+  @include mq(not-pc){
     display: none;
   }
 }
 
-@include mq(pc){
-	.is-sp{
+.is-sp{
+  @include mq(not-sp){
     display: none;
   }
 }
+
+.not-pc{
+  @include mq(pc){
+    display: none;
+  }
+}
+.not-sp{
+  @include mq(sp){
+    display: none;
+  }
+}
+
 
 .inner{
   height:inherit;
@@ -1136,15 +1148,17 @@ footer
 
 .footer__contents{
   margin: 0 auto ;
-  @include mq(pc){
-    width: calc($width-max-2 / $width-max-1 * 100%);
-    max-width: $width-max-2;
-    display: flex;
+  width: calc($width-max-2 / $width-max-1 * 100%);
+  max-width: $width-max-2;
+  display: flex;
+  @include mq(sp){
+    display: block;
   }
 }
 .footer__links{
-  @include mq(pc){
-    margin-right: auto;
+  margin-right: auto;
+  @include mq(sp){
+    text-align: center;
   }
 }
 
@@ -1195,11 +1209,11 @@ footer
 }
 
 .footer__text{
-  @include mq(pc){
-    margin-left: auto;
-    text-align: right;
+  margin-left: auto;
+  text-align: right;
+  @include mq(sp){
+    text-align: center;
   }
-
 }
 
 .footer__logo__link{
