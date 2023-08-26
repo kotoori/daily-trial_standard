@@ -192,14 +192,16 @@ Header
 .header__nav__item{
   @include mq(pc){
     &:not(:first-child){
-      margin-left: calc(40px / $width-max-1 * 100%);
+      margin-left: calc(29px / $width-max-1 * 100%);
     }
   }
 }
 
 .header__nav__link{
   text-decoration: none;
+  font-size: 1rem;
   color: $color-main;
+  letter-spacing: -0.025em;
   display: inline-block;
   padding: 6px 7px;
   border-bottom: 1px solid transparent;

@@ -231,13 +231,15 @@ Header
 
 @media screen and (min-width: 1024px) {
   .header__nav__item:not(:first-child) {
-    margin-left: 3.3333333333%;
+    margin-left: 2.4166666667%;
   }
 }
 
 .header__nav__link {
   text-decoration: none;
+  font-size: 1rem;
   color: #3E3E3E;
+  letter-spacing: -0.025em;
   display: inline-block;
   padding: 6px 7px;
   border-bottom: 1px solid transparent;
