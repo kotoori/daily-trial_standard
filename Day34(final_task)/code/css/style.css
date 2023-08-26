@@ -645,7 +645,7 @@ Comments
 
 .comments__contents {
   width: 55.5%;
-  padding: 120px 60px;
+  padding: 10% 60px;
   background-color: #FFF;
   -webkit-box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
           box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
@@ -793,7 +793,7 @@ FAQ
 Access
 ===============================*/
 .access {
-  padding-top: 120px;
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

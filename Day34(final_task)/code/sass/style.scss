@@ -594,7 +594,7 @@ Comments
 
 .comments__contents{
   width: calc(666px / 1200px * 100%);
-  padding: 120px 60px;
+  padding: 10% 60px;
   background-color: $color-bg-2;
   box-shadow: 0 5px 12px $color-shadow-1;
   min-width: 400px;
@@ -732,7 +732,7 @@ FAQ
 Access
 ===============================*/
 .access{
-  padding-top: 120px;
+  padding-top: 10%;
   display: flex;
   align-items: start;
   background: linear-gradient(to top, $color-bg 0 21.25%, transparent 21.25% 100%),
