@@ -343,8 +343,8 @@ News
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 36px 0;
-  min-height: 110px;
+  padding: 37px 0;
+  min-height: 109px;
 }
 .news__item__link:hover {
   background-color: rgba(73, 115, 255, 0.1);
