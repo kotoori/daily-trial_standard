@@ -435,9 +435,15 @@ Service
 
 .service__item__image {
   width: 64px;
-  height: 64px;
+  height: 65px;
   margin: 0 auto;
   padding: 10px 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .service__item__image img {
   width: 100%;
@@ -446,7 +452,8 @@ Service
 
 .service__item__title {
   display: block;
-  margin-top: 6px;
+  margin-top: 5px;
+  margin-left: 4px;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
@@ -455,7 +462,7 @@ Service
 }
 
 .service__item__text {
-  margin-top: 11px;
+  margin-top: 13px;
   font-size: 0.875rem;
   line-height: 1.7142857143;
 }
