@@ -91,7 +91,7 @@ img {
   font-weight: $font-wight-semibold;
   color: $color-main;
   letter-spacing: 0.2em;
-  padding: 22px 78px;
+  padding: 21px 75px 21px 79px;
 
   &.btn__general__light{
     color: $color-main;
@@ -265,11 +265,11 @@ News
 .news__wrap{
   background-color: $color-bg-2;
   box-shadow: 0 5px 12px $color-shadow-1;
-  padding: 60px 60px 40px;
+  padding: 64px 60px 40px;
 }
 
 .news__contents{
-  margin-top: 60px;
+  margin-top: 63px;
 }
 
 .news__item{
@@ -281,12 +281,12 @@ News
   &:after{
     content: "";
     display: block;
-    width: 11px;
-    height: 22px;
+    width: 14px;
+    height: 24px;
     background: transparent url(../images/news-arrow.svg) no-repeat center center / contain;
     pointer-events:none;
     position: absolute;
-    right: 16px;
+    right: 14px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -297,7 +297,7 @@ News
   color: $color-font-dark;
   display: flex;
   align-items: center;
-  padding: 37px 0;
+  padding: 36px 0;
   min-height: 110px;
   &:hover{
     background-color: $color-news-hover;
@@ -308,20 +308,21 @@ News
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  width: 259px;
+  width: 260px;
 }
 
 .news__item__date{
   font-size: 1.125rem;
   font-weight: $font-wight-regular;
+  letter-spacing: 0.025em;
 }
 .news__item__tag{
   margin-left: 40px;
-  width: 121px;
+  width: 120px;
   font-size: 0.875rem;
   border: 2px solid $color-news-tag;
   border-radius: 50px;
-  padding: 8px 0;
+  padding: 6px 0;
   text-align: center;
 }
 
@@ -333,13 +334,16 @@ News
 }
 
 .news__item__heading{
+  display: block;
+  margin-top: 1px;
   font-size: 1.125rem;
   line-height: calc(28 / 18);
   letter-spacing: 0.025em;
 }
 
 .news__footer{
-  margin-top: 40px;
+  margin-top: 39px;
+  text-align: center;
 }
 
 /*===============================
