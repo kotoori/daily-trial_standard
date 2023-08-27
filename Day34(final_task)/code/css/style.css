@@ -839,7 +839,7 @@ FAQ
 Access
 ===============================*/
 .access {
-  padding-top: 10%;
+  padding-top: calc(10% - 4px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -867,10 +867,12 @@ Access
 
 .access__text {
   width: 39.5%;
+  padding: 0 59px;
 }
 
 .access__address {
-  margin-top: 56px;
+  margin-top: 60px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
   font-style: normal;
   color: #FFFFFF;
@@ -879,10 +881,13 @@ Access
 
 .access__btn {
   margin-top: 28px;
+  letter-spacing: 0.1em;
+  padding-right: 78px;
 }
 
 .access__map__wrap {
   width: 60.5%;
+  margin-top: -4px;
 }
 
 .access__map {

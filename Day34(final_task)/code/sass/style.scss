@@ -773,7 +773,7 @@ FAQ
 Access
 ===============================*/
 .access{
-  padding-top: 10%;
+  padding-top: calc(10% - 4px);
   display: flex;
   align-items: start;
   background: linear-gradient(to top, $color-bg 0 21.25%, transparent 21.25% 100%),
@@ -797,10 +797,12 @@ Access
 
 .access__text{
   width: 39.5%;
+  padding: 0 59px;
 }
 
 .access__address{
-  margin-top: 56px;
+  margin-top: 60px;
+  font-family: $font-family-address;
   font-weight: $font-wight-medium;
   font-style: normal;
   color: $color-font-light;
@@ -810,10 +812,13 @@ Access
 
 .access__btn{
   margin-top: 28px;
+  letter-spacing: 0.1em;
+  padding-right: 78px;
 }
 
 .access__map__wrap{
   width: 60.5%;
+  margin-top: -4px;
 }
 
 .access__map{
