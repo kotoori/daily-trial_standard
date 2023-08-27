@@ -574,17 +574,17 @@ Results
 Price
 ===============================*/
 .price {
-  margin-top: 120px;
+  margin-top: 124px;
 }
 @media screen and (min-width: 1024px) {
   .price {
-    width: 80%;
-    max-width: 960px;
+    width: 100%;
+    max-width: 1040px;
   }
 }
 
 .price__table {
-  margin: 60px auto 0;
+  margin: 64px auto 0;
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
@@ -596,7 +596,7 @@ Price
 }
 
 .price__table__head {
-  width: 262px;
+  width: 261px;
   font-size: 1.5rem;
   font-weight: 600;
   color: #FFFFFF;
@@ -612,7 +612,7 @@ Price
 }
 
 .price__table__data {
-  width: calc(100% - 262px);
+  width: calc(100% - 261px);
   font-size: 1.5rem;
   font-weight: 600;
   color: #3E3E3E;
@@ -626,7 +626,7 @@ Price
 
 .price__text {
   font-size: 0.75rem;
-  margin-top: 12px;
+  margin-top: 13px;
 }
 
 /*===============================
