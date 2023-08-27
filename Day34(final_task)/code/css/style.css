@@ -660,6 +660,8 @@ Comments
 
 .comments__contents__wrap {
   width: 55.5%;
+  position: relative;
+  z-index: 10;
 }
 
 .comments__contents__container {
@@ -667,7 +669,6 @@ Comments
   background-color: #FFF;
   -webkit-box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
           box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
-  position: relative;
 }
 
 .comments__contents {
@@ -680,7 +681,7 @@ Comments
 }
 
 .comments__list {
-  margin-top: 60px;
+  margin-top: 61px;
 }
 
 .comments__item {
@@ -697,7 +698,7 @@ Comments
   height: 100px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 .comments__item__image img {
   width: 100%;
@@ -709,8 +710,17 @@ Comments
   line-height: 1.5;
 }
 
-.comments__image {
+.comments__image__wrap {
   width: 44.5%;
+  position: relative;
+  z-index: 20;
+}
+
+.comments__image {
+  padding-top: 83.1460674157%;
+  height: 0;
+  overflow: hidden;
+  background: transparent url(../images/comments3.png) no-repeat center bottom -1px/cover;
 }
 
 /*===============================
