@@ -1192,7 +1192,7 @@ footer
 ===============================*/
 .footer{
   background-color: $color-main;
-  padding: 60px 0;
+  padding: 60px 0 50px;
 }
 
 .footer__contents{
@@ -1217,7 +1217,7 @@ footer
 
 .footer__sns__item{
   &:not(:first-child){
-    margin-left: 27px;
+    margin-left: 33px;
   }
 }
 
@@ -1225,10 +1225,9 @@ footer
   display: block;
   text-decoration: none;
   font-size: 2.25rem;
-  font-weight: normal;
+  font-weight: $font-wight-bold;
   color: $color-font-light;
   opacity: 0.6;
-  padding: 5px;
   transition: opacity 0.3s ease 0s;
   &:hover{
     opacity: 0.9;
@@ -1236,13 +1235,13 @@ footer
 }
 
 .footer__nav__list{
-  margin-top: 25px;
+  margin-top: 31px;
 }
 
 
 .footer__nav__item{
   &:not(:first-child){
-    margin-top: 14px;
+    margin-top: 4px;
   }
 }
 
@@ -1258,6 +1257,7 @@ footer
 }
 
 .footer__text{
+  margin-top: 5px;
   margin-left: auto;
   text-align: right;
   @include mq(sp){
@@ -1279,11 +1279,11 @@ footer
 
 .footer__copyright{
   display: block;
-  margin-top: 10px;
+  margin-top: 17px;
   font-size: 0.75rem;
   font-weight: $font-wight-regular;
   color: $color-font-light;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.025em;
   opacity: 0.6;
 }
 
