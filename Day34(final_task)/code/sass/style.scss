@@ -71,6 +71,8 @@ img {
   font-size: 1.125rem;
   font-weight: $font-wight-medium;
   color: $color-font-light;
+  line-height: 1
+  ;
   letter-spacing: 0.025em;
   background-color: $color-btn-cv-normal;
   box-shadow: 0 3px 5px $color-shadow-1;
@@ -802,7 +804,7 @@ Access
 
 .access__address{
   margin-top: 60px;
-  font-family: $font-family-address;
+  font-family: $font-family-jp;
   font-weight: $font-wight-medium;
   font-style: normal;
   color: $color-font-light;
@@ -857,13 +859,13 @@ contact
 
 .contact__contents__header{
   background: transparent url(../images/contact1.png) no-repeat center center / cover;
-  padding: 60px 0 56px;
+  padding: 65px 0 55px;
   border-radius: 12px 12px 0 0;
   text-align: center;
 }
 
 .contact__header__text{
-  margin-top: 12px;
+  margin-top: 16px;
   color: $color-font-light;
   line-height: calc(24 / 16);
 }
@@ -922,7 +924,7 @@ contact
     color: $color-font-light;
     line-height: 16px;
     position: absolute;
-    right: -56px;
+    right: -51px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -940,7 +942,7 @@ contact
   border-radius: 0;
   width: 178px;
   height: 40px;
-  padding: 0 24px 0 12px;
+  padding: 0 26px 0 10px;
   font-size: 1rem;
   font-weight: $font-wight-medium;
   color: $color-font-dark;
@@ -955,13 +957,13 @@ contact
 
 .contact__form__select__arrow{
   display: block;
-  width: 10px;
-  height: 10px;
-  border-right: 3px solid $color-main;
-  border-bottom: 3px solid $color-main;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid $color-main;
+  border-bottom: 2px solid $color-main;
   pointer-events:none;
   position: absolute;
-  right: 12px;
+  right: 17px;
   top: 13px;
   transform: rotate(45deg);
   z-index: 0;
@@ -983,8 +985,9 @@ contact
     border-bottom: 1px solid $color-contact-border-input;
     border-radius: 0;
     width: 100%;
-    height: 40px;
+    height: 32px;
     padding: 0 24px 0 12px;
+    font-family: $font-family-jp;
     font-size: 16px;
     font-weight: $font-wight-medium;
     color: $color-font-dark;
@@ -1008,13 +1011,13 @@ contact
       &:before{
         content: "";
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         border: 1px solid $color-contact-border;
         background-color: $color-bg-2;
         cursor: pointer;
         position: absolute;
-        left: 0;
+        left: -1px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
@@ -1035,13 +1038,13 @@ contact
       &:after{
         content: "";
         display: block;
-        width: 7px;
+        width: 6px;
         height: 14px;
-        border-right: 3px solid $color-mark;
-        border-bottom: 3px solid $color-mark;
+        border-right: 2px solid $color-mark;
+        border-bottom: 2px solid $color-mark;
         cursor: pointer;
         position: absolute;
-        left: 6px;
+        left: 5px;
         top: 0;
         transform: rotate(45deg);
         z-index: 20;
@@ -1066,7 +1069,7 @@ contact
   & > .radio__item{
     display: inline-block;
     &:not(:first-child){
-      margin-left: 40px;
+      margin-left: 35px;
     }
 
     & .radio-btn{
@@ -1076,8 +1079,8 @@ contact
       &::before{
         content: "";
         display: block;
-        width: 11px;
-        height: 11px;
+        width: 10px;
+        height: 10px;
         border: 1px solid;
         border-color: $color-contact-border;
         border-radius: 50%;
@@ -1161,7 +1164,7 @@ contact
 }
 
 .contact__from__privacy__check{
-  margin-top: 40px;
+  margin-top: 38px;
 
   & span{
     font-size: 1.125rem;
