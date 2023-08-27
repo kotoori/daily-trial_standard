@@ -477,12 +477,12 @@ Results
 
 .results__wrap {
   background-color: #3E3E3E;
-  padding: 60px 0 60px 60px;
+  padding: 64px 0 60px 60px;
   width: 100vw;
 }
 
 .results__contents {
-  margin-top: 60px;
+  margin-top: 64px;
 }
 
 .results__item {
@@ -501,11 +501,11 @@ Results
 
 .results__item__text {
   background-color: #FFF;
-  padding: 16px;
+  padding: 17px 16px 19px;
 }
 
 .results__item__text__main {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -525,8 +525,8 @@ Results
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 4px;
-  left: -4px;
+  bottom: 1px;
+  left: -6px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
