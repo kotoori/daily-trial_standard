@@ -603,12 +603,23 @@ Comments
   }
 }
 
-.comments__contents{
+.comments__contents__wrap{
   width: calc(666px / 1200px * 100%);
-  padding: 124px 60px 119px;
+}
+
+.comments__contents__container{
+  padding-top: calc(604px / 666px * 100%);
   background-color: $color-bg-2;
   box-shadow: 0 0 10px $color-shadow-1;
-  min-width: 400px;
+  position: relative;
+}
+
+.comments__contents{
+  padding: 0 calc(60px / 666px * 100%);
+  position: absolute;
+  left: 0;
+  top: calc(50% + 2px);
+  transform: translateY(-50%);
 }
 
 .comments__list{
