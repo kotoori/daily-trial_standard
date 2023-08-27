@@ -581,7 +581,7 @@ margin-top: 13px;
 Comments
 ===============================*/
 .comments{
-  margin-top: 120px;
+  margin-top: 119px;
   padding-bottom: 120px;
   background: 
   linear-gradient(to right, transparent 0 76.5625%, $color-bg 76.5625% 100vw),
@@ -605,25 +605,28 @@ Comments
 
 .comments__contents{
   width: calc(666px / 1200px * 100%);
-  padding: 10% 60px;
+  padding: 124px 60px 119px;
   background-color: $color-bg-2;
-  box-shadow: 0 5px 12px $color-shadow-1;
+  box-shadow: 0 0 10px $color-shadow-1;
   min-width: 400px;
 }
 
 .comments__list{
+  margin-top: 60px;
 }
 
 .comments__item{
-  margin-top: 56px;
   display: flex;
-  align-items: center;
+  &:not(:first-child){
+    margin-top: 57px;
+  }
 }
 
 .comments__item__image{
   width: 100px;
   height: 100px;
   flex-shrink: 0;
+  margin-top: 4px;
   img{
     width: 100%;
     height: auto;
