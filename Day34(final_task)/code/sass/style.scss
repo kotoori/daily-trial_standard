@@ -605,13 +605,14 @@ Comments
 
 .comments__contents__wrap{
   width: calc(666px / 1200px * 100%);
+  position: relative;
+  z-index: 10;
 }
 
 .comments__contents__container{
   padding-top: calc(604px / 666px * 100%);
   background-color: $color-bg-2;
   box-shadow: 0 0 10px $color-shadow-1;
-  position: relative;
 }
 
 .comments__contents{
@@ -623,7 +624,7 @@ Comments
 }
 
 .comments__list{
-  margin-top: 60px;
+  margin-top: 61px;
 }
 
 .comments__item{
@@ -637,7 +638,7 @@ Comments
   width: 100px;
   height: 100px;
   flex-shrink: 0;
-  margin-top: 4px;
+  margin-top: 3px;
   img{
     width: 100%;
     height: auto;
@@ -649,8 +650,17 @@ Comments
   line-height: calc(24 / 16);
 }
 
-.comments__image{
+.comments__image__wrap{
   width: calc(534px / 1200px * 100%);
+  position: relative;
+  z-index: 20;
+}
+.comments__image{
+  padding-top: (444px / 534px * 100%);
+  height: 0;
+  overflow: hidden;
+  background: transparent url(../images/comments3.png) no-repeat center bottom -1px / cover;
+
 }
 
 /*===============================
