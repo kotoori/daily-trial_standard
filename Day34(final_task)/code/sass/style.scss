@@ -1039,7 +1039,7 @@ FAQ
 Access
 ===============================*/
 .access{
-  padding-top: calc(10% - 4px);
+  padding-top: calc(10% - 3px);
   display: flex;
   align-items: start;
   background: linear-gradient(to top, $color-bg 0 21.25%, transparent 21.25% 100%),
@@ -1074,7 +1074,7 @@ Access
 
 .access__text{
   width: 39.5%;
-  padding-left: 59px;
+  padding-left: 60px;
   @include mq(pc){
     min-width: 400px;
   }
@@ -1583,7 +1583,9 @@ footer
 
 .footer__sns__list{
   display: flex;
-  justify-content: center;
+  @include mq(sp){
+    justify-content: center;
+  }
 }
 
 .footer__sns__item{

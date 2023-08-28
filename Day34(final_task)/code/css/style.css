@@ -1217,7 +1217,7 @@ FAQ
 Access
 ===============================*/
 .access {
-  padding-top: calc(10% - 4px);
+  padding-top: calc(10% - 3px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1261,7 +1261,7 @@ Access
 
 .access__text {
   width: 39.5%;
-  padding-left: 59px;
+  padding-left: 60px;
 }
 @media screen and (min-width: 1024px) {
   .access__text {
@@ -1844,9 +1844,13 @@ footer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .footer__sns__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer__sns__item:not(:first-child) {
