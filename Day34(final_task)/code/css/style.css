@@ -679,15 +679,40 @@ Results
   margin-top: 120px;
   overflow: hidden;
 }
+@media not screen and (min-width: 1024px) {
+  .results {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .results {
+    background-color: #3E3E3E;
+  }
+}
 
 .results__wrap {
   background-color: #3E3E3E;
   padding: 64px 0 60px 60px;
   width: 100vw;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .results__wrap {
+    padding: 40px 0 40px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .results__wrap {
+    padding: 40px 0;
+  }
+}
 
 .results__contents {
   margin-top: 64px;
+}
+@media not screen and (min-width: 1024px) {
+  .results__contents {
+    margin-top: 40px;
+  }
 }
 
 .results__item {
@@ -695,6 +720,14 @@ Results
 }
 .results__item:not(:last-child) {
   margin-right: 40px;
+}
+@media not screen and (min-width: 1024px) {
+  .results__item {
+    width: 274px;
+  }
+  .results__item:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .results__item__image {
@@ -708,23 +741,62 @@ Results
   background-color: #FFF;
   padding: 17px 16px 19px;
 }
+@media screen and (max-width: 767px) {
+  .results__item__text {
+    padding: 12px;
+  }
+}
 
 .results__item__text__main {
   font-size: 1.25rem;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .results__item__text__main {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .results__item__text__main {
+    font-size: 0.875rem;
+    letter-spacing: 0.0007em;
+  }
 }
 
 .results__item__text__sub {
   margin-top: 12px;
   line-height: 1.5;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .results__item__text__sub {
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
+@media screen and (max-width: 767px) {
+  .results__item__text__sub {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    letter-spacing: 0.0008em;
+  }
+}
 
 .swiper {
   padding-bottom: 60px;
 }
+@media screen and (max-width: 767px) {
+  .swiper {
+    padding-bottom: 44px;
+  }
+}
 
 .swiper-pagination {
   text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .swiper-pagination {
+    text-align: center;
+  }
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -773,6 +845,12 @@ Results
 
 .results__footer {
   margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .results__footer {
+    margin: 24px auto 0;
+    text-align: center;
+  }
 }
 
 /*===============================

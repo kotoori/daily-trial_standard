@@ -566,16 +566,31 @@ Results
 .results{
   margin-top: 120px;
   overflow: hidden;
+  @include mq(not-pc){
+    margin-top: 60px;
+  }
+  @include mq(sp){
+    background-color: $color-main;
+  }
 }
 
 .results__wrap{
   background-color: $color-main;
   padding: 64px 0 60px 60px;
   width: 100vw;
+  @include mq(tab){
+    padding: 40px 0 40px 40px;
+  }
+  @include mq(sp){
+    padding: 40px 0;
+  }
 }
 
 .results__contents{
   margin-top: 64px;
+  @include mq(not-pc){
+    margin-top: 40px;
+  }
 }
 
 
@@ -587,6 +602,12 @@ Results
   width: 400px;
   &:not(:last-child){
     margin-right: 40px;
+  }
+  @include mq(not-pc){
+    width: 274px;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
   }
 }
 
@@ -600,24 +621,49 @@ Results
 .results__item__text{
   background-color: $color-bg-2;
   padding: 17px 16px 19px;
+  @include mq(sp){
+    padding: 12px;
+  }
 }
 
 .results__item__text__main{
   font-size: 1.25rem;
   font-weight: bold;
+  @include mq(tab){
+    font-size: 1rem;
+  }
+  @include mq(sp){
+    font-size: 0.875rem;
+    letter-spacing: 0.0007em;
+  }
 }
 
 .results__item__text__sub{
   margin-top: 12px;
   line-height: calc(24 / 16);
+  @include mq(tab){
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+  }
+  @include mq(sp){
+    font-size: 0.75rem;;
+    line-height: calc(18 /12);
+    letter-spacing: 0.0008em;
+  }
 }
 
 .swiper{
   padding-bottom: 60px;
+  @include mq(sp){
+    padding-bottom: 44px;
+  }
 }
 
 .swiper-pagination{
   text-align: left;
+  @include mq(sp){
+    text-align: center;
+  }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets,
@@ -667,6 +713,10 @@ Results
 
 .results__footer{
   margin-top: 40px;
+  @include mq(sp){
+    margin: 24px auto 0;
+    text-align: center;
+  }
 }
 
 /*===============================
