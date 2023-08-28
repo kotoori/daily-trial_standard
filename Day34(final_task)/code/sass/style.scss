@@ -244,9 +244,9 @@ Header
 }
 
 @include mq(not-pc){
-    .drawer-hamburger{
-      width: 26px;
-      padding: 28px 16px
+  .drawer-hamburger{
+    width: 26px;
+    padding: 28px 16px
   }
 
   .drawer--right.drawer-open .drawer-hamburger{
@@ -485,6 +485,13 @@ Service
   background: linear-gradient(to bottom,  $color-main 0 80.8080%,$color-bg 80.8080% 100%);
   margin-top: 120px;
   padding-top: 64px;
+  @include mq(not-pc){
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+  @include mq(sp){
+    background: linear-gradient(to bottom,  $color-main 0 59.1861%,$color-bg 59.1861% 100%);
+  };
 }
 
 .service__wrap{
@@ -494,18 +501,33 @@ Service
   background-color: $color-bg-2;
   box-shadow: 0 5px 12px $color-shadow-1;
   margin: 64px auto 0;
-  @include mq(pc){
-    width: calc($width-max-2 / $width-max-1 * 100%);
-    max-width: $width-max-2;
-    display: flex;
-    justify-content: space-around;;
-    padding: 60px 0;
+  width: calc($width-max-2 / $width-max-1 * 100%);
+  max-width: $width-max-2;
+  display: flex;
+  justify-content: space-around;;
+  padding: 60px 0;
+  @include mq(tab){
+    margin: 40px auto 0;
+    width: calc(($width-max-2 + 100px) / $width-max-1 * 100%);
+    padding: 40px 0;
+  }
+  @include mq(sp){
+    margin: 40px auto 0;
+    width: 100%;
+    padding: 40px 16px;
+    display: block;
   }
 }
 
 .service__item{
   width: calc(230px / $width-max-2 * 100%);
   min-width: 160px;
+  @include mq(sp){
+    width: 100%;
+    &:not(:first-child){
+      margin-top: 56px;
+    }
+  }
 }
 
 .service__item__image{
