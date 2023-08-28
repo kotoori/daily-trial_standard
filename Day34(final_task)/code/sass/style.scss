@@ -822,24 +822,11 @@ Comments
   }
 }
 
-.comments__contents__wrap{
+.comments__contents{
   width: calc(666px / 1200px * 100%);
-  position: relative;
-  z-index: 10;
-}
-
-.comments__contents__container{
-  padding-top: calc(604px / 666px * 100%);
+  padding: calc(10% + 4px) 60px calc(10% - 1px);
   background-color: $color-bg-2;
   box-shadow: 0 0 10px $color-shadow-1;
-}
-
-.comments__contents{
-  padding: 0 calc(60px / 666px * 100%);
-  position: absolute;
-  left: 0;
-  top: calc(50% + 2px);
-  transform: translateY(-50%);
 }
 
 .comments__list{

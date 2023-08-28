@@ -966,26 +966,12 @@ Comments
   z-index: -1;
 }
 
-.comments__contents__wrap {
+.comments__contents {
   width: 55.5%;
-  position: relative;
-  z-index: 10;
-}
-
-.comments__contents__container {
-  padding-top: 90.6906906907%;
+  padding: calc(10% + 4px) 60px calc(10% - 1px);
   background-color: #FFF;
   -webkit-box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
           box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
-}
-
-.comments__contents {
-  padding: 0 9.009009009%;
-  position: absolute;
-  left: 0;
-  top: calc(50% + 2px);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .comments__list {
