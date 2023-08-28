@@ -366,7 +366,7 @@ first view
 }
 @media screen and (max-width: 767px) {
   .fv {
-    background: transparent url(../images/mv.png) no-repeat 22% center/cover;
+    background: transparent url(../images/mv.png) no-repeat left calc(22% - 2px) center/cover;
   }
 }
 @media not screen and (min-width: 1024px) {
@@ -396,7 +396,7 @@ first view
 @media screen and (max-width: 767px) {
   .fv__contents {
     width: 100%;
-    padding: 229px 0 230px;
+    padding: 222px 0 229px;
   }
 }
 
@@ -421,9 +421,10 @@ first view
 }
 @media not screen and (min-width: 1024px) {
   .fv__lead {
-    margin-top: 29px;
+    margin-top: 20px;
     font-size: 0.875rem;
     line-height: 1.4285714286;
+    letter-spacing: 0;
   }
 }
 
@@ -432,7 +433,12 @@ first view
 }
 @media screen and (max-width: 767px) {
   .fv__btn {
-    margin-top: 27px;
+    display: block;
+    margin: 27px auto 0;
+    width: 222px;
+    font-size: 1rem;
+    letter-spacing: 0;
+    padding: 17px 4px 16px 32px;
   }
 }
 
