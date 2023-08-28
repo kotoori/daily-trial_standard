@@ -263,7 +263,7 @@ Header
 }
 @media not screen and (min-width: 1024px) {
   .header__nav__list {
-    margin-top: 160px;
+    margin-top: 147px;
   }
 }
 
@@ -274,7 +274,7 @@ Header
 }
 @media not screen and (min-width: 1024px) {
   .header__nav__item:not(:first-child) {
-    margin-top: 12px;
+    margin-top: 13px;
   }
 }
 
@@ -292,6 +292,7 @@ Header
 @media not screen and (min-width: 1024px) {
   .header__nav__link {
     font-size: 1.125rem;
+    letter-spacing: 0;
     padding: 16px 7px 6px;
   }
 }
@@ -302,30 +303,35 @@ Header
 @media not screen and (min-width: 1024px) {
   .drawer-hamburger {
     width: 26px;
-    padding: 28px 16px;
+    padding: 27px 16px;
   }
   .drawer--right.drawer-open .drawer-hamburger {
     right: 80%;
   }
   @media screen and (min-width: 375px) {
     .drawer--right.drawer-open .drawer-hamburger {
-      right: 300px;
+      right: 297px;
     }
   }
   .drawer-hamburger-icon {
     margin-top: 5px;
   }
   .drawer-hamburger-icon,
-  .drawer-hamburger-icon:after,
-  .drawer-hamburger-icon:before {
+  .drawer-hamburger-icon::after,
+  .drawer-hamburger-icon::before {
     height: 4px;
     border-radius: 4px;
+    background-color: #3E3E3E;
   }
-  .drawer-hamburger-icon:before {
+  .drawer-hamburger-icon::before {
     top: -8px;
   }
-  .drawer-hamburger-icon:after {
+  .drawer-hamburger-icon::after {
     top: 8px;
+  }
+  .drawer-open .drawer-hamburger-icon:before,
+  .drawer-open .drawer-hamburger-icon:after {
+    background-color: #FFF;
   }
 }
 @media not screen and (min-width: 1024px) {
@@ -337,6 +343,11 @@ Header
 .drawer-menu-item:hover {
   text-decoration: none;
   color: inherit;
+}
+
+.drawer-overlay {
+  background-color: #3E3E3E;
+  opacity: 0.7;
 }
 
 /*===============================
@@ -356,6 +367,24 @@ first view
 @media screen and (max-width: 767px) {
   .fv {
     background: transparent url(../images/mv.png) no-repeat 22% center/cover;
+  }
+}
+@media not screen and (min-width: 1024px) {
+  .fv {
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .drawer-open .fv {
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
+  }
+  @media screen and (min-width: 375px) {
+    .drawer-open .fv {
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
+    }
   }
 }
 

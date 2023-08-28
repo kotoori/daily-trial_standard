@@ -211,7 +211,7 @@ Header
     height: 100%;
   }
   @include mq(not-pc){
-    margin-top: 160px;
+    margin-top: 147px;
   }
 }
 
@@ -221,7 +221,7 @@ Header
       margin-left: calc(26px / $width-max-1 * 100%);
     }
     @include mq(not-pc){
-      margin-top: 12px;
+      margin-top: 13px;
     }
   }
 }
@@ -237,6 +237,7 @@ Header
   transition: border-bottom 0.3s ease 0s;
   @include mq(not-pc){
     font-size: 1.125rem;
+    letter-spacing: 0;
     padding: 16px 7px 6px;
   }
   &:hover{
@@ -247,32 +248,37 @@ Header
 @include mq(not-pc){
   .drawer-hamburger{
     width: 26px;
-    padding: 28px 16px
+    padding: 27px 16px
   }
 
   .drawer--right.drawer-open .drawer-hamburger{
     right: 80%;
     @media screen and (min-width: 375px) {
-      right: 300px;
+      right: 297px;
     }
   }
   .drawer-hamburger-icon{
     margin-top: 5px;
   }
-  .drawer-hamburger-icon, 
-  .drawer-hamburger-icon:after, 
-  .drawer-hamburger-icon:before{
+  .drawer-hamburger-icon,
+  .drawer-hamburger-icon::after,
+  .drawer-hamburger-icon::before{
     height: 4px;
     border-radius: 4px;
+    background-color: $color-main;
   }
 
-  .drawer-hamburger-icon:before{
+  .drawer-hamburger-icon::before{
     top: -8px;
   }
 
-  .drawer-hamburger-icon:after{
+  .drawer-hamburger-icon::after{
     top: 8px;
+  }
 
+  .drawer-open .drawer-hamburger-icon:before,
+  .drawer-open .drawer-hamburger-icon:after{
+    background-color: $color-bg-2;
   }
 }
 
@@ -286,6 +292,11 @@ Header
 .drawer-menu-item:hover{
   text-decoration: none;
   color: inherit;
+}
+
+.drawer-overlay {
+  background-color: $color-main;
+  opacity: 0.7;
 }
 
 /*===============================
@@ -303,6 +314,16 @@ first view
   background: transparent url(../images/mv.png) no-repeat center center  / cover;
   @include mq(sp){
     background: transparent url(../images/mv.png) no-repeat 22% center  / cover;
+  }
+
+  @include mq(not-pc){
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+    .drawer-open &{
+      transform: translateX(-80%);
+      @media screen and (min-width: 375px) {
+        transform: translateX(-300px);
+      }
+    }
   }
 }
 
