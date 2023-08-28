@@ -51,25 +51,25 @@ img {
 ===============================*/
 @media not screen and (min-width: 1024px) {
   .is-pc {
-    display: none;
+    display: none !important;
   }
 }
 
 @media not screen and (max-width: 767px) {
   .is-sp {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .not-pc {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 767px) {
   .not-sp {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -129,7 +129,7 @@ img {
 @media screen and (max-width: 767px) {
   .btn__general {
     font-size: 1.125em;
-    padding: 16px 100px;
+    padding: 16px 0;
   }
 }
 .btn__general.btn__general__light {
@@ -848,8 +848,16 @@ Results
 }
 @media screen and (max-width: 767px) {
   .results__footer {
+    width: calc(100% - 16px);
     margin: 24px auto 0;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .results__btn {
+    width: 316px;
+    max-width: 100%;
   }
 }
 
@@ -1214,6 +1222,17 @@ Access
   width: 100%;
   position: relative;
 }
+@media not screen and (min-width: 1024px) {
+  .access {
+    padding: 40px 0 60px;
+    background: #3E3E3E;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access {
+    display: block;
+  }
+}
 .access::before {
   content: "";
   display: block;
@@ -1226,10 +1245,30 @@ Access
   right: 0;
   z-index: -1;
 }
+@media not screen and (min-width: 1024px) {
+  .access::before {
+    display: none;
+  }
+}
 
 .access__text {
   width: 39.5%;
-  padding: 0 59px;
+  padding-left: 59px;
+}
+@media screen and (min-width: 1024px) {
+  .access__text {
+    min-width: 400px;
+  }
+}
+@media not screen and (min-width: 1024px) {
+  .access__text {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access__text {
+    width: 100%;
+  }
 }
 
 .access__address {
@@ -1240,16 +1279,53 @@ Access
   color: #FFFFFF;
   line-height: 1.5;
 }
+@media not screen and (min-width: 1024px) {
+  .access__address {
+    margin-top: 40px;
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
 
 .access__btn {
   margin-top: 28px;
   letter-spacing: 0.1em;
-  padding-right: 78px;
+}
+@media screen and (min-width: 1024px) {
+  .access__btn {
+    padding-right: 78px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .access__btn {
+    width: 100%;
+    text-align: center;
+    padding: 21px 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access__btn {
+    width: 339px;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .access__map__wrap {
   width: 60.5%;
   margin-top: -4px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .access__map__wrap {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access__map__wrap {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .access__map {

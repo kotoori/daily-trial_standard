@@ -28,24 +28,24 @@ img {
 ===============================*/
 .is-pc{
   @include mq(not-pc){
-    display: none;
+    display: none !important;
   }
 }
 
 .is-sp{
   @include mq(not-sp){
-    display: none;
+    display: none !important;
   }
 }
 
 .not-pc{
   @include mq(pc){
-    display: none;
+    display: none !important;
   }
 }
 .not-sp{
   @include mq(sp){
-    display: none;
+    display: none !important;
   }
 }
 
@@ -99,7 +99,7 @@ img {
   padding: 21px 75px 21px 79px;
   @include mq(sp){
     font-size: 1.125em;
-    padding: 16px 100px;
+    padding: 16px 0;
   }
 
   &.btn__general__light{
@@ -714,10 +714,19 @@ Results
 .results__footer{
   margin-top: 40px;
   @include mq(sp){
+    width: calc(100% - 16px);
     margin: 24px auto 0;
     text-align: center;
   }
 }
+
+.results__btn{
+  @include mq(sp){
+    width: 316px;
+    max-width: 100%;
+  }
+}
+
 
 /*===============================
 Price
@@ -1031,6 +1040,14 @@ Access
   background-color: $color-bg;
   width: 100%;
   position: relative;
+  @include mq(not-pc){
+    padding: 40px 0 60px;
+    background: $color-main;
+  }
+  @include mq(sp){
+    display: block;
+
+  }
   &::before{
     content: "";
     display: block;
@@ -1041,13 +1058,25 @@ Access
     top: 0;
     right: 0;
     z-index: -1;
+    @include mq(not-pc){
+      display: none;
+    }
   }
 
 }
 
 .access__text{
   width: 39.5%;
-  padding: 0 59px;
+  padding-left: 59px;
+  @include mq(pc){
+    min-width: 400px;
+  }
+  @include mq(not-pc){
+    padding-left: 40px;
+  }
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .access__address{
@@ -1057,18 +1086,42 @@ Access
   font-style: normal;
   color: $color-font-light;
   line-height: calc(24 / 16);
-
+  @include mq(not-pc){
+    margin-top: 40px;
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+  }
 }
 
 .access__btn{
   margin-top: 28px;
   letter-spacing: 0.1em;
-  padding-right: 78px;
+  @include mq(pc){
+    padding-right: 78px;
+  }
+  @include mq(tab){
+    width: 100%;
+    text-align: center;
+    padding: 21px 25px;
+  }
+  @include mq(sp){
+    width: 339px;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .access__map__wrap{
   width: 60.5%;
   margin-top: -4px;
+  @include mq(tab){
+    margin-top: 0;
+    margin-left: 40px;
+  }
+  @include mq(sp){
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .access__map{
