@@ -56,6 +56,9 @@ img {
   max-width: calc($width-max-1 + 40px * 2);
   padding: 0 40px;
   margin: 0 auto;
+  @include mq(sp){
+    padding: 0 16px;
+  }
 }
 
 .btn{
@@ -159,6 +162,9 @@ Header
   top: 0;
   left: 0;
   z-index: map-get($layer, header);
+  @include mq(sp){
+    height: $height-header-sp;
+  }
 }
 
 .header__logo{
@@ -179,7 +185,13 @@ Header
 }
 
 .header__nav{
-  height: 100%;
+  @include mq(pc){
+    height: 100%;
+  }
+  @include mq(not-pc){
+    width: 80%;
+    max-width: 300px;
+  }
 }
 
 .header__nav__list{
@@ -190,12 +202,18 @@ Header
     align-items: center;
     height: 100%;
   }
+  @include mq(not-pc){
+    margin-top: 160px;
+  }
 }
 
 .header__nav__item{
-  @include mq(pc){
-    &:not(:first-child){
+  &:not(:first-child){
+    @include mq(pc){
       margin-left: calc(26px / $width-max-1 * 100%);
+    }
+    @include mq(not-pc){
+      margin-top: 12px;
     }
   }
 }
@@ -209,9 +227,57 @@ Header
   padding: 6px 7px;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.3s ease 0s;
+  @include mq(not-pc){
+    font-size: 1.125rem;
+    padding: 16px 7px 6px;
+  }
   &:hover{
     border-bottom: 1px solid $color-main;
   }
+}
+
+@include mq(not-pc){
+    .drawer-hamburger{
+      width: 26px;
+      padding: 28px 16px
+  }
+
+  .drawer--right.drawer-open .drawer-hamburger{
+    right: 80%;
+    @media screen and (min-width: 375px) {
+      right: 300px;
+    }
+  }
+  .drawer-hamburger-icon{
+    margin-top: 5px;
+  }
+  .drawer-hamburger-icon, 
+  .drawer-hamburger-icon:after, 
+  .drawer-hamburger-icon:before{
+    height: 4px;
+    border-radius: 4px;
+  }
+
+  .drawer-hamburger-icon:before{
+    top: -8px;
+  }
+
+  .drawer-hamburger-icon:after{
+    top: 8px;
+
+  }
+}
+
+@include mq(not-pc){
+  .drawer--right .drawer-nav{
+    right: calc(-100% - 5px);
+    color: $color-main;
+  }
+}
+
+.drawer-menu-item:hover{
+  text-decoration: none;
+  color: inherit;
 }
 
 /*===============================
@@ -658,7 +724,7 @@ Comments
   z-index: 20;
 }
 .comments__image{
-  padding-top: (444px / 534px * 100%);
+  padding-top: calc(444px / 534px * 100%);
   height: 0;
   overflow: hidden;
   background: transparent url(../images/comments3.png) no-repeat center bottom -1px / cover;
@@ -677,6 +743,7 @@ FAQ
 .faq__list{
   margin-top: 64px;
   width: 613px;
+  max-width: 100%;
   margin-left: auto;
 }
 
@@ -744,28 +811,30 @@ FAQ
 }
 
 .faq__item__btn-mark{
+  width: 15px;
+  height: 15px;
   position: absolute;
-  right: -6px;
-  top: calc(50% - 2px);
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
 
 }
 
 .faq__item__btn-mark__border{
   display: block;
-  width: 15px;
+  width: 100%;
   height: 3px;
   background-color: $color-faq-button;
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
   &:first-child{
     transition: all 0.3s ease 0s;
-    transform: translate(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg);
 
     .faq__item__btn-mark.is-open &{
-      transform: translate(-50%) rotate(0deg);
+      transform: translateY(-50%) rotate(0deg);
       opacity: 0.3;
     }
   }

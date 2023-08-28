@@ -5,7 +5,8 @@ $(document).ready(function() {
   $('.drawer').drawer();
 
   //メニュークリックでdrawerを閉じる
-  $('.drawer-nav').on('click', function() {
+  $('.drawer-menu-item').on('click', function() {
+    console.log("click");
     $('.drawer').drawer('close');
   });
 });
