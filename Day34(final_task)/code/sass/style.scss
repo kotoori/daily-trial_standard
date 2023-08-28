@@ -1145,6 +1145,10 @@ contact
   margin-top: 120px;
   background: transparent url(../images/contact-bg.png) no-repeat center center / cover;
   padding: 60px 0;
+  @include mq(not-pc){
+    margin-top: 0;
+    padding: 40px 0;
+  }
 }
 
 .contact__contents{
@@ -1156,6 +1160,13 @@ contact
     width: calc($width-max-2 / $width-max-1 * 100%);
     max-width: $width-max-2;
   }
+  @include mq(tab){
+    width: calc(($width-max-2 + 100px) / $width-max-1 * 100%);
+    max-width: $width-max-2;
+  }
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .contact__contents__header{
@@ -1163,18 +1174,30 @@ contact
   padding: 65px 0 55px;
   border-radius: 12px 12px 0 0;
   text-align: center;
+  @include mq(not-pc){
+    padding: 40px 0;
+  }
 }
 
 .contact__header__text{
   margin-top: 16px;
   color: $color-font-light;
   line-height: calc(24 / 16);
+  @include mq(sp){
+    margin-top: 12px;
+  }
 }
 
 .contact__form{
   padding: 60px 120px;
+  @include mq(tab){
+    padding: 40px 60px;
+  }
+  @include mq(sp){
+    padding: 40px 12px;
+  }
 
-  &.is-hidden{
+  &.js-hidden{
     display: none;
   }
 }
@@ -1188,19 +1211,27 @@ contact
 }
 
 .contact__form__row{
-  @include mq(pc){
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  @include mq(sp){
+    display: block;
   }
 }
 
 .contact__form__row__left{
   width: 188px;
   flex-shrink: 0;
+  @include mq(sp){
+    width: 100%;
+  }
 }
 
 .contact__form__row__right{
   width: calc(100% - 188px);
+  @include mq(sp){
+    width: 100%;
+    margin-top: 16px;
+  }
 }
 
 
@@ -1235,6 +1266,9 @@ contact
 .contact__form__select__wrap{
   display: inline-block;
   position: relative;
+  @include mq(sp){
+    display: block;
+  }
 }
 
 .contact__form__select{
@@ -1253,6 +1287,11 @@ contact
     outline: none;
     border: 1px solid $color-contact-border-input-active;
     box-shadow: 0 0 5px $color-contact-mark-shadow;
+  }
+  @include mq(sp){
+    width: 100%;
+    height: 38px;
+    font-size: 0.875rem;
   }
 }
 
@@ -1299,6 +1338,11 @@ contact
       border-bottom: 1px solid $color-contact-border-input-active;
       box-shadow: 0 5px 4px -4px $color-contact-input-shadow;
     }
+    @include mq(sp){
+      height: 19px;
+      padding: 0 24px 0 0;
+      font-size: 0.875rem;
+    }
   }
 
   &[type="radio"]{
@@ -1309,6 +1353,9 @@ contact
     & + .check-box{
       padding-left: 40px;
       position: relative;
+      @include mq(sp){
+        display: inline-block;
+      }
       &:before{
         content: "";
         display: block;
@@ -1441,7 +1488,9 @@ contact
 }
 .contact__form__vertical_bottom{
   margin-top: 8px;
-
+  @include mq(sp){
+    margin-top: 12px;
+  }
 }
 .contact__form__textarea{
   appearance: none;
@@ -1466,6 +1515,9 @@ contact
 
 .contact__from__privacy__check{
   margin-top: 38px;
+  @include mq(sp){
+    margin-top: 33px;
+  }
 
   & span{
     font-size: 1.125rem;
@@ -1475,6 +1527,10 @@ contact
 
 .contact__form__btn{
   margin-top: 40px;
+  @include mq(sp){
+    display: block;
+    margin: 35px auto 0;
+  }
 }
 
 .contact__result{

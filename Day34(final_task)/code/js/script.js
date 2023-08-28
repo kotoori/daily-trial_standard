@@ -224,7 +224,7 @@ jQuery(function () {
         0: function () {
           //送信成功したと仮定する
           
-          jQuery('#js-form').addClass('is-hidden');
+          jQuery('#js-form').addClass('js-hidden');
           jQuery('.js-message-on').slideDown();
         },
         200: function () {
