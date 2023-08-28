@@ -6,7 +6,6 @@ $(document).ready(function() {
 
   //メニュークリックでdrawerを閉じる
   $('.drawer-menu-item').on('click', function() {
-    console.log("click");
     $('.drawer').drawer('close');
   });
 });
