@@ -97,6 +97,10 @@ img {
   color: $color-main;
   letter-spacing: 0.2em;
   padding: 21px 75px 21px 79px;
+  @include mq(sp){
+    font-size: 1.125em;
+    padding: 16px 100px;
+  }
 
   &.btn__general__light{
     color: $color-main;
@@ -127,6 +131,9 @@ img {
   font-size: 2.25rem;
   font-weight: $font-wight-semibold;
   color: $color-font-dark;
+  @include mq(sp){
+    font-size: 1.875rem;
+  }
   &.section__title-center{
     text-align: center;
   }
@@ -344,15 +351,30 @@ News
 ===============================*/
 .news{
   margin: 120px auto 0;
+  @include mq(sp){
+    margin: -40px auto 0;
+  }
+  @include mq(tab){
+    margin: 60px auto 0;
+  }
 }
 .news__wrap{
   background-color: $color-bg-2;
   box-shadow: 0 5px 12px $color-shadow-1;
   padding: 64px 60px 40px;
+  @include mq(sp){
+    padding: 40px 16px 40px;
+  }
+  @include mq(tab){
+    padding: 40px 40px 40px;
+  }
 }
 
 .news__contents{
   margin-top: 63px;
+  @include mq(not-pc){
+    margin-top: 40px;
+  }
 }
 
 .news__item{
@@ -382,6 +404,11 @@ News
   align-items: center;
   padding: 37px 0;
   min-height: 109px;
+  @include mq(not-pc){
+    display: block;
+    padding: 16px 0 11px;
+    min-height: 0;
+  }
   &:hover{
     background-color: $color-news-hover;
   }
@@ -392,12 +419,18 @@ News
   flex-shrink: 0;
   align-items: center;
   width: 260px;
+  @include mq(not-pc){
+    width: 100%;
+  }
 }
 
 .news__item__date{
   font-size: 1.125rem;
   font-weight: $font-wight-regular;
   letter-spacing: 0.025em;
+  @include mq(sp){
+    font-size: 0.875rem;
+  }
 }
 .news__item__tag{
   margin-left: 40px;
@@ -407,6 +440,12 @@ News
   border-radius: 50px;
   padding: 6px 0;
   text-align: center;
+  @include mq(sp){
+    margin-left: 16px;
+    width: 81px;
+    font-size: 0.75rem;
+    padding: 2px 0;
+  }
 }
 
 .news__item__text{
@@ -414,6 +453,11 @@ News
   flex-shrink: 1;
   padding-left: 40px;
   padding-right: 83px;
+  @include mq(not-pc){
+    padding-left: 0;
+    padding-right: 39px;
+    margin-top: 7px;
+  }
 }
 
 .news__item__heading{
@@ -422,6 +466,11 @@ News
   font-size: 1.125rem;
   line-height: calc(28 / 18);
   letter-spacing: 0.025em;
+  @include mq(sp){
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+    letter-spacing: 0;
+  }
 }
 
 .news__footer{
