@@ -1072,12 +1072,22 @@ FAQ
   background: transparent url(../images/qa-bg.png) no-repeat center top/cover;
   padding: 64px 0 120px;
 }
+@media not screen and (min-width: 1024px) {
+  .faq {
+    padding: 40px 0 60px;
+  }
+}
 
 .faq__list {
   margin-top: 64px;
   width: 613px;
   max-width: 100%;
   margin-left: auto;
+}
+@media not screen and (min-width: 1024px) {
+  .faq__list {
+    margin-top: 40px;
+  }
 }
 
 .faq__item {
@@ -1145,6 +1155,13 @@ FAQ
   padding: 13px 16px 10px 16px;
   border-radius: 4px;
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .faq__item__a {
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+    padding: 9px 12px;
+  }
 }
 
 .faq__item__btn-mark {

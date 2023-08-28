@@ -906,6 +906,9 @@ FAQ
   background: transparent url(../images/qa-bg.png) no-repeat center top / cover;
 //  background-attachment: fixed;
   padding: 64px 0 120px;
+  @include mq(not-pc){
+    padding: 40px 0 60px;
+  }
 }
 
 .faq__list{
@@ -913,6 +916,9 @@ FAQ
   width: 613px;
   max-width: 100%;
   margin-left: auto;
+  @include mq(not-pc){
+    margin-top: 40px;
+  }
 }
 
 .faq__item{
@@ -976,6 +982,11 @@ FAQ
   padding: 13px 16px 10px 16px;
   border-radius: 4px;
   display: none;
+  @include mq(sp){
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+    padding: 9px 12px;
+  }
 }
 
 .faq__item__btn-mark{
