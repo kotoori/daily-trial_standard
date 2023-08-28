@@ -342,7 +342,7 @@ first view
 }
 @media screen and (max-width: 767px) {
   .fv {
-    background: transparent url(../images/mv.png) no-repeat 21% center/cover;
+    background: transparent url(../images/mv.png) no-repeat 22% center/cover;
   }
 }
 
@@ -351,11 +351,23 @@ first view
   margin-left: auto;
   padding: 229px 0 153px;
 }
+@media screen and (max-width: 767px) {
+  .fv__contents {
+    width: 100%;
+    padding: 229px 0 230px;
+  }
+}
 
 .fv__heading {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
+}
+@media not screen and (min-width: 1024px) {
+  .fv__heading {
+    font-size: 1.5rem;
+    line-height: 1.6666666667;
+  }
 }
 
 .fv__lead {
@@ -365,9 +377,21 @@ first view
   line-height: 1.5555555556;
   letter-spacing: 0.025em;
 }
+@media not screen and (min-width: 1024px) {
+  .fv__lead {
+    margin-top: 29px;
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
 
 .fv__btn {
   margin-top: 37px;
+}
+@media screen and (max-width: 767px) {
+  .fv__btn {
+    margin-top: 27px;
+  }
 }
 
 /*===============================

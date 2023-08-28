@@ -294,7 +294,7 @@ first view
 .fv{
   background: transparent url(../images/mv.png) no-repeat center center  / cover;
   @include mq(sp){
-    background: transparent url(../images/mv.png) no-repeat 21% center  / cover;
+    background: transparent url(../images/mv.png) no-repeat 22% center  / cover;
   }
 }
 
@@ -302,6 +302,10 @@ first view
   width: 50%;
   margin-left: auto;
   padding: 229px 0 153px;
+  @include mq(sp){
+    width: 100%;
+    padding: 229px 0 230px;
+  }
 }
 
 
@@ -309,7 +313,10 @@ first view
   font-size: 2rem;
   font-weight: bold;
   line-height: calc(48 / 32);
-
+  @include mq(not-pc){
+    font-size: 1.5rem;
+    line-height: calc(40 / 24);
+  }
 }
 
 .fv__lead{
@@ -318,10 +325,18 @@ first view
   font-weight: bold;
   line-height: calc(28 / 18);
   letter-spacing: 0.025em;
+  @include mq(not-pc){
+    margin-top: 29px;
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+  }
 }
 
 .fv__btn{
   margin-top: 37px;
+  @include mq(sp){
+    margin-top: 27px;
+  }
 }
 
 /*===============================
