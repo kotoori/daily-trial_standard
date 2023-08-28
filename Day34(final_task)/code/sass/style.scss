@@ -724,10 +724,11 @@ Price
 ===============================*/
 .price{
   margin-top: 124px;
-
-  @include mq(pc){
-    width: 100%;
-    max-width: calc($width-max-2 + 40px * 2);
+  width: 100%;
+  max-width: calc($width-max-2 + 40px * 2);
+  @include mq(not-pc){
+    margin-top: 40px;
+    width: calc(($width-max-2 + 110px) / $width-max-1 * 100%);
   }
 }
 
@@ -736,6 +737,9 @@ Price
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+  @include mq(not-pc){
+    margin: 40px auto 0;
+  }
 }
 
 .price__table__row{
@@ -755,6 +759,10 @@ Price
   border-style: solid;
   border-width: 1px;
   border-color: $color-main $color-main $color-price-th-border;
+  @include mq(sp){
+    width: 99px;
+    font-size: 1.25rem;
+  }
 
   .price__table__row:last-child > &{
     border-color: $color-main;
@@ -773,12 +781,19 @@ Price
   border-style: solid;
   border-width: 1px;
   border-color: $color-price-td-border $color-price-td-border $color-price-td-border;
-
+  @include mq(sp){
+    width: calc(100% - 99px);
+    font-size: 1.25rem;
+    padding: 0 20px;
+  }
 }
 
 .price__text{
 font-size: 0.75rem;
 margin-top: 13px;
+  @include mq(sp){
+    margin-top: 8px;
+  }
 }
 
 /*===============================

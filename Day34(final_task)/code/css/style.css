@@ -858,11 +858,13 @@ Price
 ===============================*/
 .price {
   margin-top: 124px;
+  width: 100%;
+  max-width: 1040px;
 }
-@media screen and (min-width: 1024px) {
+@media not screen and (min-width: 1024px) {
   .price {
-    width: 100%;
-    max-width: 1040px;
+    margin-top: 40px;
+    width: 89.1666666667%;
   }
 }
 
@@ -871,6 +873,11 @@ Price
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+}
+@media not screen and (min-width: 1024px) {
+  .price__table {
+    margin: 40px auto 0;
+  }
 }
 
 .price__table__row {
@@ -890,6 +897,12 @@ Price
   border-width: 1px;
   border-color: #3E3E3E #3E3E3E #F3F3F3;
 }
+@media screen and (max-width: 767px) {
+  .price__table__head {
+    width: 99px;
+    font-size: 1.25rem;
+  }
+}
 .price__table__row:last-child > .price__table__head {
   border-color: #3E3E3E;
 }
@@ -906,10 +919,22 @@ Price
   border-width: 1px;
   border-color: #707070 #707070 #707070;
 }
+@media screen and (max-width: 767px) {
+  .price__table__data {
+    width: calc(100% - 99px);
+    font-size: 1.25rem;
+    padding: 0 20px;
+  }
+}
 
 .price__text {
   font-size: 0.75rem;
   margin-top: 13px;
+}
+@media screen and (max-width: 767px) {
+  .price__text {
+    margin-top: 8px;
+  }
 }
 
 /*===============================
