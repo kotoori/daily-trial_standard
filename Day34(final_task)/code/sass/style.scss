@@ -74,14 +74,14 @@ img {
   font-size: 1.125rem;
   font-weight: $font-wight-medium;
   color: $color-font-light;
-  line-height: 1
-  ;
+  line-height: 1;
   letter-spacing: 0.025em;
   background-color: $color-btn-cv-normal;
   box-shadow: 0 3px 5px $color-shadow-1;
   padding: 17px 50px 15px;
   border-radius: 10px;
   transition: background-color 0.3s ease 0s;
+  max-width: 100%;
   &:hover{
     background-color: $color-btn-cv-hover;
   }
@@ -131,6 +131,7 @@ img {
   font-size: 2.25rem;
   font-weight: $font-wight-semibold;
   color: $color-font-dark;
+  word-wrap: break-word;
   @include mq(sp){
     font-size: 1.875rem;
   }
@@ -524,6 +525,7 @@ Service
   min-width: 160px;
   @include mq(sp){
     width: 100%;
+    min-width: 0;
     &:not(:first-child){
       margin-top: 56px;
     }
@@ -552,6 +554,7 @@ Service
   line-height: calc(28 / 20);
   letter-spacing: 0.2em;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .service__item__text{
@@ -735,6 +738,7 @@ Price
   margin-top: 124px;
   width: 100%;
   max-width: calc($width-max-2 + 40px * 2);
+  overflow: scroll;
   @include mq(not-pc){
     margin-top: 40px;
     width: calc(($width-max-2 + 110px) / $width-max-1 * 100%);
@@ -746,6 +750,8 @@ Price
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
+  min-width: 280px;
+  white-space: nowrap;
   @include mq(not-pc){
     margin: 40px auto 0;
   }
@@ -792,6 +798,7 @@ Price
   border-color: $color-price-td-border $color-price-td-border $color-price-td-border;
   @include mq(sp){
     width: calc(100% - 99px);
+    min-width: 180px;
     font-size: 1.25rem;
     padding: 0 20px;
   }
@@ -1195,6 +1202,7 @@ contact
   }
   @include mq(sp){
     padding: 40px 12px;
+    overflow: hidden;
   }
 
   &.js-hidden{
@@ -1557,24 +1565,33 @@ footer
   width: calc($width-max-2 / $width-max-1 * 100%);
   max-width: $width-max-2;
   display: flex;
+  @include mq(tab){
+    width: calc(($width-max-2 + 100px) / $width-max-1 * 100%);
+  }
   @include mq(sp){
     display: block;
+    width: 100%;
   }
 }
 .footer__links{
   margin-right: auto;
   @include mq(sp){
     text-align: center;
+    margin-right: 0;
   }
 }
 
 .footer__sns__list{
   display: flex;
+  justify-content: center;
 }
 
 .footer__sns__item{
   &:not(:first-child){
     margin-left: 33px;
+    @include mq(sp){
+      margin-left: 50px;
+    }
   }
 }
 
@@ -1593,12 +1610,18 @@ footer
 
 .footer__nav__list{
   margin-top: 31px;
+  @include mq(sp){
+    margin-top: 42px;
+  }
 }
 
 
 .footer__nav__item{
   &:not(:first-child){
     margin-top: 4px;
+    @include mq(sp){
+      margin-top: 6px;
+    }
   }
 }
 
@@ -1608,6 +1631,9 @@ footer
   color: $color-font-light;
   letter-spacing: 0.025rem;
   padding: 10px 0;
+  @include mq(sp){
+    font-size: 0.875rem;
+  }
   &:hover{
     opacity: 0.6;
   }
@@ -1619,6 +1645,8 @@ footer
   text-align: right;
   @include mq(sp){
     text-align: center;
+    margin-top: 40px;
+    margin-left: 0;
   }
 }
 
@@ -1629,6 +1657,9 @@ footer
   font-weight: $font-wight-bold;
   color: $color-font-light;
   transition: opacity 0.3s ease 0s;
+  @include mq(sp){
+    font-size: 2rem;
+  }
   &:hover{
     opacity: 0.6;
   }
@@ -1642,6 +1673,9 @@ footer
   color: $color-font-light;
   letter-spacing: 0.025em;
   opacity: 0.6;
+  @include mq(sp){
+    margin-top: 12px;
+  }
 }
 
 /*===============================
