@@ -249,3 +249,22 @@ jQuery(function () {
 WOW.js
 ===============================*/
 new WOW().init();
+
+/*===============================
+  WOW.js option
+  ===============================*/
+jQuery(function(){
+
+  if(window.matchMedia('(min-width:768px)').matches) {
+    /* PC（768px以上)のとき、特定のアイテムのWOWオプションを指定 */
+
+    setWowDelayForItem('.comments__image__wrap',0.2);
+    setWowDelayForItem('.access__map__wrap',0.4);
+
+    /* 指定された横並びCardにWOW.jsアニメーションのdelayTimeを設定 */
+    /* delayTimeはdelayIntervalずつ、ずらして設定する */
+    function setWowDelayForItem(item,time){
+        $(item).attr('data-wow-delay',time + "s");
+    }
+  }
+});
