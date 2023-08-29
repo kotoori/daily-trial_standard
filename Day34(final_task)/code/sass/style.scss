@@ -794,7 +794,8 @@ Price
   margin-top: 124px;
   width: 100%;
   max-width: calc($width-max-2 + 40px * 2);
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   @include mq(tab){
     margin-top: 44px;
     max-width: calc(($width-max-2 + 110px) / $width-max-1 * 100%);
