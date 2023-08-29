@@ -1942,12 +1942,23 @@ contact
   padding: 60px 40px;
   display: none;
 }
+@media screen and (max-width: 767px) {
+  .contact__result {
+    padding: 40px 15px;
+  }
+}
 
 .contact__success__message {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .contact__success__message {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 }
 
 /*===============================

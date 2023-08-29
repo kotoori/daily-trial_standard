@@ -1648,6 +1648,9 @@ contact
 .contact__result{
   padding: 60px 40px;
   display: none;
+  @include mq(sp){
+    padding: 40px 15px;
+  }
 }
 
 .contact__success__message{
@@ -1655,6 +1658,10 @@ contact
   font-weight: bold;
   line-height: calc(24 / 16);
   text-align: center;
+  @include mq(sp){
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 }
 /*===============================
 footer
