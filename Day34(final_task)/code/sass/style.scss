@@ -886,7 +886,7 @@ Comments
   align-items: center;
   position: relative;
   @include mq(not-pc){
-    margin-top: 60px;
+    margin-top: 59px;
     padding-bottom: 60px;
     background: linear-gradient(to bottom, $color-bg 0 12.3711%, $color-main 12.3711% 100% );
   }
@@ -913,11 +913,11 @@ Comments
   box-shadow: 0 0 10px $color-shadow-1;
   @include mq(tab){
     width: 100%;
-    padding: 40px 40px;
+    padding: 44px 40px;
   }
   @include mq(sp){
     width: 100%;
-    padding: 40px 20px;
+    padding: 44px 20px 37px;
   }
 }
 
@@ -933,7 +933,7 @@ Comments
   &:not(:first-child){
     margin-top: 57px;
     @include mq(not-pc){
-      margin-top: 40px;
+      margin-top: 34px;
     }
   }
 }

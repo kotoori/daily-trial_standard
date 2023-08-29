@@ -1055,7 +1055,7 @@ Comments
 }
 @media not screen and (min-width: 1024px) {
   .comments {
-    margin-top: 60px;
+    margin-top: 59px;
     padding-bottom: 60px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F3F3F3), color-stop(12.3711%, #3E3E3E));
     background: linear-gradient(to bottom, #F3F3F3 0 12.3711%, #3E3E3E 12.3711% 100%);
@@ -1089,13 +1089,13 @@ Comments
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .comments__contents {
     width: 100%;
-    padding: 40px 40px;
+    padding: 44px 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .comments__contents {
     width: 100%;
-    padding: 40px 20px;
+    padding: 44px 20px 37px;
   }
 }
 
@@ -1118,7 +1118,7 @@ Comments
 }
 @media not screen and (min-width: 1024px) {
   .comments__item:not(:first-child) {
-    margin-top: 40px;
+    margin-top: 34px;
   }
 }
 
