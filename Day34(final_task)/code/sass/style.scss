@@ -520,7 +520,7 @@ Service
   padding-top: 64px;
   @include mq(not-pc){
     margin-top: 60px;
-    padding-top: 40px;
+    padding-top: 44px;
   }
   @include mq(sp){
     background: linear-gradient(to bottom,  $color-main 0 59.1861%,$color-bg 59.1861% 100%);
@@ -540,14 +540,14 @@ Service
   justify-content: space-around;;
   padding: 60px 0;
   @include mq(tab){
-    margin: 40px auto 0;
+    margin: 43px auto 0;
     width: calc(($width-max-2 + 100px) / $width-max-1 * 100%);
     padding: 40px 0;
   }
   @include mq(sp){
-    margin: 40px auto 0;
+    margin: 43px auto 0;
     width: 100%;
-    padding: 40px 16px;
+    padding: 40px 16px 35px;
     display: block;
   }
 }
@@ -559,7 +559,7 @@ Service
     width: 100%;
     min-width: 0;
     &:not(:first-child){
-      margin-top: 56px;
+      margin-top: 35px;
     }
   }
 }
@@ -587,12 +587,19 @@ Service
   letter-spacing: 0.2em;
   text-align: center;
   word-wrap: break-word;
+  @include mq(not-pc){
+    margin-top: 7px;
+    line-height: calc(24 / 20);
+  }
 }
 
 .service__item__text{
   margin-top: 13px;
   font-size: 0.875rem;
   line-height: calc(24 / 14);
+  @include mq(not-pc){
+    margin-top: 15px;
+  }
 }
 
 /*===============================
