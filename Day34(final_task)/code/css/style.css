@@ -1326,7 +1326,8 @@ Access
 }
 @media not screen and (min-width: 1024px) {
   .access {
-    padding: 40px 0 60px;
+    padding-top: 44px;
+    padding-bottom: 60px;
     background: #3E3E3E;
   }
 }
@@ -1353,23 +1354,23 @@ Access
   }
 }
 
-.access__text {
-  width: 39.5%;
-  padding-left: 60px;
-}
 @media screen and (min-width: 1024px) {
   .access__text {
     min-width: 400px;
+    width: 39.5%;
+    padding-left: 60px;
   }
 }
-@media not screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .access__text {
+    width: 100%;
     padding-left: 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .access__text {
     width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -1407,6 +1408,8 @@ Access
 }
 @media screen and (max-width: 767px) {
   .access__btn {
+    display: block;
+    margin: 25px auto 0;
     width: 339px;
     max-width: 100%;
     text-align: center;
@@ -1426,7 +1429,7 @@ Access
 @media screen and (max-width: 767px) {
   .access__map__wrap {
     width: 100%;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 }
 
@@ -1434,6 +1437,11 @@ Access
   padding-top: 71.6253443526%;
   height: 0;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .access__map {
+    padding-top: 70.2623906706%;
+  }
 }
 .access__map iframe {
   position: absolute;
