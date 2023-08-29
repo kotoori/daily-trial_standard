@@ -99,7 +99,7 @@ img {
   padding: 21px 75px 21px 79px;
   @include mq(sp){
     font-size: 1.125em;
-    padding: 17px 10px;
+    padding: 17px 10px 17px 14px;
   }
 
   &.btn__general__light{
@@ -138,6 +138,12 @@ img {
   &.section__title-center{
     text-align: center;
   }
+  @include mq(sp){
+    &.section__title-center-sp{
+      text-align: center;
+    }
+  }
+
 }
 
 .section__title-light{
@@ -508,8 +514,10 @@ News
 }
 
 .news__btn{
-  width: 268px;
-  max-width: 100%;
+  @include mq(sp){
+    width: 268px;
+    max-width: 100%;
+  }
 }
 /*===============================
 Service
@@ -624,14 +632,18 @@ Results
     padding: 40px 0 40px 40px;
   }
   @include mq(sp){
-    padding: 40px 0;
+    padding: 44px 0 40px;
+    width: 100%;
   }
 }
 
 .results__contents{
   margin-top: 64px;
   @include mq(not-pc){
-    margin-top: 40px;
+    margin-top: 43px;
+  }
+  @include mq(sp){
+    width: 100vw;
   }
 }
 
@@ -664,7 +676,7 @@ Results
   background-color: $color-bg-2;
   padding: 17px 16px 19px;
   @include mq(sp){
-    padding: 12px;
+    padding: 11px 12px 10px;
   }
 }
 
@@ -688,6 +700,7 @@ Results
     line-height: calc(20 / 14);
   }
   @include mq(sp){
+    margin-top: 9px;
     font-size: 0.75rem;;
     line-height: calc(18 /12);
     letter-spacing: 0.0008em;
@@ -713,6 +726,9 @@ Results
 .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: 1px;
   left: -6px;
+  @include mq(sp){
+    left: -14px;
+  }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
@@ -856,7 +872,7 @@ Comments
 ===============================*/
 .comments{
   margin-top: 119px;
-  padding-bottom: 120px;
+  padding-bottom: 121px;
   background:
   linear-gradient(to right, transparent 0 76.5625%, $color-bg 76.5625% 100vw),
   linear-gradient(to bottom, $color-bg 0 20.442%, $color-main 20.442% 100%);

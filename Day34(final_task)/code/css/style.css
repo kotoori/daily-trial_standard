@@ -130,7 +130,7 @@ img {
 @media screen and (max-width: 767px) {
   .btn__general {
     font-size: 1.125em;
-    padding: 17px 10px;
+    padding: 17px 10px 17px 14px;
   }
 }
 .btn__general.btn__general__light {
@@ -171,6 +171,11 @@ img {
 }
 .section__title.section__title-center, .section__title-center.section__title-light {
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .section__title.section__title-center-sp, .section__title-center-sp.section__title-light {
+    text-align: center;
+  }
 }
 
 .section__title-light {
@@ -611,9 +616,11 @@ News
   text-align: center;
 }
 
-.news__btn {
-  width: 268px;
-  max-width: 100%;
+@media screen and (max-width: 767px) {
+  .news__btn {
+    width: 268px;
+    max-width: 100%;
+  }
 }
 
 /*===============================
@@ -758,7 +765,8 @@ Results
 }
 @media screen and (max-width: 767px) {
   .results__wrap {
-    padding: 40px 0;
+    padding: 44px 0 40px;
+    width: 100%;
   }
 }
 
@@ -767,7 +775,12 @@ Results
 }
 @media not screen and (min-width: 1024px) {
   .results__contents {
-    margin-top: 40px;
+    margin-top: 43px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .results__contents {
+    width: 100vw;
   }
 }
 
@@ -799,7 +812,7 @@ Results
 }
 @media screen and (max-width: 767px) {
   .results__item__text {
-    padding: 12px;
+    padding: 11px 12px 10px;
   }
 }
 
@@ -831,6 +844,7 @@ Results
 }
 @media screen and (max-width: 767px) {
   .results__item__text__sub {
+    margin-top: 9px;
     font-size: 0.75rem;
     line-height: 1.5;
     letter-spacing: 0.0008em;
@@ -860,6 +874,13 @@ Results
 .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: 1px;
   left: -6px;
+}
+@media screen and (max-width: 767px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom, .swiper-pagination-fraction {
+    left: -14px;
+  }
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -1010,7 +1031,7 @@ Comments
 ===============================*/
 .comments {
   margin-top: 119px;
-  padding-bottom: 120px;
+  padding-bottom: 121px;
   background: -webkit-gradient(linear, left top, right top, color-stop(0, transparent), color-stop(76.5625%, #F3F3F3)), -webkit-gradient(linear, left top, left bottom, color-stop(0, #F3F3F3), color-stop(20.442%, #3E3E3E));
   background: linear-gradient(to right, transparent 0 76.5625%, #F3F3F3 76.5625% 100vw), linear-gradient(to bottom, #F3F3F3 0 20.442%, #3E3E3E 20.442% 100%);
   display: -webkit-box;
