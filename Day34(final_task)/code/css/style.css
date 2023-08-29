@@ -130,7 +130,7 @@ img {
 @media screen and (max-width: 767px) {
   .btn__general {
     font-size: 1.125em;
-    padding: 16px 0;
+    padding: 17px 10px;
   }
 }
 .btn__general.btn__general__light {
@@ -396,7 +396,7 @@ first view
 @media screen and (max-width: 767px) {
   .fv__contents {
     width: 100%;
-    padding: 222px 0 229px;
+    padding: 222px 0 230px;
   }
 }
 
@@ -438,7 +438,8 @@ first view
     width: 222px;
     font-size: 1rem;
     letter-spacing: 0;
-    padding: 17px 4px 16px 32px;
+    padding: 17px 5px 15px;
+    text-align: center;
   }
 }
 
@@ -450,7 +451,7 @@ News
 }
 @media screen and (max-width: 767px) {
   .news {
-    margin: -40px auto 0;
+    margin: -39px auto 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -467,12 +468,12 @@ News
 }
 @media screen and (max-width: 767px) {
   .news__wrap {
-    padding: 40px 16px 40px;
+    padding: 44px 0 40px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .news__wrap {
-    padding: 40px 40px 40px;
+    padding: 40px 20px 40px;
   }
 }
 
@@ -481,7 +482,7 @@ News
 }
 @media not screen and (min-width: 1024px) {
   .news__contents {
-    margin-top: 40px;
+    margin-top: 43px;
   }
 }
 
@@ -521,8 +522,8 @@ News
 @media not screen and (min-width: 1024px) {
   .news__item__link {
     display: block;
-    padding: 16px 0 11px;
     min-height: 0;
+    padding: 14px 16px 11px;
   }
 }
 .news__item__link:hover {
@@ -568,7 +569,7 @@ News
 }
 @media screen and (max-width: 767px) {
   .news__item__tag {
-    margin-left: 16px;
+    margin-left: 23px;
     width: 81px;
     font-size: 0.75rem;
     padding: 2px 0;
@@ -586,7 +587,7 @@ News
   .news__item__text {
     padding-left: 0;
     padding-right: 39px;
-    margin-top: 7px;
+    margin-top: 8px;
   }
 }
 
@@ -608,6 +609,11 @@ News
 .news__footer {
   margin-top: 39px;
   text-align: center;
+}
+
+.news__btn {
+  width: 268px;
+  max-width: 100%;
 }
 
 /*===============================
