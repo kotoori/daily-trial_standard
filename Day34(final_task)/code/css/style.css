@@ -1174,7 +1174,7 @@ FAQ
 }
 @media not screen and (min-width: 1024px) {
   .faq {
-    padding: 40px 0 60px;
+    padding: 45px 0 60px;
   }
 }
 
@@ -1186,7 +1186,7 @@ FAQ
 }
 @media not screen and (min-width: 1024px) {
   .faq__list {
-    margin-top: 40px;
+    margin-top: 42px;
   }
 }
 
@@ -1198,6 +1198,11 @@ FAQ
 }
 .faq__item:not(:first-child) {
   margin-top: 32px;
+}
+@media screen and (max-width: 767px) {
+  .faq__item:not(:first-child) {
+    margin-top: 25px;
+  }
 }
 
 .faq__accordion__button {
@@ -1211,6 +1216,11 @@ FAQ
   width: 100%;
   height: 100%;
   padding: 17px 16px 15px 16px;
+}
+@media screen and (max-width: 767px) {
+  .faq__accordion__button {
+    padding: 17px 16px 14px 16px;
+  }
 }
 
 .faq__item__q {
