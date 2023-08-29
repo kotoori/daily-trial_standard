@@ -1662,6 +1662,9 @@ footer
 .footer{
   background-color: $color-main;
   padding: 60px 0 50px;
+  @include mq(sp){
+    padding: 60px 0 58px;
+  }
 }
 
 .footer__contents{
@@ -1717,7 +1720,7 @@ footer
 .footer__nav__list{
   margin-top: 31px;
   @include mq(sp){
-    margin-top: 42px;
+    margin-top: 32px;
   }
 }
 
@@ -1751,7 +1754,7 @@ footer
   text-align: right;
   @include mq(sp){
     text-align: center;
-    margin-top: 40px;
+    margin-top: 35px;
     margin-left: 0;
   }
 }
@@ -1780,7 +1783,7 @@ footer
   letter-spacing: 0.025em;
   opacity: 0.6;
   @include mq(sp){
-    margin-top: 12px;
+    margin-top: 16px;
   }
 }
 
@@ -1817,6 +1820,9 @@ to Top
   position: absolute;
   bottom: 40px;
   right: 0;
+  @include mq(sp){
+    bottom: 13px;
+  }
   &:hover{
     opacity: 0.6;
   }
