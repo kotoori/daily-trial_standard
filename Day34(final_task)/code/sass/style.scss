@@ -82,6 +82,9 @@ img {
   border-radius: 10px;
   transition: background-color 0.3s ease 0s;
   max-width: 100%;
+  @include mq(sp){
+    font-size: 1rem;
+  }
   &:hover{
     background-color: $color-btn-cv-hover;
   }
@@ -143,7 +146,6 @@ img {
       text-align: center;
     }
   }
-
 }
 
 .section__title-light{
@@ -374,7 +376,6 @@ first view
     display: block;
     margin: 27px auto 0;
     width: 222px;
-    font-size: 1rem;
     letter-spacing: 0;
     padding: 17px 5px 15px;
     text-align: center;
@@ -1225,7 +1226,7 @@ contact
 ===============================*/
 .contact{
   margin-top: 120px;
-  background: transparent url(../images/contact-bg.png) no-repeat center center / cover;
+  background: transparent url(../images/contact-bg.png) no-repeat left center / cover;
   padding: 60px 0;
   @include mq(not-pc){
     margin-top: 0;
@@ -1255,9 +1256,12 @@ contact
   background: transparent url(../images/contact1.png) no-repeat center center / cover;
   padding: 65px 0 55px;
   border-radius: 12px 12px 0 0;
-  text-align: center;
-  @include mq(not-pc){
-    padding: 40px 0;
+  @include mq(tab){
+    padding: 44px 0;
+  }
+  @include mq(sp){
+    background: transparent url(../images/sp/contact1.png) no-repeat center center / cover;
+    padding: 44px 20px 37px 16px;
   }
 }
 
@@ -1265,8 +1269,12 @@ contact
   margin-top: 16px;
   color: $color-font-light;
   line-height: calc(24 / 16);
+  text-align: center;
   @include mq(sp){
     margin-top: 12px;
+    font-size: 0.875rem;
+    line-height: calc(20 / 14);
+    text-align-last: left;
   }
 }
 
@@ -1276,7 +1284,7 @@ contact
     padding: 40px 60px;
   }
   @include mq(sp){
-    padding: 40px 12px;
+    padding: 41px 12px 40px 12px;
     overflow: hidden;
   }
 
@@ -1313,7 +1321,7 @@ contact
   width: calc(100% - 188px);
   @include mq(sp){
     width: 100%;
-    margin-top: 16px;
+    margin-top: 15px;
   }
 }
 
@@ -1342,6 +1350,9 @@ contact
     right: -51px;
     top: 50%;
     transform: translateY(-50%);
+    @include mq(sp){
+      right: -60px;
+    }
   }
 }
 
@@ -1422,7 +1433,7 @@ contact
       box-shadow: 0 5px 4px -4px $color-contact-input-shadow;
     }
     @include mq(sp){
-      height: 19px;
+      height: 20px;
       padding: 0 24px 0 0;
       font-size: 0.875rem;
     }
@@ -1437,6 +1448,7 @@ contact
       padding-left: 40px;
       position: relative;
       @include mq(sp){
+        padding-left: 38px;
         display: inline-block;
       }
       &:before{
@@ -1455,6 +1467,10 @@ contact
         transition: border-color 0.3s ease 0s,
                     box-shadow 0.3s ease 0s,
                     background-color  0.3s ease 0s;
+        @include mq(sp){
+          width: 17px;
+          height: 17px;
+        }
 
       }
       &:hover::before{
@@ -1481,6 +1497,9 @@ contact
         z-index: 20;
         opacity: 0;
         transition: opacity 0.2s ease 0s;
+        @include mq(sp){
+          top: -3px;
+        }
       }
     }
     &:focus + .check-box::before,
@@ -1497,6 +1516,10 @@ contact
 }
 
 .contact__form__radio__group{
+  @include mq(sp){
+    padding-top: 1px;
+  }
+
   & > .radio__item{
     display: inline-block;
     &:not(:first-child){
@@ -1572,7 +1595,7 @@ contact
 .contact__form__vertical_bottom{
   margin-top: 8px;
   @include mq(sp){
-    margin-top: 12px;
+    margin-top: 15px;
   }
 }
 .contact__form__textarea{
@@ -1589,6 +1612,9 @@ contact
   line-height: calc(24 / 16);
   cursor: pointer;
   transition: all 0.2s ease 0s;
+  @include mq(sp){
+    min-height: 160px;
+  }
   &:hover,&:focus,&:focus-visible {
     outline: none;
     border: 1px solid $color-contact-border-input-active;
@@ -1599,12 +1625,15 @@ contact
 .contact__from__privacy__check{
   margin-top: 38px;
   @include mq(sp){
-    margin-top: 33px;
+    margin-top: 31px;
   }
 
   & span{
     font-size: 1.125rem;
     font-weight: bold;
+    @include mq(sp){
+      font-size: 1rem;
+    }
   }
 }
 
