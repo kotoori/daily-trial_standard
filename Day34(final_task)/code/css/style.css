@@ -947,10 +947,16 @@ Price
   max-width: 1040px;
   overflow: scroll;
 }
-@media not screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .price {
-    margin-top: 40px;
-    width: 89.1666666667%;
+    margin-top: 44px;
+    max-width: 89.1666666667%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .price {
+    margin-top: 44px;
+    max-width: 100%;
   }
 }
 
@@ -964,13 +970,18 @@ Price
 }
 @media not screen and (min-width: 1024px) {
   .price__table {
-    margin: 40px auto 0;
+    margin: 43px auto 0;
   }
 }
 
 .price__table__row {
   height: 60px;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .price__table__row {
+    height: 55px;
+  }
 }
 
 .price__table__head {
@@ -1022,7 +1033,7 @@ Price
 }
 @media screen and (max-width: 767px) {
   .price__text {
-    margin-top: 8px;
+    margin-top: 9px;
   }
 }
 

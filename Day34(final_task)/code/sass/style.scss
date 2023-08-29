@@ -794,9 +794,13 @@ Price
   width: 100%;
   max-width: calc($width-max-2 + 40px * 2);
   overflow: scroll;
-  @include mq(not-pc){
-    margin-top: 40px;
-    width: calc(($width-max-2 + 110px) / $width-max-1 * 100%);
+  @include mq(tab){
+    margin-top: 44px;
+    max-width: calc(($width-max-2 + 110px) / $width-max-1 * 100%);
+  }
+  @include mq(sp){
+    margin-top: 44px;
+    max-width: 100%;
   }
 }
 
@@ -808,14 +812,16 @@ Price
   min-width: 280px;
   white-space: nowrap;
   @include mq(not-pc){
-    margin: 40px auto 0;
+    margin: 43px auto 0;
   }
 }
 
 .price__table__row{
   height: 60px;
   width: 100%;
-
+  @include mq(sp){
+    height: 55px;
+  }
 }
 
 .price__table__head{
@@ -863,7 +869,7 @@ Price
 font-size: 0.75rem;
 margin-top: 13px;
   @include mq(sp){
-    margin-top: 8px;
+    margin-top: 9px;
   }
 }
 
