@@ -12,3 +12,11 @@
     @content;
   }
 }
+//hover style用メディアクエリのmixin
+@mixin hs($hover-possibility) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($hover-possibilitys, $hover-possibility)} {
+    //この中をカスタムできる
+    @content;
+  }
+}

@@ -108,8 +108,6 @@ img {
           box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
   padding: 17px 50px 15px;
   border-radius: 10px;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
   max-width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -117,8 +115,19 @@ img {
     font-size: 1rem;
   }
 }
-.btn__cv:hover {
-  background-color: #F18900;
+@media (hover: hover) {
+  .btn__cv {
+    -webkit-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+  }
+  .btn__cv:hover {
+    background-color: #F18900;
+  }
+}
+@media (hover: none) {
+  .btn__cv:active {
+    background-color: #F18900;
+  }
 }
 .btn__cv:disabled {
   background-color: #B2B2B2;
@@ -142,25 +151,47 @@ img {
   color: #3E3E3E;
   background-color: #FFF;
   border: 1px solid #707070;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
-.btn__general.btn__general__light:hover {
-  color: #FFFFFF;
-  background-color: #3E3E3E;
-  border: 1px solid #FFF;
+@media (hover: hover) {
+  .btn__general.btn__general__light {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .btn__general.btn__general__light:hover {
+    color: #FFFFFF;
+    background-color: #3E3E3E;
+    border: 1px solid #FFF;
+  }
+}
+@media (hover: none) {
+  .btn__general.btn__general__light:active {
+    color: #FFFFFF;
+    background-color: #3E3E3E;
+    border: 1px solid #FFF;
+  }
 }
 .btn__general.btn__general__dark {
   color: #FFFFFF;
   background-color: #3E3E3E;
   border: 1px solid #FFF;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
-.btn__general.btn__general__dark:hover {
-  color: #3E3E3E;
-  background-color: #FFF;
-  border: 1px solid #707070;
+@media (hover: hover) {
+  .btn__general.btn__general__dark {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .btn__general.btn__general__dark:hover {
+    color: #3E3E3E;
+    background-color: #FFF;
+    border: 1px solid #707070;
+  }
+}
+@media (hover: none) {
+  .btn__general.btn__general__dark:active {
+    color: #3E3E3E;
+    background-color: #FFF;
+    border: 1px solid #707070;
+  }
 }
 
 .section__title, .section__title-light {
@@ -296,8 +327,20 @@ Header
   display: inline-block;
   padding: 6px 7px;
   border-bottom: 1px solid transparent;
-  -webkit-transition: border-bottom 0.3s ease 0s;
-  transition: border-bottom 0.3s ease 0s;
+}
+@media (hover: hover) {
+  .header__nav__link {
+    -webkit-transition: border-bottom 0.3s ease 0s;
+    transition: border-bottom 0.3s ease 0s;
+  }
+  .header__nav__link:hover {
+    border-bottom: 1px solid #3E3E3E;
+  }
+}
+@media (hover: none) {
+  .header__nav__link:active {
+    border-bottom: 1px solid #3E3E3E;
+  }
 }
 @media not screen and (min-width: 1024px) {
   .header__nav__link {
@@ -305,9 +348,6 @@ Header
     letter-spacing: 0;
     padding: 16px 7px 6px;
   }
-}
-.header__nav__link:hover {
-  border-bottom: 1px solid #3E3E3E;
 }
 
 @media not screen and (min-width: 1024px) {
@@ -350,11 +390,12 @@ Header
     color: #3E3E3E;
   }
 }
-.drawer-menu-item:hover {
-  text-decoration: none;
-  color: inherit;
+@media (hover: hover) {
+  .drawer-menu-item:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 }
-
 .drawer-overlay {
   background-color: #3E3E3E;
   opacity: 0.7;
@@ -535,8 +576,19 @@ News
     padding: 14px 16px 11px;
   }
 }
-.news__item__link:hover {
-  background-color: rgba(73, 115, 255, 0.1);
+@media (hover: hover) {
+  .news__item__link {
+    -webkit-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+  }
+  .news__item__link:hover {
+    background-color: rgba(73, 115, 255, 0.1);
+  }
+}
+@media (hover: none) {
+  .news__item__link:active {
+    background-color: rgba(73, 115, 255, 0.1);
+  }
 }
 
 .news__item__meta {
@@ -1640,12 +1692,30 @@ contact
   font-weight: 500;
   color: #3E3E3E;
   cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 0.2s ease 0s;
-  transition: -webkit-box-shadow 0.2s ease 0s;
-  transition: box-shadow 0.2s ease 0s;
-  transition: box-shadow 0.2s ease 0s, -webkit-box-shadow 0.2s ease 0s;
 }
-.contact__form__select:hover, .contact__form__select:focus, .contact__form__select:focus-visible {
+@media (hover: hover) {
+  .contact__form__select {
+    -webkit-transition: -webkit-box-shadow 0.2s ease 0s;
+    transition: -webkit-box-shadow 0.2s ease 0s;
+    transition: box-shadow 0.2s ease 0s;
+    transition: box-shadow 0.2s ease 0s, -webkit-box-shadow 0.2s ease 0s;
+  }
+  .contact__form__select:hover {
+    outline: none;
+    border: 1px solid #4973FF;
+    -webkit-box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+            box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+  }
+}
+@media (hover: none) {
+  .contact__form__select:active {
+    outline: none;
+    border: 1px solid #4973FF;
+    -webkit-box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+            box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+  }
+}
+.contact__form__select:focus, .contact__form__select:focus-visible {
   outline: none;
   border: 1px solid #4973FF;
   -webkit-box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
@@ -1707,10 +1777,20 @@ contact
   font-weight: 500;
   color: #3E3E3E;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
 }
-.contact__form__input[type=text]:hover, .contact__form__input[type=text]:focus, .contact__form__input[type=text]:focus-visible, .contact__form__input[type=email]:hover, .contact__form__input[type=email]:focus, .contact__form__input[type=email]:focus-visible {
+@media (hover: hover) {
+  .contact__form__input[type=text], .contact__form__input[type=email] {
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+  }
+  .contact__form__input[type=text]:hover, .contact__form__input[type=email]:hover {
+    outline: none;
+    border-bottom: 1px solid #4973FF;
+    -webkit-box-shadow: 0 5px 4px -4px rgba(73, 115, 255, 0.5);
+            box-shadow: 0 5px 4px -4px rgba(73, 115, 255, 0.5);
+  }
+}
+.contact__form__input[type=text]:focus, .contact__form__input[type=text]:focus-visible, .contact__form__input[type=email]:focus, .contact__form__input[type=email]:focus-visible {
   outline: none;
   border-bottom: 1px solid #4973FF;
   -webkit-box-shadow: 0 5px 4px -4px rgba(73, 115, 255, 0.5);
@@ -1750,10 +1830,14 @@ contact
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
-  -webkit-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+}
+@media (hover: hover) {
+  .contact__form__input[type=checkbox] + .check-box:before {
+    -webkit-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact__form__input[type=checkbox] + .check-box:before {
@@ -1761,10 +1845,12 @@ contact
     height: 17px;
   }
 }
-.contact__form__input[type=checkbox] + .check-box:hover::before {
-  border-color: #3B69FF;
-  -webkit-box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
-          box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+@media (hover: hover) {
+  .contact__form__input[type=checkbox] + .check-box:hover::before {
+    border-color: #3B69FF;
+    -webkit-box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+            box-shadow: 0 0 5px rgba(73, 115, 255, 0.2);
+  }
 }
 .contact__form__input[type=checkbox] + .check-box:active::before {
   border-color: #3B69FF;
@@ -1785,8 +1871,12 @@ contact
           transform: rotate(45deg);
   z-index: 20;
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease 0s;
-  transition: opacity 0.2s ease 0s;
+}
+@media (hover: hover) {
+  .contact__form__input[type=checkbox] + .check-box:after {
+    -webkit-transition: opacity 0.1s ease 0s;
+    transition: opacity 0.1s ease 0s;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact__form__input[type=checkbox] + .check-box:after {
@@ -1832,15 +1922,21 @@ contact
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
-  transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
 }
-.contact__form__radio__group > .radio__item .radio-btn:hover::before {
-  border-color: #3B69FF;
-  -webkit-box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
-          box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+@media (hover: hover) {
+  .contact__form__radio__group > .radio__item .radio-btn::before {
+    -webkit-transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+    transition: border-color 0.3s ease 0s, box-shadow 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  }
+}
+@media (hover: hover) {
+  .contact__form__radio__group > .radio__item .radio-btn:hover::before {
+    border-color: #3B69FF;
+    -webkit-box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+            box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+  }
 }
 .contact__form__radio__group > .radio__item .radio-btn:active::before {
   border-color: #3B69FF;
@@ -1860,8 +1956,12 @@ contact
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease 0s;
-  transition: opacity 0.2s ease 0s;
+}
+@media (hover: hover) {
+  .contact__form__radio__group > .radio__item .radio-btn::after {
+    -webkit-transition: opacity 0.1s ease 0s;
+    transition: opacity 0.1s ease 0s;
+  }
 }
 .contact__form__radio__group > .radio__item .contact__form__input:focus + .radio-btn::before, .contact__form__radio__group > .radio__item .contact__form__input:focus-visible + .radio-btn::before {
   border-color: #3B69FF;
@@ -1896,15 +1996,25 @@ contact
   color: #3E3E3E;
   line-height: 1.5;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
 }
 @media screen and (max-width: 767px) {
   .contact__form__textarea {
     min-height: 160px;
   }
 }
-.contact__form__textarea:hover, .contact__form__textarea:focus, .contact__form__textarea:focus-visible {
+@media (hover: hover) {
+  .contact__form__textarea {
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+  }
+  .contact__form__textarea:hover {
+    outline: none;
+    border: 1px solid #4973FF;
+    -webkit-box-shadow: 0 0 8px rgba(73, 115, 255, 0.5);
+            box-shadow: 0 0 8px rgba(73, 115, 255, 0.5);
+  }
+}
+.contact__form__textarea:focus, .contact__form__textarea:focus-visible {
   outline: none;
   border: 1px solid #4973FF;
   -webkit-box-shadow: 0 0 8px rgba(73, 115, 255, 0.5);
@@ -2034,11 +2144,20 @@ footer
   font-weight: 700;
   color: #FFFFFF;
   opacity: 0.6;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
 }
-.footer__sns__link:hover {
-  opacity: 0.9;
+@media (hover: hover) {
+  .footer__sns__link {
+    -webkit-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .footer__sns__link:hover {
+    opacity: 0.9;
+  }
+}
+@media (hover: none) {
+  .footer__sns__link:active {
+    opacity: 0.9;
+  }
 }
 
 .footer__nav__list {
@@ -2071,8 +2190,19 @@ footer
     font-size: 0.875rem;
   }
 }
-.footer__nav__link:hover {
-  opacity: 0.6;
+@media (hover: hover) {
+  .footer__nav__link {
+    -webkit-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .footer__nav__link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .footer__nav__link:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__text {
@@ -2094,16 +2224,25 @@ footer
   font-size: 2.5rem;
   font-weight: 700;
   color: #FFFFFF;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
 }
 @media screen and (max-width: 767px) {
   .footer__logo__link {
     font-size: 2rem;
   }
 }
-.footer__logo__link:hover {
-  opacity: 0.6;
+@media (hover: hover) {
+  .footer__logo__link {
+    -webkit-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .footer__logo__link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .footer__logo__link:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__copyright {
@@ -2147,8 +2286,6 @@ to Top
   width: 50px;
   height: 50px;
   pointer-events: auto;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
   position: absolute;
   bottom: 40px;
   right: 0;
@@ -2158,6 +2295,17 @@ to Top
     bottom: 13px;
   }
 }
-.to-top__link:hover {
-  opacity: 0.6;
+@media (hover: hover) {
+  .to-top__link {
+    -webkit-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+  }
+  .to-top__link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .to-top__link:active {
+    opacity: 0.6;
+  }
 }

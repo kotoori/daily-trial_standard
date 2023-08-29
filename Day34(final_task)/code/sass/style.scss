@@ -80,14 +80,22 @@ img {
   box-shadow: 0 3px 5px $color-shadow-1;
   padding: 17px 50px 15px;
   border-radius: 10px;
-  transition: background-color 0.3s ease 0s;
   max-width: 100%;
   @include mq(sp){
     font-size: 1rem;
   }
-  &:hover{
-    background-color: $color-btn-cv-hover;
+  @include hs(hp){
+    transition: background-color 0.3s ease 0s;
+    &:hover{
+      background-color: $color-btn-cv-hover;
+    }
   }
+  @include hs(hi){
+    &:active{
+      background-color: $color-btn-cv-hover;
+    }
+  }
+
   &:disabled{
     background-color: $color-btn-cv-disable;
     cursor:auto;
@@ -109,11 +117,20 @@ img {
     color: $color-main;
     background-color: $color-btn-general-bg-1;
     border: 1px solid $color-btn-general-border-1;
-    transition: all 0.3s ease 0s;
-    &:hover{
-      color: $color-font-light;
-      background-color: $color-btn-general-bg-2;
-      border: 1px solid $color-btn-general-border-2;
+    @include hs(hp){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        color: $color-font-light;
+        background-color: $color-btn-general-bg-2;
+        border: 1px solid $color-btn-general-border-2;
+      }
+    }
+    @include hs(hi){
+      &:active{
+        color: $color-font-light;
+        background-color: $color-btn-general-bg-2;
+        border: 1px solid $color-btn-general-border-2;
+      }
     }
   }
 
@@ -121,11 +138,20 @@ img {
     color: $color-font-light;
     background-color: $color-btn-general-bg-2;
     border: 1px solid $color-btn-general-border-2;
-    transition: all 0.3s ease 0s;
-    &:hover{
-      color: $color-main;
-      background-color: $color-btn-general-bg-1;
-      border: 1px solid $color-btn-general-border-1;
+    @include hs(hp){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        color: $color-main;
+        background-color: $color-btn-general-bg-1;
+        border: 1px solid $color-btn-general-border-1;
+      }
+    }
+    @include hs(hi){
+      &:active{
+        color: $color-main;
+        background-color: $color-btn-general-bg-1;
+        border: 1px solid $color-btn-general-border-1;
+      }
     }
   }
 }
@@ -242,14 +268,21 @@ Header
   display: inline-block;
   padding: 6px 7px;
   border-bottom: 1px solid transparent;
-  transition: border-bottom 0.3s ease 0s;
+  @include hs(hp){
+    transition: border-bottom 0.3s ease 0s;
+    &:hover{
+      border-bottom: 1px solid $color-main;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      border-bottom: 1px solid $color-main;
+    }
+  }
   @include mq(not-pc){
     font-size: 1.125rem;
     letter-spacing: 0;
     padding: 16px 7px 6px;
-  }
-  &:hover{
-    border-bottom: 1px solid $color-main;
   }
 }
 
@@ -297,9 +330,11 @@ Header
   }
 }
 
-.drawer-menu-item:hover{
+@include hs(hp){
+  .drawer-menu-item:hover{
   text-decoration: none;
   color: inherit;
+  }
 }
 
 .drawer-overlay {
@@ -445,8 +480,16 @@ News
     min-height: 0;
     padding: 14px 16px 11px;
   }
-  &:hover{
-    background-color: $color-news-hover;
+  @include hs(hp){
+    transition: background-color 0.3s ease 0s;
+    &:hover{
+      background-color: $color-news-hover;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      background-color: $color-news-hover;
+    }
   }
 }
 
@@ -1377,13 +1420,27 @@ contact
   font-weight: $font-wight-medium;
   color: $color-font-dark;
   cursor: pointer;
-  transition: box-shadow 0.2s ease 0s;
-  &:hover,&:focus,&:focus-visible {
+  @include hs(hp){
+    transition: box-shadow 0.2s ease 0s;
+    &:hover {
+      outline: none;
+      border: 1px solid $color-contact-border-input-active;
+      box-shadow: 0 0 5px $color-contact-mark-shadow;
+    }
+  }
+  @include hs(hi){
+    &:active {
+      outline: none;
+      border: 1px solid $color-contact-border-input-active;
+      box-shadow: 0 0 5px $color-contact-mark-shadow;
+    }
+  }
+  &:focus,&:focus-visible {
     outline: none;
     border: 1px solid $color-contact-border-input-active;
     box-shadow: 0 0 5px $color-contact-mark-shadow;
   }
-  @include mq(sp){
+@include mq(sp){
     width: 100%;
     height: 38px;
     font-size: 0.875rem;
@@ -1427,8 +1484,15 @@ contact
     font-weight: $font-wight-medium;
     color: $color-font-dark;
     cursor: pointer;
-    transition: all 0.2s ease 0s;
-    &:hover,&:focus,&:focus-visible {
+    @include hs(hp){
+      transition: all 0.2s ease 0s;
+      &:hover {
+        outline: none;
+        border-bottom: 1px solid $color-contact-border-input-active;
+        box-shadow: 0 5px 4px -4px $color-contact-input-shadow;
+      }
+    }
+    &:focus,&:focus-visible {
       outline: none;
       border-bottom: 1px solid $color-contact-border-input-active;
       box-shadow: 0 5px 4px -4px $color-contact-input-shadow;
@@ -1465,18 +1529,22 @@ contact
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
-        transition: border-color 0.3s ease 0s,
-                    box-shadow 0.3s ease 0s,
-                    background-color  0.3s ease 0s;
+        @include hs(hp){
+          transition: border-color 0.3s ease 0s,
+                      box-shadow 0.3s ease 0s,
+                      background-color  0.3s ease 0s;
+        }
         @include mq(sp){
           width: 17px;
           height: 17px;
         }
 
       }
-      &:hover::before{
-        border-color: $color-mark;
-        box-shadow: 0 0 5px $color-contact-mark-shadow;
+      @include hs(hp){
+        &:hover::before{
+          border-color: $color-mark;
+          box-shadow: 0 0 5px $color-contact-mark-shadow;
+        }
       }
       &:active::before{
         border-color: $color-mark;
@@ -1497,7 +1565,9 @@ contact
         transform: rotate(45deg);
         z-index: 20;
         opacity: 0;
-        transition: opacity 0.2s ease 0s;
+        @include hs(hp){
+          transition: opacity 0.1s ease 0s;
+        }
         @include mq(sp){
           top: -3px;
         }
@@ -1545,13 +1615,17 @@ contact
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        transition: border-color 0.3s ease 0s,
-                    box-shadow 0.3s ease 0s,
-                    background-color  0.3s ease 0s;
+        @include hs(hp){
+          transition: border-color 0.3s ease 0s,
+                      box-shadow 0.3s ease 0s,
+                      background-color  0.3s ease 0s;
+        }
       }
-      &:hover::before{
-        border-color: $color-mark;
-        box-shadow: 0 0 6px $color-contact-mark-shadow;
+      @include hs(hp){
+        &:hover::before{
+          border-color: $color-mark;
+          box-shadow: 0 0 6px $color-contact-mark-shadow;
+        }
       }
       &:active::before{
         border-color: $color-mark;
@@ -1570,7 +1644,9 @@ contact
         top: 50%;
         transform: translateY(-50%);
         opacity: 0;
-        transition: opacity 0.2s ease 0s;
+        @include hs(hp){
+          transition: opacity 0.1s ease 0s;
+        }
       }
     }
 
@@ -1612,11 +1688,18 @@ contact
   color: $color-font-dark;
   line-height: calc(24 / 16);
   cursor: pointer;
-  transition: all 0.2s ease 0s;
   @include mq(sp){
     min-height: 160px;
   }
-  &:hover,&:focus,&:focus-visible {
+  @include hs(hp){
+    transition: all 0.2s ease 0s;
+    &:hover {
+      outline: none;
+      border: 1px solid $color-contact-border-input-active;
+      box-shadow: 0 0 8px $color-contact-input-shadow;
+    }
+  }
+  &:focus,&:focus-visible {
     outline: none;
     border: 1px solid $color-contact-border-input-active;
     box-shadow: 0 0 8px $color-contact-input-shadow;
@@ -1719,9 +1802,16 @@ footer
   font-weight: $font-wight-bold;
   color: $color-font-light;
   opacity: 0.6;
-  transition: opacity 0.3s ease 0s;
-  &:hover{
-    opacity: 0.9;
+  @include hs(hp){
+    transition: opacity 0.3s ease 0s;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      opacity: 0.9;
+    }
   }
 }
 
@@ -1751,8 +1841,16 @@ footer
   @include mq(sp){
     font-size: 0.875rem;
   }
-  &:hover{
-    opacity: 0.6;
+  @include hs(hp){
+    transition: opacity 0.3s ease 0s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      opacity: 0.6;
+    }
   }
 }
 
@@ -1773,12 +1871,19 @@ footer
   font-size: 2.5rem;
   font-weight: $font-wight-bold;
   color: $color-font-light;
-  transition: opacity 0.3s ease 0s;
   @include mq(sp){
     font-size: 2rem;
   }
-  &:hover{
-    opacity: 0.6;
+  @include hs(hp){
+    transition: opacity 0.3s ease 0s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      opacity: 0.6;
+    }
   }
 }
 
@@ -1824,14 +1929,21 @@ to Top
   width: 50px;
   height: 50px;
   pointer-events:auto;
-  transition: opacity 0.3s ease 0s;
   position: absolute;
   bottom: 40px;
   right: 0;
   @include mq(sp){
     bottom: 13px;
   }
-  &:hover{
-    opacity: 0.6;
+  @include hs(hp){
+    transition: opacity 0.3s ease 0s;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  @include hs(hi){
+    &:active{
+      opacity: 0.6;
+    }
   }
 }

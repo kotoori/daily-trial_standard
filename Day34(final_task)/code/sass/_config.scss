@@ -5,12 +5,17 @@
 
 // ブレークポイント
 $breakpoints: (
-//キー:値
   'sp':  'screen and (max-width: 767px)', //スマホ用の表示
   'tab': 'screen and (min-width: 768px) and (max-width: 1023px)', //タブレット用の表示）
   'pc':  'screen and (min-width: 1024px)', //PC用の表示
   'not-sp':  'not screen and (max-width: 767px)', //スマホ以外の表示
   'not-pc':  'not screen and (min-width: 1024px)', //PC以外用の表示
+) !default;
+
+//メディア特性(hover)
+$hover-possibilitys: (
+  'hp':'(hover: hover)', /* hover possible:hover指定できるPCを想定したスタイル */
+  'hi':'(hover: none)',  /* hover impossible:hoverが使えないタッチ端末を想定した装飾 */
 ) !default;
 
 // 色
