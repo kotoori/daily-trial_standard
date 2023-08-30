@@ -207,8 +207,9 @@ Header
   top: 0;
   left: 0;
   z-index: map-get($layer, header);
-  @include mq(sp){
+  @include mq(not-pc){
     height: $height-header-sp;
+    background-color: $color-header-sp;
   }
 }
 
