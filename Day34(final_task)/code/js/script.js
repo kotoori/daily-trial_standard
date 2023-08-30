@@ -16,12 +16,18 @@ Swiper
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: false,
 
-  //slidesPerViewをAutoにし、横幅とギャップはCSSで固定値を指定する
-  slidesPerView: 'auto',
-  //width: 400,
-  //spaceBetween: 40,
+  slidesPerView: 1,
+  width: 274,
+  spaceBetween: 20,
+  breakpoints: {
+    768:{
+      width: 400,
+      spaceBetween: 40,
+
+    },
+  },
 
   // If we need pagination
   pagination: {

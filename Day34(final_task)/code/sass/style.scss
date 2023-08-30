@@ -709,16 +709,7 @@ Results
 }
 
 .results__item{
-  width: 400px;
-  &:not(:last-child){
-    margin-right: 40px;
-  }
-  @include mq(not-pc){
-    width: 274px;
-    &:not(:last-child){
-      margin-right: 20px;
-    }
-  }
+  //widthやgapはjs（swiper）で設定
 }
 
 .results__item__image{

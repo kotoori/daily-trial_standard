@@ -852,21 +852,6 @@ Results
   }
 }
 
-.results__item {
-  width: 400px;
-}
-.results__item:not(:last-child) {
-  margin-right: 40px;
-}
-@media not screen and (min-width: 1024px) {
-  .results__item {
-    width: 274px;
-  }
-  .results__item:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-
 .results__item__image {
   width: 100%;
 }
