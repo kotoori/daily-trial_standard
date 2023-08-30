@@ -1016,6 +1016,7 @@ Price
 
 .price__table {
   margin: 64px auto 0;
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
   min-width: 280px;
@@ -1060,7 +1061,6 @@ Price
 }
 
 .price__table__data {
-  width: calc(100% - 261px);
   font-size: 1.5rem;
   font-weight: 600;
   color: #3E3E3E;
@@ -1073,7 +1073,6 @@ Price
 }
 @media screen and (max-width: 767px) {
   .price__table__data {
-    width: calc(100% - 99px);
     min-width: 180px;
     font-size: 1.25rem;
     padding: 0 20px;

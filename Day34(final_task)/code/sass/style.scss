@@ -854,6 +854,7 @@ Price
 
 .price__table{
   margin: 64px auto 0;
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
   min-width: 280px;
@@ -894,7 +895,6 @@ Price
 }
 
 .price__table__data{
-  width: calc(100% - 261px);
   font-size: 1.5rem;
   font-weight: $font-wight-semibold;
   color: $color-main;
@@ -905,7 +905,6 @@ Price
   border-width: 1px;
   border-color: $color-price-td-border $color-price-td-border $color-price-td-border;
   @include mq(sp){
-    width: calc(100% - 99px);
     min-width: 180px;
     font-size: 1.25rem;
     padding: 0 20px;
