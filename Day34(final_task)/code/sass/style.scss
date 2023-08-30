@@ -757,7 +757,7 @@ Results
 .swiper{
   padding-bottom: 60px;
   @include mq(sp){
-    padding-bottom: 44px;
+    padding-bottom: 45px;
   }
 }
 
@@ -771,7 +771,7 @@ Results
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: 1px;
+  bottom: 2px;
   left: -6px;
   @include mq(sp){
     left: -14px;
@@ -820,7 +820,7 @@ Results
   margin-top: 40px;
   @include mq(sp){
     width: calc(100% - 16px);
-    margin: 24px auto 0;
+    margin: 23px auto 0;
     text-align: center;
   }
 }
