@@ -219,6 +219,15 @@ Header
   @include mq(pc){
     display: none;
   }
+  @include mq(not-pc){
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+    .drawer-open &{
+      transform: translateX(-80%);
+      @media screen and (min-width: 375px) {
+        transform: translateX(-300px);
+      }
+    }
+  }
 }
 
 .header__logo__link{
@@ -337,7 +346,10 @@ Header
 
 @include mq(not-pc){
   .drawer--right .drawer-nav{
-    right: calc(-100% - 5px);
+    right: calc(-80% - 2px);  // ブラウザの左側に隠す。念のため2px余分にずらす
+    @media screen and (min-width: 375px) {
+      right: calc(-300px - 2px);
+    }
     color: $color-main;
   }
 }
@@ -360,6 +372,15 @@ main
 .main{
   position: relative;
   z-index: map-get($layer, main);
+  @include mq(not-pc){
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+    .drawer-open &{
+      transform: translateX(-80%);
+      @media screen and (min-width: 375px) {
+        transform: translateX(-300px);
+      }
+    }
+  }
 }
 
 /*===============================
@@ -369,16 +390,6 @@ first view
   background: transparent url(../images/mv.png) no-repeat center center / cover;
   @include mq(sp){
     background: transparent url(../images/mv.png) no-repeat left calc(22% - 2px) center / cover;
-  }
-
-  @include mq(not-pc){
-    transition: transform .6s cubic-bezier(.19,1,.22,1);
-    .drawer-open &{
-      transform: translateX(-80%);
-      @media screen and (min-width: 375px) {
-        transform: translateX(-300px);
-      }
-    }
   }
 }
 
@@ -1761,6 +1772,15 @@ footer
   padding: 60px 0 50px;
   @include mq(sp){
     padding: 60px 0 58px;
+  }
+  @include mq(not-pc){
+    transition: transform .6s cubic-bezier(.19,1,.22,1);
+    .drawer-open &{
+      transform: translateX(-80%);
+      @media screen and (min-width: 375px) {
+        transform: translateX(-300px);
+      }
+    }
   }
 }
 
