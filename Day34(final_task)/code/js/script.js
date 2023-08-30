@@ -40,12 +40,13 @@ const swiper = new Swiper('.swiper', {
 FAQ button
 ===============================*/
 jQuery(function(){
-  const item = '.faq__item';
+  const button = '.faq__accordion__button';
   const accordion = '.faq__item__a';
   const btnMark = '.faq__item__btn-mark';
   const openClass = 'is-open';
 
-  jQuery(item).on('click', function(){
+  //アコーディオン処理
+  jQuery(button).on('click', function(){
     //ボタンマークのアニメーションを発火させる
     const targetBtnMark = jQuery(this).find(btnMark);
     jQuery(targetBtnMark).toggleClass(openClass);
@@ -53,6 +54,16 @@ jQuery(function(){
     //アコーディオンを開閉する
     const targetAccordion = jQuery(this).find(accordion);
     jQuery(targetAccordion).slideToggle();
+  });
+
+  //キーボードで開閉可能にする
+  jQuery(button).keydown(function(e){
+
+    if (e.key === "Enter" || e.key === " ") {
+      jQuery(this).trigger("click");
+      return false;
+    }
+    return true;
   });
 });
 
@@ -252,25 +263,27 @@ jQuery(function () {
 });
 
 /*===============================
-WOW.js
+WOW.js（PC時のみ）
 ===============================*/
-new WOW().init();
+if(window.matchMedia('(min-width:1024px)').matches) {
+  new WOW().init();
 
-/*===============================
-  WOW.js option
-  ===============================*/
-jQuery(function(){
+  /*===============================
+    WOW.js option
+    ===============================*/
+  jQuery(function(){
 
-  if(window.matchMedia('(min-width:768px)').matches) {
-    /* PC（768px以上)のとき、特定のアイテムのWOWオプションを指定 */
+    if(window.matchMedia('(min-width:1024px)').matches) {
+      /* PC（768px以上)のとき、特定のアイテムのWOWオプションを指定 */
 
-    setWowDelayForItem('.comments__image__wrap',0.2);
-    setWowDelayForItem('.access__map__wrap',0.4);
+      setWowDelayForItem('.comments__image__wrap',0.2);
+      setWowDelayForItem('.access__map__wrap',0.4);
 
-    /* 指定された横並びCardにWOW.jsアニメーションのdelayTimeを設定 */
-    /* delayTimeはdelayIntervalずつ、ずらして設定する */
-    function setWowDelayForItem(item,time){
-        $(item).attr('data-wow-delay',time + "s");
+      /* 指定された横並びCardにWOW.jsアニメーションのdelayTimeを設定 */
+      /* delayTimeはdelayIntervalずつ、ずらして設定する */
+      function setWowDelayForItem(item,time){
+          $(item).attr('data-wow-delay',time + "s");
+      }
     }
-  }
-});
+  });
+}
