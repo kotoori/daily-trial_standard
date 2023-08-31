@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>デイトラ2nd最終課題</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+  <script src="./assets/js/swiper.min.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header id="js-header" class="header">
+      <h1 class="header-ttl">Sample Corp.</h1>
+      <nav class="header-nav">
+        <button id="js-toggle" class="header-burger" aria-label="menu">
+          <span class="header-burgerInline"></span>
+          <span class="header-burgerInline"></span>
+          <span class="header-burgerInline"></span>
+        </button>
+        <ul class="header-navList">
+          <li class="header-navItem"><a href="#news" class="header-navLink js-navLink">News</a></li>
+          <li class="header-navItem"><a href="#service" class="header-navLink js-navLink">Service</a></li>
+          <li class="header-navItem"><a href="#results" class="header-navLink js-navLink">Results</a></li>
+          <li class="header-navItem"><a href="#price" class="header-navLink js-navLink">Price</a></li>
+          <li class="header-navItem"><a href="#comments" class="header-navLink js-navLink">Comments</a></li>
+          <li class="header-navItem"><a href="#faq" class="header-navLink js-navLink">FAQs</a></li>
+          <li class="header-navItem"><a href="#contact" class="header-navLink js-navLink">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="js-overlay" class="header-overlay"></div>
+    </header><!-- /.header -->
+
+    <div id="js-hero" class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h2 class="hero-ttl">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h2>
+          <p class="hero-txt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+          <a href="#contact" class="hero-link">お問い合わせしてみる</a>
+        </div>
+      </div>
+    </div><!-- /.hero -->
+
+    <main>
+      <section id="news" class="news">
+        <div class="news-inner">
+          <h2 class="util-ttl">News</h2>
+          <ul class="news-list">
+            <li class="news-item">
+              <a href="#" class="news-itemLink">
+                <time class="news-itemDate" datetime="2019-02-01">2019-02-01</time>
+                <div class="news-itemCategory">テキスト</div>
+                <p class="news-itemTxt">ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</p>
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#" class="news-itemLink">
+                <time class="news-itemDate" datetime="2019-02-01">2019-02-01</time>
+                <div class="news-itemCategory">テキスト</div>
+                <p class="news-itemTxt">ニュースニュースニュースニュースニュースニュースニュース</p>
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#" class="news-itemLink">
+                <time class="news-itemDate" datetime="2019-02-01">2019-02-01</time>
+                <div class="news-itemCategory">テキスト</div>
+                <p class="news-itemTxt">ニュースニュースニュースニュースニュースニュースニュース</p>
+              </a>
+            </li>
+          </ul>
+          <div class="util-linkBox">
+            <a href="#" class="util-link">MORE</a>
+          </div>
+        </div>
+      </section><!-- /.news -->
+
+      <section id="service" class="service">
+        <h2 class="util-ttl">Service</h2>
+        <div class="service-inner">
+          <dl class="service-list">
+            <div class="service-item">
+              <dt>WEB<br>DESIGN</dt>
+              <dd>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</dd>
+            </div>
+            <div class="service-item">
+              <dt>WEB<br>CODING</dt>
+              <dd>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</dd>
+            </div>
+            <div class="service-item">
+              <dt>CMS<br>CUSTOMIZE</dt>
+              <dd>どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</dd>
+            </div>
+          </dl>
+        </div>
+      </section><!-- /.service -->
+
+      <section id="results" class="results">
+        <h2 class="util-ttl">Results</h2>
+        <div class="results-container swiper-container">
+          <ul class="results-list swiper-wrapper">
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+            <li class="results-item swiper-slide">
+              <a href="#" class="results-itemLink">
+                <figure class="results-itemFig">
+                  <img src="./assets/img/slide1.png" srcset="./assets/img/slide1.png 1x, ./assets/img/slide1@2x.png 2x" alt="">
+                </figure>
+                <div class="results-itemLinkInner">
+                  <h3 class="results-itemTtl">とかくに人の世は住みにくい。</h3>
+                  <p class="results-itemTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="results-pagination swiper-pagination"></div>
+        <div class="util-linkBox">
+          <a href="#" class="util-link mod-light">VIEW ALL</a>
+        </div>
+      </section><!-- /.results -->
+
+      <section id="price" class="price">
+        <h2 class="util-ttl">Price</h2>
+        <table class="price-table">
+          <tbody>
+            <tr>
+              <th>row 1</th><td>Price ¥10,000</td>
+            </tr>
+            <tr>
+              <th>row 2</th><td>Price ¥10,000</td>
+            </tr>
+            <tr>
+              <th>row 3</th><td>Price ¥10,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="price-txt">※ 上記料金はサンプルです。</p>
+      </section><!-- /.price -->
+
+      <div class="bg-wrapper">
+        <section id="comments" class="comments">
+          <div class="comments-inner">
+            <div class="comments-box">
+              <h2 class="util-ttl">Comments</h2>
+              <ul class="comments-list">
+                <li class="comments-item">
+                  どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+                </li>
+                <li class="comments-item">
+                  どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+                </li>
+              </ul>
+            </div>
+            <figure class="comments-fig"><img src="./assets/img/comments3.png" alt=""></figure>
+          </div>
+        </section><!-- /.comments -->
+
+        <section id="faq" class="faq">
+          <h2 class="util-ttl">Q&A</h2>
+          <div class="faq-inner">
+            <dl class="faq-list">
+              <div class="faq-item js-faq add-active">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA" style="display: block;">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+              <div class="faq-item js-faq add-active">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？<br>また、質問は質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA" style="display: block;">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+              <div class="faq-item js-faq">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+              <div class="faq-item js-faq">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+              <div class="faq-item js-faq">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+              <div class="faq-item js-faq">
+                <dt class="faq-itemQuestion">
+                  <p class="faq-itemQuestion_txt">質問質問質問？</p>
+                </dt>
+                <dd class="faq-itemAnswer js-faqA">
+                  <p class="faq-itemAnswer_txt">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section><!-- /.faq -->
+
+        <section id="access" class="access">
+          <div class="access-inner">
+            <h2 class="util-ttl">Access</h2>
+            <div class="access-address">〒106-6126<br>東京都港区六本木 6丁目 10-1<br>六本木ヒルズ森タワー</div>
+          </div>
+          <div class="access-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6714145963856!2d139.72708991518877!3d35.66046643871796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7708fe1bcd%3A0xf0b2a3bc402345f2!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yW5LiB55uu77yR77yQIOWFreacrOacqOODkuODq-OCuuajruOCv-ODr-ODvA!5e0!3m2!1sja!2sjp!4v1552842842226" allowfullscreen></iframe>
+          </div>
+          <div class="access-linkBox">
+            <a href="https://goo.gl/maps/fuaU5ZoySBYdYNap9" class="util-link mod-light" target="_blank" rel="referrer">Google Maps</a>
+          </div>
+        </section><!-- /.access -->
+      </div><!-- /.bg-wrapper -->
+
+      <section id="contact" class="contact">
+        <div class="contact-inner">
+          <div class="contact-header">
+            <div class="contact-headerInner">
+              <h2 class="util-ttl">Contact Us</h2>
+              <p class="contact-headerTxt">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+            </div>
+          </div>
+          <div class="contact-content">
+            <form action="" method="post" id="js-contactForm">
+              <dl class="contact-list">
+                <div class="contact-item">
+                  <dt class="contact-itemTtl">お問い合わせ種別</dt>
+                  <dd class="contact-selectBox">
+                    <select name="form-select" id="form-select">
+                      <option value="-" selected>選択してください</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                    </select>
+                  </dd>
+                </div>
+                <div class="contact-item">
+                  <dt class="contact-itemTtl">氏名<span class="contact-requireLabel">必須</span></dt>
+                  <dd class="contact-inputBox">
+                    <input class="js-require" type="text" name="name" placeholder="氏名">
+                    <span class="contact-focusLine"></span>
+                  </dd>
+                </div>
+                <div class="contact-item">
+                  <dt class="contact-itemTtl">フリガナ<span class="contact-requireLabel">必須</span></dt>
+                  <dd class="contact-inputBox">
+                    <input class="js-require" type="text" name="kana" id="js-formKana" placeholder="フリガナ">
+                    <span class="contact-focusLine"></span>
+                  </dd>
+                </div>
+                <div class="contact-item">
+                  <dt class="contact-itemTtl">メールアドレス</dt>
+                  <dd class="contact-inputBox">
+                    <input type="email" name="email" id="form-email" placeholder="sample@gmail.com">
+                    <span class="contact-focusLine"></span>
+                  </dd>
+                </div>
+                <div class="contact-item contact-item--radio">
+                  <dt class="contact-itemTtl">性別</dt>
+                  <dd class="contact-inputBox">
+                    <div class="contact-radio">
+                      <input type="radio" value="male" name="sex" id="radio-male" checked>
+                      <label for="radio-male" class="contact-radioLabel">男性</label>
+                    </div>
+                    <div class="contact-radio">
+                      <input type="radio" value="female" name="sex" id="radio-female">
+                      <label for="radio-female" class="contact-radioLabel">女性</label>
+                    </div>
+                  </dd>
+                </div>
+                <div class="contact-item contact-item--message mod-message">
+                  <dt class="contact-itemTtl">メッセージ</dt>
+                  <dd>
+                    <textarea name="message"></textarea>
+                  </dd>
+                </div>
+              </dl>
+              <div class="contact-privacy">
+                <input type="checkbox" name="privacy" id="form-privacy">
+                <label for="form-privacy" class="contact-privacyLabel">
+                  個人情報保護方針に同意する
+                </label>
+              </div>
+              <button id="form-submit" class="contact-button" disabled>送信する</button>
+            </form>
+          </div>
+        </div>
+      </section><!-- /.contact -->
+    </main><!-- /main -->
+
+    <footer class="footer">
+      <a href="#" class="footer-totopLink"></a>
+      <div class="footer-inner">
+        <nav class="footer-nav">
+          <ul class="footer-snsList">
+            <li class="footer-snsItem">
+              <a href="#" class="footer-snsLink"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="footer-snsItem">
+              <a href="#" class="footer-snsLink"><i class="fab fa-facebook-square"></i></a>
+            </li>
+          </ul>
+          <ul class="footer-navList">
+            <li class="footer-navItem">
+              <a href="#" class="footer-navLink">サイトマップ</a>
+            </li>
+            <li class="footer-navItem">
+              <a href="#" class="footer-navLink">個人情報保護方針</a>
+            </li>
+            <li class="footer-navItem">
+              <a href="#" class="footer-navLink">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-company">
+          <div class="footer-companyName">Sample Corp.</div>
+          <small class="footer-copyright">&copy; デイトラ Landing page Sample.</small>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+  </div><!-- /.container -->
+</body>
+</html>
