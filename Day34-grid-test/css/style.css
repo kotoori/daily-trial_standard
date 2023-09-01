@@ -1,0 +1,129 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top; /* img下の隙間を消す */
+}
+
+.border {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #808080;
+}
+
+/*===============================
+Grid style
+===============================*/
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  grid-auto-flow: dense;
+}
+
+/*===============================
+grid item color
+===============================*/
+#gi1 {
+  background-color: aqua;
+}
+
+#gi2 {
+  background-color: seashell;
+}
+
+#gi3 {
+  background-color: darkkhaki;
+}
+
+#gi4 {
+  background-color: aquamarine;
+}
+
+#gi5 {
+  background-color: pink;
+}
+
+/*===============================
+Grid Cards
+===============================*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 100px;
+}
+
+.card-list {
+  padding: 30px;
+  background-color: #ddd;
+  border: 1px solid #333;
+}
+.card-list .img {
+  width: 100%;
+  text-align: center;
+}
+.card-list .img img {
+  width: 100%;
+}
+.card-list p {
+  text-align: center;
+}
+
+/*===============================
+
+===============================*/
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#gi101 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#gi102 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+#gi103 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
