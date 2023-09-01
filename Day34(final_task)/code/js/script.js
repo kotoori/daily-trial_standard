@@ -16,8 +16,8 @@ Swiper
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: false,
-
+  loop: true,
+  loopedSlides: 6,
   slidesPerView: 1,
   width: 274,
   spaceBetween: 20,
@@ -25,7 +25,6 @@ const swiper = new Swiper('.swiper', {
     768:{
       width: 400,
       spaceBetween: 40,
-
     },
   },
 
@@ -162,7 +161,6 @@ jQuery(function(){
 
     return true;
   });
-
 });
 
 /***
@@ -178,6 +176,18 @@ function jsRadioToggle(target, num){
     checkedItem = num;
   }
 }
+
+/* キーボード操作でもradioボタンのチェック解除ができるようにする */
+jQuery(function(){
+  jQuery('.js-radio-label').keydown(function(e){
+    if (e.key === "Enter" || e.key === " ") {
+      jQuery(this).trigger("click");
+      return false;
+    }
+    return true;
+  });
+});
+
 
 
 /*===============================
