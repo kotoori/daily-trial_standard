@@ -771,6 +771,11 @@ Service
   width: 23.9583333333%;
   min-width: 160px;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .service__item {
+    width: 28.125%;
+  }
+}
 @media screen and (max-width: 767px) {
   .service__item {
     width: 100%;
@@ -1401,9 +1406,9 @@ Access
   width: 100%;
   position: relative;
 }
-@media not screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .access {
-    padding-top: 44px;
+    padding-top: 60px;
     padding-bottom: 60px;
     background: #3E3E3E;
   }
@@ -1411,6 +1416,9 @@ Access
 @media screen and (max-width: 767px) {
   .access {
     display: block;
+    padding-top: 44px;
+    padding-bottom: 60px;
+    background: #3E3E3E;
   }
 }
 .access::before {
@@ -1498,6 +1506,8 @@ Access
 .access__map__wrap {
   width: 60.5%;
   margin-top: -4px;
+  -webkit-box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
+          box-shadow: 0 0 10px rgba(62, 62, 62, 0.2);
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .access__map__wrap {

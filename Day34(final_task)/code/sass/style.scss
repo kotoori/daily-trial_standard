@@ -631,6 +631,9 @@ Service
 .service__item{
   width: calc(230px / $width-max-2 * 100%);
   min-width: 160px;
+  @include mq(tab){
+    width: calc(270px / $width-max-2 * 100%);
+  }
   @include mq(sp){
     width: 100%;
     min-width: 0;
@@ -1173,14 +1176,16 @@ Access
   background-color: $color-bg;
   width: 100%;
   position: relative;
-  @include mq(not-pc){
-    padding-top: 44px;
+  @include mq(tab){
+    padding-top: 60px;
     padding-bottom: 60px;
     background: $color-main;
   }
   @include mq(sp){
     display: block;
-
+    padding-top: 44px;
+    padding-bottom: 60px;
+    background: $color-main;
   }
   &::before{
     content: "";
@@ -1254,6 +1259,7 @@ Access
 .access__map__wrap{
   width: 60.5%;
   margin-top: -4px;
+  box-shadow: 0 0 10px $color-shadow-1;
   @include mq(tab){
     margin-top: 0;
     margin-left: 40px;
