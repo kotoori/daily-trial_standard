@@ -211,6 +211,11 @@ Header
     height: $height-header-sp;
     background-color: $color-header-sp;
   }
+  @include mq(pc){
+    &.is-scrolled{
+      background-color: $color-header-pc2;
+    }
+  }
 }
 
 .header__logo{

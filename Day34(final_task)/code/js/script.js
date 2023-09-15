@@ -196,16 +196,20 @@ jQuery(function(){
 jQuery(function(){
 /***
  *Topに戻るボタン 画面スクロールでボタン表示/非表示
+ *headerメニューを見やすくする（背景の透過度を下げる）
  ***/
   const topButton = $('.to-top');
-  const scrollAmount = 80;
+  const header = $('.header');
+  const scrollAmount = $('.fv').outerHeight();
   const fadeTime = 300;
 
   $(window).scroll(function(){
     if($(window).scrollTop() >= scrollAmount){
       topButton.fadeIn(fadeTime);
+      header.addClass("is-scrolled");
     }else{
       topButton.fadeOut(fadeTime);
+      header.removeClass("is-scrolled");
     }
   });
 });
