@@ -1,0 +1,19 @@
+@use "config" as *;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sm) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+//hover style用メディアクエリのmixin
+@mixin mq-hover($hover-possibility) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($hover-possibilities, $hover-possibility)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
