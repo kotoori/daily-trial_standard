@@ -1,0 +1,183 @@
+@use "reset";
+@use "config" as *;
+@use "mixin" as *;
+@use "base";
+
+/*===============================
+共通クラス
+===============================*/
+.inner{
+	width: 100%;
+	max-width: calc(1140px + 300px);
+	padding: 0 clamp(30px, -107.136px + 17.86vw, 150px);
+	margin: 0 auto;
+	@include mq(sp){
+		padding: 0 15px;
+	}
+}
+
+.btn{
+	width: auto;
+	height: 47px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 28px;
+	border: 2px solid transparent;
+	border-radius: 60px;
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}
+
+.btn--light{
+	@extend .btn;
+	color: $color-main;
+	border-color: $color-main;
+	background-color: $color-light;
+}
+
+.btn--dark{
+	@extend .btn;
+	color: $color-light;
+	border-color: $color-light;
+	background-color: $color-main;
+}
+
+
+
+/*===============================
+header
+===============================*/
+.header{
+	width: 100%;
+	height: $size-header-height-pc;
+	@include mq(sp){
+		height: $size-header-height-sp;
+	}
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.header__inner{
+	height: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo{
+	width: 135px;
+	height: auto;
+	flex-shrink: 0;
+	@include mq(sp){
+		width: 100px;
+		z-index: 10;
+	}
+}
+
+.header__logo__img{
+	width: 100%;
+	img{
+		width: 100%;
+	}
+}
+
+.header__hamburger{
+	@include mq(sp){
+		width: 36px;
+		height: 44px;	/* タップ範囲44px固定 */
+		position: relative;
+		z-index: 30;
+		cursor: pointer;
+	}
+}
+
+.hamburger__icon__area{
+	width: 100%;
+	height: 22px;	
+	position: relative;
+}
+
+.hamburger__icon,
+.hamburger__icon::before,
+.hamburger__icon::after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 3px;
+	background-color: $color-main;
+	border-radius: 999px;
+}
+
+.hamburger__icon{
+	transition: height 0.1s ease 0s;
+	.is-open &{
+		height: 0;
+	}
+}
+.hamburger__icon::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease 0s;
+	.is-open &{
+		transform: rotate(-30deg) translateY(-50%);
+		top: 50%;
+	}
+
+}
+.hamburger__icon::after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s ease 0s;
+	.is-open &{
+		transform: rotate(30deg) translateY(50%);
+		bottom: 50%;
+	}
+}
+
+.header__nav{
+	@include mq(sp){
+		width: 86vw;
+		max-width: 320px;
+		height: 100vh;
+		background-color: #F7BA1A;
+		position: absolute;
+		top: 0;
+		right:calc(-100vw - 2px);
+		z-index: 20;
+		transition: right 0.1s ease 0s;
+		&.is-open{
+			right: 0;
+		}
+	}
+}
+
+.header__nav__list{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	@include mq(sp){
+		display: block;
+		margin: 100px 40px 0 0;
+		text-align: right;
+	}
+}
+
+.header__nav__item{
+	@include mq(sp){
+		&:not(:first-child){
+			margin-top: 28px;
+		}
+	}
+}
+
+.header__nav__link{
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}

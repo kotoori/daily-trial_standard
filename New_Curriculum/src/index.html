@@ -23,15 +23,37 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 	<!-- css -->
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.min.css">
 </head>
 
 <body>
-
+	<header class="header">
+		<div class="inner header__inner">
+			<h1 class="header__logo">
+				<div class="header__logo__img">
+					<img src="./assets/img/logo.svg" alt="OHA!">
+				</div>
+			</h1>
+			<button class="header__hamburger is-sp">
+				<span class="sr-only">toggle navigation</span>
+				<div class="hamburger__icon__area">
+					<span class="hamburger__icon"></span>
+				</div>
+			</button>
+			<nav class="header__nav">
+				<ul class="header__nav__list header-list">
+					<li class="header__nav__item menu-item"><a class="header__nav__link" href="#service">サービスについて</a></li>
+					<li class="header__nav__item menu-item"><a class="header__nav__link" href="#">使い方</a></li>
+					<li class="header__nav__item menu-item"><a class="header__nav__link" href="#">メリット</a></li>
+					<li class="header__nav__item menu-item"><a class="btn--light" href="#">お問い合わせ</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="./js/script.js"></script>
+	<script src="./assets/js/script.min.js"></script>
 </body>
 
 </html>

@@ -152,9 +152,23 @@ function watch(){
 	gulp.watch("./src/assets/fonts/**/*", gulp.series(copyFonts, browserReload)); //フォントファイルの監視
 }
 
-exports.dev = gulp.parallel(browserInit, watch);
-
 /*===============================
 ビルド
 ===============================*/
+function build(done){
+	copyHTML();
+	compileSass();
+	copyCSS();
+	copyJS();
+	copyImg();
+	copyFonts();
+	done();
+}
+
+/*===============================
+タスク起動
+===============================*/
+
+exports.dev = gulp.parallel(build, browserInit, watch);
+
 exports.build = gulp.parallel(copyHTML, compileSass, copyCSS, copyJS, copyImg, copyFonts)

@@ -38,3 +38,10 @@ address{
 	white-space: nowrap;
 	border-width: 0;
 }
+
+.is-sp{
+	display: block;
+	@include mq(pc){
+		display: none;
+	}
+}
