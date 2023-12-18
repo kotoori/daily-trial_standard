@@ -90,6 +90,7 @@ header
 	width: 100%;
 	img{
 		width: 100%;
+		display: block;
 	}
 }
 
@@ -103,46 +104,43 @@ header
 	}
 }
 
-.hamburger__icon__area{
+.hamburger__icon{
 	width: 100%;
 	height: 22px;	//実際のhamburgerボタンの高さ
 	position: relative;
 }
 
-.hamburger__icon,
-.hamburger__icon::before,
-.hamburger__icon::after{
+.hamburger__icon__bar{
 	display: inline-block;
 	width: 100%;
 	height: 3px;
 	background-color: $color-main;
 	border-radius: 6px;
-}
-
-.hamburger__icon{
-	transition: height 0.1s ease 0s;
-	.is-open &{
-		height: 0;
-	}
-}
-
-.hamburger__icon::before{
-	content: "";
 	position: absolute;
-	top: 0;
 	left: 0;
+}
+
+.hamburger__icon__bar:nth-child(1){
+	top: 0;
 	transition: all 0.3s ease 0s;
 	.is-open &{
-		transform: rotate(-30deg) translateY(-50%);
 		top: 50%;
+		transform: rotate(-30deg) translateY(-50%);
 	}
 }
 
-.hamburger__icon::after{
-	content: "";
-	position: absolute;
+.hamburger__icon__bar:nth-child(2){
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.1s ease 0s;
+	.is-open &{
+		height: 0;
+		opacity: 0;
+	}
+}
+
+.hamburger__icon__bar:nth-child(3){
 	bottom: 0;
-	left: 0;
 	transition: all 0.3s ease 0s;
 	.is-open &{
 		transform: rotate(30deg) translateY(50%);

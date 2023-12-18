@@ -5,7 +5,7 @@ jQuery(function(){
 	const hamburgerButton = '.header__hamburger';
 	const navMenu = '.header__nav';
 	const openClass = 'is-open';
-	const drawerItem = '.js-drawer-close'
+	const drawerItem = '.menu-item a'
 
 	//ハンバーガーボタンクリックでドロワーメニュー開閉
 	jQuery(hamburgerButton).on('click', function(){
