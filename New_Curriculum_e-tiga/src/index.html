@@ -20,14 +20,43 @@
 	<!-- google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.min.css">
 </head>
 
 <body>
-
+	<!-- header -->
+	<header class="header">
+		<div class="inner header__inner">
+			<h1 class="header__logo">
+				<a class="header__logo__link" href="/">
+					<img src="./assets/img/logo.svg" alt="e-tiga">
+				</a>
+			</h1>
+			<button class="header__hamburger is-sp">
+				<span class="sr-only">toggle navigation</span>
+				<div class="hamburger__icon">
+					<span class="hamburger__icon__bar"></span>
+					<span class="hamburger__icon__bar"></span>
+					<span class="hamburger__icon__bar"></span>
+				</div>
+			</button>
+			<nav class="header__nav">
+				<div class="header__nav__logo is-sp">
+					<img src="./assets/img/logo-white.svg" alt="e-tiga">
+				</div>
+				<ul class="header__nav__list">
+					<li class="menu-item"><a href="#service">e-tigaとは</a></li>
+					<li class="menu-item"><a href="#">ご利用の流れ</a></li>
+					<li class="menu-item"><a href="#">プラン</a></li>
+					<li class="menu-item"><a href="#">運営会社</a></li>
+				</ul>
+			</nav>
+			<a href="#" class="btn header__btn is-pc">無料で登録</a>
+		</div>
+	</header>
 
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
