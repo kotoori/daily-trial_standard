@@ -1,0 +1,32 @@
+//ブレークポイント
+$breakpoints: (
+//キー:値
+  'sp':  'screen and (max-width: 767px)', //スマホ幅
+  'pc':  'screen and (min-width: 768px)', //PC幅
+) !default;
+
+//メディア特性(hover)
+$hover-possibilities: (
+  'hp':'(hover: hover)', /* hover possible:hover指定できるPCを想定したスタイル */
+  'hi':'(hover: none)',  /* hover impossible:hoverが使えないタッチ端末を想定した装飾 */
+) !default;
+
+//font
+$font-family: 'Noto Sans JP', sans-serif;
+
+//color
+$color-main: #333;
+$color-light: #FFF;
+$color-base: #FAFAFA;
+$color-key: #2082E0;
+
+//size
+$size-header-height-pc: 80px;
+$size-header-height-sp: 80px;
+$size-inner-width-pc: 1200px;
+
+// z-index
+$layer: (
+  header: 900, // ヘッダー
+  default: 0, //default
+);

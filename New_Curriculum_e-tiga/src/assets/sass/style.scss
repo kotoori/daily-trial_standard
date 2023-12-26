@@ -8,51 +8,24 @@
 ===============================*/
 .inner{
 	width: 100%;
-	max-width: calc(1140px + 300px);
-	padding: 0 clamp(30px, -107.136px + 17.86vw, 150px);
+	max-width: calc($size-inner-width-pc + 30px * 2); //最大幅 = コンテンツ幅 ＋ 左右のpadding
+	padding: 0 15px;
 	margin: 0 auto;
 	@include mq(sp){
 		padding: 0 15px;
 	}
 }
 
-%btn__a{
-	width: auto;
-	height: 47px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0 28px;
-	border: 2px solid transparent;
-	border-radius: 60px;
+.btn{
+	padding: 9px 54px;
+	border-radius: 48px;
+	background: linear-gradient(90deg, #2188DE 1.75%, #2BCBC6 97.75%);
+	box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
 	font-size: 1rem;
+	color: #F6F7F7;
 	font-weight: 700;
-	letter-spacing: 0.03em;
-}
-
-.btn--light a{
-	@extend %btn__a;
-	color: $color-main;
-	border-color: $color-main;
-	background-color: $color-light;
-	transition: background-color 0.3s ease 0s;
-	@include mq-hover(hp){
-		&:hover{
-			background-color: $color-Key-pale;
-		}
-	}
-	@include mq-hover(hi){
-		&:active{
-			background-color: $color-Key-pale;
-		}
-	}
-}
-
-.btn--dark a{
-	@extend %btn__a;
-	color: $color-light;
-	border-color: $color-light;
-	background-color: $color-main;
+	line-height: 1.7;
+	letter-spacing: 0.1875em;
 }
 
 /*===============================
@@ -74,14 +47,14 @@ header
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 25px;
 }
 
 .header__logo{
-	width: 135px;
+	width: 160px;
 	height: auto;
 	flex-shrink: 0;
 	@include mq(sp){
-		width: 100px;
 		z-index: 10;
 	}
 }
@@ -96,7 +69,7 @@ header
 
 .header__hamburger{
 	@include mq(sp){
-		width: 36px;
+		width: 40px;
 		height: 44px;	// タップ範囲44px固定
 		position: relative;
 		z-index: 30;
@@ -106,7 +79,7 @@ header
 
 .hamburger__icon{
 	width: 100%;
-	height: 22px;	//実際のhamburgerボタンの高さ
+	height: 20px;	//実際のhamburgerボタンの高さ
 	position: relative;
 }
 
@@ -114,10 +87,14 @@ header
 	display: inline-block;
 	width: 100%;
 	height: 3px;
-	background-color: $color-main;
+	background-color: $color-key;
 	border-radius: 6px;
 	position: absolute;
 	left: 0;
+	transition: background-color 0.1s ease 0s;
+	.is-open &{
+		background-color: $color-light;
+	}
 }
 
 .hamburger__icon__bar:nth-child(1){
@@ -125,7 +102,7 @@ header
 	transition: all 0.3s ease 0s;
 	.is-open &{
 		top: 50%;
-		transform: rotate(-30deg) translateY(-50%);
+		transform: rotate(-45deg) translateY(-50%);
 	}
 }
 
@@ -143,25 +120,33 @@ header
 	bottom: 0;
 	transition: all 0.3s ease 0s;
 	.is-open &{
-		transform: rotate(30deg) translateY(50%);
+		transform: rotate(45deg) translateY(50%);
 		bottom: 50%;
 	}
 }
 
 .header__nav{
 	@include mq(sp){
-		width: 320px;
-		max-width: 86vw;
+		width: 100vw;
 		height: 100vh;
-		background-color: #F7BA1A;
+		background: linear-gradient(180deg, rgba(34, 142, 221, 0.90) 0%, rgba(43, 198, 201, 0.90) 100%);
 		position: absolute;
 		top: 0;
-		right:calc(-320px - 2px);
+		right:calc(-100vw - 2px);
 		z-index: 20;
-		transition: right 1s ease 0s;
+		transition: right 0.3s ease 0s;
 		&.is-open{
 			right: 0;
 		}
+	}
+}
+
+.header__nav__logo{
+	width: 180px;
+	margin: 130px auto 0;
+	img{
+		width: 100%;
+		display: block;
 	}
 }
 
@@ -169,36 +154,49 @@ header
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 40px;
 	@include mq(sp){
-		display: block;
-		margin: 100px 40px 0 0;
-		text-align: right;
+		margin-top: 60px;
+		flex-direction: column;
+		gap: 30px;
 	}
 }
 
 .menu-item{
-	@include mq(sp){
-		&:not(:first-child){
-			margin-top: 28px;
-		}
-	}
 }
 
-.menu-item:not(.btn--light) a{
+.menu-item a{
+	display: block;
 	font-size: 1rem;
-	font-weight: 700;
-	letter-spacing: 0.03em;
-	padding: 10px 0;
+	line-height: 1.7;
+	@include mq(pc){
+		height: $size-header-height-pc;
+		font-weight: 500;	
+		padding: 20px 22px 25px;
+		border-top: 5px solid transparent;
+	}
+	@include mq(sp){
+		font-size: 1.25rem;
+		color: $color-light;
+		font-weight: 700;
+		padding: 10px 0;
+	}
 	@include mq-hover(hp){
-		transition: color 0.3s ease 0s;
+		transition: border-top 0.3s ease 0s;
 		&:hover{
-			color: $color-Key-deep;
+			border-top: 5px solid $color-key;
 		}
 	}
 	@include mq-hover(hi){
 		&:active{
-			color: $color-Key-deep;
+			color: $color-key;
 		}
+	}
+}
+
+.header__btn{
+	flex-shrink: 0;
+	transition: opacity 0.3s ease 0s;
+	&:hover{
+		opacity: 0.7;
 	}
 }

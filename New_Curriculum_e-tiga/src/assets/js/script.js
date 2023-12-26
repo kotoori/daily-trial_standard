@@ -19,4 +19,3 @@ jQuery(function(){
 		jQuery(navMenu).removeClass(openClass);
 	})
 })
-
