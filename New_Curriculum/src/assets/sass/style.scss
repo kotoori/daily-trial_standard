@@ -8,7 +8,7 @@
 ===============================*/
 .inner{
 	width: 100%;
-	max-width: calc(1140px + 300px);
+	max-width: calc(1140px + 150px * 2);
 	padding: 0 clamp(30px, -107.136px + 17.86vw, 150px);
 	margin: 0 auto;
 	@include mq(sp){
@@ -64,9 +64,11 @@ header
 	@include mq(sp){
 		height: $size-header-height-sp;
 	}
+	background-color: rgba(255, 255, 255, 0.95);
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: map-get($layer, header);
 }
 
 .header__inner{
@@ -200,5 +202,124 @@ header
 		&:active{
 			color: $color-Key-deep;
 		}
+	}
+}
+
+/*===============================
+FV
+===============================*/
+.fv{
+	margin-top: $size-header-height-pc;
+	@include mq(sp){
+		margin-top: $size-header-height-sp;
+	}
+}
+
+.fv__inner{
+	max-width: 1440px;
+	padding: 0 30px;
+}
+
+.fv__content{
+	width: 100%;
+	min-height: 500px;
+	padding-top: clamp(45px, -0.402rem + 6.7vw, 90px);
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: map-get($layer, contents);
+	@include mq(sp){
+		display: block;
+		text-align: center;
+		padding-top: 50px;
+	}
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 86.8%;
+		background: linear-gradient(to bottom, $color-gradation-1, $color-gradation-2);
+		border-radius: 30px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;	//最背面
+		@include mq(sp){
+			height: 84.7458%;
+			border-radius: 20px;
+		}
+	}
+}
+
+.fv__content__text{
+	width: 40%;
+	max-width: 440px;
+	margin-top: 20px;
+	@include mq(sp){
+		margin-top: 0;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.fv__content__text__title{
+	display: inline-block;
+	background-color: $color-light;
+	padding: 12px 15px;
+	font-size: clamp(1.5rem, 0.5rem + 2.08vw, 2.375rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.1em;
+	box-decoration-break: clone;
+	font-feature-settings: 'palt';
+	border-radius: 5px;
+	&:not(:first-child){
+		margin-top: 14px;
+	}
+	@include mq(sp){
+		display: inline-block;
+		font-size: 1.375rem;
+		padding: 10px 9px;
+
+		&:not(:first-child){
+			margin-top: 8px;
+		}
+		}
+}
+
+.fv__content__text__lead{
+	margin-top: 21px;
+	font-size: clamp(1rem, 0.857rem + 0.3vw, 1.125rem);
+	font-weight: 700;
+	line-height: 1.7;
+	letter-spacing: 0.03em;
+	@include mq(sp){
+		margin-top: 26px;
+		font-size: 1rem;
+	}
+}
+
+.fv__content__btn{
+	margin-top: 30px;
+	width: 208px;
+	min-width: 100%;
+	@include mq(sp){
+		margin-top: 21px;
+	}
+}
+
+.fv__content__img{
+	width: 43.4783%;
+	@include mq(sp){
+		width: 100%;
+		max-width: 450px;
+		margin-top: 30px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	img{
+		width: 100%;
 	}
 }
