@@ -272,8 +272,7 @@ FV
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.1em;
-	box-decoration-break: clone;
-	font-feature-settings: 'palt';
+	font-feature-settings: "palt" on;
 	border-radius: 5px;
 	&:not(:first-child){
 		margin-top: 14px;
