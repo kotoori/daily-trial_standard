@@ -12,7 +12,8 @@ $hover-possibilities: (
 ) !default;
 
 //font
-$font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+$font-family: 'Noto Sans JP', sans-serif;
+$font-family-en: 'Montserrat', sans-serif;
 
 //color
 $color-main: #111;
@@ -21,7 +22,7 @@ $color-Base: #FAFAFA;
 $color-Key-deep: #F5810E;
 $color-Key-pale: #FABE00;
 $color-gradation-1: #F8B819;
-$color-gradation-1: #F0D320;
+$color-gradation-2: #F0D320;
 
 //size
 $size-header-height-pc: 90px;
@@ -30,5 +31,6 @@ $size-header-height-sp: 70px;
 // z-index
 $layer: (
   header: 900, // ヘッダー
+  contents: 800, // メインコンテンツ ヘッダーより背面
   default: 0, //default
 );
