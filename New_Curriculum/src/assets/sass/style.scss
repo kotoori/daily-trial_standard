@@ -382,11 +382,11 @@ News
 }
 
 .news__content{
-	padding: 40px 105px 34px;
+	padding: 40px clamp(30px, -3.482rem + 11.16vw, 105px) 34px;	//768px~1440px
 	background-color: $color-light;
 	border-radius: 30px;
 	@include mq(sp){
-		padding: 40px 12px;
+		padding: 40px clamp(12px, -0.323rem + 4.58vw, 30px);	//375px~768px
 		border-radius: 20px;
 	}
 }
