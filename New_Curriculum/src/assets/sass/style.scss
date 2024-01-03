@@ -8,8 +8,8 @@
 ===============================*/
 .inner{
 	width: 100%;
-	max-width: calc(1140px + 150px * 2);
-	padding: 0 clamp(30px, -107.136px + 17.86vw, 150px);
+	max-width: calc(1140px + 30px * 2);
+	padding: 0 30px;
 	margin: 0 auto;
 	@include mq(sp){
 		padding: 0 15px;
@@ -216,8 +216,7 @@ FV
 }
 
 .fv__inner{
-	max-width: 1440px;
-	padding: 0 30px;
+	max-width: calc(1380px + 30px * 2);
 }
 
 .fv__content{
@@ -285,7 +284,7 @@ FV
 		&:not(:first-child){
 			margin-top: 8px;
 		}
-		}
+	}
 }
 
 .fv__content__text__lead{
@@ -352,8 +351,9 @@ result
 	column-gap: 40px;
 	row-gap: 26px;
 	@include mq(sp){
-		margin-top: 24px;
-		grid-template-columns: repeat(auto-fit, clamp(120px, 1.538rem + 30.77vw, 140px));	//vw375px:140px - vw310px:120px
+		max-width: 295px;// 140px * 2 + 15px(gap)
+		margin: 24px auto 0;
+		grid-template-columns: repeat(2, 1fr);
 		column-gap: 15px;
 		row-gap: 22px;
 	}
