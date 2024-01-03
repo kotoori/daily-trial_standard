@@ -322,3 +322,42 @@ FV
 		width: 100%;
 	}
 }
+
+/*===============================
+result
+===============================*/
+.result{
+	padding: 62px 0 50px;
+	@include mq(sp){
+		padding: 55px 0 50px;
+	}
+}
+
+.result__title{
+	text-align: center;
+	color: $color-main;
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	@include mq(sp){
+		font-size: 1.125rem;
+	}
+}
+
+.result__list{
+	margin-top: 47px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 200px);
+	justify-content: center;
+	column-gap: 40px;
+	row-gap: 26px;
+	@include mq(sp){
+		margin-top: 24px;
+		grid-template-columns: repeat(auto-fit, clamp(120px, 1.538rem + 30.77vw, 140px));	//vw375px:140px - vw310px:120px
+		column-gap: 15px;
+		row-gap: 22px;
+	}
+}
+
+.result__item{
+}
