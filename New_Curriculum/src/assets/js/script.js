@@ -20,3 +20,23 @@ jQuery(function(){
 	})
 })
 
+/*===============================
+modal
+===============================*/
+const modalOpen = jQuery('#js-concept__modal');
+const modalClose = jQuery('.js-modal-close');
+const modalDisplay = jQuery('#js-modal');
+
+jQuery(function(){
+	jQuery(modalOpen).on('click',function(){
+		console.log('click');
+		jQuery('body').addClass('is-fixed');
+		jQuery(modalDisplay).fadeIn(500);
+	});
+	jQuery(modalClose).on('click',function(){
+		console.log('click');
+		jQuery(modalDisplay).fadeOut(500);
+		jQuery('body').removeClass('is-fixed');
+	});
+
+});
