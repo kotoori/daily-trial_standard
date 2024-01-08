@@ -18,6 +18,7 @@
 
 %btn__a{
 	width: auto;
+	min-width: 150px;
 	height: 47px;
 	display: inline-flex;
 	align-items: center;
@@ -603,7 +604,7 @@ concept
 	margin-top: 39px;
 	text-align: center;
 	font-weight: 700;
-	letter-spacing: 0.08em
+	letter-spacing: 0.08em;
 	@include mq(sp){
 		margin-top: 37px;
 	}
@@ -615,4 +616,104 @@ concept
 	@include mq(sp){
 		margin-top: 6px;
 	}
+}
+
+/*** modal ***/
+.concept__modal{
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.2);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: map-get($layer, modal);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: calc($size-header-height-pc + 134px);
+	padding-bottom: 150px;
+	display: none;
+	@include mq(sp){
+		padding-top: calc($size-header-height-sp + 20px);
+		padding-bottom: 69px;	
+	}
+}
+
+.concept__modal__content{
+	background-color: $color-light;
+	padding: 49px 70px 75px;
+	border-radius: 20px;
+	max-height: calc(100vh - $size-header-height-pc - 134px - 150px);
+	height: 100%;
+	overflow-y: scroll;
+	@include mq(sp){
+		padding: 16px 15px 64px;
+		max-height: calc(100vh - $size-header-height-sp - 20px - 69px);
+	}
+}
+
+.modal__icon__area{
+	text-align: right;
+}
+
+.modal__icon{
+	width: 37px;
+	aspect-ratio: 1/1;
+	background-color: #F7C346;
+	border-radius: 50%;
+	vertical-align: middle;
+	cursor: pointer;
+	position: relative;
+	&::before, &::after{
+		content: "";
+		display: block;
+		width: 20px;
+		height: 4px;
+		background-color: $color-light;
+		border-radius: 8px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&::before{
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	&::after{
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	@include mq-hover(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	@include mq-hover(hi){
+		&:active{
+			opacity: 0.7;
+		}
+	}
+}
+
+.modal__text__area{
+	margin-top: 43px;
+	@include mq(sp){
+		margin-top: 13px;
+	}
+}
+.modal__text{
+	&:not(:first-child){
+		margin-top: 20px;
+		@include mq(sp){
+			margin-top: 23px;
+		}
+	}
+	@include mq(sp){
+		font-size: 0.875rem;
+	}
+}
+
+.modal__btn{
+	margin-top: 30px;
+	text-align: center;
 }
