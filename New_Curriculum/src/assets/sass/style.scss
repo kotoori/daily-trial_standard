@@ -65,6 +65,18 @@
 	letter-spacing: 0.1em;
 	text-align: center;
 }
+.section__subtitle{
+	margin-top: 14px;
+	font-family: $font-family-en;
+	font-size: clamp(0.875rem, 0.803rem + 0.31vw, 1rem);//375px~1024px
+	line-height: 1;
+	letter-spacing: 0.08em;
+	text-align: center;
+}
+
+.oha-bg{
+	background: transparent url("../img/bg_section.jpg") repeat top left / auto;
+}
 
 /*===============================
 header
@@ -533,7 +545,7 @@ concept
 	overflow: hidden;
 	@include mq(sp){
 		margin-top: 61px;
-		padding-bottom: 175px;
+		padding-bottom: 165px;
 	}
 }
 
@@ -716,4 +728,33 @@ concept
 .modal__btn{
 	margin-top: 30px;
 	text-align: center;
+}
+
+/*===============================
+MOVIE
+===============================*/
+.movie{
+	padding: 100px 0;
+	@include mq(sp){
+		padding: 60px 0;
+	}
+}
+
+.movie__content{
+	margin-top: 56px;
+	@include mq(sp){
+		margin-top: 32px;
+	}
+}
+
+.movie__content__item{
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;;
+	aspect-ratio: 640 / 360;
+	iframe{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
 }
