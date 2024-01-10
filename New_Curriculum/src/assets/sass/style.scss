@@ -758,3 +758,155 @@ MOVIE
 		display: block;
 	}
 }
+
+/*===============================
+usage
+===============================*/
+.usage{
+	padding: 100px 0;
+	@include mq(sp){
+		padding: 60px 0;
+	}
+}
+
+.usage__content{
+	margin-top: 89px;
+	@include mq(sp){
+		margin-top: 104px;
+	}
+}
+
+.usage__person{
+	text-align: center;
+}
+
+.usage__person__item{
+	padding: 44px clamp(1.875rem, -2.839rem + 9.82vw, 6rem) 56px;	//768px~1440px
+	border-radius: 40px;
+	background: #FFFBF0;
+	&:not(:first-child){
+		margin-top: 75px;
+		@include mq(sp){
+			margin-top: 112px;
+		}
+	}
+	@include mq(sp){
+		padding: 0px 40px 48px;
+
+	}
+}
+
+.usage__person__title{
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	@include mq(sp){
+		flex-direction: column;
+		gap: 16px;
+	}
+}
+
+.usage__person__title--reverse{
+	@extend .usage__person__title;
+	flex-direction: row-reverse;
+}
+
+.usage__person__title__img{
+	width: 85px;
+	height: 37px;
+	display: flex;
+	align-items: end;
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+.usage__person__title__text{
+	font-size: 1.375rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	@include mq(sp){
+		font-size: 1.125rem;
+	}
+}
+
+.usage__step{
+	margin-top: 85px;
+	display: flex;
+	gap: 24px;
+	justify-content: space-between;
+	counter-reset: step-number 0;
+	@include mq(sp){
+		margin-top: 65px;
+		flex-direction: column;
+		gap: 65px;
+	}
+}
+
+.usage__step__item{
+	position: relative;
+	counter-increment: step-number 1;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 30px;
+	border: 3px solid $color-main;
+	background: $color-light;
+	padding: 47px 0 22px;
+	@include mq(sp){
+		margin: 0 auto;
+	}
+}
+
+.usage__step__circle{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border: 3px solid $color-main;
+	background: #F5810E;
+	padding: 18px 0;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -54%);
+	.usage__step--person2 &{
+		background: #FABE00;
+	}
+}
+
+.usage__step__circle__text{
+	font-family: $font-family-en;
+	font-size: 0.8125rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.1em;
+	display: block;
+	&::after{
+		content: counter(step-number,decimal-leading-zero);
+		display: block;
+		color: $color-light;
+		font-family: $font-family-en;
+		font-size: 2.125rem;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 0.1em;
+		margin-top: 3px;
+	}
+}
+
+
+.usage__step__item__img{
+	padding: 0 47px;
+	@include mq(sp){
+		padding: 0 49px;
+	}
+}
+
+.usage__step__item__text{
+	margin-top: 10px;
+	font-family: Noto Sans JP;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+}
