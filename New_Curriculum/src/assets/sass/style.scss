@@ -916,11 +916,17 @@ MERIT
 ===============================*/
 .merit{
 	padding: 100px 0;
+	@include mq(sp){
+		padding: 60px 0;
+	}
 }
 
 .merit__list{
 	margin-top: 62px;
 	counter-reset: merit-number 0;
+	@include mq(sp){
+		margin-top: 30px;
+	}
 }
 
 .merit__item{
@@ -933,14 +939,27 @@ MERIT
 	counter-increment: merit-number 1;
 	&:not(:first-child){
 		margin-top: 41px;
+		@include mq(sp){
+			margin-top: 30px;
+		}
 	}
 	&:nth-child(odd){
 		flex-direction: row-reverse;
+	}
+	@include mq(sp){
+		display: block;
+		padding: 10px 20px 24px;
+		align-items: start;
 	}
 }
 
 .merit__item__img{
 		width: 30.7017%;
+		@include mq(sp){
+			width: 200px;
+			height: auto;
+			margin: 0 auto;
+		}
 	img{
 		width: 100%;
 		display: block;
@@ -951,9 +970,19 @@ MERIT
 	width: 50%;
 	.merit__item:nth-child(odd) &{
 		padding-right: 50px;
+		@include mq(sp){
+			padding-right: 0;
+		}
 	}
 	.merit__item:nth-child(even) &{
 		padding-left: 50px;
+		@include mq(sp){
+			padding-left: 0;
+		}
+	}
+	@include mq(sp){
+		width: 100%;
+		margin-top: 18px;
 	}
 }
 
@@ -961,6 +990,9 @@ MERIT
 	display: flex;
 	align-items: center;
 	gap: 28px;
+	@include mq(sp){
+		gap: 14px;
+	}
 }
 
 .merit__item__no{
@@ -972,6 +1004,9 @@ MERIT
 		font-size: 6.875rem;
 		font-weight: 600;
 		line-height: 1;
+		@include mq(sp){
+			font-size: 4.375rem;
+		}
 	}
 }
 
@@ -979,10 +1014,17 @@ MERIT
 	font-size: 1.25rem;
 	font-weight: 700;
 	letter-spacing:0.1em;
+	@include mq(sp){
+	font-size: 1rem;
+	}
 }
 
 .merit__item__note{
 	margin-top: 16px;
 	font-size: 0.9375rem;
 	line-height: 2;
+	@include mq(sp){
+		margin-top: 10px;
+		font-size: 0.875rem;
+	}
 }
