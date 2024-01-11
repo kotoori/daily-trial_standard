@@ -1062,6 +1062,7 @@ service
 .service{
 	padding: 100px 0;
 	text-align: center;
+	background: $color-light;
 	@include mq(sp){
 		padding: 60px 0;
 	}
@@ -1096,7 +1097,8 @@ service
 		&::-webkit-scrollbar-thumb{
 			max-width: 10%;
 			border-radius: 20px;
-			background: #FABE00;
+			background: $color-Key-pale;
+			;
 		}
 	}
 }
