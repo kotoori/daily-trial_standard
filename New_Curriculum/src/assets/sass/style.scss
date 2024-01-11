@@ -915,7 +915,7 @@ usage
 MERIT
 ===============================*/
 .merit{
-	padding: 100px 0;
+	padding: 100px 0 96px;
 	@include mq(sp){
 		padding: 60px 0;
 	}
@@ -1027,4 +1027,27 @@ MERIT
 		margin-top: 10px;
 		font-size: 0.875rem;
 	}
+}
+
+.cta{
+	padding: 60px 0;
+	background: linear-gradient(to bottom, $color-gradation-1, $color-gradation-2);
+	text-align: center;
+	@include mq(sp){
+		padding: 50px 0;
+	}
+}
+
+.cta__text{
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 2;
+	letter-spacing: 0.03em;
+	@include mq(sp){
+		font-size: 1rem;
+	}
+}
+
+.cta__link{
+	margin-top: 16px;
 }
