@@ -40,3 +40,24 @@ jQuery(function(){
 	});
 
 });
+
+/*===============================
+スムーススクロール
+===============================*/
+jQuery('a[href^="#"]').on('click', function(e){
+	e.preventDefault();
+
+  let targetY = 0;
+  let href = jQuery(this).attr("href");
+  if(href === "#"){
+    targetY = jQuery('html').offset().top;
+  }else{
+    let headerHeight = jQuery('header').innerHeight();
+    targetY = jQuery(href).offset().top - headerHeight;
+  }
+
+  // animateで移動します
+  jQuery('html, body').animate({scrollTop : targetY}, 500, 'swing');
+
+	return false;
+});
