@@ -61,3 +61,14 @@ jQuery('a[href^="#"]').on('click', function(e){
 
 	return false;
 });
+
+/*===============================
+FAQ アコーディオン
+===============================*/
+jQuery(function(){
+	const btn = '.js-faq__btn';
+	const faqItem = ".faq__item";
+	jQuery(btn).on('click',function(){
+	jQuery(this).parents(faqItem).toggleClass('is-open');
+	});
+});
