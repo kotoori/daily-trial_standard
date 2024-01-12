@@ -93,3 +93,17 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+/*===============================
+to topボタン
+===============================*/
+jQuery(function(){
+	const toTop = jQuery('.js-to-top');
+	jQuery(window).on('scroll',function(){
+		if(jQuery(this).scrollTop() > 100){
+			toTop.fadeIn();
+		}else{
+			toTop.fadeOut();
+		}
+	});
+});

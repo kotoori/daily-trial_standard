@@ -1672,3 +1672,53 @@ contact
 		}
 	}
 }//contact__form
+
+/*===============================
+footer
+===============================*/
+.footer{
+	width: 100%;
+	background: $color-main;
+	padding: 18px 0;
+	text-align: center;
+}
+
+.footer__copy{
+	display: block;
+	color: #F5F5F5;
+	font-size: 0.75rem;
+	font-style: normal;
+	line-height: 1;
+	letter-spacing: 0.08em;
+}
+
+/*===============================
+to top
+===============================*/
+.to-top{
+	width: 100%;
+	max-width: 1440px;
+	height: 0px;
+	position: fixed;
+	bottom: 0;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+.to-top__icon{
+	display: block;
+	width: 76px;
+	height: auto;
+	position: absolute;
+	right: 16px;
+	bottom: 30px;
+	display: none;
+	@include mq(sp){
+		width: 50px;
+		right: 10px;
+		bottom: 10px;
+	}
+	img{
+		width: 100%;
+	}
+}
