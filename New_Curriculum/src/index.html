@@ -414,6 +414,7 @@
 		</div>
 	</section>
 
+	<!-- gallery -->
 	<section class="gallery">
 		<div class="inner gallery__inner">
 			<h2 class="section__title">GALLERY</h2>
@@ -458,6 +459,203 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- contact -->
+	<section class="contact oha-bg">
+		<div class="inner">
+			<div class="contact__form">
+				<h2 class="section__title">CONTACT</h2>
+				<p class="section__subtitle">お問い合わせ</p>
+				<form action="" method="post" id="js-form" class="form">
+					<dl class="form_list">
+						<!-- name -->
+						<div class="form_item">
+							<dt class="form_item-title">
+								<label for="contact__form__name" class="form_label required">
+									お名前
+									<span class="form_item-inline">必須</span>
+								</label>
+							</dt>
+							<dd class="form_item-input">
+								<span class="form-control-wrap" data-name="">
+									<input
+										class="form-control form_input form_text required"
+										id="contact__form__name"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="田中 おは次郎"
+										value=""
+										type="text"
+										name="contact__form__name"
+									>
+								</span>
+							</dd>
+						</div><!-- /.form__item -->
+	
+						<!-- email -->
+						<div class="form_item">
+							<dt class="form_item-title">
+								<label for="contact__form__email" class="form_label required">
+									メールアドレス
+									<span class="form_item-inline">必須</span>
+								</label>
+							</dt>
+							<dd class="form_item-input">
+								<span class="form-control-wrap" data-name="">
+									<input
+										class="form-control form_input form_email required"
+										id="contact__form__email"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="info@oha.com"
+										value=""
+										type="email"
+										name="contact__form__email"
+									>
+								</span>
+							</dd>
+						</div><!-- /.form__item -->
+
+						<!-- kind -->
+						<div class="form_item">
+							<dt class="form_item-title">
+								<label for="" class="form_label required">
+									お問い合わせ項目
+									<span class="form_item-inline">必須</span>
+								</label>
+							</dt>
+							<dd class="form_item-input">
+								<span class="form-control-wrap" data-name="">
+									<ul class="form-radio-group">
+										<!-- radio 1 -->
+										<li>
+											<label class="form-control form_radio">
+												<input
+													class="sr-only"
+													aria-required="true"
+													aria-invalid="false"
+													value=""
+													type="radio"
+													name="contact__form__kind"
+												>
+												<span>アプリの質問</span>
+											</label>
+										</li>
+										<!-- radio 2 -->
+										<li>
+											<label class="form-control form_radio">
+												<input
+													class="sr-only"
+													aria-required="true"
+													aria-invalid="false"
+													value=""
+													type="radio"
+													name="contact__form__kind"
+												>
+												<span>取材の依頼</span>
+											</label>
+										</li>
+										<!-- radio 3 -->
+										<li>
+											<label class="form-control form_radio">
+												<input
+													class="sr-only"
+													aria-required="true"
+													aria-invalid="false"
+													value=""
+													type="radio"
+													name="contact__form__kind"
+												>
+												<span>その他</span>
+											</label>
+										</li>
+									</ul>
+								</span>
+							</dd>
+						</div><!-- /.form__item -->
+						<!-- age -->
+						<div class="form_item">
+							<dt class="form_item-title">
+								<label for="" class="form_label optional">
+									年代
+									<span class="form_item-inline">任意</span>
+								</label>
+							</dt>
+							<dd class="form_item-input">
+								<span class="form-control-wrap" data-name="">
+									<select 
+										class="form-control form_select required"
+										id=""
+										aria-required="true"
+										aria-invalid="false"
+										placeholder=""
+										value=""
+										type="email"
+										name="contact__form__age"
+									>
+										<option value="">選択してください</option>
+										<option value="10代">10代</option>
+										<option value="20代">20代</option>
+										<option value="30代">30代</option>
+										<option value="40代">40代</option>
+										<option value="50代">50代</option>
+										<option value="60代">60代</option>
+										<option value="70代">70代</option>
+										<option value="80代">80代</option>
+									</select>
+
+								</span>
+							</dd>
+						</div><!-- /.form__item -->
+						<!--  -->
+						<div class="form_item">
+							<dt class="form_item-title">
+								<label for="contact__form__concrete" class="form_label required">
+									お問い合わせ内容
+									<span class="form_item-inline">必須</span>
+								</label>
+							</dt>
+							<dd class="form_item-input">
+								<span class="form-control-wrap" data-name="">
+									<textarea
+										class="form-control form_textarea required"
+										id="contact__form__concrete"
+										aria-required="true"
+										aria-invalid="false"
+										placeholder="ここに文章を入力してくださいここに文章を入力してください"
+										value=""
+										name="contact__form__concrete"
+									></textarea>
+								</span>
+							</dd>
+						</div><!-- /.form__item -->
+					</dl>
+
+					<!-- privacy policy -->
+					<div class="form_privacy">
+						<label class="form-control form_checkbox required">
+							<input
+								class="sr-only required"
+								aria-required="true"
+								aria-invalid="false"
+								type="checkbox"
+								value=""
+								name="contact__form__privacy"
+								>
+								<span></span>
+						</label>
+						<p class="form_privacy-text"><a href="/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する</p>
+					</div>
+					<!-- submit -->
+					<div class="btn--light contact__submit">
+						<button type="submit">送信する</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<!-- swiper@11 -->

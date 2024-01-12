@@ -1418,3 +1418,257 @@ Gallery
 		font-size: 0.875rem;
 	}
 }
+
+/*===============================
+contact
+===============================*/
+.contact{
+	padding: 100px 0;
+	@include mq(sp){
+		padding: 60px 0;
+	}
+}
+
+.contact__form{
+	border-radius: 30px;
+	background: #FFF;
+	padding: 60px 20px;
+
+	.form{
+		width: 100%;
+		max-width: 612px;
+		margin: 50px auto 0;
+		@include mq(sp){
+			margin: 30px auto 0;
+		}
+	}
+	//form
+	.form_list{
+		
+	}
+	
+	.form_item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		@include mq(sp){
+			flex-direction: column;
+			align-items: start;
+			gap: 14px;
+		}
+		&:not(:first-child){
+			margin-top: 30px;
+			@include mq(sp){
+				margin-top: 33px;
+			}
+		}
+	}
+
+	.form_item-title{
+		width: 180px;
+		flex-shrink: 0;
+		text-align: right;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		font-weight: 700;
+		line-height: 1;
+		@include mq(sp){
+			width: 100%;
+			justify-content: start;
+		}
+	}
+	
+	.form_item-inline{
+		display: inline-block;
+		width: 42px;
+		padding: 6px 0 5px;
+		flex-shrink: 0;
+		border-radius: 2px;
+		text-align: center;
+		margin-left: 5px;
+		color: #FFF;
+		font-size: 0.6875rem;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 0.18em;
+		visibility: hidden;
+	}
+	.required .form_item-inline{
+		visibility: visible;
+		background: #EE8013;
+	}
+	.optional .form_item-inline{
+		visibility: visible;
+		background: #43B549;
+	}
+
+	.form_item-input{
+		width: 100%;
+		flex-shrink: 1;
+	}
+	
+	.form-control-wrap{
+		
+	}
+	
+	.form-control{
+		width: 100%;
+	}
+
+	.form_input,
+	.form_textarea{
+		color: $color-main;
+		font-size: 1rem;
+		&::placeholder{
+			color: #ADADAD;
+			font-style: normal;
+		}
+	}
+
+	.form_text,
+	.form_email,
+	.form_select,
+	.form_textarea{
+		appearance: none;
+		width: 100%;
+		border-radius: 5px;
+		border: 3px solid $color-main;
+		background: #FFF;
+		padding: 15px 16px 14px;
+		font-size: 1rem;
+		&:focus{
+			outline: none;
+			border: 3px solid $color-Key-pale;
+		}
+	}
+
+	.form_text, 
+	.form_email, 
+	.form_select{
+		height: 56px;
+	}
+	.form_textarea{
+		min-height: 180px;
+	}
+	.form_select{
+		background: transparent url("../img/icon_polygon-down.svg") no-repeat center right 18px / 12px 8px;
+		cursor: pointer;
+	}
+
+	.form-radio-group{
+		display: flex;
+		gap: 30px;
+		justify-content: start;
+		align-items: center;
+		@include mq(sp){
+			flex-direction: column;
+			gap: 11px;
+			align-items: start;
+		}
+	}
+
+	.form_radio{
+		padding-left: 28px;
+		position: relative;
+		input + span{
+			font-weight: 700;
+			line-height: 1;	
+			&::before{
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				border: 3px solid $color-main;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: $color-Key-deep;
+				position: absolute;
+				left: 7px;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity:0;
+				transition: opacity 0.3s ease 0s;
+			}
+		}
+		input:checked + span::after{
+			opacity: 1;
+		}
+	}
+	.form_privacy{
+		margin: 22px auto 0;
+		position: relative;
+		width: fit-content;
+	}
+	.form_checkbox{
+		input + span{
+			&::before{
+				content: "";
+				display: block;
+				width: 20px;
+				height: 20px;
+				border: 1px solid $color-main;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+			&::after{
+				content: "";
+				display: block;
+				width: 23px;
+				height: 20px;
+				background: url("../img/icon_contact-check.svg") no-repeat center center / 100%;
+				position: absolute;
+				left: 0px;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity:0;
+				transition: opacity 0.3s ease 0s;
+				cursor: pointer;
+			}
+		}
+		input:checked + span::after{
+			opacity: 1;
+		}
+	}
+	.form_privacy-text{
+		padding-left: 31px;
+		font-size: 0.875rem;
+		font-weight: 700;
+		a{
+			font-size: inherit;
+			font-weight: inherit;
+			text-decoration: underline;
+			@include mq-hover(hp){
+				&:hover{
+					color: $color-Key-deep;
+				}
+			}
+			@include mq-hover(hi){
+				&:active{
+					color: $color-Key-deep;
+				}
+			}		
+		}
+	}
+	.contact__submit{
+		margin-top: 38px;
+		text-align: center;
+		@include mq(sp){
+			margin-top: 30px;
+		}
+	}
+}//contact__form
