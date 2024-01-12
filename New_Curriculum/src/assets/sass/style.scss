@@ -1203,7 +1203,7 @@ service
 FAQ
 ===============================*/
 .faq{
-	padding: 100px 0 104px;
+	padding: 100px 0;
 	@include mq(sp){
 		padding: 60px 0;
 	}
@@ -1216,7 +1216,7 @@ FAQ
 	max-width: 800px;
 	display: flex;
 	flex-direction: column;
-	gap: 42px;
+	gap: 40px;
 	@include mq(sp){
 		margin: 52px auto 0;
 	}
@@ -1314,5 +1314,107 @@ FAQ
 			padding-top: 12px;
 			padding-bottom: 17px;
 		}
+	}
+}
+
+/*===============================
+Gallery
+===============================*/
+.gallery{
+	padding: 100px 0;
+	@include mq(sp){
+		padding: 63px 0 60px;
+	}
+}
+.gallery__inner{
+	@include mq(sp){
+		padding: 0 10px;
+	}
+}
+
+.gallery__content{
+	margin-top: 60px;
+	@include mq(sp){
+		margin-top: 30px;
+	}
+}
+
+.gallery__swiper{
+	width: 100%;
+	max-width: 800px;
+	padding: 0 80px 26px;
+	@include mq(sp){
+		padding: 0 5px 26px;
+	}
+
+	.swiper-button-prev, .swiper-button-next{
+		width: 50px;
+		height: 50px;
+		&:after{
+			content: "";
+		}
+		@include mq(sp){
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.swiper-button-prev{
+		background: url("../img/icon_gallery-prev.svg") no-repeat center center / 100%;
+	} 
+	.swiper-button-next{
+		background: url("../img/icon_gallery-next.svg") no-repeat center center / 100%;
+	}
+
+	//Swiper custom property
+	--swiper-navigation-top-offset: 42.7%;
+	--swiper-navigation-sides-offset: 9px;
+	--swiper-pagination-bottom: -7px;
+	--swiper-pagination-bullet-size: 10px;
+	--swiper-pagination-bullet-inactive-color: #BCBCBC;
+	--swiper-pagination-bullet-inactive-opacity: 1;
+	--swiper-pagination-color: #FABE00;
+	--swiper-pagination-bullet-horizontal-gap: 6px;
+	@include mq(sp){
+		--swiper-navigation-top-offset: 44%;
+		--swiper-navigation-sides-offset: 0;
+	
+	}
+}
+
+.gallery__item{
+	width: 100%;
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 17px 17px 14px;
+	border-radius: 30px;
+	border: 3px solid $color-main;
+	background: $color-light;
+	box-shadow: 0px 9px 30px 0px #F4F4F4;
+	@include mq(sp){
+		padding: 11px 12px 10px;
+		border-radius: 20px;
+	}
+}
+
+.gallery__item__img{
+	width: 100%;
+	aspect-ratio: 600 / 397;
+	border-radius: 20px;
+	overflow: hidden;
+	img{
+		width: 100%;
+	}
+	@include mq(sp){
+		border-radius: 10px;
+	}
+}
+
+.gallery__item__text{
+	margin-top: 18px;
+	text-align: center;
+	@include mq(sp){
+		margin-top: 11px;
+		font-size: 0.875rem;
 	}
 }

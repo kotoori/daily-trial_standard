@@ -72,3 +72,24 @@ jQuery(function(){
 	jQuery(this).parents(faqItem).toggleClass('is-open');
 	});
 });
+
+/*===============================
+スライダー
+===============================*/
+const gallerySwiper = new Swiper('.gallery__swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+	spaceBetween: 85,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

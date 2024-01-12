@@ -23,6 +23,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
 	<!-- css -->
+	<!-- swiper@11 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.min.css">
 </head>
 
@@ -412,8 +414,54 @@
 		</div>
 	</section>
 
+	<section class="gallery">
+		<div class="inner gallery__inner">
+			<h2 class="section__title">GALLERY</h2>
+			<p class="section__subtitle">ギャラリー</p>
+			<div class="gallery__content">
+				<div class="swiper gallery__swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div class="gallery__item">
+								<div class="gallery__item__img">
+									<img src="./assets/img/img_gallery1.jpg" alt="">
+								</div>
+								<p class="gallery__item__text">最高な海。を拝んでいる私最高...</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="gallery__item">
+								<div class="gallery__item__img">
+									<img src="./assets/img/img_gallery2.jpg" alt="">
+								</div>
+								<p class="gallery__item__text">モーニングは一番のり。今日も私えらい。</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="gallery__item">
+								<div class="gallery__item__img">
+									<img src="./assets/img/img_gallery3.jpg" alt="">
+								</div>
+								<p class="gallery__item__text">風車のある公園ヨガ。みんな私に釘付け。</p>
+							</div>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+				
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- swiper@11 -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="./assets/js/script.min.js"></script>
 </body>
 
