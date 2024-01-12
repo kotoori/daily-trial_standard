@@ -29,12 +29,10 @@ const modalDisplay = jQuery('#js-modal');
 
 jQuery(function(){
 	jQuery(modalOpen).on('click',function(){
-		console.log('click');
 		jQuery('body').addClass('is-fixed');
 		jQuery(modalDisplay).fadeIn(500);
 	});
 	jQuery(modalClose).on('click',function(){
-		console.log('click');
 		jQuery(modalDisplay).fadeOut(500);
 		jQuery('body').removeClass('is-fixed');
 	});
@@ -137,3 +135,93 @@ jQuery(function(){
     }
   }
 });
+
+/*===============================
+contact from
+===============================*/
+const formInputText = '.form_item-input [type="text"][aria-required="true"]';
+const formInputEmail = '.form_item-input [type="email"][aria-required="true"]';
+const formInputRadio = '.form_item-input [type="radio"][aria-required="true"]';
+const formInputCheckBox = '.form_privacy [type="checkbox"][aria-required="true"]';
+const formTextarea = '.form_item-input textarea[aria-required="true"]';
+const formSelectBox = '.form_item-input select[aria-required="true"]'
+const formSubmitBtn = '.contact__submit button';
+
+
+/* .js-form-check要素が変更されるたびに、全必須項目(.js-form-check)をチェックする */
+jQuery('[aria-required="true"]').on('input change click', function(){
+	let isInput = true;
+
+	if(isInput){
+		/* input[type="text"]を全てチェック */
+		for(let target of jQuery(formInputText)){
+			console.log('text');
+			if(target.value === ""){
+				console.log('text::false');
+				isInput = false;
+			}
+		}
+	}
+
+	if(isInput){
+		/* input[type="email"]を全てチェック 未入力があればreturn */
+		for(let target of jQuery(formInputEmail)){
+			if(target.value === ""){
+				isInput = false;
+			}
+		}
+	}
+
+	if(isInput){
+		/* input[type="radio"]を全てチェック 未チェックがあればreturn */
+		for(let target of jQuery(formInputRadio)){
+			let attrName = jQuery(target).attr('name');
+			let targetName = `${formInputRadio}[name="${attrName}"]:checked`;
+			if(jQuery(targetName).val() === undefined){
+				isInput = false;
+			}
+		}
+	}
+
+	if(isInput){
+		/* input[type="checkbox"]を全てチェック 未チェックがあればreturn */
+		for(let target of jQuery(formInputCheckBox)){
+			console.log('checkbox');
+			if(jQuery(target).prop("checked") === false){
+				isInput = false;
+				console.log('checkbox::false');
+			}
+		}
+	}
+
+	if(isInput){
+		/* textareaを全てチェック 未入力があればreturn */
+		for(let target of jQuery(formTextarea)){
+			if(target.value === ""){
+				isInput = false;
+			}
+		}
+	}
+
+	if(isInput){
+		/* selectを全てチェック 未入力があればreturn */
+		for(let target of jQuery(formSelectBox)){
+			if(target.value === ""){
+				isInput = false;
+			}
+		}
+	}
+
+	if(isInput){
+		/* 必須項目が全て入力された時の処理 */
+		jQuery(formSubmitBtn).prop("disabled",false);
+		jQuery(formSubmitBtn).addClass(activeClass);
+	}else{
+		/* 必須項目が全て入力されていない時の処理 */
+		jQuery(formSubmitBtn).prop("disabled",true);
+		jQuery(formSubmitBtn).removeClass(activeClass);
+	}
+
+	return true;
+});
+
