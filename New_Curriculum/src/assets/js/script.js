@@ -221,3 +221,27 @@ jQuery('[aria-required="true"]').on('input change click', function(){
 	return true;
 });
 
+$(document).ready(function () {
+const form = '.contact__form form';
+  jQuery(form).submit(function (event) {
+    var formData = $(form).serialize();
+    $.ajax({
+      url: $(form).attr("action"),
+      data: formData,
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function () {
+          $(".contact__submit").hide();
+          $(".submit-success").fadeIn();
+          //window.location.href = "thanks.html";
+        },
+        200: function () {
+          $(".submit-failed").fadeIn();
+        }
+      }
+    });
+    event.preventDefault();
+  });
+
+});
