@@ -139,12 +139,12 @@ jQuery(function(){
 /*===============================
 contact from
 ===============================*/
-const formInputText = '.form_item-input [type="text"][aria-required="true"]';
-const formInputEmail = '.form_item-input [type="email"][aria-required="true"]';
-const formInputRadio = '.form_item-input [type="radio"][aria-required="true"]';
-const formInputCheckBox = '.form_privacy [type="checkbox"][aria-required="true"]';
-const formTextarea = '.form_item-input textarea[aria-required="true"]';
-const formSelectBox = '.form_item-input select[aria-required="true"]'
+const formInputText = '.contact__form [type="text"][aria-required="true"]';
+const formInputEmail = '.contact__form [type="email"][aria-required="true"]';
+const formInputRadio = '.contact__form [type="radio"][aria-required="true"]';
+const formInputCheckBox = '.contact__form [type="checkbox"][aria-required="true"]';
+const formTextarea = '.contact__form textarea[aria-required="true"]';
+const formSelectBox = '.contact__form select[aria-required="true"]'
 const formSubmitBtn = '.contact__submit button';
 
 
@@ -155,9 +155,7 @@ jQuery('[aria-required="true"]').on('input change click', function(){
 	if(isInput){
 		/* input[type="text"]を全てチェック */
 		for(let target of jQuery(formInputText)){
-			console.log('text');
 			if(target.value === ""){
-				console.log('text::false');
 				isInput = false;
 			}
 		}
@@ -186,10 +184,8 @@ jQuery('[aria-required="true"]').on('input change click', function(){
 	if(isInput){
 		/* input[type="checkbox"]を全てチェック 未チェックがあればreturn */
 		for(let target of jQuery(formInputCheckBox)){
-			console.log('checkbox');
 			if(jQuery(target).prop("checked") === false){
 				isInput = false;
-				console.log('checkbox::false');
 			}
 		}
 	}
