@@ -71,7 +71,7 @@ jQuery(function(){
 
 	jQuery(btn).on('click',function(){
 		jQuery(this).toggleClass('is-open');
-		jQuery(this).children('.faq__item__a').slideToggle(300);
+		jQuery(this).find('.faq__item__a').slideToggle(300);
 	});
 
 	//キーボードで開閉可能にする
