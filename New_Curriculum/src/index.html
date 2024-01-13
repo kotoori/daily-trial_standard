@@ -168,7 +168,7 @@
 			<p class="section__subtitle">2秒で分かる！OHA!について</p>
 			<div class="movie__content">
 				<div class="movie__content__item">
-					<iframe src="https://www.youtube.com/embed/4XTF16CcqPc" title="Web制作課題用" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/4XTF16CcqPc" title="Web制作課題用" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -521,13 +521,13 @@
 						<!-- kind -->
 						<div class="form_item">
 							<dt class="form_item-title">
-								<label for="" class="form_label required">
+								<div class="required">
 									お問い合わせ項目
 									<span class="form_item-inline">必須</span>
-								</label>
+								</div>
 							</dt>
 							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
+								<div class="form-control-wrap" data-name="">
 									<ul class="form-radio-group">
 										<!-- radio 1 -->
 										<li>
@@ -572,7 +572,7 @@
 											</label>
 										</li>
 									</ul>
-								</span>
+								</div>
 							</dd>
 						</div><!-- /.form__item -->
 						<!-- age -->
@@ -590,9 +590,6 @@
 										id="contact__form__age"
 										aria-required="false"
 										aria-invalid="false"
-										placeholder=""
-										value=""
-										type="email"
 										name="entry.1195862545"
 									>
 										<option value="">選択してください</option>
@@ -625,7 +622,6 @@
 										aria-required="true"
 										aria-invalid="false"
 										placeholder="ここに文章を入力してくださいここに文章を入力してください"
-										value=""
 										name="entry.53128321"
 									></textarea>
 								</span>
