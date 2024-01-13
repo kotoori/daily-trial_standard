@@ -66,9 +66,23 @@ FAQ アコーディオン
 jQuery(function(){
 	const btn = '.js-faq__btn';
 	const faqItem = ".faq__item";
+
+	jQuery('.faq__item__a.js-default__hidden').hide();	//初期表示は非表示のAnswerを閉じる
+
 	jQuery(btn).on('click',function(){
-	jQuery(this).parents(faqItem).toggleClass('is-open');
+		jQuery(this).toggleClass('is-open');
+		jQuery(this).children('.faq__item__a').slideToggle(300);
 	});
+
+	//キーボードで開閉可能にする
+	jQuery(btn).keydown(function(e){
+		if (e.key === "Enter" || e.key === " ") {
+			jQuery(this).trigger("click");
+			return false;
+		}
+		return true;
+	});
+
 });
 
 /*===============================
