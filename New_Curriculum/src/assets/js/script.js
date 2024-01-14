@@ -121,36 +121,6 @@ jQuery(function(){
 });
 
 /*===============================
-WOW.js
-===============================*/
-new WOW().init();
-
-jQuery(function(){
-  /*===============================
-  WOW.js option
-  ===============================*/
-  const delayInterval = 0.2; /* 0.2s */
-
-  if(window.matchMedia('(min-width:768px)').matches) {
-    /* PC（768px以上)のとき、横並びカードのWOWオプションを指定 */
-
-    setWowDelayForCard('.usage__step','.usage__step__item');
-    setWowDelayForCard('.product__contents','.product__card');
-
-    /* 指定された横並びCardにWOW.jsアニメーションのdelayTimeを設定 */
-    /* delayTimeはdelayIntervalずつ、ずらして設定する */
-    function setWowDelayForCard(list,card){
-      let delayTime = 0;
-      $(list).children(card).each(function(index){
-        delayTime = index * delayInterval;
-        $(this).attr('data-wow-delay',delayTime + "s");
-      });
-
-    }
-  }
-});
-
-/*===============================
 contact from
 ===============================*/
 const formInputText = '.contact__form [type="text"][aria-required="true"]';
@@ -258,4 +228,30 @@ const form = '.contact__form form';
     event.preventDefault();
   });
 
+});
+
+/*===============================
+Intersection Observer
+===============================*/
+const options = {
+	root: null,
+	rootMargin: '-60px 0px',
+	threshold: 0,
+}
+const intersectionObserver = new IntersectionObserver(
+	function(entries){
+		entries.forEach(function(entry){
+			if(entry.isIntersecting){
+				entry.target.classList.add('is-in-view');
+			}else{
+//				entry.target.classList.remove('is-in-view');
+			}
+		})
+	},
+	options
+);
+
+const inViewItems = document.querySelectorAll('.js-in-view');
+inViewItems.forEach(function(inViewItem){
+	intersectionObserver.observe(inViewItem);
 });
