@@ -1246,6 +1246,19 @@ FAQ
 	@include mq(sp){
 		padding: 29px 29px 18px 12px;
 	}
+	&::after{
+		content: "";
+		width: 10px;
+		height: 7px;
+		position: absolute;
+		right: 18px;
+		top: 52%;
+		background: url("../img/icon_polygon-down.svg") no-repeat center center / contain;
+		transition: transform 0.3s ease 0s;
+		.is-open &{
+			transform: rotate(180deg);
+		}
+	}
 }
 
 .faq__item__mark{
@@ -1283,22 +1296,7 @@ FAQ
 	@include mq(sp){
 		font-size: 0.875rem;
 	}
-	&::after{
-		content: "";
-		width: 10px;
-		height: 7px;
-		position: absolute;
-		right: 16px;
-		top: 50%;
-		transform: translateY(-36%);
-		background: url("../img/icon_polygon-down.svg") no-repeat center center / contain;
-		transition: transform 0.3s ease 0s;
-		.is-open &{
-			transform: rotateX(180deg);
-		}
-	}
 }
-
 
 .faq__item__a{
 	display: flex;
