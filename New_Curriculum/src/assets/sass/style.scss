@@ -664,6 +664,7 @@ concept
 	max-height: calc(100vh - $size-header-height-pc - 134px - 150px);
 	height: 100%;
 	overflow-y: scroll;
+	overscroll-behavior-y: none;
 	@include mq(sp){
 		padding: 16px 15px 64px;
 		max-height: calc(100vh - $size-header-height-sp - 20px - 69px);
@@ -672,6 +673,9 @@ concept
 
 .modal__icon__area{
 	text-align: right;
+	position: sticky;
+	left: 0;
+	top: 0;
 }
 
 .modal__icon{
