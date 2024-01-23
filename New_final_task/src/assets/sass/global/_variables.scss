@@ -13,20 +13,27 @@ $hover-possibilities: (
 ) !default;
 
 //font
-$font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+$font-family-jp1: 'Noto Sans JP', sans-serif;
+$font-family-jp2: 'Kiwi Maru', serif;
+$font-family-en1: 'Courgette', cursive;
+$font-family-em2: 'Josefin Sans', sans-serif;
 
 //color
-$color-main: #111;
+$color-main: #9ED0E0;
+$color-sub-deep: #67B0C7;
+$color-sub-middle: #CCE1E4;
+$color-sub-pale: #E9F6F8;
+$color-accent1: #CE2073;
+$color-accent2: #FFEE56;
+$color-dark: #4A3636;
+$color-dim1: #CCC;
+$color-dim2: #F5F5F5;
 $color-light: #FFF;
-$color-Base: #FAFAFA;
-$color-Key-deep: #F5810E;
-$color-Key-pale: #FABE00;
-$color-accent: #f99f48;
 
 //size
-$size-header-height-pc: 90px;
-$size-header-height-sp: 70px;
-$size-inner-width-pc: 1140px;
+$size-header-height-pc: 64px;
+$size-header-height-sp: $size-header-height-pc;
+$size-inner-width-pc: 1024px;
 
 // z-index
 $layer: (

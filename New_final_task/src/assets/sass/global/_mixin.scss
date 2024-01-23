@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "variables" as global;
 
 // ---
@@ -5,7 +6,7 @@
 // ---
 //breakpoint用メディアクエリのmixin
 @mixin mq($breakpoint: sp) {
-	@media #{map-get(global.$breakpoints, $breakpoint)} {
+	@media #{map.get(global.$breakpoints, $breakpoint)} {
 		@content;
 	}
 }
@@ -13,7 +14,7 @@
 //hover style用メディアクエリのmixin
 @mixin hs($hover-possibility) {
   //map-get(マップ型変数, キー)で値を取得
-  @media #{map-get(global.$hover-possibilities, $hover-possibility)} {
+  @media #{map.get(global.$hover-possibilities, $hover-possibility)} {
     //この中をカスタムできる
     @content;
   }
