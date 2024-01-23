@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	color: global.$color-main;
+	color: global.$color-dark;
   background: global.$color-light;
   font-family: global.$font-family-jp1;
   line-height: 1.6;
@@ -42,3 +42,11 @@ address{
 	white-space: nowrap;
 	border-width: 0;
 }
+
+.hidden-pc{
+	display: auto;
+	@include global.mq(pc){
+		display: none;
+	}
+}
+

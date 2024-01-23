@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.c-btn{
+	display: inline-flex;
+	height: 36px;
+	padding: 6px 22px 8px 22px;
+	border-radius: 40px;
+	border: 2px solid var(--LP-Blown, global.$color-dark);
+	box-shadow: 0px 4px 0px 0px global.$color-dark;
+	background: var(--LP-White, global.$color-light);
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+
+	@include global.hs(hp){
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background: var(--LP-Yellow, global.$color-accent2);
+		}
+	}
+	@include global.hs(hi){
+		&:active{
+			background: var(--LP-Yellow, global.$color-accent2);
+		}
+	}
+	&.is-disabled{
+		background: var(--LP-Dark-Gray, global.$color-dim1);
+		border-color: global.$color-dim1;
+		box-shadow: none;
+		pointer-events: none;
+	}
+}
+
+.c-btn--large{
+	@extend .c-btn;
+	height: 56px;
+	padding: 10px 40px 12px 40px;
+	border: 3px solid var(--LP-Blown, global.$color-dark);
+}

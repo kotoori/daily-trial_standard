@@ -1,9 +1,12 @@
 // ブレークポイント
-$pc-width: 768px; // PCサイズ
+$tab-width: 768px; // タブレットサイズ
+$pc-width: 1024px; // PCサイズ
 
 $breakpoints: (
-  'sp': 'screen and (max-width: #{$pc-width - 1px})',//スマホ幅
+  'sp': 'screen and (max-width: #{$tab-width - 1px})',//スマホ幅
+  'tab': 'screen and (min-width: #{$tab-width}) and (max-width: #{$pc-width - 1px})',//タブレット幅
   'pc': 'screen and (min-width: #{$pc-width})',//PC幅
+  'not-pc': 'screen and (max-width: #{$pc-width - 1px})',//PC以外
 ) !default;
 
 //メディア特性(hover)
