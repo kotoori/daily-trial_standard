@@ -1,0 +1,81 @@
+@use "config" as *;
+@use "mixin" as *;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: $color-main;
+  background: $color-base;
+  font-family: $font-family;
+  line-height: 1.7;
+	&.is-fixed{
+		overflow: hidden;
+	}
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  vertical-align: top;  /* img下の隙間を消す */
+}
+
+a, button, [role="tab"]{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+address{
+	font-style: normal;
+}
+
+/* スクリーンリーダーオンリー */
+.sr-only{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.is-sp{
+	display: block;
+	@include mq(pc){
+		display: none;
+	}
+}
+
+/*===============================
+fade
+===============================*/
+.fade-in{
+	opacity: 0 ;
+	transition: opacity 1s ease;
+	&.is-in-view{
+		opacity: 1;
+	}
+}
+
+.fade-in-up{
+	opacity: 0 ;
+	transform: translateY(24px);
+	transition: opacity 1s ease, transform 1s ease;
+	&.is-in-view{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in-down{
+	opacity: 0 ;
+	transform: translateY(-24px);
+	transition: opacity 1s ease, transform 1s ease;
+	&.is-in-view{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
