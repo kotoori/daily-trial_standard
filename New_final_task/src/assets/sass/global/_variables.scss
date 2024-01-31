@@ -1,0 +1,46 @@
+// ブレークポイント
+$tab-width: 768px; // タブレットサイズ
+$pc-width: 1024px; // PCサイズ
+
+$breakpoints: (
+  'sp': 'screen and (max-width: #{$tab-width - 1px})',//スマホ幅
+  'tab': 'screen and (min-width: #{$tab-width}) and (max-width: #{$pc-width - 1px})',//タブレット幅
+  'pc': 'screen and (min-width: #{$pc-width})',//PC幅
+  'not-pc': 'screen and (max-width: #{$pc-width - 1px})',//PC以外
+) !default;
+
+//メディア特性(hover)
+$hover-possibilities: (
+  'hp':'(hover: hover)', /* hover possible:hover指定できるPCを想定したスタイル */
+  'hi':'(hover: none)',  /* hover impossible:hoverが使えないタッチ端末を想定した装飾 */
+) !default;
+
+//font
+$font-family-jp1: 'Noto Sans JP', sans-serif;
+$font-family-jp2: 'Kiwi Maru', serif;
+$font-family-en1: 'Courgette', cursive;
+$font-family-em2: 'Josefin Sans', sans-serif;
+
+//color
+$color-main: #9ED0E0;
+$color-sub-deep: #67B0C7;
+$color-sub-middle: #CCE1E4;
+$color-sub-pale: #E9F6F8;
+$color-accent1: #CE2073;
+$color-accent2: #FFEE56;
+$color-dark: #4A3636;
+$color-dim1: #CCC;
+$color-dim2: #F5F5F5;
+$color-light: #FFF;
+
+//size
+$size-header-height-pc: 64px;
+$size-header-height-sp: $size-header-height-pc;
+$size-inner-width-pc: 1024px;
+
+// z-index
+$layer: (
+  header: 900, // ヘッダー
+  default: 0, //default
+);
+

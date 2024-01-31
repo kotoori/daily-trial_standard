@@ -1,0 +1,35 @@
+@use "../global" as global;
+
+c-section-title {
+	display: inline-block;
+	color: var(--LP-Blown, global.$color-dark);
+	line-height: 1.25;
+	text-align: center;
+	padding-bottom: 6px;
+	border-bottom: 6px solid var(--LP-Yellow, global.$color-accent2);
+}
+
+.c-section-title__icon {
+	display: inline-block;
+	width: 37.333px;
+	height: auto;
+	@include global.mq(pc){
+		width: 44px;
+	}
+}
+
+.c-section-title__en {
+	margin-top: 6px;
+	display: block;
+	font-family: global.$font-family-en1;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.c-section-title__jp {
+	margin-top: 6px;
+	font-family: global.$font-family-jp2;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
