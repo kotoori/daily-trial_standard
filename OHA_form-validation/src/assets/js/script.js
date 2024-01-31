@@ -332,7 +332,8 @@ const form = '.contact__form form';
           //window.location.href = "thanks.html";
         },
         200: function () {
-          $(".submit-failed").fadeIn();
+          $(".contact__submit").hide();
+          $(".submit-success").fadeIn();
         }
       }
     });

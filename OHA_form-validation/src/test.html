@@ -471,209 +471,46 @@
 			<div class="contact__form js-in-view fade-in-up">
 				<h2 class="section__title">CONTACT</h2>
 				<p class="section__subtitle">お問い合わせ</p>
-				<form action="mail.php" method="post" id="js-form" class="form" novalidate>
-					<dl class="form_list">
-						<!-- name -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<label for="contact__form__name" class="form_label required">
-									お名前
-									<span class="form_item-inline">必須</span>
-								</label>
-							</dt>
-							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
-									<input
-										class="form-control form_input form_text required"
-										id="contact__form__name"
-										required
-										aria-invalid="false"
-										placeholder="田中 おは次郎"
-										value=""
-										type="text"
-										name="お名前"
-									>
-								</span>
-							</dd>
-						</div><!-- /.form__item -->
-	
-						<!-- name2 -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<label for="contact__form__name" class="form_label required">
-									お名前2
-									<span class="form_item-inline">必須</span>
-								</label>
-							</dt>
-							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
-									<input
-										class="form-control form_input form_text required"
-										id="contact__form__name2"
-										required
-										aria-invalid="false"
-										placeholder="佐藤 おは子"
-										value=""
-										type="text"
-										name="お名前2"
-									>
-								</span>
-							</dd>
-						</div><!-- /.form__item -->
-	
-						<!-- email -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<label for="contact__form__email" class="form_label required">
-									メールアドレス
-									<span class="form_item-inline">必須</span>
-								</label>
-							</dt>
-							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
-									<input
-										class="form-control form_input form_email required"
-										id="contact__form__email"
-										required
-										aria-invalid="false"
-										placeholder="info@oha.com"
-										value=""
-										type="email"
-										name="Email"
-									>
-								</span>
-							</dd>
-						</div><!-- /.form__item -->
-
-						<!-- kind -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<div class="required">
-									お問い合わせ項目
-									<span class="form_item-inline">必須</span>
-								</div>
-							</dt>
-							<dd class="form_item-input">
-								<div class="form-control-wrap" data-name="">
-									<ul class="form-radio-group">
-										<!-- radio 1 -->
-										<li>
-											<label class="form-control form_radio">
-												<input
-													class="sr-only required"
-													required
-													aria-invalid="false"
-													value="アプリの質問"
-													type="radio"
-													name="お問い合わせ項目"
-												>
-												<span>アプリの質問</span>
-											</label>
-										</li>
-										<!-- radio 2 -->
-										<li>
-											<label class="form-control form_radio">
-												<input
-													class="sr-only"
-													required
-													aria-invalid="false"
-													value="取材の依頼"
-													type="radio"
-													name="お問い合わせ項目"
-												>
-												<span>取材の依頼</span>
-											</label>
-										</li>
-										<!-- radio 3 -->
-										<li>
-											<label class="form-control form_radio">
-												<input
-													class="sr-only"
-													required
-													aria-invalid="false"
-													value="その他"
-													type="radio"
-													name="お問い合わせ項目"
-												>
-												<span>その他</span>
-											</label>
-										</li>
-									</ul>
-								</div>
-							</dd>
-						</div><!-- /.form__item -->
-						<!-- age -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<label for="contact__form__age" class="form_label optional">
-									年代
-									<span class="form_item-inline">任意</span>
-								</label>
-							</dt>
-							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
-									<select 
-										class="form-control form_select"
-										id="contact__form__age"
-										aria-invalid="false"
-										name="年代"
-									>
-										<option value="">選択してください</option>
-										<option value="10代">10代</option>
-										<option value="20代">20代</option>
-										<option value="30代">30代</option>
-										<option value="40代">40代</option>
-										<option value="50代">50代</option>
-										<option value="60代">60代</option>
-										<option value="70代">70代</option>
-										<option value="80代">80代</option>
-									</select>
-
-								</span>
-							</dd>
-						</div><!-- /.form__item -->
-						<!--  -->
-						<div class="form_item">
-							<dt class="form_item-title">
-								<label for="contact__form__concrete" class="form_label required">
-									お問い合わせ内容
-									<span class="form_item-inline">必須</span>
-								</label>
-							</dt>
-							<dd class="form_item-input">
-								<span class="form-control-wrap" data-name="">
-									<textarea
-										class="form-control form_textarea required"
-										id="contact__form__concrete"
-										required
-										aria-invalid="false"
-										placeholder="ここに文章を入力してくださいここに文章を入力してください"
-										name="お問い合わせ内容"
-									></textarea>
-								</span>
-							</dd>
-						</div><!-- /.form__item -->
-					</dl>
-
-					<!-- privacy policy -->
-					<div class="form_privacy form_item-input">
-						<label class="form-control form_checkbox required">
-							<input
-								class="sr-only required"
-								required
-								aria-invalid="false"
-								type="checkbox"
-								value="同意する"
-								name="プライバシーポリシーに同意する[]"
-								>
-								<span class="form_privacy-text"><a href="/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する</span>
-							</label>
-					</div>
-					<!-- submit -->
-					<div class="btn--light contact__submit">
-						<button type="submit">送信する</button>
-					</div>
-					<p class="submit-success">送信しました。<br class="is-sp">お問い合わせありがとうございます。</p>
+				<form method="post" action="mail.php">
+					<table class="formTable">
+						<tr>
+							<th>ご用件</th>
+							<td><select name="ご用件">
+									<option value="">選択してください</option>
+									<option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+									<option value="リンクについて">リンクについて</option>
+								</select></td>
+						</tr>
+						<tr>
+							<th>お名前</th>
+							<td><input size="20" type="text" name="お名前" /> ※必須</td>
+						</tr>
+						<tr>
+							<th>電話番号（半角）</th>
+							<td><input size="30" type="text" name="電話番号" /></td>
+						</tr>
+						<tr>
+							<th>Mail（半角）</th>
+							<td><input size="30" type="text" name="Email" /> ※必須</td>
+						</tr>
+						<tr>
+							<th>性別</th>
+							<td><input type="radio" name="性別" value="男" /> 男　
+								<input type="radio" name="性別" value="女" /> 女 </td>
+						</tr>
+						<tr>
+							<th>サイトを知ったきっかけ</th>
+							<td><input name="サイトを知ったきっかけ[]" type="checkbox" value="友人・知人" /> 友人・知人　
+								<input name="サイトを知ったきっかけ[]" type="checkbox" value="検索エンジン" /> 検索エンジン</td>
+						</tr>
+						<tr>
+							<th>お問い合わせ内容<br /></th>
+							<td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+						</tr>
+					</table>
+					<p align="center">
+						<input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
+					</p>
 				</form>
 			</div>
 		</div>
